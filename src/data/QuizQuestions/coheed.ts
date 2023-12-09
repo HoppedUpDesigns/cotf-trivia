@@ -8,8 +8,8 @@ import { Topic } from ".";
 export const coheed: Topic = {
   topic: "Coheed and Cambria",
   level: "Beginner",
-  totalQuestions: 150,
-  totalScore: 750,
+  totalQuestions: 152,
+  totalScore: 760,
   totalTime: 3600,
   questions: [
     {
