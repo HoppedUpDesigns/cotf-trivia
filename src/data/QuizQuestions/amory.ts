@@ -390,7 +390,6 @@ export const amory: Topic = {
       correctAnswers: ["Assassins working for Wilhelm Ryan"],
       score: 5,
     },
-    questions: [
   {
     question: "In The Amory Wars, what is the name of the collection of 78 planets and seven stars held in place by interconnecting beams of energy?",
     choices: [
@@ -490,6 +489,6 @@ export const amory: Topic = {
       type: "MCQs",
       correctAnswers: ["Mark Wahlberg"],
       score: 5,
-    },
+          },
   ],
 };
