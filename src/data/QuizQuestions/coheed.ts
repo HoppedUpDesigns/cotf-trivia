@@ -8,8 +8,8 @@ import { Topic } from ".";
 export const coheed: Topic = {
   topic: "Coheed and Cambria",
   level: "Beginner",
-  totalQuestions: 152,
-  totalScore: 760,
+  totalQuestions: 92,
+  totalScore: 460,
   totalTime: 3600,
   questions: [
     {
@@ -37,14 +37,14 @@ export const coheed: Topic = {
       score: 5,
     },
     {
-      question: "What year was The Second Stage Turbine Blade released?",
+      question: "What year was 'The Second Stage Turbine Blade' released?",
       choices: ["2003", "2001", "2004", "2002"],
       type: "MCQs",
       correctAnswers: ["2002"],
       score: 5,
     },
     {
-      question: "What year was In Keeping Secrets of Silent Earth: 3 released?",
+      question: "What year was I'n Keeping Secrets of Silent Earth: 3' released?",
       choices: ["2003", "2004", "2005", "2006"],
       type: "MCQs",
       correctAnswers: ["2003"],
@@ -52,7 +52,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What year was Good Apollo, I'm Burning Star IV, Vol. 1 released?",
+        "What year was 'Good Apollo, I'm Burning Star IV, Vol. 1' released?",
       choices: ["2004", "2005", "2006", "2007"],
       type: "MCQs",
       correctAnswers: ["2005"],
@@ -60,35 +60,35 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What year was Good Apollo, I'm Burning Star IV, Vol. 2 released?",
+        "What year was 'Good Apollo, I'm Burning Star IV, Vol. 2' released?",
       choices: ["2005", "2006", "2007", "2008"],
       type: "MCQs",
       correctAnswers: ["2007"],
       score: 5,
     },
     {
-      question: "What year was Year of the Black Rainbow released?",
+      question: "What year was 'Year of the Black Rainbow' released?",
       choices: ["2010", "2008", "2009", "2011"],
       type: "MCQs",
       correctAnswers: ["2010"],
       score: 5,
     },
     {
-      question: "What year was The Afterman: Ascension released?",
+      question: "What year was 'The Afterman: Ascension' released?",
       choices: ["2012", "2011", "2010", "2013"],
       type: "MCQs",
       correctAnswers: ["2012"],
       score: 5,
     },
     {
-      question: "What year was The Afterman: Descension released?",
+      question: "What year was 'The Afterman: Descension' released?",
       choices: ["2012", "2010", "2013", "2014"],
       type: "MCQs",
       correctAnswers: ["2013"],
       score: 5,
     },
     {
-      question: "What year was The Color Before the Sun released?",
+      question: "What year was 'The Color Before the Sun' released?",
       choices: ["2011", "2012", "2015", "2016"],
       type: "MCQs",
       correctAnswers: ["2015"],
@@ -111,6 +111,18 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Claudio Sanchez and Travis Stever"],
+      score: 5,
+    },
+{
+      question: "What is the name of the band that Claudio and Travis were in that broke up in 1995?",
+      choices: [
+        "Delirium Trigger",
+        "Toxic Parents",
+        "Beautiful Loser",
+        "Shabütie",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Toxic Parents"],
       score: 5,
     },
     {
@@ -261,20 +273,8 @@ export const coheed: Topic = {
       score: 5,
     },
     {
-      question: "What is the title of Coheed and Cambria's first studio album?",
-      choices: [
-        "The Second Stage Turbine Blade",
-        "In Keeping Secrets of Silent Earth: 3",
-        "Year of the Black Rainbow",
-        "The Prize Fighter Inferno",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Second Stage Turbine Blade"],
-      score: 5,
-    },
-    {
       question:
-        "In 2012, which member of Coheed and Cambria was replaced by Zach Cooper as the bassist?",
+        "In 2012, which member of Coheed and Cambria was replaced by Zach Cooper?",
       choices: ["Michael Todd", "Chris Pennie", "Travis Stever", "Josh Eppard"],
       type: "MCQs",
       correctAnswers: ["Michael Todd"],
@@ -405,32 +405,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which Coheed and Cambria album served as a prequel to 'The Amory Wars' storyline and explored the character Sirius Amory?",
-      choices: [
-        "Good Apollo, I'm Burning Star IV",
-        "Year of the Black Rainbow",
-        "The Afterman: Ascension",
-        "Vaxis - Act I: The Unheavenly Creatures",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Year of the Black Rainbow"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the name of the graphic novel series that Claudio Sanchez co-wrote, expanding on The Amory Wars narrative?",
-      choices: [
-        "The Afterman",
-        "The Keywork Chronicles",
-        "The Bag.On.Line Adventures",
-        "The Second Stage Turbine Blade",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Bag.On.Line Adventures"],
-      score: 5,
-    },
-    {
-      question:
         "Which member of Coheed and Cambria took on the persona of 'Sirius Amory' during 'The Amory Wars' concept?",
       choices: [
         "Claudio Sanchez",
@@ -444,20 +418,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the name of Coheed and Cambria's first EP, released before their debut album?",
-      choices: [
-        "The Penelope EP",
-        "The Delirium Trigger EP",
-        "The Shabütie EP",
-        "The Elf Tower New Mexico EP",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Penelope EP"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2007, Coheed and Cambria contributed a song to the soundtrack of which popular science fiction film?",
+        "In 2007, Coheed and Cambria contributed a song to the soundtrack of which film?",
       choices: [
         "Star Wars: The Force Awakens",
         "Blade Runner 2049",
@@ -504,20 +465,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the title of Coheed and Cambria's coffee table book released in 2021?",
-      choices: [
-        "The Amory Wars Chronicles",
-        "The Unheavenly Coffee Table",
-        "Vaxis Visualized",
-        "Year of the Coffee Table",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Vaxis Visualized"],
-      score: 5,
-    },
-    {
-      question:
-        "During the recording of 'In Keeping Secrets of Silent Earth: 3,' which member of the band temporarily left, leading to Chris Pennie joining as the drummer?",
+        "During the recording of 'In Keeping Secrets of Silent Earth: 3,' which member of the band temporarily left, leading to Chris Pennie joining the band?",
       choices: [
         "Josh Eppard",
         "Travis Stever",
@@ -526,19 +474,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Josh Eppard"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the name of the comic book series co-written by Claudio Sanchez that delves into the backstory of 'The Amory Wars' characters?",
-      choices: [
-        "The Bag.On.Line Adventures",
-        "The Keywork Chronicles",
-        "The Afterman",
-        "The Second Stage Turbine Blade",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Bag.On.Line Adventures"],
       score: 5,
     },
     {
@@ -556,7 +491,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What was the title of Coheed and Cambria's first demo album released in 1999?",
+        "What was the title of Shabütie's first demo album released in 1999?",
       choices: [
         "The Second Stage Turbine Blade",
         "Plan to Take Over the World",
@@ -629,20 +564,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the title of Coheed and Cambria's second studio album, released in 2003?",
-      choices: [
-        "The Second Stage Turbine Blade",
-        "In Keeping Secrets of Silent Earth: 3",
-        "Good Apollo, I'm Burning Star IV",
-        "No World for Tomorrow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["In Keeping Secrets of Silent Earth: 3"],
-      score: 5,
-    },
-    {
-      question:
-        "During the early years, what pseudonym did Claudio Sanchez use as the vocalist for Coheed and Cambria?",
+        "During the early years, what pseudonym did Claudio Sanchez use?",
       choices: [
         "Sirius Amory",
         "The Crowing",
@@ -659,11 +581,11 @@ export const coheed: Topic = {
       choices: [
         "The Afterman: Descension",
         "Year of the Black Rainbow",
-        "Good Apollo, I'm Burning Star IV",
+        "Good Apollo, I'm Burning Star IV, Volume Two: No World for Tomorrow",
         "Vaxis - Act I: The Unheavenly Creatures",
       ],
       type: "MCQs",
-      correctAnswers: ["Year of the Black Rainbow"],
+      correctAnswers: ["Good Apollo, I'm Burning Star IV, Volume Two: No World for Tomorrow"],
       score: 5,
     },
     {
@@ -698,60 +620,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Last Supper: Live at Hammerstein Ballroom"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the name of Coheed and Cambria's official podcast where the band discusses various topics?",
-      choices: [
-        "The Unheavenly Podcast",
-        "The Keywork Chronicles",
-        "The Coheed Cast",
-        "Heed Your Call",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Coheed Cast"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2012, Coheed and Cambria released a double album. What are the titles of the two parts?",
-      choices: [
-        "The Afterman: Ascension and The Afterman: Descension",
-        "Good Apollo, I'm Burning Star IV: From Fear Through the Eyes of Madness and The Afterman: Ascension",
-        "Year of the Black Rainbow and The Afterman: Descension",
-        "In Keeping Secrets of Silent Earth: 3 and Vaxis - Act I: The Unheavenly Creatures",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Afterman: Ascension and The Afterman: Descension"],
-      score: 5,
-    },
-    {
-      question:
-        "Which Coheed and Cambria album features the song 'A Favor House Atlantic,' which gained mainstream success?",
-      choices: [
-        "Good Apollo, I'm Burning Star IV",
-        "In Keeping Secrets of Silent Earth: 3",
-        "The Second Stage Turbine Blade",
-        "Vaxis - Act I: The Unheavenly Creatures",
-      ],
-      type: "MCQs",
-      correctAnswers: ["In Keeping Secrets of Silent Earth: 3"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2009, Coheed and Cambria embarked on a tour where they performed which two albums in their entirety?",
-      choices: [
-        "The Afterman: Ascension and The Afterman: Descension",
-        "Good Apollo, I'm Burning Star IV and No World for Tomorrow",
-        "In Keeping Secrets of Silent Earth: 3 and Year of the Black Rainbow",
-        "The Second Stage Turbine Blade and In Keeping Secrets of Silent Earth: 3",
-      ],
-      type: "MCQs",
-      correctAnswers: [
-        "Good Apollo, I'm Burning Star IV and No World for Tomorrow",
-      ],
       score: 5,
     },
     {
@@ -803,53 +671,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the name of Coheed and Cambria's drummer who joined the band in 2016?",
-      choices: ["Chris Pennie", "Taylor Hawkins", "Nate Kelley", "Josh Eppard"],
-      type: "MCQs",
-      correctAnswers: ["Josh Eppard"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2001, Coheed and Cambria released their second studio album. What is the title of this album?",
-      choices: [
-        "The Second Stage Turbine Blade",
-        "In Keeping Secrets of Silent Earth: 3",
-        "Good Apollo, I'm Burning Star IV",
-        "No World for Tomorrow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["In Keeping Secrets of Silent Earth: 3"],
-      score: 5,
-    },
-    {
-      question:
-        "Which member of Coheed and Cambria is known for his distinctive voice and guitar work and is the primary songwriter for the band?",
-      choices: [
-        "Travis Stever",
-        "Claudio Sanchez",
-        "Zach Cooper",
-        "Josh Eppard",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Claudio Sanchez"],
-      score: 5,
-    },
-    {
-      question:
-        "Coheed and Cambria's third studio album was released in 2005. What is the title of this album?",
-      choices: [
-        "Good Apollo, I'm Burning Star IV",
-        "In Keeping Secrets of Silent Earth: 3",
-        "No World for Tomorrow",
-        "Year of the Black Rainbow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV"],
-      score: 5,
-    },
-    {
-      question:
         "What is the name of Coheed and Cambria's first-ever headlining tour, launched in 2004?",
       choices: [
         "The Unheavenly Tour",
@@ -859,45 +680,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Neverender Tour"],
-      score: 5,
-    },
-    {
-      question:
-        "Which famous record producer worked with Coheed and Cambria on their debut album 'The Second Stage Turbine Blade'?",
-      choices: [
-        "Rick Rubin",
-        "Butch Vig",
-        "David Bottrill",
-        "Michael Birnbaum",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Michael Birnbaum"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of Coheed and Cambria's sixth studio album, released in 2012?",
-      choices: [
-        "Vaxis - Act I: The Unheavenly Creatures",
-        "The Afterman: Ascension",
-        "Year of the Black Rainbow",
-        "The Afterman: Descension",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Afterman: Ascension"],
-      score: 5,
-    },
-    {
-      question:
-        "Which member of Coheed and Cambria is known for his work as a comic book artist and has created much of the band's album artwork?",
-      choices: [
-        "Travis Stever",
-        "Josh Eppard",
-        "Claudio Sanchez",
-        "Zach Cooper",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Claudio Sanchez"],
       score: 5,
     },
     {
@@ -915,32 +697,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the title of the graphic novel that Claudio Sanchez co-wrote, providing additional details about 'The Amory Wars' universe?",
-      choices: [
-        "The Keywork Chronicles",
-        "The Bag.On.Line Adventures",
-        "The Afterman",
-        "The Second Stage Turbine Blade",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Bag.On.Line Adventures"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of Coheed and Cambria's first-ever studio album, released in 2002?",
-      choices: [
-        "In Keeping Secrets of Silent Earth: 3",
-        "Year of the Black Rainbow",
-        "The Second Stage Turbine Blade",
-        "Good Apollo, I'm Burning Star IV",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Second Stage Turbine Blade"],
-      score: 5,
-    },
-    {
-      question:
         "Which member of Coheed and Cambria originally played bass guitar and later switched to lead guitar?",
       choices: [
         "Claudio Sanchez",
@@ -954,41 +710,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2019, Coheed and Cambria went on tour with a band that shares its name with a famous amusement park. What is the name of this band?",
-      choices: ["Disneyland", "Six Flags", "Universal Studios", "Cedar Point"],
-      type: "MCQs",
-      correctAnswers: ["Mastodon"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of the acoustic album released by Coheed and Cambria in 2019?",
-      choices: [
-        "The Unheavenly Creatures",
-        "Vaxis - Act I: The Unheavenly Creatures",
-        "The Color Before the Sun",
-        "No World for Tomorrow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Color Before the Sun"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2007, Coheed and Cambria released a compilation album featuring early demos and unreleased tracks. What is the title of this album?",
-      choices: [
-        "The Bag.On.Line Adventures",
-        "The Penelope EP",
-        "The Afterman: Ascension",
-        "The Lost Shepherd",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Lost Shepherd"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the name of the character who serves as the protagonist in 'The Amory Wars' narrative created by Claudio Sanchez?",
+        "What is the name of the character who serves as the protagonist in 'The Amory Wars' narrative?",
       choices: ["Coheed Kilgannon", "Sirius Amory", "The Crowing", "Ambellina"],
       type: "MCQs",
       correctAnswers: ["The Crowing"],
@@ -996,7 +718,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2008, Coheed and Cambria released a studio album featuring a song inspired by the film 'The NeverEnding Story.' What is the title of this album?",
+        "Which album features a song inspired by the film 'The NeverEnding Story.'?",
       choices: [
         "Year of the Black Rainbow",
         "The Afterman: Descension",
@@ -1043,58 +765,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the title of Coheed and Cambria's second studio album, released in 2003?",
-      choices: [
-        "In Keeping Secrets of Silent Earth: 3",
-        "Good Apollo, I'm Burning Star IV",
-        "The Second Stage Turbine Blade",
-        "Year of the Black Rainbow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["In Keeping Secrets of Silent Earth: 3"],
-      score: 5,
-    },
-    {
-      question:
-        "Coheed and Cambria's discography often references a science fiction narrative called 'The Amory Wars.' Who is the primary creator of this storyline?",
-      choices: [
-        "Claudio Sanchez",
-        "Travis Stever",
-        "Josh Eppard",
-        "Zach Cooper",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Claudio Sanchez"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2005, Coheed and Cambria contributed a cover of a popular song to a tribute album. What was the title of the song they covered?",
-      choices: [
-        "Bohemian Rhapsody",
-        "Wish You Were Here",
-        "Purple Haze",
-        "Karma Police",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Wish You Were Here"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the name of Coheed and Cambria's official fan club, providing exclusive content and access to events?",
-      choices: [
-        "Children of the Fence",
-        "Keywork Crew",
-        "Amory Elite",
-        "The Unheavenly Host",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Children of the Fence"],
-      score: 5,
-    },
-    {
-      question:
         "In 2017, Coheed and Cambria released a single that was also featured in the soundtrack of a popular animated film. What is the title of this single?",
       choices: [
         "Old Flames",
@@ -1121,27 +791,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the title of Coheed and Cambria's fourth studio album, released in 2007?",
-      choices: [
-        "The Afterman: Descension",
-        "Year of the Black Rainbow",
-        "Good Apollo, I'm Burning Star IV",
-        "No World for Tomorrow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV"],
-      score: 5,
-    },
-    {
-      question:
-        "Coheed and Cambria's album 'Year of the Black Rainbow' serves as a prequel to 'The Amory Wars' storyline. What character does it primarily focus on?",
-      choices: ["Sirius Amory", "Ambellina", "Coheed Kilgannon", "The Writer"],
-      type: "MCQs",
-      correctAnswers: ["Sirius Amory"],
-      score: 5,
-    },
-    {
-      question:
         "In 2018, Coheed and Cambria embarked on a tour named after a significant element in 'The Amory Wars' universe. What was the title of this tour?",
       choices: [
         "The Keywork Chronicles Tour",
@@ -1155,20 +804,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the title of the graphic novel series co-written by Claudio Sanchez that expands on 'The Amory Wars' narrative?",
-      choices: [
-        "The Afterman",
-        "The Bag.On.Line Adventures",
-        "The Keywork Chronicles",
-        "The Second Stage Turbine Blade",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Keywork Chronicles"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2014, Coheed and Cambria released an album that marked a departure from 'The Amory Wars' concept. What is the title of this album?",
+        "In 2015, Coheed and Cambria released an album that marked a departure from 'The Amory Wars' concept. What is the title of this album?",
       choices: [
         "Vaxis - Act I: The Unheavenly Creatures",
         "The Afterman: Descension",
@@ -1177,19 +813,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Color Before the Sun"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the name of the character Claudio Sanchez portrayed in the music video for the song 'A Favor House Atlantic'?",
-      choices: [
-        "Sirius Amory",
-        "The Crowing",
-        "Ambellina",
-        "Claudio Kilgannon",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Claudio Kilgannon"],
       score: 5,
     },
     {
@@ -1249,19 +872,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2011, Coheed and Cambria performed their album 'Good Apollo, I'm Burning Star IV' in its entirety. What was the special name given to this tour?",
-      choices: [
-        "The Good Apollo Tour",
-        "The Ascension Tour",
-        "The Burning Star Tour",
-        "Neverender: SSTB",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Neverender: SSTB"],
-      score: 5,
-    },
-    {
-      question:
         "Coheed and Cambria's fourth studio album, 'No World for Tomorrow,' was released in 2007. What is the title of the opening track on this album?",
       choices: [
         "Feathers",
@@ -1271,58 +881,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The End Complete I: The Fall of House Atlantic"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2016, Coheed and Cambria released a compilation album featuring demos and rare tracks. What is the title of this album?",
-      choices: [
-        "The Lost Shepherd",
-        "Rarities Vol. 1",
-        "The Unraveling Palette of Dawn",
-        "Past is Prologue",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Rarities Vol. 1"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2013, Coheed and Cambria released a double album as the ninth installment in 'The Amory Wars' series. What are the titles of the two parts of this album?",
-      choices: [
-        "The Afterman: Ascension and The Afterman: Descension",
-        "Year of the Black Rainbow and The Afterman: Ascension",
-        "Vaxis - Act I: The Unheavenly Creatures and The Afterman: Descension",
-        "In Keeping Secrets of Silent Earth: 3 and Vaxis - Act I: The Unheavenly Creatures",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Afterman: Ascension and The Afterman: Descension"],
-      score: 5,
-    },
-    {
-      question:
-        "Which member of Coheed and Cambria is known for his side project 'The Prize Fighter Inferno'?",
-      choices: [
-        "Claudio Sanchez",
-        "Travis Stever",
-        "Zach Cooper",
-        "Josh Eppard",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Claudio Sanchez"],
-      score: 5,
-    },
-    {
-      question:
-        "Coheed and Cambria released an album in 2009 that serves as a prequel to 'The Amory Wars' saga. What is the title of this album?",
-      choices: [
-        "Year of the Black Rainbow",
-        "Good Apollo, I'm Burning Star IV",
-        "The Afterman: Ascension",
-        "No World for Tomorrow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Year of the Black Rainbow"],
       score: 5,
     },
     {
@@ -1348,32 +906,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the title of Coheed and Cambria's fifth studio album, released in 2008?",
-      choices: [
-        "Good Apollo, I'm Burning Star IV",
-        "No World for Tomorrow",
-        "Year of the Black Rainbow",
-        "The Afterman: Ascension",
-      ],
-      type: "MCQs",
-      correctAnswers: ["No World for Tomorrow"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2015, Coheed and Cambria went on tour with another prog-rock band, showcasing their affinity for complex musical compositions. What was the name of this tour?",
-      choices: [
-        "The Complexity Tour",
-        "The Prog Odyssey Tour",
-        "The Neverender Tour",
-        "The Color Before the Sun Tour",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Color Before the Sun Tour"],
-      score: 5,
-    },
-    {
-      question:
         "What is the title of the song that served as the lead single for Coheed and Cambria's album 'Good Apollo, I'm Burning Star IV: Vol. 2 – No World for Tomorrow'?",
       choices: [
         "The Running Free",
@@ -1391,71 +923,6 @@ export const coheed: Topic = {
       choices: ["Gears of War", "Halo 2", "Assassin's Creed", "Fallout 3"],
       type: "MCQs",
       correctAnswers: ["Gears of War"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2017, Coheed and Cambria released an album that continued 'The Amory Wars' narrative. What is the title of this album?",
-      choices: [
-        "The Afterman: Ascension",
-        "Vaxis - Act I: The Unheavenly Creatures",
-        "Year of the Black Rainbow",
-        "The Color Before the Sun",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Vaxis - Act I: The Unheavenly Creatures"],
-      score: 5,
-    },
-    {
-      question:
-        "Coheed and Cambria's song 'Blood Red Summer' gained popularity and was featured on which of their albums?",
-      choices: [
-        "Good Apollo, I'm Burning Star IV",
-        "In Keeping Secrets of Silent Earth: 3",
-        "The Second Stage Turbine Blade",
-        "The Afterman: Ascension",
-      ],
-      type: "MCQs",
-      correctAnswers: ["In Keeping Secrets of Silent Earth: 3"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2018, Coheed and Cambria released a coffee table book. What is the title of this book?",
-      choices: [
-        "The Amory Wars: Chronicles",
-        "The Keywork Compendium",
-        "The Bag.On.Line Adventures",
-        "The Coheed Chronicles",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Amory Wars: Chronicles"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of the song that served as the lead single for Coheed and Cambria's album 'The Afterman: Descension'?",
-      choices: [
-        "Key Entity Extraction IV: Evagria the Faithful",
-        "Gravity's Union",
-        "Dark Side of Me",
-        "The Hard Sell",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Key Entity Extraction IV: Evagria the Faithful"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2005, Coheed and Cambria released a limited edition version of their album 'Good Apollo, I'm Burning Star IV.' What was the special feature of this edition?",
-      choices: [
-        "Exclusive bonus track",
-        "Graphic novel adaptation",
-        "Signed poster",
-        "3D album cover",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Graphic novel adaptation"],
       score: 5,
     },
     {
@@ -1494,32 +961,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2016, Coheed and Cambria embarked on a tour to celebrate the 10th anniversary of a specific album. Which album was it?",
-      choices: [
-        "The Afterman: Ascension",
-        "Good Apollo, I'm Burning Star IV",
-        "In Keeping Secrets of Silent Earth: 3",
-        "No World for Tomorrow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV"],
-      score: 5,
-    },
-    {
-      question:
-        "Which member of Coheed and Cambria is known for his distinctive guitar work and often collaborates with Claudio Sanchez in creating the band's sound?",
-      choices: [
-        "Travis Stever",
-        "Josh Eppard",
-        "Zach Cooper",
-        "Claudio Sanchez",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Travis Stever"],
-      score: 5,
-    },
-    {
-      question:
         "Coheed and Cambria's album 'The Afterman: Ascension' features a song with a guest appearance by which famous musician?",
       choices: [
         "Serj Tankian",
@@ -1529,32 +970,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Serj Tankian"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2012, Coheed and Cambria released a double album as the eighth installment in 'The Amory Wars' series. What are the titles of the two parts of this album?",
-      choices: [
-        "The Afterman: Ascension and The Afterman: Descension",
-        "Year of the Black Rainbow and The Afterman: Ascension",
-        "Vaxis - Act I: The Unheavenly Creatures and The Afterman: Descension",
-        "In Keeping Secrets of Silent Earth: 3 and Vaxis - Act I: The Unheavenly Creatures",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Afterman: Ascension and The Afterman: Descension"],
-      score: 5,
-    },
-    {
-      question:
-        "Which member of Coheed and Cambria is known for his distinctive drumming style and joined the band in 2007?",
-      choices: [
-        "Claudio Sanchez",
-        "Travis Stever",
-        "Zach Cooper",
-        "Josh Eppard",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Josh Eppard"],
       score: 5,
     },
     {
@@ -1576,58 +991,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Live at the Hammerstein Ballroom"],
-      score: 5,
-    },
-    {
-      question:
-        "Coheed and Cambria's song 'Ten Speed (Of God's Blood & Burial)' is part of which studio album?",
-      choices: [
-        "Good Apollo, I'm Burning Star IV",
-        "Year of the Black Rainbow",
-        "In Keeping Secrets of Silent Earth: 3",
-        "The Second Stage Turbine Blade",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of the comic book series co-written by Claudio Sanchez that serves as a prequel to 'The Amory Wars' narrative?",
-      choices: [
-        "The Afterman",
-        "The Bag.On.Line Adventures",
-        "The Keywork Chronicles",
-        "The Second Stage Turbine Blade",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Keywork Chronicles"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2013, Coheed and Cambria performed a concert where they played their album 'In Keeping Secrets of Silent Earth: 3' in its entirety. What was the name of this tour?",
-      choices: [
-        "The Neverender Tour",
-        "The In Keeping Secrets Tour",
-        "The Silent Earth Tour",
-        "The Coheed Chronicles Tour",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Neverender Tour"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of the song that served as the lead single for Coheed and Cambria's album 'Good Apollo, I'm Burning Star IV: Vol. 1 – From Fear Through The Eyes of Madness'?",
-      choices: [
-        "Welcome Home",
-        "The Suffering",
-        "The Willing Well IV: The Final Cut",
-        "Apollo I: The Writing Writer",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Suffering"],
       score: 5,
     },
     {
@@ -1658,109 +1021,10 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Coheed and Cambria's song 'Feathers' is featured on which studio album?",
-      choices: [
-        "Good Apollo, I'm Burning Star IV",
-        "In Keeping Secrets of Silent Earth: 3",
-        "The Second Stage Turbine Blade",
-        "Vaxis - Act I: The Unheavenly Creatures",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2011, Coheed and Cambria collaborated with another artist to release a split single. Who was the collaborating artist?",
-      choices: [
-        "Between the Buried and Me",
-        "Circa Survive",
-        "The Dear Hunter",
-        "The Used",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Between the Buried and Me"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of Coheed and Cambria's first studio album, released in 2002?",
-      choices: [
-        "Good Apollo, I'm Burning Star IV",
-        "In Keeping Secrets of Silent Earth: 3",
-        "The Second Stage Turbine Blade",
-        "No World for Tomorrow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Second Stage Turbine Blade"],
-      score: 5,
-    },
-    {
-      question:
         "In 2014, Coheed and Cambria released a song that was used as the end credits theme for a popular animated TV series. What is the title of this song?",
       choices: ["Here to Mars", "Island", "Colors", "The Hard Sell"],
       type: "MCQs",
       correctAnswers: ["Island"],
-      score: 5,
-    },
-    {
-      question:
-        "Coheed and Cambria's album 'Good Apollo, I'm Burning Star IV: Vol. 2 – No World for Tomorrow' features a song with a guest appearance by which famous musician?",
-      choices: [
-        "Serj Tankian",
-        "Maynard James Keenan",
-        "Chino Moreno",
-        "Corey Taylor",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Chino Moreno"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2016, Coheed and Cambria released a song as a tribute to a legendary artist who passed away that year. Who was the artist they paid tribute to?",
-      choices: ["David Bowie", "Prince", "Leonard Cohen", "George Michael"],
-      type: "MCQs",
-      correctAnswers: ["David Bowie"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of the Coheed and Cambria documentary that provides an in-depth look at the making of their album 'Good Apollo, I'm Burning Star IV: Vol. 1 – From Fear Through The Eyes of Madness'?",
-      choices: [
-        "Behind the Keywork",
-        "The Fiction Will See the Real",
-        "Neverender: Children of the Fence Edition",
-        "From Fear to Eternity",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Fiction Will See the Real"],
-      score: 5,
-    },
-    {
-      question:
-        "Coheed and Cambria's song 'The Dark Sentencer' serves as the opening track for which album?",
-      choices: [
-        "The Afterman: Ascension",
-        "The Afterman: Descension",
-        "Vaxis - Act I: The Unheavenly Creatures",
-        "Year of the Black Rainbow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Vaxis - Act I: The Unheavenly Creatures"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2003, Coheed and Cambria released a single that gained mainstream success and was featured in the soundtrack of a popular video game. What is the title of this single?",
-      choices: [
-        "Welcome Home",
-        "A Favor House Atlantic",
-        "Blood Red Summer",
-        "The Suffering",
-      ],
-      type: "MCQs",
-      correctAnswers: ["A Favor House Atlantic"],
       score: 5,
     },
     {
@@ -1774,32 +1038,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Personal experiences and emotions"],
-      score: 5,
-    },
-    {
-      question:
-        "Which member of Coheed and Cambria is known for his skills as a multi-instrumentalist and has contributed to the band's diverse sound?",
-      choices: [
-        "Travis Stever",
-        "Claudio Sanchez",
-        "Zach Cooper",
-        "Josh Eppard",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Travis Stever"],
-      score: 5,
-    },
-    {
-      question:
-        "Coheed and Cambria performed a cover of a famous track for a tribute album dedicated to the original artist. Which song did they cover, and who was the original artist?",
-      choices: [
-        "Comfortably Numb by Pink Floyd",
-        "Dream On by Aerosmith",
-        "Bohemian Rhapsody by Queen",
-        "Hotel California by Eagles",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Bohemian Rhapsody by Queen"],
       score: 5,
     },
   ],

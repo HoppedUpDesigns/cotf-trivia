@@ -8,8 +8,8 @@ import { Topic } from ".";
 export const sideProjects: Topic = {
   topic: "Side Projects",
   level: "Beginner",
-  totalQuestions: 40,
-  totalScore: 200,
+  totalQuestions: 30,
+  totalScore: 150,
   totalTime: 3600,
   questions: [
     {
@@ -36,6 +36,19 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Travis Stever"],
+      score: 5,
+    },
+    {
+      question:
+        "What was the name Travis Stever went by in the band Fire Deuce?",
+      choices: [
+        "Cleveland Stever",
+        "Travis Stever",
+        "Boston Strangler",
+        "Yankee Dandy",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Cleveland Stever"],
       score: 5,
     },
     {
@@ -116,23 +129,10 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the name of a band Zach Cooper was in before Coheed and Cambria?",
+        "What is the name of the band Zach Cooper was in before Coheed and Cambria?",
       choices: ["Nirvana", "Afterman", "Inferno", "Life Before This"],
       type: "MCQs",
       correctAnswers: ["Life Before This"],
-      score: 5,
-    },
-    {
-      question:
-        "The Prize Fighter Inferno is a solo project by which member of Coheed and Cambria?",
-      choices: [
-        "Claudio Sanchez",
-        "Travis Stever",
-        "Josh Eppard",
-        "Zach Cooper",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Claudio Sanchez"],
       score: 5,
     },
     {
@@ -189,20 +189,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the title of The Prize Fighter Inferno's second full-length album, released in 2019?",
-      choices: [
-        "The Going Price for Home",
-        "Thief",
-        "In the Clear",
-        "More Better",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Thief"],
-      score: 5,
-    },
-    {
-      question:
-        "The Prize Fighter Inferno's EP 'Gears' was released in 2005. What animated series inspired the song 'Gears'?",
+        "What animated series inspired the  Prize Fighter Inferno song 'Gears'?",
       choices: ["Rick and Morty", "Adventure Time", "The Simpsons", "Futurama"],
       type: "MCQs",
       correctAnswers: ["The Simpsons"],
@@ -214,32 +201,6 @@ export const sideProjects: Topic = {
       choices: ["Banjo", "Accordion", "Mandolin", "Trumpet"],
       type: "MCQs",
       correctAnswers: ["Banjo"],
-      score: 5,
-    },
-    {
-      question:
-        "The Prize Fighter Inferno's EP 'Gears' includes a song with a cover of a classic track. Which song is covered on this EP?",
-      choices: [
-        "Bohemian Rhapsody by Queen",
-        "Dream On by Aerosmith",
-        "Wish You Were Here by Pink Floyd",
-        "Rocket Man by Elton John",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Rocket Man by Elton John"],
-      score: 5,
-    },
-    {
-      question:
-        "The Prize Fighter Inferno's album 'Thief' features a song inspired by a popular video game. Which game is it?",
-      choices: [
-        "The Legend of Zelda",
-        "Final Fantasy",
-        "Super Mario Bros.",
-        "World of Warcraft",
-      ],
-      type: "MCQs",
-      correctAnswers: ["The Legend of Zelda"],
       score: 5,
     },
     {
@@ -257,7 +218,20 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the title of Davenport Cabinet's debut album, released in 2007?",
+        "What is the name of the Prize Fighter Inferno EP that was available to people who ordered the fourth issue of 'Kill Audio'?",
+      choices: [
+        "Beaver Records",
+        "Erizo Schultz",
+        "Who Watches The Watchmen",
+        "The Echomaker",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Beaver Records"],
+      score: 5,
+    },
+    {
+      question:
+        "What is the title of the first album under the Davenport Cabinet name?",
       choices: [
         "Our Machine",
         "Nostalgia in Stereo",
@@ -265,46 +239,7 @@ export const sideProjects: Topic = {
         "Risk and Reward",
       ],
       type: "MCQs",
-      correctAnswers: ["Our Machine"],
-      score: 5,
-    },
-    {
-      question:
-        "In 2013, Davenport Cabinet released an album featuring a song that serves as a sequel to a Coheed and Cambria track. What is the title of this song?",
-      choices: [
-        "The Margretville Dance",
-        "Sons of Belial",
-        "Here's Looking at You, Kid",
-        "Expector",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Sons of Belial"],
-      score: 5,
-    },
-    {
-      question:
-        "Davenport Cabinet's album 'Damned Renegades' includes a song that shares its title with a classic novel. Which novel is it?",
-      choices: [
-        "Moby-Dick",
-        "The Great Gatsby",
-        "To Kill a Mockingbird",
-        "1984",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Moby-Dick"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of the EP released by Davenport Cabinet in 2018?",
-      choices: [
-        "Risks in Magic",
-        "Murmuration",
-        "Live at Dingbatz",
-        "Carousel",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Risks in Magic"],
+      correctAnswers: ["Nostalgia in Stereo"],
       score: 5,
     },
     {
@@ -326,24 +261,11 @@ export const sideProjects: Topic = {
       choices: [
         "Circa Survive",
         "Thank You Scientist",
-        "RX Bandits",
+        "One Small Step For Landmines",
         "The Dear Hunter",
       ],
       type: "MCQs",
-      correctAnswers: ["RX Bandits"],
-      score: 5,
-    },
-    {
-      question:
-        "What is the title of Davenport Cabinet's third full-length album, released in 2021?",
-      choices: [
-        "Our Machine II",
-        "Blessed Shivs",
-        "Curator",
-        "Multitude of Stars",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Multitude of Stars"],
+      correctAnswers: ["One Small Step For Landmines"],
       score: 5,
     },
     {
@@ -402,20 +324,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "In 2013, Weerd Science released an EP containing a song featuring a guest appearance by a member of another band. Who was the guest musician?",
-      choices: [
-        "Claudio Sanchez",
-        "Travis Stever",
-        "Chino Moreno",
-        "Maynard James Keenan",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Chino Moreno"],
-      score: 5,
-    },
-    {
-      question:
-        "Weerd Science's song 'Conspiracy Theories Without Mel Gibson' is part of which EP?",
+        "Weerd Science's song 'Conspiracy Theories w/ out Mel Gibson' is part of which EP?",
       choices: [
         "The Waterfront EP",
         "Sick Kids",
@@ -423,12 +332,12 @@ export const sideProjects: Topic = {
         "Friends and Nervous Breakdowns",
       ],
       type: "MCQs",
-      correctAnswers: ["The Waterfront EP"],
+      correctAnswers: ["Friends and Nervous Breakdowns"],
       score: 5,
     },
     {
       question:
-        "What is the title of Weerd Science's third full-length album, released in 2018?",
+        "What is the title of Weerd Science's third full-length album, released in 2014?",
       choices: [
         "The Waterfront EP",
         "Red Light Juliet",
@@ -436,7 +345,7 @@ export const sideProjects: Topic = {
         "Red Light Juliet Part 2",
       ],
       type: "MCQs",
-      correctAnswers: ["Red Light Juliet Part 2"],
+      correctAnswers: ["Red Light Juliet"],
       score: 5,
     },
     {
@@ -454,32 +363,6 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "In 2019, Weerd Science released a single with a cover of a classic song. Which song did they cover?",
-      choices: [
-        "Bohemian Rhapsody by Queen",
-        "Billie Jean by Michael Jackson",
-        "Dream On by Aerosmith",
-        "The Sound of Silence by Simon & Garfunkel",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Billie Jean by Michael Jackson"],
-      score: 5,
-    },
-    {
-      question:
-        "Weerd Science's EP 'Sick Kids' includes a collaboration with a member of another band. Who is the guest musician?",
-      choices: [
-        "Travis Stever",
-        "Chino Moreno",
-        "Claudio Sanchez",
-        "Maynard James Keenan",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Travis Stever"],
-      score: 5,
-    },
-    {
-      question:
         "What is the title of Weerd Science's second full-length album, released in 2011?",
       choices: [
         "Red Light Juliet",
@@ -488,20 +371,7 @@ export const sideProjects: Topic = {
         "Ruin Your Life",
       ],
       type: "MCQs",
-      correctAnswers: ["Ruin Your Life"],
-      score: 5,
-    },
-    {
-      question:
-        "Weerd Science's song 'Blueprints for Future Homes' is part of which EP?",
-      choices: [
-        "Friends and Nervous Breakdowns",
-        "Sick Kids",
-        "Red Light Juliet",
-        "The Waterfront EP",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Friends and Nervous Breakdowns"],
+      correctAnswers: ["Sick Kids"],
       score: 5,
     },
   ],
