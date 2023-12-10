@@ -416,7 +416,6 @@ export const amory: Topic = {
     score: 5,
   },
   {
-  {
     question: "What was the first graphic series related to the Amory Wars published in 2004?",
     choices: [
       "The Amory Wars: Good Apollo, I'm Burning Star IV",
