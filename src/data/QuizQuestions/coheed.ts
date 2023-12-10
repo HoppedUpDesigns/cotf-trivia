@@ -8,8 +8,8 @@ import { Topic } from ".";
 export const coheed: Topic = {
   topic: "Coheed and Cambria",
   level: "Beginner",
-  totalQuestions: 92,
-  totalScore: 460,
+  totalQuestions: 100,
+  totalScore: 500,
   totalTime: 3600,
   questions: [
     {
@@ -146,40 +146,6 @@ export const coheed: Topic = {
       score: 5,
     },
     {
-      question:
-        "What inspired Claudio Sanchez to create The Amory Wars, the conceptual universe in Coheed and Cambria's albums?",
-      choices: ["A book series", "A dream", "A movie", "A graphic novel"],
-      type: "MCQs",
-      correctAnswers: ["A graphic novel"],
-      score: 5,
-    },
-    {
-      question:
-        "Which Coheed and Cambria album marked a departure from The Amory Wars concept?",
-      choices: [
-        "Year of the Black Rainbow",
-        "The Afterman: Ascension",
-        "The Unheavenly Creatures",
-        "Vaxis - Act I: The Unheavenly Creatures",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Year of the Black Rainbow"],
-      score: 5,
-    },
-    {
-      question:
-        "What song by Coheed and Cambria gained significant mainstream success and radio play?",
-      choices: [
-        "The Crowing",
-        "Welcome Home",
-        "A Favor House Atlantic",
-        "Gravity's Union",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Welcome Home"],
-      score: 5,
-    },
-    {
       question: "What is the name of Coheed and Cambria's official fan club?",
       choices: [
         "The Prize Fighter Inferno",
@@ -210,19 +176,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["A high school friendship"],
-      score: 5,
-    },
-    {
-      question:
-        "Which member of Coheed and Cambria is the primary lyricist and creative force behind The Amory Wars concept?",
-      choices: [
-        "Travis Stever",
-        "Josh Eppard",
-        "Claudio Sanchez",
-        "Zach Cooper",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Claudio Sanchez"],
       score: 5,
     },
     {
@@ -1027,18 +980,161 @@ export const coheed: Topic = {
       correctAnswers: ["Island"],
       score: 5,
     },
-    {
-      question:
-        "Coheed and Cambria's album 'The Color Before the Sun' marks a departure from their concept albums. What inspired Claudio Sanchez to write this album?",
-      choices: [
-        "Personal experiences and emotions",
-        "Science fiction literature",
-        "Classic mythology",
-        "The works of Edgar Allan Poe",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Personal experiences and emotions"],
-      score: 5,
-    },
+  {
+    question: "Who were the founding members of the band Beautiful Loser after Toxic Parents split?",
+    choices: [
+      "Claudio Sanchez, Travis Stever, and Shawna Wirkus",
+      "Claudio Sanchez, Travis Stever, and Nate Kelley",
+      "Claudio Sanchez, Travis Stever, and Jon Carleo",
+      "Claudio Sanchez, Travis Stever, and Michael Todd",
+    ],
+    type: "MCQs",
+    correctAnswers: ["Claudio Sanchez, Travis Stever, and Shawna Wirkus"],
+    score: 5,
+  },
+  {
+    question: "What led to the breakup of the band Beautiful Loser in June 1995?",
+    choices: [
+      "Creative differences",
+      "Argument over gas money",
+      "Lack of interest in music",
+      "Disagreement on the band's name",
+    ],
+    type: "MCQs",
+    correctAnswers: ["Argument over gas money"],
+    score: 5,
+  },
+  {
+    question: "What African tribe chant inspired the band name Shabütie?",
+    choices: [
+      "Maasai",
+      "Zulu",
+      "Himba",
+      "Xhosa",
+    ],
+    type: "MCQs",
+    correctAnswers: ["Maasai"],
+    score: 5,
+  },
+  {
+    question: "Who replaced Jon Carleo on bass when he left the band in August 1996?",
+    choices: [
+      "Nate Kelley",
+      "Michael Todd",
+      "Josh Eppard",
+      "Chris Pennie",
+    ],
+    type: "MCQs",
+    correctAnswers: ["Michael Todd"],
+    score: 5,
+  },
+  {
+    question: "Who made a guest appearance on Coheed and Cambria's first studio album?",
+    choices: [
+      "John A. Hanson",
+      "Claudio Sanchez",
+      "Travis Stever",
+      "Dr. Know",
+    ],
+    type: "MCQs",
+    correctAnswers: ["Dr. Know"],
+    score: 5,
+  },
+  {
+    question: "Who recorded the drums for Coheed and Cambria's fourth studio album?",
+    choices: [
+      "Josh Eppard",
+      "Chris Pennie",
+      "Taylor Hawkins",
+      "Michael Petrak",
+    ],
+    type: "MCQs",
+    correctAnswers: ["Taylor Hawkins"],
+    score: 5,
+  },
+  {
+    question: "Who replaced Josh Eppard and Michael Todd in early November 2006?",
+    choices: [
+      "Matt Williams and Michael Petrak",
+      "Chris Pennie and Taylor Hawkins",
+      "Josh Eppard and Michael Todd",
+      "Zachary Cooper and Chondra Echert",
+    ],
+    type: "MCQs",
+    correctAnswers: ["Matt Williams and Michael Petrak"],
+    score: 5,
+  },
+  {
+    question: "Who joined Coheed and Cambria as its drummer in June 2008?",
+    choices: [
+      "Nate Kelley",
+      "Chris Pennie",
+      "Taylor Hawkins",
+      "Josh Eppard",
+    ],
+    type: "MCQs",
+    correctAnswers: ["Chris Pennie"],
+    score: 5,
+  },
+  {
+    question: "What was the name of the band formed by Claudio Sanchez, Travis Stever, and Shawna Wirkus after Toxic Parents split in March 1995?",
+    choices: [
+      "Beautiful Loser",
+      "Shabütie",
+      "Toxic Trio",
+      "Naked Prey"
+    ],
+    type: "MCQs",
+    correctAnswers: ["Beautiful Loser"],
+    score: 5,
+  },
+  {
+    question: "Which band member left Shabütie after an argument over gas money, leading to the formation of the trio named Shabütie?",
+    choices: [
+      "Claudio Sanchez",
+      "Travis Stever",
+      "Nate Kelley",
+      "Jon Carleo"
+    ],
+    type: "MCQs",
+    correctAnswers: ["Travis Stever"],
+    score: 5,
+  },
+  {
+    question: "What word, meaning 'naked prey' became the name of the trio formed after the breakup of Beautiful Loser?",
+    choices: [
+      "Shabütie",
+      "Toxic",
+      "Prey Trio",
+      "Naked Losers"
+    ],
+    type: "MCQs",
+    correctAnswers: ["Shabütie"],
+    score: 5,
+  },
+  {
+    question: "Which member joined Shabütie in August 1996, replacing Jon Carleo on bass?",
+    choices: [
+      "Michael Todd",
+      "Nate Kelley",
+      "Josh Eppard",
+      "Travis Stever"
+    ],
+    type: "MCQs",
+    correctAnswers: ["Michael Todd"],
+    score: 5,
+  },
+  {
+    question: "What is the name of the manager who started working with Coheed and Cambria in August 2002?",
+    choices: [
+      "Blaze James",
+      "Nick Raskulinecz",
+      "Shawna Wirkus",
+      "Michael Todd"
+    ],
+    type: "MCQs",
+    correctAnswers: ["Blaze James"],
+    score: 5,
+  },
   ],
 };

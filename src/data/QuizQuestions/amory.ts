@@ -8,8 +8,8 @@ import { Topic } from ".";
 export const amory: Topic = {
   topic: "AMORY WARS",
   level: "Beginner",
-  totalQuestions: 32,
-  totalScore: 160,
+  totalQuestions: 42,
+  totalScore: 210,
   totalTime: 3600,
   questions: [
     {
@@ -367,19 +367,19 @@ export const amory: Topic = {
       score: 5,
     },
     {
-      question: "What is the significance of 'The Keywork'?",
+      question: "What is the Keywork?",
       choices: [
         "A weapon",
         "A celestial event",
         "A spaceship",
-        "A source of power",
+        "interconnecting beams of energy",
       ],
       type: "MCQs",
-      correctAnswers: ["A source of power"],
+      correctAnswers: ["interconnecting beams of energy"],
       score: 5,
     },
     {
-      question: "What is the role of 'The Onstantine Priests'?",
+      question: "What is the role of the Onstantine Priests?",
       choices: [
         "Protectors of the Keywork",
         "Cult leaders",
@@ -388,6 +388,108 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Assassins working for Wilhelm Ryan"],
+      score: 5,
+    },
+    questions: [
+  {
+    question: "In The Amory Wars, what is the name of the collection of 78 planets and seven stars held in place by interconnecting beams of energy?",
+    choices: [
+      "Heaven's Fence",
+      "Heavenly Collection",
+      "Keywork",
+      "Magical Nexus"
+    ],
+    type: "MCQs",
+    correctAnswers: ["Heaven's Fence"],
+    score: 5,
+  },
+  {
+    question: "Who is the Supreme Tri-Mage?",
+    choices: [
+      "Claudio Kilgannon",
+      "The Crowing",
+      "Wilhelm Ryan",
+      "Creature"
+    ],
+    type: "MCQs",
+    correctAnswers: ["Wilhelm Ryan"],
+    score: 5,
+  },
+  {
+  {
+    question: "What was the first graphic series related to the Amory Wars published in 2004?",
+    choices: [
+      "The Amory Wars: Good Apollo, I'm Burning Star IV",
+      "The Second Stage Turbine Blade Ultimate Edition",
+      "The Bag.On.Line. Adventures: The Second Stage Turbine Blade",
+      "Evil Ink’s The Amory Wars"
+    ],
+    type: "MCQs",
+    correctAnswers: ["The Bag.On.Line. Adventures: The Second Stage Turbine Blade"],
+    score: 5,
+  },
+  {
+    question: "Who co-wrote the novel included in the deluxe edition of 'Year of the Black Rainbow'?",
+    choices: [
+      "Wes Abbott",
+      "Christopher Shy",
+      "Peter David",
+      "Claudio Sanchez"
+    ],
+    type: "MCQs",
+    correctAnswers: ["Peter David"],
+    score: 5,
+  },
+    {
+      question: "Who rules over humankind in Heaven's Fence?",
+      choices: ["Wilhelm Ryan", "Mariah", "Mayo Deftinwolf", "Claudio Sanchez"],
+      type: "MCQs",
+      correctAnswers: ["Wilhelm Ryan"],
+      score: 5,
+    },
+    {
+      question: "Who illustrated The Amory Wars: The Second Stage Turbine Blade?",
+      choices: [
+        "Wes Abbott",
+        "Gus Vasquez and Mike S. Miller",
+        "Gabriel Guzman",
+        "Dave Hamann"
+      ],
+      type: "MCQs",
+      correctAnswers: ["Dave Hamann"],
+      score: 5,
+    },
+    {
+      question: "What virus were Coheed and Cambria unknowingly implanted with?",
+      choices: [
+        "Sinstar",
+        "Telekinetic",
+        "Monstar",
+        "Omnipotent"
+      ],
+      type: "MCQs",
+      correctAnswers: ["Monstar"],
+      score: 5,
+    },
+    {
+      question: "What was the name given to Cambria, Coheed, and Inferno?",
+      choices: ["K.B.I.", "Red Army", "Sinstar", "The Prise"],
+      type: "MCQs",
+      correctAnswers: ["K.B.I."],
+      score: 5,
+    },
+    {
+      question: "How many sectors are there in Heaven's Fence?",
+      choices: ["4", "12", "11", "10"],
+      type: "MCQs",
+      correctAnswers: ["12"],
+      score: 5,
+    },
+    {
+      question: "On December 2, 2012, who announced he would be producing a film adaptation of The Amory Wars?",
+      choices: ["Peter David", "Christopher Nolan", "Dwayne Johnson", "Mark Wahlberg"],
+      type: "MCQs",
+      correctAnswers: ["Mark Wahlberg"],
       score: 5,
     },
   ],
