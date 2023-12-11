@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.32f784cd.css",
-    "main.js": "/static/js/main.a3f380c5.js",
+    "main.js": "/static/js/main.eb06b3c1.js",
     "static/js/787.caaf11a9.chunk.js": "/static/js/787.caaf11a9.chunk.js",
     "static/media/anek-malayalam-v4-malayalam-700.woff": "/static/media/anek-malayalam-v4-malayalam-700.c6ce627cd72c475d46cb.woff",
     "static/media/anek-malayalam-v4-malayalam-600.woff": "/static/media/anek-malayalam-v4-malayalam-600.8a1553bb42261d2beb5b.woff",
@@ -28,11 +28,11 @@
     "index.html": "/index.html",
     "static/media/start.svg": "/static/media/start.0085dec5cb635e6a4b0b73a507947989.svg",
     "main.32f784cd.css.map": "/static/css/main.32f784cd.css.map",
-    "main.a3f380c5.js.map": "/static/js/main.a3f380c5.js.map",
+    "main.eb06b3c1.js.map": "/static/js/main.eb06b3c1.js.map",
     "787.caaf11a9.chunk.js.map": "/static/js/787.caaf11a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32f784cd.css",
-    "static/js/main.a3f380c5.js"
+    "static/js/main.eb06b3c1.js"
   ]
 }

@@ -181,9 +181,9 @@ export const coheed: Topic = {
     {
       question:
         "In what city did Claudio Sanchez and Travis Stever form the band Coheed and Cambria?",
-      choices: ["New York City", "Boston", "Los Angeles", "Seattle"],
+      choices: ["Nyack", "Boston", "Los Angeles", "Seattle"],
       type: "MCQs",
-      correctAnswers: ["New York City"],
+      correctAnswers: ["Nyack"],
       score: 5,
     },
     {
@@ -418,7 +418,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "During the recording of 'In Keeping Secrets of Silent Earth: 3,' which member of the band temporarily left, leading to Chris Pennie joining the band?",
+        "During the recording of 'Year of the Black Rainbow,' which member of the band temporarily left, leading to Chris Pennie joining the band?",
       choices: [
         "Josh Eppard",
         "Travis Stever",
@@ -457,15 +457,15 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which influential progressive rock band did Coheed and Cambria tour with, helping them gain early exposure?",
-      choices: ["Rush", "Genesis", "Yes", "Pink Floyd"],
+        "What music festival did Coheed and Cambria headline in 2008?",
+      choices: ["Coachella", "Burning Man", "Lollapalooza", "Bamboozle"],
       type: "MCQs",
-      correctAnswers: ["The Used"],
+      correctAnswers: ["Bamboozle"],
       score: 5,
     },
     {
       question:
-        "In 2006, Coheed and Cambria released a limited-edition graphic novel accompanying which album?",
+        "In 2005, Coheed and Cambria released a limited-edition graphic novel accompanying which album?",
       choices: [
         "Good Apollo, I'm Burning Star IV",
         "In Keeping Secrets of Silent Earth: 3",
@@ -590,15 +590,15 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2020, Coheed and Cambria released an album with a unique concept inspired by the Apollo space program. What is the title of this album?",
+        "What year was Live at the Starland Ballroom released?",
       choices: [
-        "The Afterman: Ascension",
-        "Vaxis - Act I: The Unheavenly Creatures",
-        "Year of the Black Rainbow",
-        "The Unheavenly Creatures",
+        "2006",
+        "2003",
+        "2005",
+        "2004",
       ],
       type: "MCQs",
-      correctAnswers: ["Vaxis - Act I: The Unheavenly Creatures"],
+      correctAnswers: ["2005"],
       score: 5,
     },
     {
@@ -799,7 +799,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Coheed and Cambria released a live album in 2019, capturing performances from their 'Neverender' tour. What is the title of this live album?",
+        "Coheed and Cambria released a live album in 2009, capturing performances from their 'Neverender' tour. What is the title of this live album?",
       choices: [
         "The Unheavenly Creatures Tour: Live",
         "Neverender: Children of the Fence Edition",
