@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/data/quizTopics.tsx */
+
 import { ReactNode } from 'react'
 import { ReactComponent as JavaScript } from '../assets/icons/javascript.svg'
 import { ReactComponent as Python } from '../assets/icons/python.svg'

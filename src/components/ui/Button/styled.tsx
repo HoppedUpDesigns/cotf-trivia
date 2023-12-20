@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/components/ui/Button/styled.tsx */
+
 import styled from 'styled-components'
 import { device } from '../../../styles/BreakPoints'
 interface ButtonType {

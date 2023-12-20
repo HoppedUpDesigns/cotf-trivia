@@ -1,9 +1,9 @@
+/* Here is the code for the file cotf/src/components/QuestionScreen/Question/index.tsx */
+
 import { FC } from 'react'
 import styled from 'styled-components'
 
 import { device } from '../../../styles/BreakPoints'
-
-import CodeSnippet from '../../ui/CodeSnippet'
 import Answer from '../Answer'
 import QuizImage from '../../ui/QuizImage'
 
@@ -33,7 +33,6 @@ const QuestionStyle = styled.h2`
 
 interface QuestionTypes {
   question: string
-  code?: string
   image?: string
   type: string
   choices: string[]
@@ -43,7 +42,6 @@ interface QuestionTypes {
 
 const Question: FC<QuestionTypes> = ({
   question,
-  code,
   image,
   type,
   choices,
@@ -53,8 +51,6 @@ const Question: FC<QuestionTypes> = ({
   return (
     <QuestionContainer>
       <QuestionStyle>{question}</QuestionStyle>
-      {/* if question contains code snippet then show code */}
-      {code && <CodeSnippet code={code} language="javascript" />}
       {/* if question contains an image */}
       {image && <QuizImage image={image} />}
       <AnswersContainer>

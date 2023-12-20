@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/styles/BreakPoints.ts */
+
 interface Size {
   xs: string
   sm: string

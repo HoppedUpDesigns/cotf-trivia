@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/styles/Theme.ts */
+
 import { Theme } from './styled'
 
 export const themes: Record<string, Theme> = {

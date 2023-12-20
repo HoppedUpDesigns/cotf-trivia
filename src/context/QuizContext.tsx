@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/context/QuizContext.tsx */
+
 import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
 
 import { quiz } from '../data/QuizQuestions'

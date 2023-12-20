@@ -1,3 +1,5 @@
+/* Here is the code for file cotf/src/App.tsx */
+
 import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 

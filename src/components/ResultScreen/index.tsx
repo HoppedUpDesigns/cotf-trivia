@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/components/ResultsScreen/index.tsx */
+
 import { FC } from 'react'
 import styled, { css } from 'styled-components'
 
@@ -8,7 +10,6 @@ import { Flex, LogoContainer, ResizableBox } from '../../styles/Global'
 import { refreshPage } from '../../utils/helpers'
 
 import Button from '../ui/Button'
-import CodeSnippet from '../ui/CodeSnippet'
 import QuizImage from '../ui/QuizImage'
 import ResultOverview from './ResultOverview'
 import RightAnswer from './RightAnswer'
@@ -137,7 +138,6 @@ const ResultScreen: FC = () => {
             {
               question,
               choices,
-              code,
               image,
               correctAnswers,
               selectedAnswer,
@@ -154,7 +154,6 @@ const ResultScreen: FC = () => {
                     <QuestionStyle>{question}</QuestionStyle>
                   </Flex>
                   <div>
-                    {code && <CodeSnippet code={code} language="javascript" />}
                     {image && <QuizImage image={image} />}
                     <ul>
                       {choices.map((ans: string, index: number) => {

@@ -1,3 +1,4 @@
+/* Here is the code for the file cotf/src/components/Main/index.tsx */
 import { useEffect } from 'react'
 
 import { useQuiz } from '../../context/QuizContext'

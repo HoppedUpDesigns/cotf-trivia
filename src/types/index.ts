@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/types/index.ts */
+
 import { Dispatch, SetStateAction } from 'react'
 import { Question } from '../data/QuizQuestions'
 

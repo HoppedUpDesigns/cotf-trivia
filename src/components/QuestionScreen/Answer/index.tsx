@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/components/QuestionScreen/Answer/index.tsx */
+
 import { FC } from 'react'
 import styled, { css } from 'styled-components'
 import { device } from '../../../styles/BreakPoints'

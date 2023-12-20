@@ -29,7 +29,7 @@ export const amory: Topic = {
       question: "What is the name of Dr. Sirius Amory's wife?",
       choices: ["Mirriam", "Meri", "Mandy", "Martha"],
       type: "MCQs",
-      correctAnswers: ["The United Sentry States"],
+      correctAnswers: ["Meri"],
       score: 5,
     },
     {
@@ -320,7 +320,7 @@ export const amory: Topic = {
         "Ambellina",
         "Mariah",
         "Meriwell",
-        "Erica Court,",
+        "Erica Court",
       ],
       type: "MCQs",
       correctAnswers: ["Erica Court,"],

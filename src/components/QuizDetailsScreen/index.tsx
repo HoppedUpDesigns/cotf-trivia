@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/components/QuizDetailsScreen/index.tsx */
+
 import styled from 'styled-components'
 
 import { AppLogo, StartIcon } from '../../config/icons'

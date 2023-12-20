@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/components/QuestionScreen/QuizHeader/Counter/index.tsx */
+
 import { FC } from 'react'
 import styled from 'styled-components'
 

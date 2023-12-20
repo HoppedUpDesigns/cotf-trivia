@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/hooks/useTimer.ts */
+
 import { Dispatch, SetStateAction, useEffect } from 'react'
 
 interface QuizDetails {

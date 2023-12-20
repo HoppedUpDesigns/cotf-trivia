@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/components/ui/Button/index.tsx */
+
 import { FC, ReactNode } from 'react'
 import { ButtonStyle, IconLeft, IconRight } from './styled'
 

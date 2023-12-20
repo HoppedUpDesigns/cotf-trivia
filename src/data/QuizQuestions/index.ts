@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/data/QuizQuestions/index.ts */
+
 import { neverender } from './neverender'
 import { amory } from './amory'
 import { sideProjects } from './sideProjects'

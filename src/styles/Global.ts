@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/styles/Global.ts */
+
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { device } from './BreakPoints'
 import fontsCss from './fonts.module.css'

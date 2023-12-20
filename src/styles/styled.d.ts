@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/styles/styled.d.ts */
+
 // import original module declarations
 import 'styled-components'
 

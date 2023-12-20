@@ -1,17 +1,19 @@
-import { FC, useEffect, useState } from 'react'
-import styled from 'styled-components'
+/* Here is the code for the file cotf/src/components/QuestionScreen/index.tsx */
 
-import { AppLogo, CheckIcon, Next, TimerIcon } from '../../config/icons'
-import { useQuiz } from '../../context/QuizContext'
-import { useTimer } from '../../hooks'
-import { device } from '../../styles/BreakPoints'
-import { PageCenter } from '../../styles/Global'
-import { ScreenTypes } from '../../types'
+import { FC, useEffect, useState } from "react";
+import styled from "styled-components";
 
-import Button from '../ui/Button'
-import ModalWrapper from '../ui/ModalWrapper'
-import Question from './Question'
-import QuizHeader from './QuizHeader'
+import { AppLogo, CheckIcon, Previous, Next, TimerIcon } from "../../config/icons";
+import { useQuiz } from "../../context/QuizContext";
+import { useTimer } from "../../hooks";
+import { device } from "../../styles/BreakPoints";
+import { PageCenter } from "../../styles/Global";
+import { ScreenTypes } from "../../types";
+
+import Button from "../ui/Button";
+import ModalWrapper from "../ui/ModalWrapper";
+import Question from "./Question";
+import QuizHeader from "./QuizHeader";
 
 const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
   width: 900px;
@@ -30,12 +32,14 @@ const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
       svg {
         path {
           fill: ${({ selectedAnswer, theme }) =>
-            selectedAnswer ? `${theme.colors.buttonText}` : `${theme.colors.darkGray}`};
+            selectedAnswer
+              ? `${theme.colors.buttonText}`
+              : `${theme.colors.darkGray}`};
         }
       }
     }
   }
-`
+`;
 
 const LogoContainer = styled.div`
   margin-top: 50px;
@@ -48,7 +52,7 @@ const LogoContainer = styled.div`
       height: 80px;
     }
   }
-`
+`;
 
 const ButtonWrapper = styled.div`
   position: absolute;
@@ -61,13 +65,13 @@ const ButtonWrapper = styled.div`
     width: 90%;
     right: 15px;
   }
-`
+`;
 
 const QuestionScreen: FC = () => {
-  const [activeQuestion, setActiveQuestion] = useState<number>(0)
-  const [selectedAnswer, setSelectedAnswer] = useState<string[]>([])
-  const [showTimerModal, setShowTimerModal] = useState<boolean>(false)
-  const [showResultModal, setShowResultModal] = useState<boolean>(false)
+  const [activeQuestion, setActiveQuestion] = useState<number>(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<string[]>([]);
+  const [showTimerModal, setShowTimerModal] = useState<boolean>(false);
+  const [showResultModal, setShowResultModal] = useState<boolean>(false);
 
   const {
     questions,
@@ -79,75 +83,92 @@ const QuestionScreen: FC = () => {
     timer,
     setTimer,
     setEndTime,
-  } = useQuiz()
+  } = useQuiz();
 
-  const currentQuestion = questions[activeQuestion]
+  const currentQuestion = questions[activeQuestion];
 
-  const { question, type, choices, code, image, correctAnswers } = currentQuestion
+  const { question, type, choices, image, correctAnswers } =
+    currentQuestion;
 
   const onClickNext = () => {
     const isMatch: boolean =
       selectedAnswer.length === correctAnswers.length &&
-      selectedAnswer.every((answer) => correctAnswers.includes(answer))
+      selectedAnswer.every((answer) => correctAnswers.includes(answer));
 
     // adding selected answer, and if answer matches key to result array with current question
-    setResult([...result, { ...currentQuestion, selectedAnswer, isMatch }])
+    setResult([...result, { ...currentQuestion, selectedAnswer, isMatch }]);
 
     if (activeQuestion !== questions.length - 1) {
-      setActiveQuestion((prev) => prev + 1)
+      setActiveQuestion((prev) => prev + 1);
     } else {
       // how long does it take to finish the quiz
-      const timeTaken = quizDetails.totalTime - timer
-      setEndTime(timeTaken)
-      setShowResultModal(true)
+      const timeTaken = quizDetails.totalTime - timer;
+      setEndTime(timeTaken);
+      setShowResultModal(true);
     }
-    setSelectedAnswer([])
-  }
+    setSelectedAnswer([]);
+  };
 
   const handleAnswerSelection = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target
+    const { name, checked } = e.target;
 
-    if (type === 'MAQs') {
+    if (type === "MAQs") {
       if (selectedAnswer.includes(name)) {
         setSelectedAnswer((prevSelectedAnswer) =>
           prevSelectedAnswer.filter((element) => element !== name)
-        )
+        );
       } else {
-        setSelectedAnswer((prevSelectedAnswer) => [...prevSelectedAnswer, name])
+        setSelectedAnswer((prevSelectedAnswer) => [
+          ...prevSelectedAnswer,
+          name,
+        ]);
       }
     }
 
-    if (type === 'MCQs' || type === 'boolean') {
+    if (type === "MCQs" || type === "boolean") {
       if (checked) {
-        setSelectedAnswer([name])
+        setSelectedAnswer([name]);
       }
     }
-  }
+  };
+
+    const onClickPrevious = () => {
+    if (activeQuestion > 0) {
+      setActiveQuestion(activeQuestion - 1);
+    }
+  };
 
   const handleSkipQuestion = () => {
     const filterQuestion = questions.filter(
       (item) => item.question !== currentQuestion.question
-    )
+    );
 
     // in case of skip question add current questions to the end of questions array, with skipped key
-    setQuestions([...filterQuestion, { ...currentQuestion, skipped: true }])
-    setSelectedAnswer([])
-  }
+    setQuestions([...filterQuestion, { ...currentQuestion, skipped: true }]);
+    setSelectedAnswer([]);
+  };
 
   const handleModal = () => {
-    setCurrentScreen(ScreenTypes.ResultScreen)
-    document.body.style.overflow = 'auto'
-  }
+    setCurrentScreen(ScreenTypes.ResultScreen);
+    document.body.style.overflow = "auto";
+  };
 
   // to prevent scrolling when modal is opened
   useEffect(() => {
     if (showTimerModal || showResultModal) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     }
-  }, [showTimerModal, showResultModal])
+  }, [showTimerModal, showResultModal]);
 
   // timer hooks, handle conditions related to time
-  useTimer(timer, quizDetails, setEndTime, setTimer, setShowTimerModal, showResultModal)
+  useTimer(
+    timer,
+    quizDetails,
+    setEndTime,
+    setTimer,
+    setShowTimerModal,
+    showResultModal
+  );
 
   return (
     <PageCenter>
@@ -163,7 +184,6 @@ const QuestionScreen: FC = () => {
         />
         <Question
           question={question}
-          code={code}
           image={image}
           choices={choices}
           type={type}
@@ -171,11 +191,19 @@ const QuestionScreen: FC = () => {
           selectedAnswer={selectedAnswer}
         />
         <ButtonWrapper>
+          <Button
+            text={"Previous"} 
+            onClick={onClickPrevious} 
+            icon={<Previous />} 
+            iconPosition="left" 
+            disabled={activeQuestion === 0} 
+          />
+
           {!currentQuestion?.skipped && (
             <Button text="Skip" onClick={handleSkipQuestion} outline />
           )}
           <Button
-            text={activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
+            text={activeQuestion === questions.length - 1 ? "Finish" : "Next"}
             onClick={onClickNext}
             icon={<Next />}
             iconPosition="right"
@@ -186,7 +214,7 @@ const QuestionScreen: FC = () => {
       {/* timer or finish quiz modal*/}
       {(showTimerModal || showResultModal) && (
         <ModalWrapper
-          title={showResultModal ? 'Done!' : 'Your time is up!'}
+          title={showResultModal ? "Done!" : "Your time is up!"}
           subtitle={`You have attempted ${result.length} questions in total.`}
           onClick={handleModal}
           icon={showResultModal ? <CheckIcon /> : <TimerIcon />}
@@ -194,7 +222,7 @@ const QuestionScreen: FC = () => {
         />
       )}
     </PageCenter>
-  )
-}
+  );
+};
 
-export default QuestionScreen
+export default QuestionScreen;

@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/components/SplashScreen/index.tsx */
+
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 

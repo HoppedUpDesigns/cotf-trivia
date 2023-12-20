@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/utils/helper.ts */
+
 export const addLeadingZero = (number: number) => {
   if (number > 9) {
     return number

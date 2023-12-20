@@ -1,3 +1,5 @@
+/* Here is the code for file cotf/src/reportWebVitals.ts */
+
 import { ReportHandler } from 'web-vitals';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {

@@ -1,3 +1,5 @@
+/* Here is the code for the file cotf/src/components/ui/ToggleTheme/index.tsx */
+
 import React, { FC } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Moon, Sun } from '../../../config/icons'
