@@ -1,6 +1,6 @@
-# Xeven Quiz - ReactJS Quiz App Template Code Documentations
+# cotf Quiz App - ReactJS Quiz App Template Code Documentations
 
-Welcome to the Code Quiz App documentation! This guide will walk you through the steps to start using and customizing the app according to your needs. The Code Quiz App is designed to help you create interactive quizzes with various question types, including Multiple Choice Questions (MCQs), Multiple Answer Questions (MAQs), and True/False questions.
+Welcome to the cotf Quiz App documentation! This guide will walk you through the steps to start using and customizing the app according to your needs. The Code Quiz App is designed to help you create interactive quizzes with various question types, including Multiple Choice Questions (MCQs), Multiple Answer Questions (MAQs), and True/False questions.
 
 ## Demo App
 
@@ -23,7 +23,7 @@ Understanding the folder structure is essential for working with the app. Here's
 
 - **assets**: Contains all the app's assets, such as fonts, icons, and images
 - **components**: Contains all the components of app
-- **components/UI**: Contains reusable UI components of app
+- **components/ui**: Contains reusable ui components of app
 - **context**: Includes a context for sharing logic across the app
 - **styles**: Contains styles and their configurations using Styled Components
 - **hooks**: Includes reusable hooks used in the app
@@ -34,7 +34,7 @@ Understanding the folder structure is essential for working with the app. Here's
 
 ### Components Architecture
 
-The **Xeven Quiz App** consists of 5 main screens/components that are displayed conditionally:
+The ** cotf Quiz App** consists of 5 main screens/components that are displayed conditionally:
 
 1. Splash Screen
 2. Quiz Topics Screen
@@ -163,19 +163,9 @@ export default Main
 
 Each question supports a **`code`** key, which is conditionally shown only if the question contains a code snippet.
 
-### How to format code snippet
-
-In the Xeven Quiz App, code snippets are pieces of code represented as text. To make them look nice and readable, we use an npm package called **`prismjs`**. This tool highlights the code with different colors so that it stands out and is easy to understand.
-
-To display code correctly, we need to pay attention to the spaces and how the code is structured, just like we do with the existing questions. This way, the code will appear neatly formatted and will be easier for users to read and comprehend.
-
-Here's an example image to illustrate the correct format for displaying code snippets:
-
-![code-snippet-format.png](./src/assets/images/code-snippet-format.png)
-
 ### **Implementing Different Types of Quiz Questions**
 
-The Code Quiz App supports various types of quiz questions, including Multiple Choice Questions (MCQs), Multiple Answer Questions (MAQs), and True/False questions. To add different question types, you can modify the question components and their associated data structures. You can refer to the existing question formats in the **`data/QuizQuestions`** folder as examples when creating new questions.
+The cotf Quiz App supports various types of quiz questions, including Multiple Choice Questions (MCQs), Multiple Answer Questions (MAQs), and True/False questions. To add different question types, you can modify the question components and their associated data structures. You can refer to the existing question formats in the **`data/QuizQuestions`** folder as examples when creating new questions.
 
 For example, if you want to create a Multiple Choice Question (MCQ), you need to set its **`type`** to **`MCQs`** in the question data. Similarly, for a Multiple Answer Question (MAQ), set the **`type`** to **`MAQs`**, and for a True/False question, set it to the appropriate type as well.
 
@@ -183,25 +173,4 @@ For example, if you want to create a Multiple Choice Question (MCQ), you need to
 
 ### **Important Note**
 
-Before making the Code Quiz App your own, remember to customize the meta and title tags in the **`index.html`** file, as well as the logo, preview image, and favicon image in the **`public`** folder. This ensures that the app reflects your branding and identity.
-
-## **Deploying the Quiz App to a Production Environment**
-
-To share your quiz app with the world, you need to deploy it on a server that supports single-page applications or the React ecosystem. Here are some popular options for deploying your app:
-
-1. Digital Ocean
-2. Vercel
-3. Netlify
-4. AWS Amplify
-
-Choose the one that best suits your needs and follow their deployment instructions to make your app accessible to users.
-
-### What to expect in next update?
-
-The next app update, scheduled for September 2023, will bring exciting new features and improvements:
-
-1. Dark mode support.
-2. Image support in Quiz Questions.
-3. Faster Typography with Typography Styled components
-
-I hope this documentation helps you get started with the Xeven Quiz App. If you have any questions or feedback, please feel free to reach out to me at **[abdul_basit313@outlook.com](mailto:abdul_basit313@outlook.com)**. Happy quizzing!
+Before making the cotf Quiz App your own, remember to customize the meta and title tags in the **`index.html`** file, as well as the logo, preview image, and favicon image in the **`public`** folder. This ensures that the app reflects your branding and identity.
