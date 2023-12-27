@@ -1,14 +1,14 @@
-# cotf Quiz App - ReactJS Quiz App Template Code Documentations
+# COTF Trivia Quiz App - ReactJS Quiz App Template Code Documentations
 
-Welcome to the cotf Quiz App documentation! This guide will walk you through the steps to start using and customizing the app according to your needs. The Code Quiz App is designed to help you create interactive quizzes with various question types, including Multiple Choice Questions (MCQs), Multiple Answer Questions (MAQs), and True/False questions.
+Welcome to the COTF Trivia Quiz App documentation! This guide will walk you through the steps to start using and customizing the app according to your needs. The Code Quiz App is designed to help you create interactive quizzes with various question types, including Multiple Choice Questions (MCQs), Multiple Answer Questions (MAQs), and True/False questions.
 
 ## Demo App
 
-To experience the Demo App, visit the link: https://xeven-quiz.vercel.app/
+To experience the Demo App, visit the link: https://cotf-trivia-4644c.web.app/
 
-## **How to Start a Project**
+## ** How to Start a Project **
 
-To start the project, follow these steps:
+To start a new project, follow these steps:
 
 1. Download and extract the zip file containing the project.
 2. Open the terminal and navigate to the project directory.
@@ -18,8 +18,6 @@ To start the project, follow these steps:
 ### Folder Structure Explanation
 
 Understanding the folder structure is essential for working with the app. Here's an overview of the main folders:
-
-![quiz-app-folder-structure.png](./src/assets/images/quiz-app-folder-structure.png)
 
 - **assets**: Contains all the app's assets, such as fonts, icons, and images
 - **components**: Contains all the components of app
@@ -34,7 +32,7 @@ Understanding the folder structure is essential for working with the app. Here's
 
 ### Components Architecture
 
-The ** cotf Quiz App** consists of 5 main screens/components that are displayed conditionally:
+The ** COTF Trivia Quiz App** consists of 5 main screens/components that are displayed conditionally:
 
 1. Splash Screen
 2. Quiz Topics Screen
@@ -42,11 +40,11 @@ The ** cotf Quiz App** consists of 5 main screens/components that are displayed 
 4. Questions Screen
 5. Result Screen
 
-The screens are organized in the **`components`** folder since the app does not utilize routing. If a component is reusable and can be used in multiple places within the app (e.g., Button, ModalWrapper, and CodeSnippet), it is placed in the **`components/UI`** folder. On the other hand, if a component is screen-specific and separated just to make other components smaller and more manageable, it is placed in the relevant components folder. For example, the components `**QuizHeader**`, `**Question**`, and `**Answer**` are inside the **`QuestionScreen`** folder.
+The screens are organized in the **`components`** folder since the app does not utilize routing. If a component is reusable and can be used in multiple places within the app (e.g., Button, ModalWrapper, and CodeSnippet), it is placed in the **`components/ui`** folder. On the other hand, if a component is screen-specific and separated just to make other components smaller and more manageable, it is placed in the relevant components folder. For example, the components `**QuizHeader**`, `**Question**`, and `**Answer**` are inside the **`QuestionScreen`** folder.
 
 ## How to customize the quiz layout and styling
 
-### **Changing the App Theme**
+### ** Changing the App Theme **
 
 To change the theme of the app, follow these steps:
 
@@ -63,7 +61,7 @@ To change the font of the app, follow these steps:
 4. Go to the **`theme`** file and change the font name.
 5. Go to the global styles and update the font in the **`body`** section.
 
-### **Modifying the Quiz Topic Screen or Adding New Categories**
+### ** Modifying the Quiz Topic Screen or Adding New Categories **
 
 To modify the Quiz Topics Screen or add new categories of topics/icons, follow these steps:
 
@@ -76,18 +74,18 @@ For example
 ```jsx
 export const quizTopics: QuizTopic[] = [
   {
-    title: 'React', // match topic value with this line
-    icon: <ReactIcon />,
+    title: 'AMORY WARS', // match topic value with this line
+    icon: <Coheed />, // match icon for this quiz topic here
   },
   {
-    title: 'JavaScript', // match topic value with this line
-    icon: <JavaScript />,
+    title: 'Side Projects', // match topic value with this line
+    icon: <Coheed />, // match icon for this quiz topic here
   },
   ....
 ]
 
-export const javascript: Topic = {
-  topic: 'Javascript', // match value with topic key
+export const coheed: Topic = {
+  topic: 'Coheed and Cambria', // match value with topic key
   level: 'Beginner',
   totalQuestions: 14,
   .....
@@ -98,11 +96,11 @@ export const javascript: Topic = {
 
 This app is designed with scalability in mind, allowing you to easily add new screens. Here's how you can add a new screen, such as a "Quiz Types" screen (where you can select quiz type for example individual question timer, with or without timer):
 
-**Step 1: Create a component**
+### ** Step 1: Create a component **
 
 Create a new component called **`QuizType`** in the **`components`** folder.
 
-**Step 2: Update the Main component**
+### ** Step 2: Update the Main component **
 
 Go to the main components file (**`Main/index.ts`**) and render the **`QuizType`** screen in the **`screenComponents`** section/object. Don't forget to add the screen name in the typescript **`screenTypes`** as well.
 
@@ -159,18 +157,14 @@ function Main() {
 export default Main
 ```
 
-### **How to Add Code Snippets in Questions**
+### ** Implementing Different Types of Quiz Questions **
 
-Each question supports a **`code`** key, which is conditionally shown only if the question contains a code snippet.
-
-### **Implementing Different Types of Quiz Questions**
-
-The cotf Quiz App supports various types of quiz questions, including Multiple Choice Questions (MCQs), Multiple Answer Questions (MAQs), and True/False questions. To add different question types, you can modify the question components and their associated data structures. You can refer to the existing question formats in the **`data/QuizQuestions`** folder as examples when creating new questions.
+The COTF Trivia Quiz App supports various types of quiz questions, including Multiple Choice Questions (MCQs), Multiple Answer Questions (MAQs), and True/False questions. To add different question types, you can modify the question components and their associated data structures. You can refer to the existing question formats in the **`data/QuizQuestions`** folder as examples when creating new questions.
 
 For example, if you want to create a Multiple Choice Question (MCQ), you need to set its **`type`** to **`MCQs`** in the question data. Similarly, for a Multiple Answer Question (MAQ), set the **`type`** to **`MAQs`**, and for a True/False question, set it to the appropriate type as well.
 
 **Remember:** For MAQs, users can select multiple answer options, while for MCQs and True/False questions, users can select only one option. Make sure to set the correct **`type`** to match the question's behavior accordingly.
 
-### **Important Note**
+### ** Important Note **
 
-Before making the cotf Quiz App your own, remember to customize the meta and title tags in the **`index.html`** file, as well as the logo, preview image, and favicon image in the **`public`** folder. This ensures that the app reflects your branding and identity.
+Before making the COTF Trivia Quiz App your own, remember to customize the meta and title tags in the **`index.html`** file, as well as the logo, preview image, and favicon image in the **`public`** folder. This ensures that the app reflects your branding and identity.
