@@ -20,7 +20,6 @@ const initialState: QuizContextTypes = {
   setEndTime: () => {},
   quizDetails: {
     totalQuestions: 0,
-    totalScore: 0,
     totalTime: 0,
     selectedQuizTopic: 'Coheed and Cambria',
   },
@@ -51,7 +50,6 @@ const QuizProvider = ({ children }: QuizProviderProps) => {
     questions: quizQuestions,
     totalQuestions,
     totalTime,
-    totalScore,
   } = quiz[quizTopic]
 
   const selectQuizTopic = (topic: string) => {
@@ -65,7 +63,6 @@ const QuizProvider = ({ children }: QuizProviderProps) => {
 
   const quizDetails = {
     totalQuestions,
-    totalScore,
     totalTime,
     selectedQuizTopic: quizTopic,
   }

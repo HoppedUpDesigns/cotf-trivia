@@ -1,0 +1,44 @@
+Here is the code for the |-- /src |-- /data |-- |-- /QuizQuestions file: 
+
+
+
+Here is how the questions in the /src/data/QuizQuestions/amory.ts, coheed.ts, sideProjects.ts, and neverender.ts files are formated:
+// Question Types
+// 1. MCQs | Multiple Choice | single
+// 2. boolean | true/false | single
+// 3. MAQs | Multiple Answers | multiple
+
+import { Topic } from ".";
+
+export const topic: Topic = {
+  topic: "QUIZ TOPIC GOES HERE",
+  questions: [
+    {
+      question:
+        "QUESTION TO BE ASKED GOES HERE?",
+      choices: [
+        "ANSWER CHOICE 1",
+        "ANSWER CHOICE 2",
+        "ANSWER CHOICE 3",
+        "ANSWER CHOICE 4",
+      ],
+      type: "MCQs",
+      correctAnswers: ["ANSWER GOES HERE"],
+    },
+    {
+      question: 'QUESTION TO BE ASKED GOES HERE?.',
+      choices: ['True', 'False'],
+      type: 'boolean',
+      correctAnswers: ['ANSWER GOES HERE'],
+      score: 5,
+    },
+    {
+      question:
+        'QUESTION TO BE ASKED GOES HERE? (Select all that apply)',
+      choices: ['ANSWER CHOICE 1', 'ANSWER CHOICE 2', 'ANSWER CHOICE 3', 'ANSWER CHOICE 4'],
+      type: 'MAQs',
+      correctAnswers: ['CORRECT ANSWER 1 GOES HERE', 'CORRECT ANSWER 2 GOES HERE', 'CORRECT ANSWER 3 GOES HERE'],
+      score: 5,
+    },
+   ],
+};

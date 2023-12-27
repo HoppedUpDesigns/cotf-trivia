@@ -7,9 +7,7 @@ import { Topic } from ".";
 
 export const amory: Topic = {
   topic: "AMORY WARS",
-  level: "Beginner",
   totalQuestions: 40,
-  totalScore: 200,
   totalTime: 3600,
   questions: [
     {
@@ -23,14 +21,12 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Narrows"],
-      score: 5,
     },
     {
       question: "What is the name of Dr. Sirius Amory's wife?",
       choices: ["Mirriam", "Meri", "Mandy", "Martha"],
       type: "MCQs",
       correctAnswers: ["Meri"],
-      score: 5,
     },
     {
       question: "What are the names of Coheed and Cambria's twins?",
@@ -42,35 +38,30 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Matthew and Maria"],
-      score: 5,
     },
     {
       question: "How did Coheed kill his youngest children?",
-      choices: ["poisoned them", "chocked them", "shot them", "drowned them"],
+      choices: ["Poisoned Them", "Chocked Them", "Shot Them", "Drowned Them"],
       type: "MCQs",
-      correctAnswers: ["poisoned them"],
-      score: 5,
+      correctAnswers: ["Poisoned Them"],
     },
     {
       question: "How did Coheed kill his oldest child?",
-      choices: ["bullet to the head", "hammer blow to the head", "burned her to death", "drowned her"],
+      choices: ["Bullet To The Head", "Hammer Blow To The Head", "Burned Her To Eeath", "Drowned Her"],
       type: "MCQs",
-      correctAnswers: ["hammer blow to the head"],
-      score: 5,
+      correctAnswers: ["Hammer Blow To The Head"],
     },
     {
       question: "What is the name of Josephine's boyfriend?",
       choices: ["Johnny", "Cecil", "Patrick", "Travis"],
       type: "MCQs",
       correctAnswers: ["Patrick"],
-      score: 5,
     },
     {
       question: "What is the name of Claudio's girlfriend?",
       choices: ["Newo", "Sara", "Penny", "Rachel"],
       type: "MCQs",
       correctAnswers: ["Newo"],
-      score: 5,
     },
     {
       question:
@@ -83,7 +74,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Ghansgraad"],
-      score: 5,
     },
     {
       question:
@@ -91,7 +81,6 @@ export const amory: Topic = {
       choices: ["Victor", "Sizer", "Cecil", "Patrick"],
       type: "MCQs",
       correctAnswers: ["Cecil"],
-      score: 5,
     },
     {
       question: "What is the name of the only Admiral in the United Red Army?",
@@ -103,7 +92,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Vielar Crom"],
-      score: 5,
     },
     {
       question: "Who is the leader of the rebellion against Wilhelm Ryan?",
@@ -115,14 +103,12 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Mariah Antillarea"],
-      score: 5,
     },
     {
-      question: "What is another name for the prophecy ot The Crowing?",
+      question: "What is another name for the prophecy of The Crowing?",
       choices: ["Son of Three", "Guardians", "God's Warrior", "Ghansgraad"],
       type: "MCQs",
       correctAnswers: ["Son of Three"],
-      score: 5,
     },
     {
       question:
@@ -130,7 +116,6 @@ export const amory: Topic = {
       choices: ["Crystal Lake", "Si-Revody ", "Apity Prime", "Paris: Earth"],
       type: "MCQs",
       correctAnswers: ["Si-Revody "],
-      score: 5,
     },
     {
       question:
@@ -143,7 +128,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The All-Mother"],
-      score: 5,
     },
     {
       question:
@@ -151,7 +135,6 @@ export const amory: Topic = {
       choices: ["Hetricus", "Apity Prime", "Cobalt and Calcium", "Star IV"],
       type: "MCQs",
       correctAnswers: ["Hetricus"],
-      score: 5,
     },
     {
       question:
@@ -164,7 +147,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Jersey City Devils"],
-      score: 5,
     },
     {
       question:
@@ -172,7 +154,6 @@ export const amory: Topic = {
       choices: ["Creature", "Vaxis", "Gutter", "Senorita Erminia"],
       type: "MCQs",
       correctAnswers: ["Vaxis"],
-      score: 5,
     },
     {
       question: "In the false memory that Inferno implanted in Cambria, what was her occupation?",
@@ -184,7 +165,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Nurse"],
-      score: 5,
     },
     {
       question: "Where did Mayo Deftinwolf discard Sizer's body?",
@@ -196,7 +176,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Godder Damm"],
-      score: 5,
     },
     {
       question:
@@ -209,7 +188,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Grail Arbor"],
-      score: 5,
     },
     {
       question:
@@ -222,7 +200,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Paris:Earth"],
-      score: 5,
     },
     {
       question:
@@ -235,7 +212,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Meriwell"],
-      score: 5,
     },
     {
       question:
@@ -248,7 +224,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Kalline"],
-      score: 5,
     },
     {
       question:
@@ -261,26 +236,23 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Prison Planet"],
-      score: 5,
     },
     {
       question: "What is the name of the home planet of The Narrows?",
       choices: ["Hilmgore", "Javan III", "Donar", "Howling Earth"],
       type: "MCQs",
       correctAnswers: ["Hilmgore"],
-      score: 5,
     },
     {
-      question: "What is the 'The Camper Velorium'?",
+      question: "What is the The Camper Velorium?",
       choices: [
-        "A weapon",
-        "A spaceship",
-        "A religious artifact",
-        "A secret organization",
+        "A Weapon",
+        "A Spaceship",
+        "A Religious Artifact",
+        "A Secret Organization",
       ],
       type: "MCQs",
-      correctAnswers: ["A spaceship"],
-      score: 5,
+      correctAnswers: ["A Spaceship"],
     },
     {
       question: "What is the name of Vaxis' mother?",
@@ -292,7 +264,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Nia Worn"],
-      score: 5,
     },
     {
       question:
@@ -300,19 +271,17 @@ export const amory: Topic = {
       choices: ["Vaxis", "Candelaria", "HOSS", "Nostrand Crane"],
       type: "MCQs",
       correctAnswers: ["Candelaria"],
-      score: 5,
     },
     {
       question: "What is the Keywork?",
       choices: [
-        "A weapon",
-        "A celestial event",
-        "A spaceship",
-        "interconnecting beams of energy",
+        "A Weapon",
+        "A Celestial Event",
+        "A Spaceship",
+        "Interconnecting Beams of Energy",
       ],
       type: "MCQs",
-      correctAnswers: ["interconnecting beams of energy"],
-      score: 5,
+      correctAnswers: ["Interconnecting Beams of Energy"],
     },
     {
       question: "What is the name of Ryder's ex-girlfriend?",
@@ -320,11 +289,10 @@ export const amory: Topic = {
         "Ambellina",
         "Mariah",
         "Meriwell",
-        "Erica Court",
+        "Erica",
       ],
       type: "MCQs",
-      correctAnswers: ["Erica Court,"],
-      score: 5,
+      correctAnswers: ["Erica"],
     },
     {
       question:
@@ -337,14 +305,12 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Heaven's Fence"],
-      score: 5,
     },
     {
       question: "Who is the Supreme Tri-Mage?",
       choices: ["Claudio Kilgannon", "The Crowing", "Wilhelm Ryan", "Creature"],
       type: "MCQs",
       correctAnswers: ["Wilhelm Ryan"],
-      score: 5,
     },
     {
       question:
@@ -357,9 +323,7 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: [
-        "The Bag.On.Line. Adventures: The Second Stage Turbine Blade",
-      ],
-      score: 5,
+        "The Bag.On.Line. Adventures: The Second Stage Turbine Blade"],
     },
     {
       question:
@@ -372,27 +336,24 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Peter David"],
-      score: 5,
     },
     {
       question: "What is the Great Crash?",
-      choices: ["Cosmological Event", "Spacecraft", "Battle", "Weapon"],
+      choices: ["Cosmological Event", "Spacecraft", "A Great Battle", "Weapon"],
       type: "MCQs",
       correctAnswers: ["Cosmological Event"],
-      score: 5,
     },
     {
       question:
-        "Who are the Unheavenly Creatures?",
+        "What are the Unheavenly Creatures?",
       choices: [
         "A Gang",
         "K.B.I",
         "The Prise",
-        "Magical Beings",
+        "Star System",
       ],
       type: "MCQs",
       correctAnswers: ["A Gang"],
-      score: 5,
     },
     {
       question:
@@ -400,21 +361,18 @@ export const amory: Topic = {
       choices: ["The Narrows", "Keneyto", "Scolorustia", "Crosif"],
       type: "MCQs",
       correctAnswers: ["Scolorustia"],
-      score: 5,
     },
     {
       question: "What was the name given to Cambria, Coheed, and Inferno?",
       choices: ["K.B.I.", "Red Army", "Sinstar", "The Prise"],
       type: "MCQs",
       correctAnswers: ["K.B.I."],
-      score: 5,
     },
     {
       question: "How many sectors are there in Heaven's Fence?",
       choices: ["4", "12", "11", "10"],
       type: "MCQs",
       correctAnswers: ["12"],
-      score: 5,
     },
     {
       question:
@@ -427,7 +385,6 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Mark Wahlberg"],
-      score: 5,
     },
   ],
 };

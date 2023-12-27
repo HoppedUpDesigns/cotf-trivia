@@ -1,0 +1,19 @@
+level
+totalQuestions
+totalScore
+totalTime
+code
+score
+
+
+      score: 5,
+    },
+
+
+
+
+    GOOGLE_APPLICATION_CREDENTIALS=/Users/jason/Sites/cotf/cotf-trivia-4644c-firebase-adminsdk-xffvg-686407b859.json
+
+
+
+    firebase emulators:export --project=cotf-trivia-4644c /Users/jason/Sites/cotf/scripts/

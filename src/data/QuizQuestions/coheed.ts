@@ -7,9 +7,7 @@ import { Topic } from ".";
 
 export const coheed: Topic = {
   topic: "Coheed and Cambria",
-  level: "Beginner",
   totalQuestions: 100,
-  totalScore: 500,
   totalTime: 3600,
   questions: [
     {
@@ -22,7 +20,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Devil In Jersey City"],
-      score: 5,
     },
     {
       question: "What is the name of Coheed and Cambria's first studio album?",
@@ -34,21 +31,18 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Second Stage Turbine Blade"],
-      score: 5,
     },
     {
       question: "What year was 'The Second Stage Turbine Blade' released?",
       choices: ["2003", "2001", "2004", "2002"],
       type: "MCQs",
       correctAnswers: ["2002"],
-      score: 5,
     },
     {
       question: "What year was I'n Keeping Secrets of Silent Earth: 3' released?",
       choices: ["2003", "2004", "2005", "2006"],
       type: "MCQs",
       correctAnswers: ["2003"],
-      score: 5,
     },
     {
       question:
@@ -56,7 +50,6 @@ export const coheed: Topic = {
       choices: ["2004", "2005", "2006", "2007"],
       type: "MCQs",
       correctAnswers: ["2005"],
-      score: 5,
     },
     {
       question:
@@ -64,42 +57,36 @@ export const coheed: Topic = {
       choices: ["2005", "2006", "2007", "2008"],
       type: "MCQs",
       correctAnswers: ["2007"],
-      score: 5,
     },
     {
       question: "What year was 'Year of the Black Rainbow' released?",
       choices: ["2010", "2008", "2009", "2011"],
       type: "MCQs",
       correctAnswers: ["2010"],
-      score: 5,
     },
     {
       question: "What year was 'The Afterman: Ascension' released?",
       choices: ["2012", "2011", "2010", "2013"],
       type: "MCQs",
       correctAnswers: ["2012"],
-      score: 5,
     },
     {
       question: "What year was 'The Afterman: Descension' released?",
       choices: ["2012", "2010", "2013", "2014"],
       type: "MCQs",
       correctAnswers: ["2013"],
-      score: 5,
     },
     {
       question: "What year was 'The Color Before the Sun' released?",
       choices: ["2011", "2012", "2015", "2016"],
       type: "MCQs",
       correctAnswers: ["2015"],
-      score: 5,
     },
     {
       question: "In what year was Coheed and Cambria formed?",
       choices: ["1998", "2001", "2003", "2005"],
       type: "MCQs",
       correctAnswers: ["1998"],
-      score: 5,
     },
     {
       question: "Who are the founding members of Coheed and Cambria?",
@@ -111,7 +98,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Claudio Sanchez and Travis Stever"],
-      score: 5,
     },
 {
       question: "What is the name of the band that Claudio and Travis were in that broke up in 1995?",
@@ -123,7 +109,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Toxic Parents"],
-      score: 5,
     },
     {
       question: "What is the title of Coheed and Cambria's debut album?",
@@ -135,7 +120,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Second Stage Turbine Blade"],
-      score: 5,
     },
     {
       question:
@@ -143,7 +127,6 @@ export const coheed: Topic = {
       choices: ["Travis Stever", "Josh Eppard", "Michael Todd", "Zach Cooper"],
       type: "MCQs",
       correctAnswers: ["Josh Eppard"],
-      score: 5,
     },
     {
       question: "What is the name of Coheed and Cambria's official fan club?",
@@ -155,7 +138,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Children of the Fence"],
-      score: 5,
     },
     {
       question:
@@ -163,7 +145,6 @@ export const coheed: Topic = {
       choices: ["Josh Eppard", "Travis Stever", "Michael Todd", "Chris Pennie"],
       type: "MCQs",
       correctAnswers: ["Josh Eppard"],
-      score: 5,
     },
     {
       question:
@@ -176,7 +157,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["A high school friendship"],
-      score: 5,
     },
     {
       question:
@@ -184,7 +164,6 @@ export const coheed: Topic = {
       choices: ["Nyack", "Boston", "Los Angeles", "Seattle"],
       type: "MCQs",
       correctAnswers: ["Nyack"],
-      score: 5,
     },
     {
       question:
@@ -197,7 +176,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Year of the Black Rainbow"],
-      score: 5,
     },
     {
       question:
@@ -210,7 +188,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["A family member"],
-      score: 5,
     },
     {
       question:
@@ -223,7 +200,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Afterman: Descension"],
-      score: 5,
     },
     {
       question:
@@ -231,7 +207,6 @@ export const coheed: Topic = {
       choices: ["Michael Todd", "Chris Pennie", "Travis Stever", "Josh Eppard"],
       type: "MCQs",
       correctAnswers: ["Michael Todd"],
-      score: 5,
     },
     {
       question:
@@ -244,7 +219,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["A personal tragedy"],
-      score: 5,
     },
     {
       question:
@@ -257,7 +231,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Feathers"],
-      score: 5,
     },
     {
       question:
@@ -265,7 +238,6 @@ export const coheed: Topic = {
       choices: ["Lead vocalist", "Drummer", "Bassist", "Lead guitarist"],
       type: "MCQs",
       correctAnswers: ["Drummer"],
-      score: 5,
     },
     {
       question:
@@ -278,7 +250,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Shabütie"],
-      score: 5,
     },
     {
       question:
@@ -286,7 +257,6 @@ export const coheed: Topic = {
       choices: ["Punk rock", "Post-hardcore", "Progressive metal", "Emo"],
       type: "MCQs",
       correctAnswers: ["Punk rock"],
-      score: 5,
     },
     {
       question:
@@ -294,7 +264,6 @@ export const coheed: Topic = {
       choices: ["CBGB", "Whisky a Go Go", "The Roxy Theatre", "The Troubadour"],
       type: "MCQs",
       correctAnswers: ["CBGB"],
-      score: 5,
     },
     {
       question:
@@ -302,7 +271,6 @@ export const coheed: Topic = {
       choices: ["1998", "2001", "2003", "2005"],
       type: "MCQs",
       correctAnswers: ["2003"],
-      score: 5,
     },
     {
       question:
@@ -315,7 +283,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Michael Birnbaum"],
-      score: 5,
     },
     {
       question:
@@ -328,7 +295,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["It's part of The Amory Wars storyline"],
-      score: 5,
     },
     {
       question:
@@ -341,7 +307,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Good Apollo, I'm Burning Star IV"],
-      score: 5,
     },
     {
       question:
@@ -354,7 +319,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["A Grammy Award nomination"],
-      score: 5,
     },
     {
       question:
@@ -367,7 +331,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Travis Stever"],
-      score: 5,
     },
     {
       question:
@@ -380,7 +343,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Transformers"],
-      score: 5,
     },
     {
       question:
@@ -393,7 +355,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Vaxis - Act I: The Unheavenly Creatures"],
-      score: 5,
     },
     {
       question:
@@ -406,7 +367,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Beyond the Fence"],
-      score: 5,
     },
     {
       question:
@@ -414,7 +374,6 @@ export const coheed: Topic = {
       choices: ["Gravity's Union", "The Hard Sell", "The Crowing", "Ghost"],
       type: "MCQs",
       correctAnswers: ["Gravity's Union"],
-      score: 5,
     },
     {
       question:
@@ -427,7 +386,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Josh Eppard"],
-      score: 5,
     },
     {
       question:
@@ -440,7 +398,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["In Keeping Secrets of Silent Earth: 3"],
-      score: 5,
     },
     {
       question:
@@ -453,7 +410,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Plan to Take Over the World"],
-      score: 5,
     },
     {
       question:
@@ -461,7 +417,6 @@ export const coheed: Topic = {
       choices: ["Coachella", "Burning Man", "Lollapalooza", "Bamboozle"],
       type: "MCQs",
       correctAnswers: ["Bamboozle"],
-      score: 5,
     },
     {
       question:
@@ -474,7 +429,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Good Apollo, I'm Burning Star IV"],
-      score: 5,
     },
     {
       question:
@@ -487,7 +441,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Welcome Home"],
-      score: 5,
     },
     {
       question:
@@ -500,7 +453,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["It's part of The Amory Wars storyline"],
-      score: 5,
     },
     {
       question:
@@ -513,7 +465,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Evil Ink Records"],
-      score: 5,
     },
     {
       question:
@@ -526,7 +477,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Prize Fighter Inferno"],
-      score: 5,
     },
     {
       question:
@@ -539,7 +489,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Good Apollo, I'm Burning Star IV, Volume Two: No World for Tomorrow"],
-      score: 5,
     },
     {
       question:
@@ -547,7 +496,6 @@ export const coheed: Topic = {
       choices: ["Coachella", "Lollapalooza", "Reading Festival", "Bonnaroo"],
       type: "MCQs",
       correctAnswers: ["Lollapalooza"],
-      score: 5,
     },
     {
       question:
@@ -560,7 +508,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["A Favor House Atlantic"],
-      score: 5,
     },
     {
       question:
@@ -573,7 +520,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Last Supper: Live at Hammerstein Ballroom"],
-      score: 5,
     },
     {
       question:
@@ -586,7 +532,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Year of the Black Rainbow"],
-      score: 5,
     },
     {
       question:
@@ -599,7 +544,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["2005"],
-      score: 5,
     },
     {
       question:
@@ -612,7 +556,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["A legal dispute"],
-      score: 5,
     },
     {
       question:
@@ -620,7 +563,6 @@ export const coheed: Topic = {
       choices: ["The Crowing", "Welcome Home", "The Suffering", "Feathers"],
       type: "MCQs",
       correctAnswers: ["The Suffering"],
-      score: 5,
     },
     {
       question:
@@ -633,7 +575,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Neverender Tour"],
-      score: 5,
     },
     {
       question:
@@ -646,7 +587,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Afterman: Ascension"],
-      score: 5,
     },
     {
       question:
@@ -659,7 +599,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Travis Stever"],
-      score: 5,
     },
     {
       question:
@@ -667,7 +606,6 @@ export const coheed: Topic = {
       choices: ["Coheed Kilgannon", "Sirius Amory", "The Crowing", "Ambellina"],
       type: "MCQs",
       correctAnswers: ["The Crowing"],
-      score: 5,
     },
     {
       question:
@@ -680,7 +618,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Good Apollo, I'm Burning Star IV"],
-      score: 5,
     },
     {
       question:
@@ -693,7 +630,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Equal Vision Records"],
-      score: 5,
     },
     {
       question:
@@ -701,7 +637,6 @@ export const coheed: Topic = {
       choices: ["Eminem", "Travis Scott", "Kid Cudi", "Logic"],
       type: "MCQs",
       correctAnswers: ["Travis Scott"],
-      score: 5,
     },
     {
       question:
@@ -714,7 +649,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Live at the Roxy"],
-      score: 5,
     },
     {
       question:
@@ -727,7 +661,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["You Got Spirit, Kid"],
-      score: 5,
     },
     {
       question:
@@ -740,7 +673,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["In Keeping Secrets of Silent Earth: 3"],
-      score: 5,
     },
     {
       question:
@@ -753,7 +685,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Unheavenly Creatures Tour"],
-      score: 5,
     },
     {
       question:
@@ -766,7 +697,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Color Before the Sun"],
-      score: 5,
     },
     {
       question:
@@ -779,7 +709,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Guitar Hero III: Legends of Rock"],
-      score: 5,
     },
     {
       question:
@@ -787,7 +716,6 @@ export const coheed: Topic = {
       choices: ["2003", "2005", "2007", "2009"],
       type: "MCQs",
       correctAnswers: ["2005"],
-      score: 5,
     },
     {
       question:
@@ -795,7 +723,6 @@ export const coheed: Topic = {
       choices: ["Jim Lee", "Todd McFarlane", "Alex Ross", "Brian Bolland"],
       type: "MCQs",
       correctAnswers: ["Jim Lee"],
-      score: 5,
     },
     {
       question:
@@ -808,7 +735,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Neverender: Children of the Fence Edition"],
-      score: 5,
     },
     {
       question:
@@ -821,7 +747,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Dark Sentencer"],
-      score: 5,
     },
     {
       question:
@@ -834,7 +759,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The End Complete I: The Fall of House Atlantic"],
-      score: 5,
     },
     {
       question:
@@ -847,7 +771,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Second Stage Turbine Blade"],
-      score: 5,
     },
     {
       question:
@@ -855,7 +778,6 @@ export const coheed: Topic = {
       choices: ["Zach Cooper", "Michael Todd", "Josh Eppard", "Travis Stever"],
       type: "MCQs",
       correctAnswers: ["Michael Todd"],
-      score: 5,
     },
     {
       question:
@@ -868,7 +790,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Running Free"],
-      score: 5,
     },
     {
       question:
@@ -876,7 +797,6 @@ export const coheed: Topic = {
       choices: ["Gears of War", "Halo 2", "Assassin's Creed", "Fallout 3"],
       type: "MCQs",
       correctAnswers: ["Gears of War"],
-      score: 5,
     },
     {
       question:
@@ -884,7 +804,6 @@ export const coheed: Topic = {
       choices: ["Sirius Amory", "The Writer", "The Keywork", "Al the Killer"],
       type: "MCQs",
       correctAnswers: ["The Writer"],
-      score: 5,
     },
     {
       question:
@@ -897,7 +816,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Unheavenly Brew"],
-      score: 5,
     },
     {
       question:
@@ -910,7 +828,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Neverender: Children of the Fence Edition"],
-      score: 5,
     },
     {
       question:
@@ -923,7 +840,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Serj Tankian"],
-      score: 5,
     },
     {
       question:
@@ -931,7 +847,6 @@ export const coheed: Topic = {
       choices: ["Sirius Amory", "The Gutter", "Vic the Butcher", "Creature"],
       type: "MCQs",
       correctAnswers: ["Vic the Butcher"],
-      score: 5,
     },
     {
       question:
@@ -944,7 +859,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Live at the Hammerstein Ballroom"],
-      score: 5,
     },
     {
       question:
@@ -957,7 +871,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Maynard James Keenan"],
-      score: 5,
     },
     {
       question:
@@ -970,7 +883,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Claudio Sanchez"],
-      score: 5,
     },
     {
       question:
@@ -978,7 +890,6 @@ export const coheed: Topic = {
       choices: ["Here to Mars", "Island", "Colors", "The Hard Sell"],
       type: "MCQs",
       correctAnswers: ["Island"],
-      score: 5,
     },
   {
     question: "Who were the founding members of the band Beautiful Loser after Toxic Parents split?",
@@ -990,8 +901,7 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Claudio Sanchez, Travis Stever, and Shawna Wirkus"],
-    score: 5,
-  },
+    },
   {
     question: "What led to the breakup of the band Beautiful Loser in June 1995?",
     choices: [
@@ -1002,9 +912,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Argument over gas money"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "What African tribe chant inspired the band name Shabütie?",
     choices: [
       "Maasai",
@@ -1014,9 +923,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Maasai"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "Who replaced Jon Carleo on bass when he left the band in August 1996?",
     choices: [
       "Nate Kelley",
@@ -1026,9 +934,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Michael Todd"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "Who made a guest appearance on Coheed and Cambria's first studio album?",
     choices: [
       "John A. Hanson",
@@ -1038,9 +945,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Dr. Know"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "Who recorded the drums for Coheed and Cambria's fourth studio album?",
     choices: [
       "Josh Eppard",
@@ -1050,9 +956,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Taylor Hawkins"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "Who replaced Josh Eppard and Michael Todd in early November 2006?",
     choices: [
       "Matt Williams and Michael Petrak",
@@ -1062,9 +967,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Matt Williams and Michael Petrak"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "Who joined Coheed and Cambria as its drummer in June 2008?",
     choices: [
       "Nate Kelley",
@@ -1074,9 +978,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Chris Pennie"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "What was the name of the band formed by Claudio Sanchez, Travis Stever, and Shawna Wirkus after Toxic Parents split in March 1995?",
     choices: [
       "Beautiful Loser",
@@ -1086,9 +989,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Beautiful Loser"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "Which band member left Shabütie after an argument over gas money, leading to the formation of the trio named Shabütie?",
     choices: [
       "Claudio Sanchez",
@@ -1098,9 +1000,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Travis Stever"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "What word, meaning 'naked prey' became the name of the trio formed after the breakup of Beautiful Loser?",
     choices: [
       "Shabütie",
@@ -1110,9 +1011,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Shabütie"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "Which member joined Shabütie in August 1996, replacing Jon Carleo on bass?",
     choices: [
       "Michael Todd",
@@ -1122,9 +1022,8 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Michael Todd"],
-    score: 5,
-  },
-  {
+    },
+    {
     question: "What is the name of the manager who started working with Coheed and Cambria in August 2002?",
     choices: [
       "Blaze James",
@@ -1134,7 +1033,6 @@ export const coheed: Topic = {
     ],
     type: "MCQs",
     correctAnswers: ["Blaze James"],
-    score: 5,
-  },
+    },
   ],
 };

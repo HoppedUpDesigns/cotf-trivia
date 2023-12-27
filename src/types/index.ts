@@ -36,7 +36,6 @@ export type QuizContextTypes = {
   setEndTime: (type: number) => void
   quizDetails: {
     totalQuestions: number
-    totalScore: number
     totalTime: number
     selectedQuizTopic: string
   }

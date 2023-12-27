@@ -1,0 +1,11 @@
+I need to copy the following files into ChatGPT 4.0:
+
+/* Here is the code for the file cotf/src/types/index.ts file */
+
+/* All the files in the /src/utils/ folder */
+
+all the files in the /cotf/src/ folder starting with App.test.tsx
+
+all the files in the /cotf root folder
+
+all of the other folders such as public

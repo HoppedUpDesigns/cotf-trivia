@@ -7,9 +7,7 @@ import { Topic } from ".";
 
 export const neverender: Topic = {
   topic: "S.S. Neverender",
-  level: "Beginner",
   totalQuestions: 42,
-  totalScore: 210,
   totalTime: 3600,
   questions: [
     {
@@ -18,7 +16,6 @@ export const neverender: Topic = {
       choices: ["Pearl", "Bliss", "Gem", "Diamond"],
       type: "MCQs",
       correctAnswers: ["Gem"],
-      score: 5,
     },
     {
       question:
@@ -26,7 +23,6 @@ export const neverender: Topic = {
       choices: ["Gem", "Pearl", "Bliss", "Emerald"],
       type: "MCQs",
       correctAnswers: ["Pearl"],
-      score: 5,
     },
     {
       question:
@@ -39,7 +35,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Camper Velourium I: Faint of Hearts"],
-      score: 5,
     },
     {
       question: "What city did the 2nd S.S. Neverender visit?",
@@ -51,7 +46,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Puerto Plata, Dominican Republic"],
-      score: 5,
     },
     {
       question:
@@ -64,7 +58,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Motion City Sounctrack"],
-      score: 5,
     },
     {
       question:
@@ -72,7 +65,6 @@ export const neverender: Topic = {
       choices: ["Jai Alai", "Two-Hearted", "The Liars Club", "Freak of Nature"],
       type: "MCQs",
       correctAnswers: ["The Liars Club"],
-      score: 5,
     },
     {
       question: "The 2023 guest named drink winner was?",
@@ -84,7 +76,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Blood Red Summer"],
-      score: 5,
     },
     {
       question:
@@ -97,7 +88,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Marisa Dabice"],
-      score: 5,
     },
     {
       question:
@@ -105,7 +95,6 @@ export const neverender: Topic = {
       choices: ["Romantic", "Patience", "Gypsy Pervert", "Perfect"],
       type: "MCQs",
       correctAnswers: ["Patience"],
-      score: 5,
     },
     {
       question:
@@ -118,7 +107,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Taking Back Sunday"],
-      score: 5,
     },
     {
       question: "Which band played at the Prom on the 1st S.S. Neverender?",
@@ -130,7 +118,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Thank You Scientist"],
-      score: 5,
     },
     {
       question:
@@ -143,7 +130,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Diary"],
-      score: 5,
     },
     {
       question:
@@ -156,7 +142,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Nate Mendel"],
-      score: 5,
     },
     {
       question:
@@ -169,7 +154,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Commit This to Memory"],
-      score: 5,
     },
     {
       question:
@@ -182,7 +166,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Guitar Hero III: Legends of Rock"],
-      score: 5,
     },
     {
       question:
@@ -195,7 +178,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Jazz Fusion"],
-      score: 5,
     },
     {
       question:
@@ -208,7 +190,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Tapping"],
-      score: 5,
     },
     {
       question:
@@ -216,7 +197,6 @@ export const neverender: Topic = {
       choices: ["Sydney", "Melbourne", "Perth", "Brisbane"],
       type: "MCQs",
       correctAnswers: ["Perth"],
-      score: 5,
     },
     {
       question:
@@ -229,7 +209,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["High Visceral {Part 1}"],
-      score: 5,
     },
     {
       question:
@@ -237,7 +216,6 @@ export const neverender: Topic = {
       choices: ["Circa Survive", "Thrice", "Saosin", "Chiodos"],
       type: "MCQs",
       correctAnswers: ["Circa Survive"],
-      score: 5,
     },
     {
       question:
@@ -250,7 +228,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Sound of Animals Fighting"],
-      score: 5,
     },
     {
       question:
@@ -258,7 +235,6 @@ export const neverender: Topic = {
       choices: ["Donovan Melero", "Shane Gann", "Aric Garcia", "John Stirrat"],
       type: "MCQs",
       correctAnswers: ["Donovan Melero"],
-      score: 5,
     },
     {
       question:
@@ -271,7 +247,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Wake"],
-      score: 5,
     },
     {
       question:
@@ -284,7 +259,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Counter Intuitive Records"],
-      score: 5,
     },
     {
       question:
@@ -297,7 +271,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["I Thought You Didn't Even Like Leaving"],
-      score: 5,
     },
     {
       question:
@@ -310,7 +283,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Our Machine II"],
-      score: 5,
     },
     {
       question:
@@ -323,7 +295,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["3 (Three)"],
-      score: 5,
     },
     {
       question:
@@ -331,7 +302,6 @@ export const neverender: Topic = {
       choices: ["Keyboards", "Drums", "Bass Guitar", "Violin"],
       type: "MCQs",
       correctAnswers: ["Keyboards"],
-      score: 5,
     },
     {
       question:
@@ -339,7 +309,6 @@ export const neverender: Topic = {
       choices: ["Burger King", "McDonald's", "KFC", "Taco Bell"],
       type: "MCQs",
       correctAnswers: ["McDonald's"],
-      score: 5,
     },
     {
       question:
@@ -352,14 +321,12 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Never Say Diet"],
-      score: 5,
     },
     {
       question: "What is the title of Pinkshift's debut EP, released in 2021?",
       choices: ["Sacred Geometry", "Pastel Clouds", "Mars", "Tainted Waters"],
       type: "MCQs",
       correctAnswers: ["Sacred Geometry"],
-      score: 5,
     },
     {
       question: "Who is the lead vocalist of Pinkshift?",
@@ -371,7 +338,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Ashrita Kumar"],
-      score: 5,
     },
     {
       question:
@@ -379,7 +345,6 @@ export const neverender: Topic = {
       choices: ["2018", "2019", "2020", "2021"],
       type: "MCQs",
       correctAnswers: ["2020"],
-      score: 5,
     },
     {
       question:
@@ -387,7 +352,6 @@ export const neverender: Topic = {
       choices: ["Dead Kennedys", "Fugazi", "Jawbreaker", "Against Me!"],
       type: "MCQs",
       correctAnswers: ["Against Me!"],
-      score: 5,
     },
     {
       question:
@@ -400,7 +364,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["All Roads Lead to the Gun"],
-      score: 5,
     },
     {
       question:
@@ -408,7 +371,6 @@ export const neverender: Topic = {
       choices: ["Godhand", "The Interstice", "Eclipse", "Lifeblood"],
       type: "MCQs",
       correctAnswers: ["Godhand"],
-      score: 5,
     },
     {
       question:
@@ -416,7 +378,6 @@ export const neverender: Topic = {
       choices: ["Phil Bozeman", "CJ McMahon", "Alex Terrible", "Dickie Allen"],
       type: "MCQs",
       correctAnswers: ["CJ McMahon"],
-      score: 5,
     },
     {
       question:
@@ -429,7 +390,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Dear Lemon House, You Ruined Me: Senior Year"],
-      score: 5,
     },
     {
       question:
@@ -442,7 +402,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Spirited Away"],
-      score: 5,
     },
     {
       question:
@@ -455,14 +414,12 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Worlds I've Lost"],
-      score: 5,
     },
     {
       question: "Proper. hails from which city in the United States?",
       choices: ["Chicago", "Los Angeles", "New York", "Philadelphia"],
       type: "MCQs",
       correctAnswers: ["Philadelphia"],
-      score: 5,
     },
     {
       question:
@@ -475,7 +432,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Made Up Dreams"],
-      score: 5,
     },
   ],
 };

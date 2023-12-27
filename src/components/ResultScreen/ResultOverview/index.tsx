@@ -31,13 +31,6 @@ const ResultOverview: FC<ResultOverviewProps> = ({ result }) => {
 
   const totalQuestionAttempted = result.length
 
-  const obtainedScore = result
-    .filter((item) => item.isMatch && typeof item.score === 'number')
-    .reduce((accumulator, currentValue) => accumulator + (currentValue.score || 0), 0)
-
-  // Passed if 60 or more than 60% marks
-  const calculateStatus =
-    (obtainedScore / quizDetails.totalScore) * 100 >= 60 ? 'Passed' : 'Failed'
 
   return (
     <ResultOverviewStyle>
@@ -47,14 +40,7 @@ const ResultOverview: FC<ResultOverviewProps> = ({ result }) => {
         {quizDetails.totalQuestions}
       </p>
       <p>
-        Score secured:<HighlightedText> {obtainedScore} </HighlightedText>/{' '}
-        {quizDetails.totalScore}
-      </p>
-      <p>
         Time Spent:<HighlightedText> {convertSeconds(endTime)} </HighlightedText>
-      </p>
-      <p>
-        Status:<HighlightedText> {calculateStatus}</HighlightedText>
       </p>
     </ResultOverviewStyle>
   )

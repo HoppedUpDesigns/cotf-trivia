@@ -1,0 +1,30 @@
+### QuizDetailsScreen 
+### File: /cotf/src/components/QuizDetailsScreen/index.tsx
+
+1. Selected Quiz Topic: AMORY WARS
+The value "AMORY WARS" is retrieved from the function:  selectedQuizTopic
+
+2. "Total questions available from this quiz: 100"
+The "100" in the line above is retrieved from a function called totalQuestions which is found in each
+of the /cotf/src/data/QuizQuestions/ files (so for our example there are 100 totalQuestions in the "AMORY WARS" quiz)
+
+3. *** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+"How many questions do you want to attempt?
+Right beside this line "How many questions do you want to attempt?" should be an input box where the user can enter the number of questions they want to be quizzed on based upon the totalQuestions available for the quiz (in our example the user selected the quiz Topic AMORY WARS). The user must enter a number in this input box between 1 and the totalQuestions available from the selected quiz topic (in our example the user selected the quiz Topic AMORY WARS). So a new function called something like userSelectedQuestions
+*** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+
+4.   *** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+"Total score possible in your quiz" 
+This line is based on the number of questions the user entered to be quizzed on in the input box above.
+They will get 5 ponts for each question answered correctly multiplied by the number of questions the user entered to be quizzed on in the input box above.(in our example the user selected the quiz Topic AMORY WARS). So if the user enters 20 in the input box using the function userSelectedQuestions, they will have a possible score of 100 based on a function named something like userSelectedMaxScore
+ *** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+
+5.  *** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+"Max number of points available in the "AMORY WARS" quiz"
+ *** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+
+6.  *** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+"You will have 10 seconds to answer each question in this quiz"
+ *** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+
+7. "To save time, you can skip questions. Skipped questions will show up at the end of the quiz."

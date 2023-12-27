@@ -1,0 +1,266 @@
+### SplashScreen 
+### File: /cotf/src/components/SplashScreen/index.tsx
+
+When the user goes to the website at https://cotf-trivia-4644c.web.app/, the first screen they see is the SplashScreen. The user only briefly sees this screen and is then automatically sent to the QuizTopicsScreen.
+
+
+
+
+### QuizTopicsScreen 
+### File: /cotf/src/components/QuizTopicsScreen/index.tsx
+
+On the QuizTopicsScreen, the user sees 5 main sections. These 5 sections are explained below from the top of the screen to the bottom of the screen. These sections are:
+
+1. The first section of content shown on the QuizTopicsScreen is the logo for the website which is imported this way to the QuizTopicsScreen: 
+import { AppLogo } from '../../config/icons'
+The code to render the AppLogo is found in these lines of the source code for the /cotf/src/components/QuizTopicsScreen/index.tsx file:
+        <LogoContainer>
+          <AppLogo />
+        </LogoContainer>
+
+2. The next section of content on the QuizTopicsScreen is a Heading with a welcome message.
+This Heading reads "WELCOME TO COTF TRIVIA"
+The code for this Heading is found in these lines of the source code for the QuizTopicsScreen/index.tsx file:
+        <Heading>
+          WELCOME TO <HighlightedText> COTF TRIVIA</HighlightedText>
+        </Heading>
+
+ 3. The next section of content on the QuizTopicsScreen is a prompt for the user to select a quiz.
+This line reads "Select topic below to start your Quiz."
+The code for this text prompt is found in this line of the source code for the QuizTopicsScreen/index.tsx file:
+        <DetailText>Select topic below to start your Quiz.</DetailText>
+
+4. The next section of content on the QuizTopicsScreen are the 4 clickable quiz Topics which are:
+Coheed and Cambria, AMORY WARS, Side Projects, and S.S. Neverender.
+The code for these quiz Topics is found in these lines of the source code for the QuizTopicsScreen/index.tsx file:
+        <SelectButtonContainer>
+          {quizTopics.map(({ title, icon, disabled }) => (
+            <SelectButton
+              key={title}
+              active={quizTopic === title}
+              onClick={() => !disabled && selectQuizTopic(title)}
+              disabled={disabled}
+            >
+              {icon}
+              <SelectButtonText>{title}</SelectButtonText>
+            </SelectButton>
+          ))}
+        </SelectButtonContainer>
+
+5. The final section of content on the QuizTopicsScreen is the clickable "Continue" Button that simply contains the word "CONTINUE"
+The code for this "CONTINUE" Button is found in this line of the source code for the QuizTopicsScreen/index.tsx file:
+<Button text="CONTINUE" onClick={goToQuizDetailsScreen} bold />
+
+
+
+
+### QuizDetailsScreen 
+### File: /cotf/src/components/QuizDetailsScreen/index.tsx
+
+Once the user selects one of the 4 quiz Topics on the QuizTopicsScreen and clicks the "CONTINUE" Button, they will be taken to the QuizDetailsScreen
+
+On the QuizDetailsScreen, the user will see 9 main sections. These 9 sections are explained below from the top of the screen to the bottom of the screen. These sections are:
+
+1. The first section of content shown on the QuizDetailsScreen is the logo for the website which is displayed in the same manner in which it is displayed on the QuizTopicsScreen and is imported to the /cotf/src/components/QuizDetailsScreen/index.tsx file this way:
+import { AppLogo, StartIcon } from "../../config/icons";
+The code to render the AppLogo is found in these lines of the source code for the /cotf/src/components/QuizDetailsScreen/index.tsx file: 
+        <LogoContainer>
+          <AppLogo />
+        </LogoContainer>
+
+2. The next section of content shown on the QuizDetailsScreen shows the user the name of the website. This section simply consists of the text "COTF TRIVIA"
+The code to render the "COTF TRIVIA" section is found in these lines of the source code for the /cotf/src/components/QuizDetailsScreen/index.tsx file: 
+<AppTitle>COTF TRIVIA</AppTitle>
+
+3. The next section of content shown on the QuizDetailsScreen tells the user which quiz Topic they have selected to take a quiz on. For the purposes of this explaination, we will say that the user selected the quiz Topic "AMORY WARS". This section of the content shown on the QuizDetailsScreen will read this now: "Selected Quiz Topic: AMORY WARS"
+The code to render the "Selected Quiz Topic: AMORY WARS" section is found in these lines of the source code for the /cotf/src/components/QuizDetailsScreen/index.tsx file: 
+
+          <DetailText>
+            Selected Quiz Topic: <HighlightedText>{selectedQuizTopic}</HighlightedText>
+          </DetailText>
+
+4. The next section of content shown on the QuizDetailsScreen tells the user how many questions are available in the selected quiz Topic that they can be quizzed on. For the purposes of this explaination, we will say that the user selected the quiz Topic "AMORY WARS". This section of the content shown on the QuizDetailsScreen will contain this text: "Total questions available from this quiz:" 
+Next to this line of text will be a number that is pulled from the selected quiz Topic quiz found here for the AMORY WARS quiz:
+/cotf/src/data/QuizQuestions/amory.ts
+There is a property of the const amoryQuestions that is exported to the QuizDetailsScreen called totalQuestions. This totalQuestions property contains the number of questions available in the AMORY WARS quiz. This is the maxQuestions avaiable in the AMORY WARS quiz. 
+The code to render the "Total questions available from this quiz:" totalQuestions section is found in these lines of the source code for the /cotf/src/components/QuizDetailsScreen/index.tsx file: 
+          <DetailText>
+            Total questions to attempt:{' '}
+            <HighlightedText>{totalQuestions}</HighlightedText>
+          </DetailText>
+
+5. *** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+The next section of content shown on the QuizDetailsScreen will consists of the text "How many questions do you want to attempt?". Right beside this line "How many questions do you want to attempt?" should be an input box where the user can enter the number of questions they want to be quizzed on based upon the totalQuestions available for the quiz (in our example the user selected the quiz Topic AMORY WARS). The user must enter a number in this input box between 1 and the totalQuestions available from the selected quiz topic (in our example the user selected the quiz Topic AMORY WARS).
+The code to render the "How many questions do you want to attempt?" and the input box will look something like these lines to be added to the /cotf/src/components/QuizDetailsScreen/index.tsx file: 
+
+<InputContainer>
+  <QuestionCountInput
+    selectedQuestionCount={selectedQuestionCount}
+    onChange={(value) => setSelectedQuestionCount(value)}
+    maxQuestions={totalQuestions}
+  />
+</InputContainer>
+
+6.  The next section of content shown on the QuizDetailsScreen is a text line that reads "Total number of points available" Right beside the text "Total number of points available" is a number that tells the user how many points they can receive from the selected quiz Topic (in our example the user selected the quiz Topic AMORY WARS). This Score will be calculated using 5 points for each question in the quiz multiplied by the totalQuestions in the quiz.  So if there is 200 questions in the AMORY WARS quiz the number to the right of the line "Total number of points available" will be 1000 (5 pts for each question multiplied by the totalQuestions of 200)
+The code to render the "Total number of points available" and the number for the max Score is found in these lines of the /cotf/src/components/QuizDetailsScreen/index.tsx file: 
+          <DetailText>
+            Score in total: <HighlightedText>{totalScore}</HighlightedText>
+          </DetailText>
+
+7. The next section of content shown on the QuizDetailsScreen is a text line that reads "You will have 10 seconds to answer each question of the quiz" 
+The code to render the  text "You will have 10 seconds to answer each question of the quiz" is found in these lines of the /cotf/src/components/QuizDetailsScreen/index.tsx file: 
+          <DetailText>
+            You will have 10 seconds to answer each question of the quiz
+          </DetailText>
+
+8. The next section of content shown on the QuizDetailsScreen is a text line that reads "To save time, you can skip questions. Skipped questions will show up at the end of the quiz." 
+The code to render the  text "To save time, you can skip questions. Skipped questions will show up at the end of the quiz" is found in these lines of the /cotf/src/components/QuizDetailsScreen/index.tsx file: 
+          <DetailText>
+            To save time, you can skip questions. Skipped questions will show up at the end of the quiz.
+          </DetailText>
+
+9. The final section of content on the QuizDetailsScreen is the clickable "Start" Button that simply contains the word "START"
+The code for this "Start" Button is found in these lines of the /cotf/src/components/QuizDetailsScreen/index.tsx file:
+        <Button
+          text="Start"
+          icon={<StartIcon />}
+          iconPosition="left"
+          onClick={goToQuestionScreen}
+          bold
+        />
+
+
+
+
+### QuestionScreen 
+### File: /cotf/src/components/QuestionScreen/index.tsx
+
+*** IMPORTANT: When the user clicks the "Start" Button on the QuizDetailsScreen, they will be quizzed on ONLY the number they entered into the input box where the user enters the number of questions they want to be quizzed on. Once the number of questions have been answered, 20 in our example above, the quiz will end and the user will be taken to the ResultOverview screen which will be explained later. ***
+
+Once the user clicks on the "Start" Button on the QuizDetailsScreen, they will be taken to the QuestionScreen.
+On the QuestionScreen, the user will see 9 main sections. These 9 sections are explained below from the top of the screen to the bottom of the screen. These sections are:
+
+1.  The first section of content shown on the QuestionScreen is the Mode icons. Right beside the Mood icons
+is a toggle that allows the user to switch the Theme of the app from light to dark. This toggle is shown to the user at the top, right of the QuestionScreen. The code that renders this toggle is found in the /cotf/src/components/ui/ToggleTheme/index.tsx file
+
+2. The next section of content shown on the QuestionScreen is the logo for the website which is displayed in the same manner in which it is displayed on the QuizTopicsScreen and is imported to the /cotf/src/components/QuestionScreen/index.tsx file this way:
+import { AppLogo, StartIcon } from "../../config/icons";
+The code to render the AppLogo is found in these lines of the source code for the /cotf/src/components/QuestionScreen/index.tsx file: 
+        <LogoContainer>
+          <AppLogo />
+        </LogoContainer>
+
+3. The next section of content shown on the QuestionScreen is the actual Question component of the quiz. The first component shown to the user is on the top, left of the Question being asked. This section of the Question shows the user what number question from the selected quiz they are currently attempting to answer from the totalQuestions available. It uses this functiion ActiveQuestionNo and is displayed in this format: 01/100. The text that goes to the right of the / in the 01/100 example, is the number that the user entered into the input box on the QuizDetailsScreen. So in our example above, the user entered 20 into the input box next to the text "How many questions do you want to attempt?". So this section to the top, left of the Question should read 01/20 for the first question asked from the quiz, 02/20 for the second question asked from the quiz, etc. 
+
+4. *** THIS NEXT SECTION IS A PLACEMARK FOR FUTURE WEBSITE FUNCTIONALITY ****
+The next section of content shown on the QuestionScreen is the actual Question component of the quiz. The second component shown to the user is on the top, right of the Question being asked. This section of the Question shows the user how much time fhey have remaining to finish the selected quiz they are currently taking. This Timer is shown to the user in this format: minutes : seconds. The Timer's time remaining will be calculated by the number that the user entered into the input box on the QuizDetailsScreen and 10 seconds for each question. So in the example above, the user will have 3 minutes : 20 seconds to finish the quiz they have selected to take. This is calculated based on the fact they want to be quizzed on 20 questions from the "AMORY WARS" quiz and they will have 10 seconds to answer each question. So 20 questions multiplied by 10 seconds equals 200 seconds which will be formatted to 3 minutes : 20 seconds
+
+5. The next section of content shown on the QuestionScreen is the current Question they are being asked. This will be displayed as the question from the question in the "AMORY WARS" quiz such as "Which song by Coheed and Cambria is considered a tribute to Claudio Sanchez's dog, Apollo?"
+
+6. The next section of content shown on the QuestionScreen is the answer choices for the current Question they are being asked. This will be displayed as the choices from the question in the "AMORY WARS" quiz such as:
+"A. Welcome Home"
+"B. The Suffering"
+"C. Feathers"
+"D. The Running Free"
+
+7. The next section of content shown on the QuestionScreen is the "Previous" Button that allows the user to return to the previous question they were just asked. This is displayed at the bottom, left of the Question section.
+
+8. The next section of content shown on the QuestionScreen is the "Skip" Button that allows the user to skip the question they are currently being asked. This is displayed in the bottom, middle of the Question section.
+
+9. The last section of content shown on the QuestionScreen is the "Next" Button that allows the user to go to the next question in the quiz. This is displayed at the bottom, right of the Question section.
+
+
+
+### Next question to end of quiz
+The user will continue to answer questions in the same manner as described above until they have answered all questions in the quiz or the Timer runs out. 
+
+
+### ResultOverview
+### File: /cotf/src/components/ResultScreen/ResultOverview/index.tsx
+Once the user has answered all of the questions from the quiz they will see a clickable "Finish" Button. This "Finish" Button replaces the "Next" Button on the very last question they are asked on the quiz. So in our example above, when the user gets to question 20, the "Next" Button will be replaced by the "Finish" Button. Once they user clicks on the "Finish" Button, they will be taken to the ResultOverview screen. This ResultOverview screen consists of 4 sections described below:
+
+1. The checkmark icon
+2. The text "Done!"
+3. You have attempted 20 questions in total.
+4. "SHOW RESULT" Button
+
+
+
+
+### ResultScreen
+### File: /cotf/src/components/ResultScreen/index.tsx
+Once the "SHOW RESULT" Button is clicked on the ResultOverview screen, the user is taken to the
+ResultScreen. The ResultScreen has 8 main sections:
+
+1.  The first section of content shown on the QuestionScreen is the Mode icons. Right beside the Mood icons
+is a toggle that allows the user to switch the Theme of the app from light to dark. This toggle is shown to the user at the top, right of the QuestionScreen. The code that renders this toggle is found in the /cotf/src/components/ui/ToggleTheme/index.tsx file
+
+2. The next section of content shown on the QuestionScreen is the logo for the website which is displayed in the same manner in which it is displayed on the QuizTopicsScreen and is imported to the /cotf/src/components/QuestionScreen/index.tsx file this way:
+import { AppLogo, StartIcon } from "../../config/icons";
+
+3. The next section of content shown on the QuestionScreen is a line of text that reads:
+"You attempted questions: 20 / 20" based on the example we have been using of the user selecting the "AMORY WARS" quiz and asking to be quizzed on 20 questions. The 20 / 20 section of the code assumes that the user
+answered every question they asked to be quizzed on from the number that the user entered into the input box on the QuizDetailsScreen. If the user did not answer all of the questions because the Timer ran out, the user would 
+see a line such as "You attempted questions: 15 / 20". This means the user answered 15 questions out to the 
+number the user entered into the input box on the QuizDetailsScreen (which in our example is 20)
+
+4.  The next section of content shown on the QuestionScreen is a line of text that reads:
+"Score secured: 45 / 100" This is based on how many questions the user got right based on the number of
+questions the user entered into the input box on the QuizDetailsScreen (which in our example is 20). The user 
+will get 5 points for every question answered questions and they will have a maxScore of 100 (20 questions multiplied by 20 questions requested by the user entered into the input box on the QuizDetailsScreen)
+
+5. The next section of content shown on the QuestionScreen is a line of text that reads:
+"Time Spent: 2 minutes : 38 seconds" This is based on the time the user has to finish the quiz based on how many requested by the user entered into the input box on the QuizDetailsScreen. The user is given 10 seconds
+to answer each question requested by the user entered into the input box on the QuizDetailsScreen. So in the
+example we have been using, the user will have 200 seconds to complete the quiz but the time will be formatted
+in the format minutes : seconds. So in our example, the Timer will display 3 minutes : 20 seconds (10 seconds per requested multiplied by 20 questions requested by the user entered into the input box on the QuizDetailsScreen). If the user does not finish the quiz before the Timer runs out, they would see:
+"Time Spent: 3 minutes : 20 seconds"
+
+6. The next section of content shown on the QuestionScreen is a line of text that reads:
+"Status: Failed" or it will read "Status: Passed". The Calculation of the status (calculateStatus) is based on whether the user obtained a score is 60% or more of the totalScore based on the number of questions requested by the user entered into the input box on the QuizDetailsScreen. So in our example, the user requested to be quizzed on 20 questions. So if the user answers 12 or more questions correctly, they will see the message:
+"Status: Passed" If they answered 11 or fewer questions correctly, they will see the message:
+"Status: Failed"
+
+7. The next section of content shown on the QuestionScreen is the current Question they are being asked. This will be displayed as the question from the question in the "AMORY WARS" quiz such as "Which song by Coheed and Cambria is considered a tribute to Claudio Sanchez's dog, Apollo?"
+
+8. The next section of content shown on the QuestionScreen is each question and the choices for each question in their quiz in this manner: 
+"Which song by Coheed and Cambria is considered a tribute to Claudio Sanchez's dog, Apollo?"
+"A. Welcome Home"
+"B. The Suffering"
+"C. Feathers"
+"D. The Running Free"
+If the question was answered correctly, the RightAnswer the user selected will be highlighted in green.
+If the question was not answered correctly, the selectedAnswer by the user will be highlighted in red.
+Under each question and the choices, the RightAnswer to the question will be displayed. To the left of
+each question will be a line that reads either "Score 5" or "Score 0". If the user answered the question correctly,
+the line will say "Score 5" and the text will be colored green. If the user did not answer the question correctly,
+the line will say "Score 0" and the text will be colored red
+
+9.  The last section of content shown on the QuestionScreen is a clickable Button that reads:
+"RETRY". If the user clicks the Button "RETRY" they will be returned to the SplashScreen briefly and then they will be taken to the QuizTopicsScreen and they can start the whole quiz process over.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

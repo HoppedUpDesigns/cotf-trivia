@@ -7,9 +7,7 @@ import { Topic } from ".";
 
 export const sideProjects: Topic = {
   topic: "Side Projects",
-  level: "Beginner",
   totalQuestions: 30,
-  totalScore: 150,
   totalTime: 3600,
   questions: [
     {
@@ -23,7 +21,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The City Introvert"],
-      score: 5,
     },
     {
       question:
@@ -36,7 +33,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Travis Stever"],
-      score: 5,
     },
     {
       question:
@@ -49,7 +45,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Cleveland Stever"],
-      score: 5,
     },
     {
       question: "What was the original name of Davenport Cabinet?",
@@ -61,14 +56,12 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The English Panther"],
-      score: 5,
     },
     {
       question: "Who is the rapper Weerd Science?",
       choices: ["Travis Stever", "Joey Eppard", "Zach Cooper", "Josh Eppard"],
       type: "MCQs",
       correctAnswers: ["Josh Eppard"],
-      score: 5,
     },
     {
       question: "Who is the lead singer of L.S. Dunes?",
@@ -80,7 +73,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Anthony Green"],
-      score: 5,
     },
     {
       question:
@@ -88,7 +80,6 @@ export const sideProjects: Topic = {
       choices: ["West Coast Devin", "Mike Tyson", "Jesse", "Claudio"],
       type: "MCQs",
       correctAnswers: ["Jesse"],
-      score: 5,
     },
     {
       question:
@@ -101,7 +92,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["My Chemical Romance"],
-      score: 5,
     },
     {
       question: "What is the name of Davenport Cabinet's 2nd album?",
@@ -113,7 +103,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Nostalgia In Stereo"],
-      score: 5,
     },
     {
       question: "Whose side project is called The Prize Fighter Inferno?",
@@ -125,7 +114,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Claudio Sanchez"],
-      score: 5,
     },
     {
       question:
@@ -133,7 +121,6 @@ export const sideProjects: Topic = {
       choices: ["Nirvana", "Afterman", "Inferno", "Life Before This"],
       type: "MCQs",
       correctAnswers: ["Life Before This"],
-      score: 5,
     },
     {
       question:
@@ -146,7 +133,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["My Brother's Blood Machine"],
-      score: 5,
     },
     {
       question:
@@ -159,7 +145,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Afterman: Ascension"],
-      score: 5,
     },
     {
       question:
@@ -172,7 +157,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Margretville"],
-      score: 5,
     },
     {
       question:
@@ -185,7 +169,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Half Measures"],
-      score: 5,
     },
     {
       question:
@@ -193,7 +176,6 @@ export const sideProjects: Topic = {
       choices: ["Rick and Morty", "Adventure Time", "The Simpsons", "Futurama"],
       type: "MCQs",
       correctAnswers: ["The Simpsons"],
-      score: 5,
     },
     {
       question:
@@ -201,7 +183,6 @@ export const sideProjects: Topic = {
       choices: ["Banjo", "Accordion", "Mandolin", "Trumpet"],
       type: "MCQs",
       correctAnswers: ["Banjo"],
-      score: 5,
     },
     {
       question:
@@ -214,7 +195,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Travis Stever"],
-      score: 5,
     },
     {
       question:
@@ -227,7 +207,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Beaver Records"],
-      score: 5,
     },
     {
       question:
@@ -240,7 +219,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Nostalgia in Stereo"],
-      score: 5,
     },
     {
       question:
@@ -253,7 +231,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Fallout 4"],
-      score: 5,
     },
     {
       question:
@@ -266,7 +243,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["One Small Step For Landmines"],
-      score: 5,
     },
     {
       question:
@@ -279,7 +255,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["H.P. Lovecraft"],
-      score: 5,
     },
     {
       question:
@@ -292,9 +267,7 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: [
-        "It's named after a street in Claudio Sanchez's hometown",
-      ],
-      score: 5,
+        "It's named after a street in Claudio Sanchez's hometown"],
     },
     {
       question:
@@ -307,7 +280,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Josh Eppard"],
-      score: 5,
     },
     {
       question:
@@ -320,7 +292,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Friends and Nervous Breakdowns"],
-      score: 5,
     },
     {
       question:
@@ -333,7 +304,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Friends and Nervous Breakdowns"],
-      score: 5,
     },
     {
       question:
@@ -346,7 +316,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Red Light Juliet"],
-      score: 5,
     },
     {
       question:
@@ -359,7 +328,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Fallout 4"],
-      score: 5,
     },
     {
       question:
@@ -372,7 +340,6 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Sick Kids"],
-      score: 5,
     },
   ],
 };

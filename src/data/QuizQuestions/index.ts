@@ -1,5 +1,3 @@
-/* Here is the code for the file cotf/src/data/QuizQuestions/index.ts */
-
 import { neverender } from './neverender'
 import { amory } from './amory'
 import { sideProjects } from './sideProjects'
@@ -18,16 +16,12 @@ export type Question = {
   choices: Choice[]
   type: 'MCQs' | 'MAQs' | 'boolean'
   correctAnswers: CorrectAnswers
-  score: number
-  code?: string
   image?: string
 }
 
 export type Topic = {
   topic: string
-  level: string
   totalQuestions: number
-  totalScore: number
   totalTime: number
   questions: Question[]
 }
