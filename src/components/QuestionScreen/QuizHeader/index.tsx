@@ -1,5 +1,28 @@
-/* Here is the code for the file cotf/src/components/QuestionScreen/QuizHeader/index.tsx */
 
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file defines the QuizHeader component, which displays the current question number, total questions, and the timer.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: - Shows the active question number and total number of questions in the quiz.
+ *                 - Displays a countdown timer for the current quiz session.
+ *                 - Highlights if the current question is skipped.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/04/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *     - Initial creation of the QuizHeader component with active question, total questions, and timer display.
+ *     - Added styling for skipped questions and responsive design considerations.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *     - This component is a critical part of the quiz interface, providing users with essential information about their progress and time.
+ *     - Ensure accuracy in the display of the active question number and timer countdown to maintain user trust and engagement.
+ *     - Consider enhancing the visual feedback for skipped questions and other special cases to improve user experience.
+ ***************************************************************************************************************************/
 import { FC } from 'react'
 import styled from 'styled-components'
 

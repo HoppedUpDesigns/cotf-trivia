@@ -1,5 +1,20 @@
-/* Here is the code for the file cotf/src/styles/Theme.ts */
-
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/styles/Theme.ts
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file defines and exports the light and dark themes for the application, specifying colors, fonts, shadows, paddings, and margins for each theme.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: It provides a consistent theme structure for the application by offering a 'themes' object containing 'light' and 'dark' theme configurations to be applied throughout the application.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/04/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: Added a new dark theme configuration with customized color schemes, adjusted font settings, and refined shadows for improved readability and user experience in dark mode.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: Ensure themes are accessible and meet contrast standards. Test changes with different user scenarios to ensure a consistent and comfortable user experience.
+ ***************************************************************************************************************************/
 import { Theme } from './styled'
 
 export const themes: Record<string, Theme> = {

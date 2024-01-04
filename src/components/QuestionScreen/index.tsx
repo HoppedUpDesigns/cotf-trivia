@@ -1,8 +1,31 @@
-/* Here is the code for the file cotf/src/components/QuestionScreen/index.tsx */
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file defines the QuestionScreen component, responsible for displaying individual quiz questions and managing quiz flow.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: - Renders questions along with answer options and navigational buttons to move between questions.
+ *                 - Manages the state of the current question, user's selected answers, and quiz progress.
+ *                 - Implements a timer for the quiz and displays a modal upon completion or when time runs out.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/04/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *     - Initial creation of the QuestionScreen component with navigation and answer selection.
+ *     - Added timer functionality and modal for quiz completion and timeout.
+ *     - Integrated quiz context for global state management.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *     - This component is central to the quiz experience, orchestrating the display and interaction of questions and answers.
+ *     - Ensure proper handling of quiz data and state to maintain a smooth user experience.
+ *     - Consider scalability and maintainability as quiz requirements evolve.
+ ***************************************************************************************************************************/
 
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
-
 import { AppLogo, CheckIcon, Previous, Next, TimerIcon } from "../../config/icons";
 import { useQuiz } from "../../context/QuizContext";
 import { useTimer } from "../../hooks";

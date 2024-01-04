@@ -14,6 +14,7 @@ export const topic: Topic = {
   topic: "QUIZ TOPIC GOES HERE",
   questions: [
     {
+      questionID: 0,
       question:
         "QUESTION TO BE ASKED GOES HERE?",
       choices: [
@@ -26,19 +27,19 @@ export const topic: Topic = {
       correctAnswers: ["ANSWER GOES HERE"],
     },
     {
+      questionID: 0,
       question: 'QUESTION TO BE ASKED GOES HERE?.',
       choices: ['True', 'False'],
       type: 'boolean',
       correctAnswers: ['ANSWER GOES HERE'],
-      score: 5,
     },
     {
+      questionID: 0,
       question:
         'QUESTION TO BE ASKED GOES HERE? (Select all that apply)',
       choices: ['ANSWER CHOICE 1', 'ANSWER CHOICE 2', 'ANSWER CHOICE 3', 'ANSWER CHOICE 4'],
       type: 'MAQs',
       correctAnswers: ['CORRECT ANSWER 1 GOES HERE', 'CORRECT ANSWER 2 GOES HERE', 'CORRECT ANSWER 3 GOES HERE'],
-      score: 5,
     },
    ],
 };

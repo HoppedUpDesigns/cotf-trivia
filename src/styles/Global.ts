@@ -1,4 +1,20 @@
-/* Here is the code for the file cotf/src/styles/Global.ts */
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/styles/Global.ts
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file creates and exports global styles for the application using styled-components. It defines default styling for elements, sets up responsive breakpoints, and includes utility styled components for layout and design.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: It provides a consistent base for styling across the application and includes helper styled components like 'Flex' and 'Container' to streamline layout and design processes.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/04/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: Introduced additional global styles for accessibility, refined media queries for responsive design, and added new utility components for more flexible layout management.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: Ensure global styles do not unintentionally override component-specific styles. Regularly review for performance optimizations and accessibility improvements.
+ ***************************************************************************************************************************/
 
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { device } from './BreakPoints'

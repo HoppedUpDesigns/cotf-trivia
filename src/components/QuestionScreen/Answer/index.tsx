@@ -1,5 +1,26 @@
-/* Here is the code for the file cotf/src/components/QuestionScreen/Answer/index.tsx */
-
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/Answer/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file defines the Answer component, which is used within the QuestionScreen component to display and interact with the answer choices for a quiz question.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: - Renders an answer choice with a label (A, B, C, D, etc.) and a selectable input (checkbox or radio) based on the question type.
+ *                 - Highlights the selected answer for the user to visualize their choice.
+ *                 - Handles changes to the selected answer, informing the parent component of the selection.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/04/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *     - Initial creation of the Answer component with input handling and dynamic styling based on the question type and selection state.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *     - The component is designed to be flexible for both single and multiple answer questions.
+ *     - Ensure the parent component provides the necessary props for correct functionality.
+ *     - Consider extending this component for additional features such as answer explanation or instant feedback.
+ ***************************************************************************************************************************/
 import { FC } from 'react'
 import styled, { css } from 'styled-components'
 import { device } from '../../../styles/BreakPoints'

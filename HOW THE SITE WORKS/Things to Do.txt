@@ -1,0 +1,269 @@
+Give me very detailed, step by step instructions on how to create these new components and/or adapt the functionality of the file so that these changes to these files will help me move the data fetching for the cotf Quiz App from the local files in the cotf Quiz App to the Database name `cotf-trivia-4644c' located at `cotf-trivia-4644c.firebaseapp.com' that I have created for the cotf Quiz App. I will give you each change that I want in a step by step fashion such as Step 1:, Step: 2:, etc. I will give you these changes one by one. If any files other than the file mentioned in the Step needs to be changed, tell me which file and where in that file that changes need to be made. I want to make sure changes are made systematically in the order of the files that need to be changed so that there are no conflicts between the source code in a any file and all files are connected in the right order with all the correct functionality are in those files. This cotf Quiz App was created with ReactJS using npm to compile the code. The backend of the cotf Quiz App is stored in a Firebase, Firestore Database. The Database is named`cotf-trivia-4644c' and the location of the Database URL is cotf-trivia-4644c.firebaseapp.com. The Database has a Collection named `quizQuestions` and the Collection Documents are named `AMORY WARS`, `Coheed and Cambria`, `S.S. Neverender` and `Side Projects`. These Collection Documents contain 5 Fields that are identical for each of the 4 Collection Documents. These Fields are:
+`questionID` which is has the number type
+`question` which is has the string type
+`choices` which is has the array type
+`type` which is has the string type. Return to me the 100% complete and functional code with all of your suggested changes/additions merged into the source code for all of the files that I request for you to add functionality and/or new components, files, or folders for the cotf Quiz App.
+
+
+Step 1:
+@file: /Users/jason/Sites/cotf/src/types/index.ts
+1. Connect to the Database
+2. Edit this code:
+export interface QuestionTypes extends Question {
+skipped?: boolean
+}
+export interface Result extends Question {
+selectedAnswer: string[]
+isMatch: boolean
+skipped?: boolean
+}
+export type QuizContextTypes = {
+currentScreen: ScreenTypes
+setCurrentScreen: Dispatch<SetStateAction<ScreenTypes>>
+quizTopic: string
+selectQuizTopic: (type: string) => void
+questions: QuestionTypes[]
+setQuestions: Dispatch<SetStateAction<any[]>>
+result: Result[]
+setResult: Dispatch<SetStateAction<any[]>>
+timer: number
+setTimer: Dispatch<SetStateAction<number>>
+endTime: number
+setEndTime: (type: number) => void
+quizDetails: {
+totalQuestions: number
+totalTime: number
+selectedQuizTopic: string
+}
+}
+
+Step 2:
+@file: /Users/jason/Sites/cotf/src/components/Main/index.tsx
+1. Connect to the Database
+2. Edit this code:
+const ComponentToRender = screenComponents[currentScreen] || <SplashScreen />
+to render components based on the Database type, variables, properties, etc
+
+Step 3:
+@file: /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx
+1. Connect to the Database
+2. Edit this code:
+const QuizTopicsScreen: React.FC = () => {
+const { quizTopic, selectQuizTopic, setCurrentScreen } = useQuiz()
+to fetch quizTopics from the Database Collection Documents NOT local JSON or TypeScript files.
+3. Edit this code:
+<DetailText>Select topic below to start your Quiz.</DetailText>
+<SelectButtonContainer>
+{quizTopics.map(({ title, icon, disabled }) => (
+<SelectButton
+key={title}
+active={quizTopic === title}
+onClick={() => !disabled && selectQuizTopic(title)}
+disabled={disabled}
+>
+{icon}
+<SelectButtonText>{title}</SelectButtonText>
+</SelectButton>
+))}
+to get the quizTopics from the const QuizTopicsScreen: React.FC = () => {
+const { quizTopic, selectQuizTopic, setCurrentScreen } = useQuiz()
+code above.
+
+Step 4:
+@file: /Users/jason/Sites/cotf/src/context/QuizContext.tsx
+1. Connect to the Database
+2. Ediit this code:
+import { quiz } from '../data/QuizQuestions'
+to get the quiz data from the Database NOT the QuizQuestions folder
+3. Edit this code:
+const initialState: QuizContextTypes = {
+currentScreen: ScreenTypes.SplashScreen,
+setCurrentScreen: () => {},
+quizTopic: 'Coheed and Cambria',
+selectQuizTopic: () => {},
+questions: [],
+setQuestions: () => {},
+result: [],
+setResult: () => {},
+timer: 15,
+setTimer: () => {},
+endTime: 0,
+setEndTime: () => {},
+quizDetails: {
+totalQuestions: 0,
+totalTime: 0,
+selectedQuizTopic: 'Coheed and Cambria',
+},
+}
+to get the quizTopic, questions, quizDetails, totalQuestions, and selectedQuizTopic values from the Database Collection Documents and the code imported from: import { quiz } from '../data/QuizQuestions' (but from the Database NOT the QuizQuestions folder)
+4. All values for the quiz, quizTopic, questions and any related values are in the @file: /Users/jason/Sites/cotf/src/context/QuizContext.tsx file are fetched from Database sources not local files
+
+
+Step 5:
+@file: /Users/jason/Sites/cotf/src/App.tsx
+1. Adapt the code to fetch the values needed from the newly updated QuizContext file and any Database Collection Document code necessary for any and all Database functions and values.
+
+Step 6:
+@file: /Users/jason/Sites/cotf/src/hooks/useShuffleQuestions.ts
+1. Connect to the Database
+2. Adapt the code to fetch useShuffleQuestions from the Database Collection Documents NOT local files
+
+
+Step 7:
+@file: /Users/jason/Sites/cotf/src/hooks/useTimer.ts
+1. Connect to the Database
+2. Apart the code:
+interface QuizDetails {
+totalTime: number
+}
+const useTimer = (
+timer: number,
+quizDetails: QuizDetails,
+setEndTime: (time: number) => void,
+setTimer: Dispatch<SetStateAction<number>>,
+setShowTimerModal: (time: boolean) => void,
+showResultModal: boolean
+) => {
+useEffect(() => {
+if (timer <= 0) {
+const timeTaken = quizDetails.totalTime
+setEndTime(timeTaken)
+setShowTimerModal(true)
+setTimer(0)
+}
+}, [timer, quizDetails.totalTime, setEndTime, setShowTimerModal, setTimer])
+useEffect(() => {
+if (!showResultModal) {
+const countTimer = setTimeout(() => {
+setTimer((prevTimer) => prevTimer - 1)
+}, 1000)
+return () => clearTimeout(countTimer)
+}
+}, [timer, setTimer])
+}
+to get all values from Database sources not local files
+3. Change the value of the useTimer so that the user is given 10 seconds for each question they requested from the QuizDetailsScreen getTopicQuestionCount value
+
+
+
+
+Step 8:
+@file: /Users/jason/Sites/cotf/src/hooks/index.ts
+1. Adapt the code to get the values from the newly edited useTimer.ts and useShuffleQuestions.ts files
+
+
+
+Step 9:
+@file: /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx
+1. Create input box on QuizDetailsScreen that:
+a. is a input box that allows the user to type in their answer to the prompt "How many questions would you like to attempt?"
+b. The code for the input box will go directly under this code:
+<DetailText>
+Total questions available in the selected quiz:{' '}
+<HighlightedText>{getTopicQuestionCount()}</HighlightedText>
+</DetailText>
+The input container will be placed inside a <DetailText> container
+c. Accepts only numbers as input
+d. The user must enter the value of 1 in this input box.
+e. The maximum the user can input is the getTopicQuestionCount from the QuizDetailsScreen based on the number of questions available to the user from the selectedQuizTopic from the QuizDetailsScreen
+f. If user does not enter a number between 1 and the getTopicQuestionCount or they enter any non-numberic characters, they will be shown an error message that reads "You must enter a number between 1 and " {getTopicQuestionCount}
+
+
+Step 10:
+@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/index.tsx
+1. Adapt the code to fetch values necessary from the newly updated cotf Quiz App files necessary and all Database functions and values needed.
+
+
+
+
+
+Step 11:
+@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/Counter/index.tsx
+1. Adapt this code:
+const Counter: FC<CounterProps> = ({ time }) => {
+return (
+<Flex center>
+<TimerIcon />
+<TimerStyle>{time}</TimerStyle>
+</Flex>
+)
+}
+to get the {time} value from the newly edited useTimer hook
+
+
+
+Step 12:
+@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx
+1. Connect to the Database
+2. Edit the code of the QuestionScreen to fetch all values from the Database Collection Documents NOT local files
+3. Once the user clicks on the "Start" Button on the QuizDetailsScreen, the getTopicQuestionCount will be passed to the QuestionScreen
+4. The user will ONLY be asked the getTopicQuestionCount number of questions from the quiz they selected from the selectedQuizTopic value from the QuizDetailsScreen
+5. Once the user has answered the getTopicQuestionCount number of questions or the useTimer value runs out, the user will be sent to the ResultOverview Screen
+
+
+Step 13:
+@file: /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/index.tsx
+1. Connect to the Database
+2. Adapt this code:
+interface ResultOverviewProps {
+result: Result[]
+}
+const ResultOverview: FC<ResultOverviewProps> = ({ result }) => {
+const { quizDetails, endTime } = useQuiz()
+const totalQuestionAttempted = result.length
+return (
+<ResultOverviewStyle>
+<p>
+You attempted questions:{' '}
+<HighlightedText> {totalQuestionAttempted} </HighlightedText>/{' '}
+{quizDetails.totalQuestions}
+</p>
+<p>
+Time Spent:<HighlightedText> {convertSeconds(endTime)} </HighlightedText>
+</p>
+</ResultOverviewStyle>
+)
+}
+to fetch values from any and all Database Collection Document values and newly edited cotf Quiz App files necessary NOT local files
+
+Step 14:
+@file: /Users/jason/Sites/cotf/src/utils/helpers.ts
+1. Adapt the code to use any values necessary from the newly updated useTimer hook or any Database Collection Document code necessary for any and all Database functions and values.
+
+Step 15:
+@file: /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/index.tsx
+1. Connect to the Database
+2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection Document code necessary for any and all Database functions and values.
+
+
+Step 16:
+@file: /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx
+1. Connect to the Database
+2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection Document code necessary for any and all Database functions and values.
+
+
+
+
+merge your suggested changes into the code below. Any existing code that needs to be in the file, leave alone and return to me this code as it is. return to me the 100% complete and functional code for the file. update the comment box with the changes made including the date
+Step 17:
+@file: /Users/jason/Sites/cotf/src/api/api.js
+1. Connect to the Database
+2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection Document code necessary for any and all Database functions and values.
+
+
+
+
+merge your suggested changes into the code below. Any existing code that needs to be in the file, leave alone and return to me this code as it is. return to me the 100% complete and functional code for the file. update the comment box with the changes made including the date
+Step 18:
+@file: /Users/jason/Sites/cotf/scripts/importData.js
+1. Adapt the code to send the questions from the QuizQuestions folder data contained in JSON files named `amory.json`, `coheed.json`, `neverender.json`, and `sideProjects.json` to the `cotf-trivia-4644c' Database with a Collection named `quizQuestions` and Collection Documents named `AMORY WARS`, `Coheed and Cambria`, `S.S. Neverender` and `Side Projects`. These Collection Documents contain 5 Fields that are identical for each of the 4 Collection Documents. These Fields are:
+`questionID` which is has the number type
+`question` which is has the string type
+`choices` which is has the array type
+`type` which is has the string type
+`correctAnswers` which is has the array type
+I want to use the importData.js file to import data into all Collection Documents at once.
+2. Currently, the importData.js file is sending the question data to the Database and adding each question to its own individual Document with the format:
+`AMORY WARS_Q1, AMORY WARS_Q2, AMORY WARS_Q3` etc up to the last question currently in the `amory.json` file. This is true for all of the `QuizQuestions` JSON files sent to the Database. I want all of the questions from the `QuizQuestions` JSON files sent to the Database into 1 bulk Document named after the `AMORY WARS`, `Coheed and Cambria`, `S.S. Neverender` and `Side Projects` Collection Documents. I don't want Collection Documents with any kind of `_Q1' etc added to the end of the Collection Document name.
+3. I want a new JavaScript file that will let me import `QuizQuestions` JSON file questions data. This new JavaScript file should amend these questions to the `AMORY WARS`, `Coheed and Cambria`, `S.S. Neverender` and `Side Projects` Collection Documents to the END of these Collection Documents. For example, if the `AMORY WARS` Collection Document contains 100 questions, when I import data with this new JavaScript document, any new questions will be added after the last question currently in the `AMORY WARS` Collection Document. This will be true for any of the other Collection Documents as well.
+4. I want one new JavaScript file that will let me import question data from all 4 Collection Documents at once and another JavaScript file that will let me import data from just 1 individual Collection Document.

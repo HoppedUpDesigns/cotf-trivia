@@ -1,5 +1,26 @@
-/* Here is the code for the file cotf/src/components/ui/ToggleTheme/index.tsx */
-
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/ui/ToggleTheme/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: The ToggleTheme component provides a user interface element allowing users to switch between light and dark themes. This enhances user experience by offering visual comfort and personalization options based on user preference or environmental conditions.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: - Renders a toggle switch that changes the application's theme between light and dark modes.
+ *                 - Utilizes styled-components for dynamic styling based on the current theme.
+ *                 - Employs animations to provide a smooth and intuitive interaction as the toggle is switched.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/04/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *     - Implemented the initial version of the ToggleTheme component with responsive design.
+ *     - Added theme-based styling and animations for the toggle switch.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *     - Ensure the component is integrated with the global theme context for seamless theme switching.
+ *     - Future improvements might include accessibility enhancements and a more detailed indication of the current theme.
+ ***************************************************************************************************************************/
 import React, { FC } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Moon, Sun } from '../../../config/icons'

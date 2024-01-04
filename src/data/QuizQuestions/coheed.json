@@ -1,6 +1,7 @@
 [
   {
-    "question": "What was Coheed and Cambria's first single?",
+    "questionID": 1,
+    "question": "{What was Coheed and Cambria's first single?",
     "choices": [
       "Junesong Provision",
       "Time Consumer",
@@ -13,7 +14,8 @@
     ]
   },
   {
-    "question": "What is the name of Coheed and Cambria's first studio album?",
+    "questionID": 2,
+    "question": "{What is the name of Coheed and Cambria's first studio album?",
     "choices": [
       "The Second Stage Turbine Blade",
       "Good Apollo, I'm Burning Star IV, Vol. 1",
@@ -26,7 +28,8 @@
     ]
   },
   {
-    "question": "What year was 'The Second Stage Turbine Blade' released?",
+    "questionID": 3,
+    "question": "{What year was 'The Second Stage Turbine Blade' released?",
     "choices": [
       "2003",
       "2001",
@@ -39,7 +42,8 @@
     ]
   },
   {
-    "question": "What year was I'n Keeping Secrets of Silent Earth: 3' released?",
+    "questionID": 4,
+    "question": "{What year was I'n Keeping Secrets of Silent Earth: 3' released?",
     "choices": [
       "2003",
       "2004",
@@ -52,7 +56,8 @@
     ]
   },
   {
-    "question": "What year was 'Good Apollo, I'm Burning Star IV, Vol. 1' released?",
+    "questionID": 5,
+    "question": "{What year was 'Good Apollo, I'm Burning Star IV, Vol. 1' released?",
     "choices": [
       "2004",
       "2005",
@@ -65,7 +70,8 @@
     ]
   },
   {
-    "question": "What year was 'Good Apollo, I'm Burning Star IV, Vol. 2' released?",
+    "questionID": 6,
+    "question": "{What year was 'Good Apollo, I'm Burning Star IV, Vol. 2' released?",
     "choices": [
       "2005",
       "2006",
@@ -78,7 +84,8 @@
     ]
   },
   {
-    "question": "What year was 'Year of the Black Rainbow' released?",
+    "questionID": 7,
+    "question": "{What year was 'Year of the Black Rainbow' released?",
     "choices": [
       "2010",
       "2008",
@@ -91,7 +98,8 @@
     ]
   },
   {
-    "question": "What year was 'The Afterman: Ascension' released?",
+    "questionID": 8,
+    "question": "{What year was 'The Afterman: Ascension' released?",
     "choices": [
       "2012",
       "2011",
@@ -104,7 +112,8 @@
     ]
   },
   {
-    "question": "What year was 'The Afterman: Descension' released?",
+    "questionID": 9,
+    "question": "{What year was 'The Afterman: Descension' released?",
     "choices": [
       "2012",
       "2010",
@@ -117,7 +126,8 @@
     ]
   },
   {
-    "question": "What year was 'The Color Before the Sun' released?",
+    "questionID": 10,
+    "question": "{What year was 'The Color Before the Sun' released?",
     "choices": [
       "2011",
       "2012",
@@ -130,7 +140,8 @@
     ]
   },
   {
-    "question": "In what year was Coheed and Cambria formed?",
+    "questionID": 11,
+    "question": "{In what year was Coheed and Cambria formed?",
     "choices": [
       "1998",
       "2001",
@@ -143,7 +154,8 @@
     ]
   },
   {
-    "question": "Who are the founding members of Coheed and Cambria?",
+    "questionID": 12,
+    "question": "{Who are the founding members of Coheed and Cambria?",
     "choices": [
       "Claudio Sanchez and Josh Eppard",
       "Claudio Sanchez and Travis Stever",
@@ -156,7 +168,8 @@
     ]
   },
   {
-    "question": "What is the name of the band that Claudio and Travis were in that broke up in 1995?",
+    "questionID": 13,
+    "question": "{What is the name of the band that Claudio and Travis were in that broke up in 1995?",
     "choices": [
       "Delirium Trigger",
       "Toxic Parents",
@@ -169,7 +182,8 @@
     ]
   },
   {
-    "question": "What is the title of Coheed and Cambria's debut album?",
+    "questionID": 14,
+    "question": "{What is the title of Coheed and Cambria's debut album?",
     "choices": [
       "The Second Stage Turbine Blade",
       "In Keeping Secrets of Silent Earth: 3",
@@ -182,7 +196,8 @@
     ]
   },
   {
-    "question": "Which member of the band joined after the release of their debut album?",
+    "questionID": 15,
+    "question": "{Which member of the band joined after the release of their debut album?",
     "choices": [
       "Travis Stever",
       "Josh Eppard",
@@ -195,7 +210,8 @@
     ]
   },
   {
-    "question": "What is the name of Coheed and Cambria's official fan club?",
+    "questionID": 16,
+    "question": "{What is the name of Coheed and Cambria's official fan club?",
     "choices": [
       "The Prize Fighter Inferno",
       "The Children of the Fence",
@@ -208,7 +224,8 @@
     ]
   },
   {
-    "question": "Which member of Coheed and Cambria temporarily left the band but later returned?",
+    "questionID": 17,
+    "question": "{Which member of Coheed and Cambria temporarily left the band but later returned?",
     "choices": [
       "Josh Eppard",
       "Travis Stever",
@@ -221,7 +238,8 @@
     ]
   },
   {
-    "question": "What significant event led to the formation of Coheed and Cambria?",
+    "questionID": 18,
+    "question": "{What significant event led to the formation of Coheed and Cambria?",
     "choices": [
       "A shared vision",
       "A chance meeting",
@@ -234,7 +252,8 @@
     ]
   },
   {
-    "question": "In what city did Claudio Sanchez and Travis Stever form the band Coheed and Cambria?",
+    "questionID": 19,
+    "question": "{In what city did Claudio Sanchez and Travis Stever form the band Coheed and Cambria?",
     "choices": [
       "Nyack",
       "Boston",
@@ -247,7 +266,8 @@
     ]
   },
   {
-    "question": "Which Coheed and Cambria album serves as the prequel to The Amory Wars and provides insights into the origins of the storyline?",
+    "questionID": 20,
+    "question": "{Which Coheed and Cambria album serves as the prequel to The Amory Wars and provides insights into the origins of the storyline?",
     "choices": [
       "In Keeping Secrets of Silent Earth: 3",
       "Year of the Black Rainbow",
@@ -260,7 +280,8 @@
     ]
   },
   {
-    "question": "What inspired Claudio Sanchez to create the character 'Coheed Kilgannon'?",
+    "questionID": 21,
+    "question": "{What inspired Claudio Sanchez to create the character 'Coheed Kilgannon'?",
     "choices": [
       "A family member",
       "A friend",
@@ -273,7 +294,8 @@
     ]
   },
   {
-    "question": "Which album marked the return of Josh Eppard to Coheed and Cambria after a temporary departure?",
+    "questionID": 22,
+    "question": "{Which album marked the return of Josh Eppard to Coheed and Cambria after a temporary departure?",
     "choices": [
       "The Afterman: Descension",
       "Good Apollo, I'm Burning Star IV",
@@ -286,7 +308,8 @@
     ]
   },
   {
-    "question": "In 2012, which member of Coheed and Cambria was replaced by Zach Cooper?",
+    "questionID": 23,
+    "question": "{In 2012, which member of Coheed and Cambria was replaced by Zach Cooper?",
     "choices": [
       "Michael Todd",
       "Chris Pennie",
@@ -299,7 +322,8 @@
     ]
   },
   {
-    "question": "What event served as the catalyst for Claudio Sanchez to start writing the story of The Amory Wars?",
+    "questionID": 24,
+    "question": "{What event served as the catalyst for Claudio Sanchez to start writing the story of The Amory Wars?",
     "choices": [
       "A personal tragedy",
       "A dream",
@@ -312,7 +336,8 @@
     ]
   },
   {
-    "question": "Which song by Coheed and Cambria is considered a tribute to Claudio Sanchez's dog, Apollo?",
+    "questionID": 25,
+    "question": "{Which song by Coheed and Cambria is considered a tribute to Claudio Sanchez's dog, Apollo?",
     "choices": [
       "Welcome Home",
       "The Suffering",
@@ -325,7 +350,8 @@
     ]
   },
   {
-    "question": "What role did Nate Kelley play in the early years of Coheed and Cambria?",
+    "questionID": 26,
+    "question": "{What role did Nate Kelley play in the early years of Coheed and Cambria?",
     "choices": [
       "Lead vocalist",
       "Drummer",
@@ -338,7 +364,8 @@
     ]
   },
   {
-    "question": "What was the original name of Coheed and Cambria before they changed it to the current name?",
+    "questionID": 27,
+    "question": "{What was the original name of Coheed and Cambria before they changed it to the current name?",
     "choices": [
       "Shabütie",
       "The Prize Fighter Inferno",
@@ -351,7 +378,8 @@
     ]
   },
   {
-    "question": "During their early years, what genre of music did Coheed and Cambria primarily identify with?",
+    "questionID": 28,
+    "question": "{During their early years, what genre of music did Coheed and Cambria primarily identify with?",
     "choices": [
       "Punk rock",
       "Post-hardcore",
@@ -364,7 +392,8 @@
     ]
   },
   {
-    "question": "Which venue played a crucial role in Coheed and Cambria's early success in the New York music scene?",
+    "questionID": 29,
+    "question": "{Which venue played a crucial role in Coheed and Cambria's early success in the New York music scene?",
     "choices": [
       "CBGB",
       "Whisky a Go Go",
@@ -377,7 +406,8 @@
     ]
   },
   {
-    "question": "In what year did Coheed and Cambria sign their first major record deal?",
+    "questionID": 30,
+    "question": "{In what year did Coheed and Cambria sign their first major record deal?",
     "choices": [
       "1998",
       "2001",
@@ -390,7 +420,8 @@
     ]
   },
   {
-    "question": "Which influential producer worked with Coheed and Cambria on their breakthrough album 'In Keeping Secrets of Silent Earth: 3'?",
+    "questionID": 31,
+    "question": "{Which influential producer worked with Coheed and Cambria on their breakthrough album 'In Keeping Secrets of Silent Earth: 3'?",
     "choices": [
       "Butch Vig",
       "David Bottrill",
@@ -403,7 +434,8 @@
     ]
   },
   {
-    "question": "What is the significance of the song 'The Camper Velourium III: Al the Killer' in Coheed and Cambria's discography?",
+    "questionID": 32,
+    "question": "{What is the significance of the song 'The Camper Velourium III: Al the Killer' in Coheed and Cambria's discography?",
     "choices": [
       "It's a tribute to a fan",
       "It's a concept for a movie",
@@ -416,7 +448,8 @@
     ]
   },
   {
-    "question": "Which album marked the departure of drummer Josh Eppard and the temporary inclusion of drummer Taylor Hawkins?",
+    "questionID": 33,
+    "question": "{Which album marked the departure of drummer Josh Eppard and the temporary inclusion of drummer Taylor Hawkins?",
     "choices": [
       "Good Apollo, I'm Burning Star IV",
       "The Afterman: Ascension",
@@ -429,7 +462,8 @@
     ]
   },
   {
-    "question": "What notable event in 2004 boosted Coheed and Cambria's mainstream visibility?",
+    "questionID": 34,
+    "question": "{What notable event in 2004 boosted Coheed and Cambria's mainstream visibility?",
     "choices": [
       "A Grammy Award nomination",
       "A performance on Saturday Night Live",
@@ -442,7 +476,8 @@
     ]
   },
   {
-    "question": "Which member of Coheed and Cambria took on the persona of 'Sirius Amory' during 'The Amory Wars' concept?",
+    "questionID": 35,
+    "question": "{Which member of Coheed and Cambria took on the persona of 'Sirius Amory' during 'The Amory Wars' concept?",
     "choices": [
       "Claudio Sanchez",
       "Travis Stever",
@@ -455,7 +490,8 @@
     ]
   },
   {
-    "question": "In 2007, Coheed and Cambria contributed a song to the soundtrack of which film?",
+    "questionID": 36,
+    "question": "{In 2007, Coheed and Cambria contributed a song to the soundtrack of which film?",
     "choices": [
       "Star Wars: The Force Awakens",
       "Blade Runner 2049",
@@ -468,7 +504,8 @@
     ]
   },
   {
-    "question": "Which album by Coheed and Cambria marked a return to The Amory Wars concept after a brief departure?",
+    "questionID": 37,
+    "question": "{Which album by Coheed and Cambria marked a return to The Amory Wars concept after a brief departure?",
     "choices": [
       "Year of the Black Rainbow",
       "The Afterman: Descension",
@@ -481,7 +518,8 @@
     ]
   },
   {
-    "question": "What is the title of the documentary that provides insights into the making of Coheed and Cambria's album 'The Color Before the Sun'?",
+    "questionID": 38,
+    "question": "{What is the title of the documentary that provides insights into the making of Coheed and Cambria's album 'The Color Before the Sun'?",
     "choices": [
       "Beyond the Fence",
       "The Afterman Chronicles",
@@ -494,7 +532,8 @@
     ]
   },
   {
-    "question": "Which song by Coheed and Cambria was inspired by Claudio Sanchez's experience with sleep paralysis?",
+    "questionID": 39,
+    "question": "{Which song by Coheed and Cambria was inspired by Claudio Sanchez's experience with sleep paralysis?",
     "choices": [
       "Gravity's Union",
       "The Hard Sell",
@@ -507,7 +546,8 @@
     ]
   },
   {
-    "question": "During the recording of 'Year of the Black Rainbow,' which member of the band temporarily left, leading to Chris Pennie joining the band?",
+    "questionID": 40,
+    "question": "{During the recording of 'Year of the Black Rainbow,' which member of the band temporarily left, leading to Chris Pennie joining the band?",
     "choices": [
       "Josh Eppard",
       "Travis Stever",
@@ -520,7 +560,8 @@
     ]
   },
   {
-    "question": "In 2022, Coheed and Cambria celebrated the anniversary of which album with a special re-release?",
+    "questionID": 41,
+    "question": "{In 2022, Coheed and Cambria celebrated the anniversary of which album with a special re-release?",
     "choices": [
       "Good Apollo, I'm Burning Star IV",
       "The Second Stage Turbine Blade",
@@ -533,7 +574,8 @@
     ]
   },
   {
-    "question": "What was the title of Shabütie's first demo album released in 1999?",
+    "questionID": 42,
+    "question": "{What was the title of Shabütie's first demo album released in 1999?",
     "choices": [
       "The Second Stage Turbine Blade",
       "Plan to Take Over the World",
@@ -546,7 +588,8 @@
     ]
   },
   {
-    "question": "What music festival did Coheed and Cambria headline in 2008?",
+    "questionID": 43,
+    "question": "{What music festival did Coheed and Cambria headline in 2008?",
     "choices": [
       "Coachella",
       "Burning Man",
@@ -559,7 +602,8 @@
     ]
   },
   {
-    "question": "In 2005, Coheed and Cambria released a limited-edition graphic novel accompanying which album?",
+    "questionID": 44,
+    "question": "{In 2005, Coheed and Cambria released a limited-edition graphic novel accompanying which album?",
     "choices": [
       "Good Apollo, I'm Burning Star IV",
       "In Keeping Secrets of Silent Earth: 3",
@@ -572,7 +616,8 @@
     ]
   },
   {
-    "question": "Which song by Coheed and Cambria served as the theme for the animated series 'American Dad!'?",
+    "questionID": 45,
+    "question": "{Which song by Coheed and Cambria served as the theme for the animated series 'American Dad!'?",
     "choices": [
       "A Favor House Atlantic",
       "The Suffering",
@@ -585,7 +630,8 @@
     ]
   },
   {
-    "question": "What is the significance of the song 'The Willing Well IV: The Final Cut' in Coheed and Cambria's discography?",
+    "questionID": 46,
+    "question": "{What is the significance of the song 'The Willing Well IV: The Final Cut' in Coheed and Cambria's discography?",
     "choices": [
       "It's a cover song",
       "It's a live recording",
@@ -598,7 +644,8 @@
     ]
   },
   {
-    "question": "In 2015, Coheed and Cambria launched a record label. What is the name of this label?",
+    "questionID": 47,
+    "question": "{In 2015, Coheed and Cambria launched a record label. What is the name of this label?",
     "choices": [
       "Evil Ink Records",
       "Keywork Records",
@@ -611,7 +658,8 @@
     ]
   },
   {
-    "question": "During the early years, what pseudonym did Claudio Sanchez use?",
+    "questionID": 48,
+    "question": "{During the early years, what pseudonym did Claudio Sanchez use?",
     "choices": [
       "Sirius Amory",
       "The Crowing",
@@ -624,7 +672,8 @@
     ]
   },
   {
-    "question": "Which Coheed and Cambria album features the single 'The Running Free'?",
+    "questionID": 49,
+    "question": "{Which Coheed and Cambria album features the single 'The Running Free'?",
     "choices": [
       "The Afterman: Descension",
       "Year of the Black Rainbow",
@@ -637,7 +686,8 @@
     ]
   },
   {
-    "question": "In 2004, Coheed and Cambria joined the lineup of which major music festival, boosting their exposure?",
+    "questionID": 50,
+    "question": "{In 2004, Coheed and Cambria joined the lineup of which major music festival, boosting their exposure?",
     "choices": [
       "Coachella",
       "Lollapalooza",
@@ -650,7 +700,8 @@
     ]
   },
   {
-    "question": "What is the title of Coheed and Cambria's first music video, released in 2002?",
+    "questionID": 51,
+    "question": "{What is the title of Coheed and Cambria's first music video, released in 2002?",
     "choices": [
       "The Suffering",
       "A Favor House Atlantic",
@@ -663,7 +714,8 @@
     ]
   },
   {
-    "question": "In 2004, Coheed and Cambria released a live DVD capturing a performance in New York. What is the title of this DVD?",
+    "questionID": 52,
+    "question": "{In 2004, Coheed and Cambria released a live DVD capturing a performance in New York. What is the title of this DVD?",
     "choices": [
       "Live at the Roxy",
       "Neverender: Children of the Fence Edition",
@@ -676,7 +728,8 @@
     ]
   },
   {
-    "question": "What is the name of Coheed and Cambria's fifth studio album, released in 2010?",
+    "questionID": 53,
+    "question": "{What is the name of Coheed and Cambria's fifth studio album, released in 2010?",
     "choices": [
       "The Afterman: Ascension",
       "Year of the Black Rainbow",
@@ -689,7 +742,8 @@
     ]
   },
   {
-    "question": "What year was Live at the Starland Ballroom released?",
+    "questionID": 54,
+    "question": "{What year was Live at the Starland Ballroom released?",
     "choices": [
       "2006",
       "2003",
@@ -702,7 +756,8 @@
     ]
   },
   {
-    "question": "During the early years, Coheed and Cambria released music under the name Shabütie. What inspired the name change?",
+    "questionID": 55,
+    "question": "{During the early years, Coheed and Cambria released music under the name Shabütie. What inspired the name change?",
     "choices": [
       "A legal dispute",
       "A desire for a fresh start",
@@ -715,7 +770,8 @@
     ]
   },
   {
-    "question": "Which song by Coheed and Cambria is known for its extended guitar solo and was released as a single in 2005?",
+    "questionID": 56,
+    "question": "{Which song by Coheed and Cambria is known for its extended guitar solo and was released as a single in 2005?",
     "choices": [
       "The Crowing",
       "Welcome Home",
@@ -728,7 +784,8 @@
     ]
   },
   {
-    "question": "What is the name of Coheed and Cambria's first-ever headlining tour, launched in 2004?",
+    "questionID": 57,
+    "question": "{What is the name of Coheed and Cambria's first-ever headlining tour, launched in 2004?",
     "choices": [
       "The Unheavenly Tour",
       "The Neverender Tour",
@@ -741,7 +798,8 @@
     ]
   },
   {
-    "question": "In 2013, Coheed and Cambria released a concept album that served as a prequel to 'The Amory Wars' storyline. What is the title of this album?",
+    "questionID": 58,
+    "question": "{In 2013, Coheed and Cambria released a concept album that served as a prequel to 'The Amory Wars' storyline. What is the title of this album?",
     "choices": [
       "Good Apollo, I'm Burning Star IV",
       "Year of the Black Rainbow",
@@ -754,7 +812,8 @@
     ]
   },
   {
-    "question": "Which member of Coheed and Cambria originally played bass guitar and later switched to lead guitar?",
+    "questionID": 59,
+    "question": "{Which member of Coheed and Cambria originally played bass guitar and later switched to lead guitar?",
     "choices": [
       "Claudio Sanchez",
       "Travis Stever",
@@ -767,7 +826,8 @@
     ]
   },
   {
-    "question": "What is the name of the character who serves as the protagonist in 'The Amory Wars' narrative?",
+    "questionID": 60,
+    "question": "{What is the name of the character who serves as the protagonist in 'The Amory Wars' narrative?",
     "choices": [
       "Coheed Kilgannon",
       "Sirius Amory",
@@ -780,7 +840,8 @@
     ]
   },
   {
-    "question": "Which album features a song inspired by the film 'The NeverEnding Story.'?",
+    "questionID": 61,
+    "question": "{Which album features a song inspired by the film 'The NeverEnding Story.'?",
     "choices": [
       "Year of the Black Rainbow",
       "The Afterman: Descension",
@@ -793,7 +854,8 @@
     ]
   },
   {
-    "question": "Which record label signed Coheed and Cambria for their debut album 'The Second Stage Turbine Blade'?",
+    "questionID": 62,
+    "question": "{Which record label signed Coheed and Cambria for their debut album 'The Second Stage Turbine Blade'?",
     "choices": [
       "Columbia Records",
       "Equal Vision Records",
@@ -806,7 +868,8 @@
     ]
   },
   {
-    "question": "In 2018, Coheed and Cambria collaborated with a popular rapper on the song 'The Dark Sentencer.' Who was the rapper?",
+    "questionID": 63,
+    "question": "{In 2018, Coheed and Cambria collaborated with a popular rapper on the song 'The Dark Sentencer.' Who was the rapper?",
     "choices": [
       "Eminem",
       "Travis Scott",
@@ -819,7 +882,8 @@
     ]
   },
   {
-    "question": "What is the title of Coheed and Cambria's first live album, released in 2004?",
+    "questionID": 64,
+    "question": "{What is the title of Coheed and Cambria's first live album, released in 2004?",
     "choices": [
       "Live at the Apollo",
       "Live at the Roxy",
@@ -832,7 +896,8 @@
     ]
   },
   {
-    "question": "In 2017, Coheed and Cambria released a single that was also featured in the soundtrack of a popular animated film. What is the title of this single?",
+    "questionID": 65,
+    "question": "{In 2017, Coheed and Cambria released a single that was also featured in the soundtrack of a popular animated film. What is the title of this single?",
     "choices": [
       "Old Flames",
       "You Got Spirit, Kid",
@@ -845,7 +910,8 @@
     ]
   },
   {
-    "question": "Which Coheed and Cambria album features the character 'Ambellina,' a prominent figure in 'The Amory Wars' storyline?",
+    "questionID": 66,
+    "question": "{Which Coheed and Cambria album features the character 'Ambellina,' a prominent figure in 'The Amory Wars' storyline?",
     "choices": [
       "Vaxis - Act I: The Unheavenly Creatures",
       "Good Apollo, I'm Burning Star IV",
@@ -858,7 +924,8 @@
     ]
   },
   {
-    "question": "In 2018, Coheed and Cambria embarked on a tour named after a significant element in 'The Amory Wars' universe. What was the title of this tour?",
+    "questionID": 67,
+    "question": "{In 2018, Coheed and Cambria embarked on a tour named after a significant element in 'The Amory Wars' universe. What was the title of this tour?",
     "choices": [
       "The Keywork Chronicles Tour",
       "The Vaxis Voyage Tour",
@@ -871,7 +938,8 @@
     ]
   },
   {
-    "question": "In 2015, Coheed and Cambria released an album that marked a departure from 'The Amory Wars' concept. What is the title of this album?",
+    "questionID": 68,
+    "question": "{In 2015, Coheed and Cambria released an album that marked a departure from 'The Amory Wars' concept. What is the title of this album?",
     "choices": [
       "Vaxis - Act I: The Unheavenly Creatures",
       "The Afterman: Descension",
@@ -884,7 +952,8 @@
     ]
   },
   {
-    "question": "In 2006, Coheed and Cambria released an exclusive track for the soundtrack of a popular video game. Which game featured their song 'Welcome Home'?",
+    "questionID": 69,
+    "question": "{In 2006, Coheed and Cambria released an exclusive track for the soundtrack of a popular video game. Which game featured their song 'Welcome Home'?",
     "choices": [
       "Guitar Hero III: Legends of Rock",
       "Fallout 3",
@@ -897,7 +966,8 @@
     ]
   },
   {
-    "question": "Coheed and Cambria's song 'The Suffering' gained significant radio play. In which year was it released as a single?",
+    "questionID": 70,
+    "question": "{Coheed and Cambria's song 'The Suffering' gained significant radio play. In which year was it released as a single?",
     "choices": [
       "2003",
       "2005",
@@ -910,7 +980,8 @@
     ]
   },
   {
-    "question": "Which famous comic book artist collaborated with Claudio Sanchez on 'The Amory Wars' comic book series?",
+    "questionID": 71,
+    "question": "{Which famous comic book artist collaborated with Claudio Sanchez on 'The Amory Wars' comic book series?",
     "choices": [
       "Jim Lee",
       "Todd McFarlane",
@@ -923,7 +994,8 @@
     ]
   },
   {
-    "question": "Coheed and Cambria released a live album in 2009, capturing performances from their 'Neverender' tour. What is the title of this live album?",
+    "questionID": 72,
+    "question": "{Coheed and Cambria released a live album in 2009, capturing performances from their 'Neverender' tour. What is the title of this live album?",
     "choices": [
       "The Unheavenly Creatures Tour: Live",
       "Neverender: Children of the Fence Edition",
@@ -936,7 +1008,8 @@
     ]
   },
   {
-    "question": "What is the title of the song that served as the lead single for Coheed and Cambria's album 'Vaxis - Act I: The Unheavenly Creatures'?",
+    "questionID": 73,
+    "question": "{What is the title of the song that served as the lead single for Coheed and Cambria's album 'Vaxis - Act I: The Unheavenly Creatures'?",
     "choices": [
       "The Dark Sentencer",
       "The Gutter",
@@ -949,7 +1022,8 @@
     ]
   },
   {
-    "question": "Coheed and Cambria's fourth studio album, 'No World for Tomorrow,' was released in 2007. What is the title of the opening track on this album?",
+    "questionID": 74,
+    "question": "{Coheed and Cambria's fourth studio album, 'No World for Tomorrow,' was released in 2007. What is the title of the opening track on this album?",
     "choices": [
       "Feathers",
       "The End Complete I: The Fall of House Atlantic",
@@ -962,7 +1036,8 @@
     ]
   },
   {
-    "question": "In 2010, Coheed and Cambria performed a series of concerts called 'Neverender: SSTB.' What album did they play in its entirety during this tour?",
+    "questionID": 75,
+    "question": "{In 2010, Coheed and Cambria performed a series of concerts called 'Neverender: SSTB.' What album did they play in its entirety during this tour?",
     "choices": [
       "Year of the Black Rainbow",
       "Good Apollo, I'm Burning Star IV",
@@ -975,7 +1050,8 @@
     ]
   },
   {
-    "question": "Which member of Coheed and Cambria joined the band in 2007, filling the role of bassist?",
+    "questionID": 76,
+    "question": "{Which member of Coheed and Cambria joined the band in 2007, filling the role of bassist?",
     "choices": [
       "Zach Cooper",
       "Michael Todd",
@@ -988,7 +1064,8 @@
     ]
   },
   {
-    "question": "What is the title of the song that served as the lead single for Coheed and Cambria's album 'Good Apollo, I'm Burning Star IV: Vol. 2 – No World for Tomorrow'?",
+    "questionID": 77,
+    "question": "{What is the title of the song that served as the lead single for Coheed and Cambria's album 'Good Apollo, I'm Burning Star IV: Vol. 2 – No World for Tomorrow'?",
     "choices": [
       "The Running Free",
       "Feathers",
@@ -1001,7 +1078,8 @@
     ]
   },
   {
-    "question": "Coheed and Cambria's song 'Welcome Home' gained popularity as the soundtrack for a trailer of a highly anticipated video game. Which game featured this trailer?",
+    "questionID": 78,
+    "question": "{Coheed and Cambria's song 'Welcome Home' gained popularity as the soundtrack for a trailer of a highly anticipated video game. Which game featured this trailer?",
     "choices": [
       "Gears of War",
       "Halo 2",
@@ -1014,7 +1092,8 @@
     ]
   },
   {
-    "question": "Coheed and Cambria's album 'The Afterman: Descension' continues the story of a character introduced in 'The Afterman: Ascension.' What is the name of this character?",
+    "questionID": 79,
+    "question": "{Coheed and Cambria's album 'The Afterman: Descension' continues the story of a character introduced in 'The Afterman: Ascension.' What is the name of this character?",
     "choices": [
       "Sirius Amory",
       "The Writer",
@@ -1027,7 +1106,8 @@
     ]
   },
   {
-    "question": "In 2017, Coheed and Cambria announced their collaboration with a brewery to release a signature beer. What is the name of this beer?",
+    "questionID": 80,
+    "question": "{In 2017, Coheed and Cambria announced their collaboration with a brewery to release a signature beer. What is the name of this beer?",
     "choices": [
       "Welcome Home Wheat",
       "Unheavenly Brew",
@@ -1040,7 +1120,8 @@
     ]
   },
   {
-    "question": "What is the title of the documentary film released in 2009 that provides a behind-the-scenes look at Coheed and Cambria's tour life?",
+    "questionID": 81,
+    "question": "{What is the title of the documentary film released in 2009 that provides a behind-the-scenes look at Coheed and Cambria's tour life?",
     "choices": [
       "The Fiction Will See the Real",
       "Neverender: Children of the Fence Edition",
@@ -1053,7 +1134,8 @@
     ]
   },
   {
-    "question": "Coheed and Cambria's album 'The Afterman: Ascension' features a song with a guest appearance by which famous musician?",
+    "questionID": 82,
+    "question": "{Coheed and Cambria's album 'The Afterman: Ascension' features a song with a guest appearance by which famous musician?",
     "choices": [
       "Serj Tankian",
       "Maynard James Keenan",
@@ -1066,7 +1148,8 @@
     ]
   },
   {
-    "question": "Coheed and Cambria's album 'Vaxis - Act I: The Unheavenly Creatures' was released in 2018. What is the name of the character introduced in this album?",
+    "questionID": 83,
+    "question": "{Coheed and Cambria's album 'Vaxis - Act I: The Unheavenly Creatures' was released in 2018. What is the name of the character introduced in this album?",
     "choices": [
       "Sirius Amory",
       "The Gutter",
@@ -1079,7 +1162,8 @@
     ]
   },
   {
-    "question": "In 2004, Coheed and Cambria released a live DVD featuring footage from a concert in New York City. What is the title of this live DVD?",
+    "questionID": 84,
+    "question": "{In 2004, Coheed and Cambria released a live DVD featuring footage from a concert in New York City. What is the title of this live DVD?",
     "choices": [
       "Live at the Roxy",
       "The Last Supper: Live at Hammerstein Ballroom",
@@ -1092,7 +1176,8 @@
     ]
   },
   {
-    "question": "Coheed and Cambria's album 'No World for Tomorrow' features a song with a guest appearance by which famous musician?",
+    "questionID": 85,
+    "question": "{Coheed and Cambria's album 'No World for Tomorrow' features a song with a guest appearance by which famous musician?",
     "choices": [
       "Maynard James Keenan",
       "Serj Tankian",
@@ -1105,7 +1190,8 @@
     ]
   },
   {
-    "question": "In 2015, Coheed and Cambria released an animated video for the song 'You Got Spirit, Kid.' Who directed this animated video?",
+    "questionID": 86,
+    "question": "{In 2015, Coheed and Cambria released an animated video for the song 'You Got Spirit, Kid.' Who directed this animated video?",
     "choices": [
       "Wes Anderson",
       "Robert Rodriguez",
@@ -1118,7 +1204,8 @@
     ]
   },
   {
-    "question": "In 2014, Coheed and Cambria released a song that was used as the end credits theme for a popular animated TV series. What is the title of this song?",
+    "questionID": 87,
+    "question": "{In 2014, Coheed and Cambria released a song that was used as the end credits theme for a popular animated TV series. What is the title of this song?",
     "choices": [
       "Here to Mars",
       "Island",
@@ -1131,7 +1218,8 @@
     ]
   },
   {
-    "question": "Who were the founding members of the band Beautiful Loser after Toxic Parents split?",
+    "questionID": 88,
+    "question": "{Who were the founding members of the band Beautiful Loser after Toxic Parents split?",
     "choices": [
       "Claudio Sanchez, Travis Stever, and Shawna Wirkus",
       "Claudio Sanchez, Travis Stever, and Nate Kelley",
@@ -1144,7 +1232,8 @@
     ]
   },
   {
-    "question": "What led to the breakup of the band Beautiful Loser in June 1995?",
+    "questionID": 89,
+    "question": "{What led to the breakup of the band Beautiful Loser in June 1995?",
     "choices": [
       "Creative differences",
       "Argument over gas money",
@@ -1157,7 +1246,8 @@
     ]
   },
   {
-    "question": "What African tribe chant inspired the band name Shabütie?",
+    "questionID": 90,
+    "question": "{What African tribe chant inspired the band name Shabütie?",
     "choices": [
       "Maasai",
       "Zulu",
@@ -1170,7 +1260,8 @@
     ]
   },
   {
-    "question": "Who replaced Jon Carleo on bass when he left the band in August 1996?",
+    "questionID": 91,
+    "question": "{Who replaced Jon Carleo on bass when he left the band in August 1996?",
     "choices": [
       "Nate Kelley",
       "Michael Todd",
@@ -1183,7 +1274,8 @@
     ]
   },
   {
-    "question": "Who made a guest appearance on Coheed and Cambria's first studio album?",
+    "questionID": 92,
+    "question": "{Who made a guest appearance on Coheed and Cambria's first studio album?",
     "choices": [
       "John A. Hanson",
       "Claudio Sanchez",
@@ -1196,7 +1288,8 @@
     ]
   },
   {
-    "question": "Who recorded the drums for Coheed and Cambria's fourth studio album?",
+    "questionID": 93,
+    "question": "{Who recorded the drums for Coheed and Cambria's fourth studio album?",
     "choices": [
       "Josh Eppard",
       "Chris Pennie",
@@ -1209,7 +1302,8 @@
     ]
   },
   {
-    "question": "Who replaced Josh Eppard and Michael Todd in early November 2006?",
+    "questionID": 94,
+    "question": "{Who replaced Josh Eppard and Michael Todd in early November 2006?",
     "choices": [
       "Matt Williams and Michael Petrak",
       "Chris Pennie and Taylor Hawkins",
@@ -1222,7 +1316,8 @@
     ]
   },
   {
-    "question": "Who joined Coheed and Cambria as its drummer in June 2008?",
+    "questionID": 95,
+    "question": "{Who joined Coheed and Cambria as its drummer in June 2008?",
     "choices": [
       "Nate Kelley",
       "Chris Pennie",
@@ -1235,7 +1330,8 @@
     ]
   },
   {
-    "question": "What was the name of the band formed by Claudio Sanchez, Travis Stever, and Shawna Wirkus after Toxic Parents split in March 1995?",
+    "questionID": 96,
+    "question": "{What was the name of the band formed by Claudio Sanchez, Travis Stever, and Shawna Wirkus after Toxic Parents split in March 1995?",
     "choices": [
       "Beautiful Loser",
       "Shabütie",
@@ -1248,7 +1344,8 @@
     ]
   },
   {
-    "question": "Which band member left Shabütie after an argument over gas money, leading to the formation of the trio named Shabütie?",
+    "questionID": 97,
+    "question": "{Which band member left Shabütie after an argument over gas money, leading to the formation of the trio named Shabütie?",
     "choices": [
       "Claudio Sanchez",
       "Travis Stever",
@@ -1261,7 +1358,8 @@
     ]
   },
   {
-    "question": "What word, meaning 'naked prey' became the name of the trio formed after the breakup of Beautiful Loser?",
+    "questionID": 98,
+    "question": "{What word, meaning 'naked prey' became the name of the trio formed after the breakup of Beautiful Loser?",
     "choices": [
       "Shabütie",
       "Toxic",
@@ -1274,7 +1372,8 @@
     ]
   },
   {
-    "question": "Which member joined Shabütie in August 1996, replacing Jon Carleo on bass?",
+    "questionID": 99,
+    "question": "{Which member joined Shabütie in August 1996, replacing Jon Carleo on bass?",
     "choices": [
       "Michael Todd",
       "Nate Kelley",
@@ -1287,7 +1386,8 @@
     ]
   },
   {
-    "question": "What is the name of the manager who started working with Coheed and Cambria in August 2002?",
+    "questionID": 100,
+    "question": "{What is the name of the manager who started working with Coheed and Cambria in August 2002?",
     "choices": [
       "Blaze James",
       "Nick Raskulinecz",

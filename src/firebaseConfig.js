@@ -1,15 +1,29 @@
-// File: /cotf/src/firebaseConfig.js
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import { initializeApp } from 'firebase-admin/app';
-import * as admin from 'firebase-admin';
-import serviceAccount from './cotf-trivia-4644c-firebase-adminsdk-xffvg-686407b859.json';
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/firebaseConfig.js
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file serves as the configuration setup for Firebase in the Coheed and The Fence (COTF) Trivia application. It initializes Firebase with the specific project settings and provides a unified point of export for the Firebase app and Firestore services.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *     - Initializes the Firebase application with the given configuration.
+ *     - Sets up the Firestore database for storing and retrieving quiz data.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/04/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *     - Updated the imports for Firebase to be compatible with the latest version.
+ *     - Defined the Firebase configuration with project-specific settings.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *     - The firebaseConfig must be kept secure and should not be exposed in public repositories.
+ *     - This configuration is crucial for connecting the application to Firebase services and should be updated if the Firebase project settings change.
+ ***************************************************************************************************************************/
 
-initializeApp({
-    credential: applicationDefault(),
-    databaseURL: 'https://cotf-trivia-4644c.firebaseio.com'
-});
-
+import firebase from 'firebase/compat/app'; // Updated import for compatibility
+import 'firebase/compat/firestore'; // Updated import for compatibility
 
 const firebaseConfig = {
   apiKey: "60829957132",
@@ -21,6 +35,7 @@ const firebaseConfig = {
   measurementId: "G-YJPTMZCJX3"
 };
 
-firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig); // Initialize the Firebase app
 
-export const firestore = firebase.firestore();
+export default firebaseApp; // Export the initialized app
+export const firestore = firebase.firestore(); // Export firestore

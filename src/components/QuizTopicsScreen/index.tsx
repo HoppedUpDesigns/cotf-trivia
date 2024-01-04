@@ -1,7 +1,26 @@
-/* Here is the code for the file cotf/src/components/QuizTopicsScreen/index.tsx */
-
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file defines the QuizTopicsScreen component, which is the first point of interaction for users to select a quiz topic and begin their trivia experience.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: - Displays a list of available quiz topics for users to select from.
+ *                 - Allows users to proceed to the QuizDetailsScreen once they've selected a topic.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/04/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *     - Initial creation of the QuizTopicsScreen component with functionality to display and select quiz topics.
+ *     - Implemented user-friendly UI with interactive topic selection buttons and a continue button to proceed.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *     - This component sets the stage for users by providing a clear and engaging way to choose the quiz they want to attempt.
+ *     - Future updates may include additional topics or more interactive elements to engage users further.
+ ***************************************************************************************************************************/
 import styled from 'styled-components'
-
 import { AppLogo } from '../../config/icons'
 import { useQuiz } from '../../context/QuizContext'
 import { quizTopics } from '../../data/quizTopics'

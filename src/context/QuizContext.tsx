@@ -1,7 +1,28 @@
-/* Here is the code for the file cotf/src/context/QuizContext.tsx */
-
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/context/QuizContext.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: The QuizContext file centralizes the state and logic of the quiz application, enabling easy management and sharing of state across various components. This context provides essential data and functions related to the quiz, such as current screen, quiz topics, questions, results, and timer.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: - Manages the global state of the quiz application, including current screen, selected topic, questions, results, and timing.
+ *                 - Provides a QuizContext for components to consume and interact with the quiz state.
+ *                 - Implements functions to update the state, such as selecting a quiz topic, setting questions, and recording results.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/04/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *     - Initial creation of the QuizContext with foundational state and functions.
+ *     - Added dynamic handling of quiz questions and topics.
+ *     - Implemented timing and result recording functionalities.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *     - Ensure that the context is wrapped around the application root to provide global access.
+ *     - Consider implementing more robust error handling and state validation as the application scales.
+ ***************************************************************************************************************************/
 import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
-
 import { quiz } from '../data/QuizQuestions'
 import { QuizContextTypes, Result, ScreenTypes } from '../types'
 

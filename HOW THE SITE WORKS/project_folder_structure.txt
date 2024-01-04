@@ -4,227 +4,120 @@
 *** anything that looks like this |--  is a file ***
 *** for example: |-- package.json is a file that is one level down from the root of the project (i.e. /cotf) ***
 
-/cotf
-  |-- /build
-  |     |-- /static
-  |     |     |-- /css
-  |     |     |-- /js
-  |     |     |-- /media
-  |     |-- index.html
+/Users/jason/Sites/cotf/
+  |-- /Users/jason/Sites/cotf/build/
+  |     |-- /Users/jason/Sites/cotf/build/static/
+  |     |     |-- /Users/jason/Sites/cotf/build/static/css
+  |     |     |-- /Users/jason/Sites/cotf/build/static/js
+  |     |     |-- /Users/jason/Sites/cotf/build/static/media
+  |     |-- /Users/jason/Sites/cotf/build/index.html
   |
-  |-- /node_modules
+  |-- /Users/jason/Sites/cotf/node_modules/
   |
-  |-- /public
-  |     |-- index.html
-  |     |-- site.webmanifest
+  |-- /Users/jason/Sites/cotf/public/
+  |     |-- /Users/jason/Sites/cotf/public/index.html
+  |     |-- /Users/jason/Sites/cotf/public/site.webmanifest
   |
-  |-- /src
-  |     |-- /components
-  |     |     |-- /Main
-  |     |     |     |-- index.tsx
+  |-- /Users/jason/Sites/cotf/src/
+  |     |-- /Users/jason/Sites/cotf/src/components/
+  |     |     |-- /Users/jason/Sites/cotf/src/components/Main
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/Main/index.tsx
   |     |     |
-  |     |     |-- /QuestionScreen
-  |     |     |     |-- /Answer
-  |     |     |     |     |-- index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Answer/
+  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Answer/index.tsx
   |     |     |     |
-  |     |     |     |-- /Question
-  |     |     |     |     |-- index.tsx
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/
+  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/index.tsx
   |     |     |     |
-  |     |     |     |-- /QuizHeader
-  |     |     |     |     |-- /Counter
-  |     |     |     |     |     |-- index.tsx
-  |     |     |     |     |-- index.tsx
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/QuizHeader/
+  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/QuizHeader/Counter
+  |     |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/QuizHeader/Counter/index.tsx
+  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/QuizHeader/index.tsx
   |     |     |     |
-  |     |     |-- index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/index.tsx
   |     |     |
-  |     |     |-- /QuizDetailsScreen
-  |     |     |     |-- index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx
   |     |     |
-  |     |     |-- /QuizTopicsScreen
-  |     |     |     |-- index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx
   |     |     |
-  |     |     |-- /ResultScreen
-  |     |     |     |-- /ResultOverview
-  |     |     |     |     |-- index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/
+  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/index.tsx
   |     |     |     |
-  |     |     |     |-- /RightAnswer
-  |     |     |     |     |-- index.tsx
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/
+  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/index.tsx
   |     |     |     |
-  |     |     |     |-- index.tsx
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx
   |     |     |
-  |     |     |-- /SplashScreen
-  |     |           |-- index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/SplashScreen/
+  |     |           |-- /Users/jason/Sites/cotf/src/components/SplashScreen/index.tsx
   |     |
-  |     |-- /ui
-  |     |     |-- /Button
-  |     |     |     |-- index.tsx
-  |     |     |     |-- styled.tsx
+  |     |-- /Users/jason/Sites/cotf/src/components/ui/
+  |     |     |-- /Users/jason/Sites/cotf/src/components/ui/Button/
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/Button/index.tsx
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/Button/styled.tsx
   |     |     |
-  |     |     |-- /Input
-  |     |     |     |-- index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/ui/ModalWrapper/
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/ModalWrapper/index.tsx
   |     |     |
-  |     |     |-- /ModalWrapper
-  |     |     |     |-- index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/ui/PreviousButton/
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/PreviousButton/index.tsx
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/PreviousButton/styled.tsx
   |     |     |
-  |     |     |-- /PreviousButton
-  |     |     |     |-- index.tsx
-  |     |     |     |-- styled.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/QuizImage/
+  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuizImage/index.tsx
   |     |     |
-  |     |     |-- /QuizImage
-  |     |     |     |-- index.tsx
-  |     |     |
-  |     |     |-- /ToggleTheme
-  |     |           |-- index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/components/ui/ToggleTheme/
+  |     |           |-- /Users/jason/Sites/cotf/src/components/ui/ToggleTheme/index.tsx
   |
-  |-- /UserInput
-  |     |-- QuestionInput.tsx
+  |-- /Users/jason/Sites/cotf/src/config/
+  |     |-- /Users/jason/Sites/cotf/src/config/icons.ts
   |
-  |-- /config
-  |     |-- icons.ts
+  |-- /Users/jason/Sites/cotf/src/context/
+  |     |-- /Users/jason/Sites/cotf/src/context/QuizContext.tsx
   |
-  |-- /context
-  |     |-- QuizContext.tsx
-  |
-  |-- /data
-  |     |-- /QuizQuestions
-  |     |     |-- amory.ts
-  |     |     |-- coheed.ts
-  |     |     |-- index.tsx
-  |     |     |-- neverender.ts
-  |     |     |-- sideProjects.ts
+  |-- /Users/jason/Sites/cotf/src/data/
+  |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/
+  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/amory.ts
+  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/coheed.ts
+  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/index.tsx
+  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/neverender.ts
+  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/sideProjects.ts
   |     |
-  |     |-- quizTopics.tsx
+  |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/quizTopics.tsx
   |
-  |-- /hooks
-  |     |-- index.tsx
-  |     |-- useShuffleQuestions.ts
-  |     |-- useTimer.ts
+  |-- /Users/jason/Sites/cotf/src/hooks
+  |     |-- /Users/jason/Sites/cotf/src/hooks/index.tsx
+  |     |-- /Users/jason/Sites/cotf/src/hooks/useShuffleQuestions.ts
+  |     |-- /Users/jason/Sites/cotf/src/hooks/useTimer.ts
   |
-  |-- /styles
-  |     |-- Breakpoints.ts
-  |     |-- fonts.module.css
-  |     |-- Global.ts
-  |     |-- styled.d.ts
-  |     |-- Theme.ts
+  |-- /Users/jason/Sites/cotf/src/styles/
+  |     |-- /Users/jason/Sites/cotf/src/styles/Breakpoints.ts
+  |     |-- /Users/jason/Sites/cotf/src/styles/fonts.module.css
+  |     |-- /Users/jason/Sites/cotf/src/styles/Global.ts
+  |     |-- /Users/jason/Sites/cotf/src/styles/styled.d.ts
+  |     |-- /Users/jason/Sites/cotf/src/styles/Theme.ts
   |
-  |-- /types
-  |     |-- index.tsx
+  |-- /Users/jason/Sites/cotf/src/types/
+  |     |-- /Users/jason/Sites/cotf/src/types/index.tsx
   |
-  |-- /utils
-  |     |-- helpers.ts
+  |-- /Users/jason/Sites/cotf/src/utils/
+  |     |-- /Users/jason/Sites/cotf/src/utils/helpers.ts
   |
-  |-- App.test.tsx
-  |-- App.tsx
-  |-- index.tsx
-  |-- logo.svg
-  |-- react-app-env.d.ts
-  |-- reportWebVitals.ts
-  |-- setupTests.ts
+  |-- /Users/jason/Sites/cotf/src/App.test.tsx
+  |-- /Users/jason/Sites/cotf/src/App.tsx
+  |-- /Users/jason/Sites/cotf/src/index.tsx
+  |-- /Users/jason/Sites/cotf/src/logo.svg
+  |-- /Users/jason/Sites/cotf/src/react-app-env.d.ts
+  |-- /Users/jason/Sites/cotf/src/reportWebVitals.ts
+  |-- /Users/jason/Sites/cotf/src/setupTests.ts
 |
-|-- .firebaserc
-|-- .gitignore
-|-- HOW_COTF_WORKS_EXPLANATION.txt
-|-- package-lock.json
-|-- package.json
-|-- project_folder_structure.txt
-|-- quiz_questions_format.txt
-|-- README.md
-|-- tsconfig.json
-
-
-// another way to display folder structure
-/cotf/
-  /.firebase/
-  /.github/
-  /build/
-  /node_modules/
-  /public/
-  /src/
-    /assets/
-      /fonts/
-        /anek-malayalam/
-      /icons/
-        /app-logo.svg
-        /check.svg
-        /moon.svg
-        /next.svg
-        /previous.svg
-        /refresh.svg
-        /start.svg
-        /sun.svg
-        /timer.svg
-    /components/
-      /Main/
-        /index.tsx
-        /QuestionScreen/
-          /Answer/
-            /index.tsx
-          /Question/
-            /index.tsx
-            /QuizHeader/
-              /index.tsx
-              /Counter/
-                /index.tsx
-          /index.tsx
-        /QuizDetailsScreen/
-          /index.tsx
-        /QuizTopicsScreen/
-          /index.tsx
-        /ResultScreen/
-          /ResultOverview/
-            /index.tsx
-          /RightAnswer/
-            /index.tsx
-        /SplashScreen/
-          /index.tsx
-        /ui/
-          /Button/
-            /index.tsx
-            /styled.tsx
-          /Input/
-            /index.tsx
-          /ModalWrapper/
-            /index.tsx
-          /QuizImage/
-            /index.tsx
-          /ToggleTheme/
-            /index.tsx
-          /UserInput/
-            /QuestionInput.tsx
-    /config/
-      /icons.ts
-    /context/
-      /QuizContext.tsx
-    /data/
-      /QuizQuestions/
-        /amory.ts
-        /coheed.ts
-        /index.ts
-        /neverender.ts
-        /sideProjects.ts
-    /hooks/
-      /index.ts
-      /useShuffleQuestions.ts
-      /useTimer.ts
-    /styles/
-      /Breakpoints.ts
-      /fonts.module.css
-      /Global.ts
-      /styled.d.ts
-      /Theme.ts
-    /types/
-      /index.ts
-    /utils/
-      /helpers.ts
-  /App.test.tsx
-  /App.tsx
-  /index.tsx
-  /logo.svg
-  /react-app-env.d.ts
-  /reportWebVitals.ts
-  /setupTests.ts
-  /firebase.json
-  /package-lock.json
-  /package.json
-  /README.md
-  /tsconfig.json
+|-- /Users/jason/Sites/cotf/.firebaserc
+|-- /Users/jason/Sites/cotf/.gitignore
+|-- /Users/jason/Sites/cotf/package-lock.json
+|-- /Users/jason/Sites/cotf/package.json
+|-- /Users/jason/Sites/cotf/README.md
+|-- /Users/jason/Sites/cotf/tsconfig.json
