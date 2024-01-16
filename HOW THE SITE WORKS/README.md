@@ -11,9 +11,6 @@ import { Topic } from ".";
 
 export const topic: Topic = {
   topic: "QUIZ TOPIC GOES HERE",
-  totalQuestions: TOTAL NUMBER OF QUESTIONS IN THE SELECTED QUIZ GOES HERE,
-  totalScore: THE SCORE THAT IS POSSIBLE IF ALL QUESTIONS ARE ANSWERED CORRECTLY GOES HERE,
-  totalTime: THE TIME THAT THE USER HAS TO FINISH THE QUIZ GOES HERE. TIME IS IN SECONDS FORMAT,
   questions: [
     {
       question:
@@ -26,14 +23,12 @@ export const topic: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["ANSWER GOES HERE"],
-      score: 5,
     },
     {
       question: 'QUESTION TO BE ASKED GOES HERE?.',
       choices: ['True', 'False'],
       type: 'boolean',
       correctAnswers: ['ANSWER GOES HERE'],
-      score: 5,
     },
     {
       question:
@@ -41,238 +36,9 @@ export const topic: Topic = {
       choices: ['ANSWER CHOICE 1', 'ANSWER CHOICE 2', 'ANSWER CHOICE 3', 'ANSWER CHOICE 4'],
       type: 'MAQs',
       correctAnswers: ['CORRECT ANSWER 1 GOES HERE', 'CORRECT ANSWER 2 GOES HERE', 'CORRECT ANSWER 3 GOES HERE'],
-      score: 5,
     },
    ],
 };
-
-
-### Folder Structure
-
-/cotf
-  |-- /build
-  |     |-- /static
-  |     |     |-- /css
-  |     |     |-- /js
-  |     |     |-- /media
-  |     |-- index.html
-  |
-  |-- /node_modules
-  |
-  |-- /public
-  |     |-- index.html
-  |     |-- site.webmanifest
-  |
-  |-- /src
-  |     |-- /components
-  |     |     |-- /Main
-  |     |     |     |-- index.tsx
-  |     |     |
-  |     |     |-- /QuestionScreen
-  |     |     |     |-- /Answer
-  |     |     |     |     |-- index.tsx
-  |     |     |     |
-  |     |     |     |-- /Question
-  |     |     |     |     |-- index.tsx
-  |     |     |     |
-  |     |     |     |-- /QuizHeader
-  |     |     |     |     |-- /Counter
-  |     |     |     |     |     |-- index.tsx
-  |     |     |     |     |-- index.tsx
-  |     |     |     |
-  |     |     |-- index.tsx
-  |     |     |
-  |     |     |-- /QuizDetailsScreen
-  |     |     |     |-- index.tsx
-  |     |     |
-  |     |     |-- /QuizTopicsScreen
-  |     |     |     |-- index.tsx
-  |     |     |
-  |     |     |-- /ResultScreen
-  |     |     |     |-- /ResultOverview
-  |     |     |     |     |-- index.tsx
-  |     |     |     |
-  |     |     |     |-- /RightAnswer
-  |     |     |     |     |-- index.tsx
-  |     |     |     |
-  |     |     |     |-- index.tsx
-  |     |     |
-  |     |     |-- /SplashScreen
-  |     |           |-- index.tsx
-  |     |
-  |     |-- /ui
-  |     |     |-- /Button
-  |     |     |     |-- index.tsx
-  |     |     |     |-- styled.tsx
-  |     |     |
-  |     |     |-- /Input
-  |     |     |     |-- index.tsx
-  |     |     |
-  |     |     |-- /ModalWrapper
-  |     |     |     |-- index.tsx
-  |     |     |
-  |     |     |-- /PreviousButton
-  |     |     |     |-- index.tsx
-  |     |     |     |-- styled.tsx
-  |     |     |
-  |     |     |-- /QuizImage
-  |     |     |     |-- index.tsx
-  |     |     |
-  |     |     |-- /ToggleTheme
-  |     |           |-- index.tsx
-  |
-  |-- /UserInput
-  |     |-- QuestionInput.tsx
-  |
-  |-- /config
-  |     |-- icons.ts
-  |
-  |-- /context
-  |     |-- QuizContext.tsx
-  |
-  |-- /data
-  |     |-- /QuizQuestions
-  |     |     |-- amory.ts
-  |     |     |-- coheed.ts
-  |     |     |-- index.tsx
-  |     |     |-- neverender.ts
-  |     |     |-- sideProjects.ts
-  |     |
-  |     |-- quizTopics.tsx
-  |
-  |-- /hooks
-  |     |-- index.tsx
-  |     |-- useShuffleQuestions.ts
-  |     |-- useTimer.ts
-  |
-  |-- /styles
-  |     |-- Breakpoints.ts
-  |     |-- fonts.module.css
-  |     |-- Global.ts
-  |     |-- styled.d.ts
-  |     |-- Theme.ts
-  |
-  |-- /types
-  |     |-- index.tsx
-  |
-  |-- /utils
-  |     |-- helpers.ts
-  |
-  |-- App.test.tsx
-  |-- App.tsx
-  |-- index.tsx
-  |-- logo.svg
-  |-- react-app-env.d.ts
-  |-- reportWebVitals.ts
-  |-- setupTests.ts
-|
-|-- .firebaserc
-|-- .gitignore
-|-- HOW_COTF_WORKS_EXPLANATION.txt
-|-- package-lock.json
-|-- package.json
-|-- project_folder_structure.txt
-|-- quiz_questions_format.txt
-|-- README.md
-|-- tsconfig.json
-
-
-// another way to display folder structure
-/cotf/
-  /.firebase/
-  /.github/
-  /build/
-  /node_modules/
-  /public/
-  /src/
-    /assets/
-      /fonts/
-        /anek-malayalam/
-      /icons/
-        /app-logo.svg
-        /check.svg
-        /moon.svg
-        /next.svg
-        /previous.svg
-        /refresh.svg
-        /start.svg
-        /sun.svg
-        /timer.svg
-    /components/
-      /Main/
-        /index.tsx
-        /QuestionScreen/
-          /Answer/
-            /index.tsx
-          /Question/
-            /index.tsx
-            /QuizHeader/
-              /index.tsx
-              /Counter/
-                /index.tsx
-          /index.tsx
-        /QuizDetailsScreen/
-          /index.tsx
-        /QuizTopicsScreen/
-          /index.tsx
-        /ResultScreen/
-          /ResultOverview/
-            /index.tsx
-          /RightAnswer/
-            /index.tsx
-        /SplashScreen/
-          /index.tsx
-        /ui/
-          /Button/
-            /index.tsx
-            /styled.tsx
-          /Input/
-            /index.tsx
-          /ModalWrapper/
-            /index.tsx
-          /QuizImage/
-            /index.tsx
-          /ToggleTheme/
-            /index.tsx
-          /UserInput/
-            /QuestionInput.tsx
-    /config/
-      /icons.ts
-    /context/
-      /QuizContext.tsx
-    /data/
-      /QuizQuestions/
-        /amory.ts
-        /coheed.ts
-        /index.ts
-        /neverender.ts
-        /sideProjects.ts
-    /hooks/
-      /index.ts
-      /useShuffleQuestions.ts
-      /useTimer.ts
-    /styles/
-      /Breakpoints.ts
-      /fonts.module.css
-      /Global.ts
-      /styled.d.ts
-      /Theme.ts
-    /types/
-      /index.ts
-    /utils/
-      /helpers.ts
-  /App.test.tsx
-  /App.tsx
-  /index.tsx
-  /logo.svg
-  /react-app-env.d.ts
-  /reportWebVitals.ts
-  /setupTests.ts
-  /firebase.json
-  /package-lock.json
-  /package.json
-  /README.md
-  /tsconfig.json
 
 ### Folder Structure Explanation
 

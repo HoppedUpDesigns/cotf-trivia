@@ -1,31 +1,3 @@
-/***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/utils/helpers.ts
- * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This utility module provides a collection of helper functions designed to simplify and centralize common operations used throughout the Coheed and The Fence (COTF) trivia app.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: 
- *     - addLeadingZero: Adds a leading zero to single-digit numbers for display purposes.
- *     - formatTime: Converts time in seconds to a formatted string (minutes:seconds).
- *     - convertSeconds: Converts a given number of seconds into a human-readable format including hours, minutes, and seconds.
- *     - refreshPage: Reloads the current page to reset the state or start over.
- *     - shuffleArray: Randomly shuffles the elements of an array, providing a new sequence every time it's called.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Created by: Jason McCoy
- * Created on: 12/30/2023
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
- *     - Implemented and refined utility functions for wider use across the application.
- *     - Enhanced the formatTime and convertSeconds functions for better time representation.
- *     - Added shuffleArray function to support randomizing quiz questions.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: 
- *     - These helpers are crucial for maintaining clean, readable, and DRY code throughout the application.
- *     - Future enhancements might include more sophisticated time formatting and array manipulation utilities.
- ***************************************************************************************************************************/
-
 export const addLeadingZero = (number: number) => {
   if (number > 9) {
     return number

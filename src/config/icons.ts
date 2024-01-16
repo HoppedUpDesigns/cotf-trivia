@@ -25,5 +25,6 @@ import { ReactComponent as TimerIcon } from '../assets/icons/timer.svg'
 import { ReactComponent as StartIcon } from '../assets/icons/start.svg'
 import { ReactComponent as Sun } from '../assets/icons/sun.svg'
 import { ReactComponent as Moon } from '../assets/icons/moon.svg'
+import { ReactComponent as Coheed } from '../assets/icons/app-logo.svg'
 
-export { AppLogo, CheckIcon, Next, Previous, Refresh, TimerIcon, StartIcon, Sun, Moon }
+export { AppLogo, CheckIcon, Next, Previous, Refresh, TimerIcon, StartIcon, Sun, Moon, Coheed }

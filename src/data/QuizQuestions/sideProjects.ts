@@ -8,7 +8,6 @@ import { Topic } from ".";
 export const sideProjects: Topic = {
   topic: "Side Projects",
   totalQuestions: 30,
-  totalTime: 3600,
   questions: [
     {
       question:

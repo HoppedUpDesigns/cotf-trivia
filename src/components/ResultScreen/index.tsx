@@ -1,28 +1,3 @@
-
-/***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx
- * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This file defines the ResultScreen component, which displays a detailed overview of the user's performance in the quiz, including answers, correct answers, and score.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: - Presents a summary of correct and incorrect answers.
- *                 - Highlights the user's selected answers and shows the correct answers for reference.
- *                 - Provides an option to retry the quiz.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Created by: Jason McCoy
- * Created on: 12/30/2023
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
- *     - Implemented result overview display including question, user's answers, and correct answers.
- *     - Added interactive elements to allow users to navigate and retry the quiz.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: 
- *     - This component is crucial for providing feedback to users, enabling learning and improvement.
- *     - Future enhancements could include more detailed analytics and personalized feedback based on performance.
- ***************************************************************************************************************************/
-
 import { FC } from 'react'
 import styled, { css } from 'styled-components'
 import { AppLogo, Refresh } from '../../config/icons'
@@ -126,6 +101,19 @@ const Answer = styled.li<AnswerProps>`
   }
 `
 
+const Score = styled.span<{ right: boolean }>`
+  font-weight: 500;
+  font-size: 16px;
+  color: ${({ right, theme }) =>
+    right ? `${theme.colors.success}` : `${theme.colors.danger}`};
+  margin-top: 4px;
+  @media ${device.md} {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+`
 
 const ResultScreen: FC = () => {
   const { result } = useQuiz()

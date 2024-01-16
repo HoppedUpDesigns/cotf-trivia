@@ -7,7 +7,7 @@ Give me very detailed, step by step instructions on how to create these new comp
 
 Step 1:
 @file: /Users/jason/Sites/cotf/src/types/index.ts
-1. Connect to the Database
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Edit this code:
 export interface QuestionTypes extends Question {
 skipped?: boolean
@@ -39,14 +39,14 @@ selectedQuizTopic: string
 
 Step 2:
 @file: /Users/jason/Sites/cotf/src/components/Main/index.tsx
-1. Connect to the Database
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Edit this code:
 const ComponentToRender = screenComponents[currentScreen] || <SplashScreen />
 to render components based on the Database type, variables, properties, etc
 
 Step 3:
 @file: /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx
-1. Connect to the Database
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Edit this code:
 const QuizTopicsScreen: React.FC = () => {
 const { quizTopic, selectQuizTopic, setCurrentScreen } = useQuiz()
@@ -71,7 +71,7 @@ code above.
 
 Step 4:
 @file: /Users/jason/Sites/cotf/src/context/QuizContext.tsx
-1. Connect to the Database
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Ediit this code:
 import { quiz } from '../data/QuizQuestions'
 to get the quiz data from the Database NOT the QuizQuestions folder
@@ -101,18 +101,19 @@ to get the quizTopic, questions, quizDetails, totalQuestions, and selectedQuizTo
 
 Step 5:
 @file: /Users/jason/Sites/cotf/src/App.tsx
-1. Adapt the code to fetch the values needed from the newly updated QuizContext file and any Database Collection Document code necessary for any and all Database functions and values.
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
+2. Adapt the code to fetch the values needed from the newly updated QuizContext file and any Database Collection Document code necessary for any and all Database functions and values.
 
 Step 6:
 @file: /Users/jason/Sites/cotf/src/hooks/useShuffleQuestions.ts
-1. Connect to the Database
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code to fetch useShuffleQuestions from the Database Collection Documents NOT local files
 
 
 Step 7:
 @file: /Users/jason/Sites/cotf/src/hooks/useTimer.ts
-1. Connect to the Database
-2. Apart the code:
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
+2. Adapt the code:
 interface QuizDetails {
 totalTime: number
 }
@@ -143,19 +144,60 @@ return () => clearTimeout(countTimer)
 }
 to get all values from Database sources not local files
 3. Change the value of the useTimer so that the user is given 10 seconds for each question they requested from the QuizDetailsScreen getTopicQuestionCount value
+Here is the code for useTimer.ts:
+import { Dispatch, SetStateAction, useEffect } from 'react'
 
+interface QuizDetails {
+  totalTime: number
+}
+
+const useTimer = (
+  timer: number,
+  quizDetails: QuizDetails,
+  setEndTime: (time: number) => void,
+  setTimer: Dispatch<SetStateAction<number>>,
+  setShowTimerModal: (time: boolean) => void,
+  showResultModal: boolean
+) => {
+  useEffect(() => {
+    if (timer <= 0) {
+      const timeTaken = quizDetails.totalTime
+      setEndTime(timeTaken)
+      setShowTimerModal(true)
+      setTimer(0)
+    }
+  }, [timer, quizDetails.totalTime, setEndTime, setShowTimerModal, setTimer])
+
+  useEffect(() => {
+    if (!showResultModal) {
+      const countTimer = setTimeout(() => {
+        setTimer((prevTimer) => prevTimer - 1)
+      }, 1000)
+      return () => clearTimeout(countTimer)
+    }
+  }, [timer, setTimer])
+}
+
+export default useTimer
 
 
 
 Step 8:
 @file: /Users/jason/Sites/cotf/src/hooks/index.ts
-1. Adapt the code to get the values from the newly edited useTimer.ts and useShuffleQuestions.ts files
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
+2. Adapt the code to get the values from the newly edited useTimer.ts and useShuffleQuestions.ts files
+Here is the code for /Users/jason/Sites/cotf/src/hooks/index.ts:
+import useShuffleQuestions from './useShuffleQuestions'
+import useTimer from './useTimer'
+
+export { useShuffleQuestions, useTimer }
 
 
 
 Step 9:
 @file: /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx
-1. Create input box on QuizDetailsScreen that:
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
+2. Create input box on QuizDetailsScreen that:
 a. is a input box that allows the user to type in their answer to the prompt "How many questions would you like to attempt?"
 b. The code for the input box will go directly under this code:
 <DetailText>
@@ -167,19 +209,247 @@ c. Accepts only numbers as input
 d. The user must enter the value of 1 in this input box.
 e. The maximum the user can input is the getTopicQuestionCount from the QuizDetailsScreen based on the number of questions available to the user from the selectedQuizTopic from the QuizDetailsScreen
 f. If user does not enter a number between 1 and the getTopicQuestionCount or they enter any non-numberic characters, they will be shown an error message that reads "You must enter a number between 1 and " {getTopicQuestionCount}
+3. The code for this input box will replace the comment that reads: `// Input box code goes here`
+Here is the code for the /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file: 
+import React, { useEffect, useState } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
+import firebaseApp from "../../firebaseConfig";
+import styled from "styled-components";
+import { AppLogo, StartIcon } from "../../config/icons";
+import { useQuiz } from "../../context/QuizContext";
+import { useShuffleQuestions } from "../../hooks";
+import {
+  CenterCardContainer,
+  HighlightedText,
+  LogoContainer,
+  PageCenter,
+} from "../../styles/Global";
+import { ScreenTypes } from "../../types";
+import Button from "../ui/Button";
+
+const AppTitle = styled.h2`
+  font-weight: 700;
+  font-size: 32px;
+  color: ${({ theme }) => theme.colors.themeColor};
+`;
+
+const DetailTextContainer = styled.div`
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 500px;
+`;
+
+const DetailText = styled.p`
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  line-height: 1.3;
+`;
+
+const Input = styled.input`
+  margin-left: 10px;
+  padding: 5px;
+`;
+
+// Initialize Firestore
+const db = getFirestore(firebaseApp);
+
+const QuizDetailsScreen = () => {
+  const { setCurrentScreen, quizDetails } = useQuiz();
+  const { selectedQuizTopic, totalQuestions, totalTime } = quizDetails;
+
+  const [lastAmoryQuestionId, setLastAmoryQuestionId] = useState(0);
+  const [lastCoheedQuestionId, setLastCoheedQuestionId] = useState(0);
+  const [lastNeverenderQuestionId, setLastNeverenderQuestionId] = useState(0);
+  const [lastSideProjectsQuestionId, setLastSideProjectsQuestionId] = useState(0);
+
+  async function getLastQuestionId(topic: string): Promise<number> {
+    // Ensure the topic is a non-empty string.
+    if (typeof topic !== 'string' || topic.trim() === '') {
+      console.error('Invalid topic provided');
+      return 0;
+    }
+  
+    try {
+      // Reference the correct document based on the provided topic.
+      const docRef = doc(db, "quizQuestions", topic);
+      const docSnap = await getDoc(docRef);
+  
+      // Check if the document exists and has the required field.
+      if (docSnap.exists() && docSnap.data().questionID) {
+        const lastQuestionId = docSnap.data().questionID;
+  
+        // Ensure that the questionID is a number.
+        if (typeof lastQuestionId === 'number') {
+          return lastQuestionId;
+        } else {
+          console.error(`Found questionID is not a number for topic: ${topic}`);
+          return 0;
+        }
+      } else {
+        // Handle cases where the document doesn't exist or doesn't have the questionID field.
+        console.error(`Document not found or missing questionID field for topic: ${topic}`);
+        return 0;
+      }
+    } catch (error) {
+      // Handle any other errors that might occur.
+      console.error(`Error fetching document for topic: ${topic}`, error);
+      return 0;
+    }
+  }
+  
+
+  useEffect(() => {
+    async function fetchLastQuestionIds() {
+      setLastAmoryQuestionId(await getLastQuestionId("AMORY WARS"));
+      setLastCoheedQuestionId(await getLastQuestionId("Coheed and Cambria"));
+      setLastNeverenderQuestionId(await getLastQuestionId("S.S. Neverender"));
+      setLastSideProjectsQuestionId(await getLastQuestionId("Side Projects"));
+    }
+
+    fetchLastQuestionIds();
+  }, []);
+
+  const goToQuestionScreen = () => {
+    setCurrentScreen(ScreenTypes.QuestionScreen);
+  };
+
+  // Shuffle or randomize quiz questions
+  useShuffleQuestions();
+
+  // Determine which question count to display based on the selected topic
+  const getTopicQuestionCount = () => {
+    switch(selectedQuizTopic) {
+      case 'AMORY WARS': return lastAmoryQuestionId;
+      case 'Coheed and Cambria': return lastCoheedQuestionId;
+      case 'S.S. Neverender': return lastNeverenderQuestionId;
+      case 'Side Projects': return lastSideProjectsQuestionId;
+      default: return 0; // Default case if no topic matches
+    }
+  }
+
+  return (
+    <PageCenter light justifyCenter>
+      <CenterCardContainer>
+        <LogoContainer>
+          <AppLogo />
+        </LogoContainer>
+        <AppTitle>COTF TRIVIA</AppTitle>
+        <DetailTextContainer>
+          <DetailText>
+            Selected Quiz Topic: <HighlightedText>{selectedQuizTopic}</HighlightedText>
+          </DetailText>
+          <DetailText>
+            Total questions available in the selected quiz:{' '}
+            <HighlightedText>{getTopicQuestionCount()}</HighlightedText>
+          </DetailText>
+          // Input box code goes here
+          <DetailText>You will have 10 seconds to answer each question in the quiz</DetailText>
+          <DetailText>
+            To save time, you can skip questions. Skipped questions will show up at the
+            end of the quiz.
+          </DetailText>
+        </DetailTextContainer>
+        <Button
+          text="Start"
+          icon={<StartIcon />}
+          iconPosition="left"
+          onClick={goToQuestionScreen}
+          bold
+        />
+      </CenterCardContainer>
+    </PageCenter>
+  )
+}
+
+export default QuizDetailsScreen;
+
 
 
 Step 10:
 @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/index.tsx
-1. Adapt the code to fetch values necessary from the newly updated cotf Quiz App files necessary and all Database functions and values needed.
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
+2. Adapt the code to fetch values necessary from the newly updated cotf Quiz App files necessary and all Database functions and values needed.
+3. The line of code `<TotalQuestionNo>/{addLeadingZero(totalQuestions)}</TotalQuestionNo>` needs to be 
+adapted so that the totalQuestions is the number the user entered into the input box on the
+QuizDetailsScreen that set the number of questions the user wanted to be quizzed on.
+Here's the code for the /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/index.tsx file:
+import { FC } from 'react'
+import styled from 'styled-components'
 
+import { device } from '../../../styles/BreakPoints'
+import { Flex } from '../../../styles/Global'
+import { addLeadingZero, formatTime } from '../../../utils/helpers'
+
+import Counter from './Counter'
+
+const ActiveQuestionNo = styled.span`
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.themeColor};
+`
+
+const SkippedQuestionStyle = styled.span`
+  font-size: clamp(12px, 4vw, 16px);
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.infoText};
+  background: ${({ theme }) => theme.colors.infoBackground};
+  border-radius: 15px;
+  margin-right: 13px;
+  display: inline-block;
+  padding: 15px 20px;
+  text-align: center;
+  @media ${device.md} {
+    padding: 12px 15px;
+  }
+`
+
+const TotalQuestionNo = styled.span`
+  font-size: clamp(20px, 5vw, 30px);
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.darkerGray};
+`
+
+interface QuizHeaderProps {
+  activeQuestion: number
+  totalQuestions: number
+  timer: number
+  skipped?: boolean
+}
+
+const QuizHeader: FC<QuizHeaderProps> = ({
+  activeQuestion,
+  totalQuestions,
+  timer,
+  skipped,
+}) => {
+  return (
+    <Flex spaceBetween gap="6px">
+      <div>
+        <ActiveQuestionNo>{addLeadingZero(activeQuestion + 1)}</ActiveQuestionNo>
+        <TotalQuestionNo>/{addLeadingZero(totalQuestions)}</TotalQuestionNo>
+      </div>
+      <Flex>
+        {skipped && <SkippedQuestionStyle>Skipped Question</SkippedQuestionStyle>}
+        <Counter time={`${formatTime(timer)}`} />
+      </Flex>
+    </Flex>
+  )
+}
+
+export default QuizHeader
 
 
 
 
 Step 11:
 @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/Counter/index.tsx
-1. Adapt this code:
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
+2. Adapt this code:
 const Counter: FC<CounterProps> = ({ time }) => {
 return (
 <Flex center>
@@ -191,19 +461,272 @@ return (
 to get the {time} value from the newly edited useTimer hook
 
 
+*** I have finished steps 1 to 11 ******
+
+
+
+
+
 
 Step 12:
 @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx
-1. Connect to the Database
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Edit the code of the QuestionScreen to fetch all values from the Database Collection Documents NOT local files
 3. Once the user clicks on the "Start" Button on the QuizDetailsScreen, the getTopicQuestionCount will be passed to the QuestionScreen
 4. The user will ONLY be asked the getTopicQuestionCount number of questions from the quiz they selected from the selectedQuizTopic value from the QuizDetailsScreen
 5. Once the user has answered the getTopicQuestionCount number of questions or the useTimer value runs out, the user will be sent to the ResultOverview Screen
+Merge the changes you just suggested for the /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx file.
+If anything is in the wrong place in the code, move it to the correct area of the source code.
+Add any import statements, if any, needed
+Make sure variables, functions, types, etc are all spelled right and are being used properly.
+If any of the existing code below works, keep it in your response as it. This includes returning all of the 
+styled components just as they are. Include the 100% complete code for any and all styled components. Give me back all the code below that works,
+don't comment out any code. Return to me the entire, 100% correct, 100% completed code.
+Give me back the ENTIRE source code for the file. Give me back existing code that is correct EXACTLY as it is. This includes returning ALL of the style definitions. Don't comment out ANY of the code. This rule goes for ALL of the code I provide you in the future.
+for the file.
+Here is the code for the /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx file:
+import { FC, useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { AppLogo, CheckIcon, Previous, Next, TimerIcon } from '../../config/icons';
+import { useQuiz } from '../../context/QuizContext';
+import { useTimer } from '../../hooks';
+import { device } from '../../styles/BreakPoints';
+import { PageCenter } from '../../styles/Global';
+import { ScreenTypes } from '../../types';
+import Button from '../ui/Button';
+import ModalWrapper from '../ui/ModalWrapper';
+import Question from './Question';
+import QuizHeader from './QuizHeader';
+
+const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
+  width: 900px;
+  min-height: 500px;
+  background: ${({ theme }) => theme.colors.cardBackground};
+  border-radius: 4px;
+  padding: 30px 60px 80px 60px;
+  margin-bottom: 70px;
+  position: relative;
+  @media ${device.md} {
+    width: 100%;
+    padding: 15px 15px 80px 15px;
+  }
+  button {
+    span {
+      svg {
+        path {
+          fill: ${({ selectedAnswer, theme }) =>
+            selectedAnswer
+              ? `${theme.colors.buttonText}`
+              : `${theme.colors.darkGray}`};
+        }
+      }
+    }
+  }
+`;
+
+const LogoContainer = styled.div`
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media ${device.md} {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    svg {
+      width: 185px;
+      height: 80px;
+    }
+  }
+`;
+
+const ButtonWrapper = styled.div`
+  position: absolute;
+  right: 60px;
+  bottom: 30px;
+  display: flex;
+  gap: 20px;
+  @media ${device.sm} {
+    justify-content: flex-end;
+    width: 90%;
+    right: 15px;
+  }
+`;
+
+const QuestionScreen: FC = () => {
+  const [activeQuestion, setActiveQuestion] = useState<number>(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<string[]>([]);
+  const [showTimerModal, setShowTimerModal] = useState<boolean>(false);
+  const [showResultModal, setShowResultModal] = useState<boolean>(false);
+
+  const {
+    questions,
+    setQuestions,
+    quizDetails,
+    result,
+    setResult,
+    setCurrentScreen,
+    timer,
+    setTimer,
+    setEndTime,
+    userSelectedQuestions, // Extracted from context
+  } = useQuiz();
+
+  const currentQuestion = questions[activeQuestion];
+  const skipped = currentQuestion?.skipped || false;
+
+  const onClickNext = () => {
+    const isMatch: boolean =
+      selectedAnswer.length === correctAnswers.length &&
+      selectedAnswer.every((answer) => correctAnswers.includes(answer));
+          // Redirect to results after last question based on user selection or time out
+    if (activeQuestion + 1 >= userSelectedQuestions || timer <= 0) {
+      setCurrentScreen(ScreenTypes.ResultScreen); // Redirect to ResultScreen
+    }
+
+    // adding selected answer, and if answer matches key to result array with current question
+    setResult([...result, { ...currentQuestion, selectedAnswer, isMatch }]);
+
+    if (activeQuestion !== questions.length - 1) {
+      setActiveQuestion((prev) => prev + 1);
+    } else {
+      // how long does it take to finish the quiz
+      const timeTaken = quizDetails.totalTime - timer;
+      setEndTime(timeTaken);
+      setShowResultModal(true);
+    }
+    setSelectedAnswer([]);
+  };
+
+  const handleAnswerSelection = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+
+    if (type === "MAQs") {
+      if (selectedAnswer.includes(name)) {
+        setSelectedAnswer((prevSelectedAnswer) =>
+          prevSelectedAnswer.filter((element) => element !== name)
+        );
+      } else {
+        setSelectedAnswer((prevSelectedAnswer) => [
+          ...prevSelectedAnswer,
+          name,
+        ]);
+      }
+    }
+
+    if (type === "MCQs" || type === "boolean") {
+      if (checked) {
+        setSelectedAnswer([name]);
+      }
+    }
+  };
+
+    const onClickPrevious = () => {
+    if (activeQuestion > 0) {
+      setActiveQuestion(activeQuestion - 1);
+    }
+  };
+
+  const handleSkipQuestion = () => {
+    const filterQuestion = questions.filter(
+      (item) => item.question !== currentQuestion.question
+    );
+
+    // in case of skip question add current questions to the end of questions array, with skipped key
+    setQuestions([...filterQuestion, { ...currentQuestion, skipped: true }]);
+    setSelectedAnswer([]);
+  };
+
+  const handleModal = () => {
+    setCurrentScreen(ScreenTypes.ResultScreen);
+    document.body.style.overflow = "auto";
+  };
+
+  // to prevent scrolling when modal is opened
+  useEffect(() => {
+    if (showTimerModal || showResultModal) {
+      document.body.style.overflow = "hidden";
+    }
+  }, [showTimerModal, showResultModal]);
+
+  // timer hooks, handle conditions related to time
+  useTimer(
+    timer,
+    quizDetails,
+    setEndTime,
+    setTimer,
+    setShowTimerModal,
+    showResultModal
+  );
+
+  return (
+    <PageCenter>
+      <LogoContainer>
+        <AppLogo />
+      </LogoContainer>
+      <QuizContainer selectedAnswer={selectedAnswer.length > 0}>
+        <QuizHeader
+          activeQuestion={activeQuestion}
+          totalQuestions={quizDetails.totalQuestions}
+          timer={timer}
+          skipped={currentQuestion?.skipped}
+        />
+        <Question
+          question={question}
+          image={image}
+          choices={choices}
+          type={type}
+          handleAnswerSelection={handleAnswerSelection}
+          selectedAnswer={selectedAnswer}
+        />
+        <ButtonWrapper>
+          <Button
+            text={"Previous"} 
+            onClick={onClickPrevious} 
+            icon={<Previous />} 
+            iconPosition="left" 
+            disabled={activeQuestion === 0} 
+          />
+
+          {!currentQuestion?.skipped && (
+            <Button text="Skip" onClick={handleSkipQuestion} outline />
+          )}
+          <Button
+            text={activeQuestion === questions.length - 1 ? "Finish" : "Next"}
+            onClick={onClickNext}
+            icon={<Next />}
+            iconPosition="right"
+            disabled={selectedAnswer.length === 0}
+          />
+        </ButtonWrapper>
+      </QuizContainer>
+      {/* timer or finish quiz modal*/}
+      {(showTimerModal || showResultModal) && (
+        <ModalWrapper
+          title={showResultModal ? "Done!" : "Your time is up!"}
+          subtitle={`You have attempted ${result.length} questions in total.`}
+          onClick={handleModal}
+          icon={showResultModal ? <CheckIcon /> : <TimerIcon />}
+          buttonTitle="SHOW RESULT"
+        />
+      )}
+    </PageCenter>
+  );
+};
+
+export default QuestionScreen;
+
+
+
+
+
+
+
+***** I have completed Steps 1-12 ********
+
+
 
 
 Step 13:
 @file: /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/index.tsx
-1. Connect to the Database
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt this code:
 interface ResultOverviewProps {
 result: Result[]
@@ -225,45 +748,361 @@ Time Spent:<HighlightedText> {convertSeconds(endTime)} </HighlightedText>
 )
 }
 to fetch values from any and all Database Collection Document values and newly edited cotf Quiz App files necessary NOT local files
+Merge the changes you just suggested for the /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx file.
+If anything is in the wrong place in the code, move it to the correct area of the source code.
+Add any import statements, if any, needed
+Make sure variables, functions, types, etc are all spelled right and are being used properly.
+If any of the existing code below works, keep it in your response as it. This includes returning all of the 
+styled components just as they are. Include the 100% complete code for any and all styled components. Give me back all the code below that works,
+don't comment out any code. Return to me the entire, 100% correct, 100% completed code.
+Give me back the ENTIRE source code for the file. Also, tell me any files that need to be edited in order for there to be no conflicts among any files, types, imports, variables, properties, etc Give me back existing code that is correct EXACTLY as it is. This includes returning ALL of the style definitions. Don't comment out ANY of the code. This rule goes for ALL of the code I provide you in the future.
+for the file. Here is the current code for the /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/index.tsx file:
+import { FC } from 'react'
+import styled from 'styled-components'
+import { useQuiz } from '../../../context/QuizContext'
+import { device } from '../../../styles/BreakPoints'
+import { HighlightedText } from '../../../styles/Global'
+import { convertSeconds } from '../../../utils/helpers'
+import { Result } from '../../../types'
+
+const ResultOverviewStyle = styled.div`
+  text-align: center;
+  margin-bottom: 70px;
+  @media ${device.md} {
+    margin-bottom: 30px;
+  }
+  p {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+`
+
+interface ResultOverviewProps {
+  result: Result[]
+}
+
+const ResultOverview: FC<ResultOverviewProps> = ({ result }) => {
+  const { quizDetails, endTime } = useQuiz()
+
+  const totalQuestionAttempted = result.length
+
+
+  return (
+    <ResultOverviewStyle>
+      <p>
+        You attempted questions:{' '}
+        <HighlightedText> {totalQuestionAttempted} </HighlightedText>/{' '}
+        {quizDetails.totalQuestions}
+      </p>
+      <p>
+        Time Spent:<HighlightedText> {convertSeconds(endTime)} </HighlightedText>
+      </p>
+    </ResultOverviewStyle>
+  )
+}
+
+export default ResultOverview
+
+
+
+
+
+
+
+
+
 
 Step 14:
 @file: /Users/jason/Sites/cotf/src/utils/helpers.ts
-1. Adapt the code to use any values necessary from the newly updated useTimer hook or any Database Collection Document code necessary for any and all Database functions and values.
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
+2. Adapt the code to use any values necessary from the newly updated useTimer hook or any Database Collection Document code necessary for any and all Database functions and values.
+Merge the changes you just suggested for the file.
+If anything is in the wrong place in the code, move it to the correct area of the source code.
+Add any import statements, if any, needed
+Make sure variables, functions, types, etc are all spelled right and are being used properly.
+If any of the existing code below works, keep it in your response as it. This includes returning all of the 
+styled components just as they are. Include the 100% complete code for any and all styled components. Give me back all the code below that works,
+don't comment out any code. Return to me the entire, 100% correct, 100% completed code.
+Give me back the ENTIRE source code for the file. Also, tell me any files that need to be edited in order for there to be no conflicts among any files, types, imports, variables, properties, etc Give me back existing code that is correct EXACTLY as it is. This includes returning ALL of the style definitions. Don't comment out ANY of the code. This rule goes for ALL of the code I provide you in the future.
+for the file. Here is the current code for the /Users/jason/Sites/cotf/src/utils/helpers.ts file: 
+export const addLeadingZero = (number: number) => {
+  if (number > 9) {
+    return number
+  } else {
+    return '0' + number
+  }
+}
+
+// utility function to format the remaining time as minutes:seconds
+export function formatTime(time: number) {
+  const minutes = Math.floor(time / 60)
+  const seconds = time % 60
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`
+}
+
+export const convertSeconds = (seconds: number): string => {
+  const hours = Math.floor(seconds / 3600)
+  const minutes = Math.floor((seconds % 3600) / 60)
+  const remainingSeconds = seconds % 60
+
+  const hourString = hours > 0 ? `${hours} hour${hours > 1 ? 's' : ''}` : ''
+  const minuteString = minutes > 0 ? `${minutes} minute${minutes > 1 ? 's' : ''}` : ''
+  const secondString =
+    remainingSeconds > 0
+      ? `${remainingSeconds} second${remainingSeconds > 1 ? 's' : ''}`
+      : ''
+
+  if (hours > 0) {
+    return `${hourString} : ${minuteString || '0 minute'} ${
+      secondString && `: ${secondString}`
+    }`
+  } else if (!hours && minutes > 0) {
+    return `${minuteString} ${secondString && `: ${secondString}`}`
+  }
+
+  return secondString
+}
+
+export const refreshPage = (): void => {
+  window.location.reload()
+}
+
+export const shuffleArray = <T>(array: T[]): T[] => {
+  const shuffledArray = [...array]
+
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+
+    // Swap elements using array destructuring
+    ;[shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]
+  }
+
+  return shuffledArray
+
+
+
 
 Step 15:
 @file: /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/index.tsx
-1. Connect to the Database
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection Document code necessary for any and all Database functions and values.
+
+
+
+
 
 
 Step 16:
 @file: /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx
-1. Connect to the Database
-2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection Document code necessary for any and all Database functions and values.
+1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
+2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection 
+Merge the changes you just suggested for the file.
+If anything is in the wrong place in the code, move it to the correct area of the source code.
+Add any import statements, if any, needed
+Make sure variables, functions, types, etc are all spelled right and are being used properly.
+If any of the existing code below works, keep it in your response as it. This includes returning all of the 
+styled components just as they are. Include the 100% complete code for any and all styled components. Give me back all the code below that works,
+don't comment out any code. Return to me the entire, 100% correct, 100% completed code.
+Give me back the ENTIRE source code for the file. Also, tell me any files that need to be edited in order for there to be no conflicts among any files, types, imports, variables, properties, etc Give me back existing code that is correct EXACTLY as it is. This includes returning ALL of the style definitions. Don't comment out ANY of the code. This rule goes for ALL of the code I provide you in the future.
+for the file. Here is the current code for the /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx:
+import { FC } from 'react'
+import styled, { css } from 'styled-components'
+import { AppLogo, Refresh } from '../../config/icons'
+import { useQuiz } from '../../context/QuizContext'
+import { device } from '../../styles/BreakPoints'
+import { Flex, LogoContainer, ResizableBox } from '../../styles/Global'
+import { refreshPage } from '../../utils/helpers'
+import Button from '../ui/Button'
+import QuizImage from '../ui/QuizImage'
+import ResultOverview from './ResultOverview'
+import RightAnswer from './RightAnswer'
+
+const ResultScreenContainer = styled.div`
+  max-width: 900px;
+  margin: 60px auto;
+  @media ${device.md} {
+    width: 90%;
+    margin: 30px auto;
+    padding-top: 40px;
+  }
+`
+
+const InnerContainer = styled.div`
+  background: ${({ theme }) => theme.colors.cardBackground};
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 40px 90px 90px 90px;
+  @media ${device.md} {
+    padding: 15px;
+  }
+`
+
+const QuestionContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  @media ${device.md} {
+    flex-direction: column;
+  }
+`
+
+const QuestionNumber = styled.h6`
+  font-size: clamp(16px, 5vw, 24px);
+  font-weight: 500;
+  line-height: 1.3;
+  color: ${({ theme }) => theme.colors.primaryText};
+`
+
+const QuestionStyle = styled.span`
+  font-size: clamp(16px, 5vw, 24px);
+  font-weight: 500;
+  line-height: 1.3;
+  color: ${({ theme }) => theme.colors.primaryText};
+  margin-bottom: 20px;
+  @media ${device.md} {
+    margin-bottom: 10px;
+  }
+`
+
+interface AnswerProps {
+  correct?: boolean
+  wrong?: boolean
+}
+
+const Answer = styled.li<AnswerProps>`
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  width: 90%;
+  @media ${device.md} {
+    width: 100%;
+  }
+  background: ${({ theme }) => theme.colors.answerBg};
+  border-radius: 16px;
+  font-size: clamp(16px, 5vw, 18px);
+  font-weight: 600;
+  padding: 15px;
+  color: ${({ theme }) => theme.colors.secondaryText};
+  margin-top: clamp(13px, calc(10px + 6 * ((100vw - 600px) / 1320)), 16px);
+
+  // if user answer matches to correct answer make answer background success color otherwise danger color
+  ${({ correct }) =>
+    correct &&
+    css`
+      border: 1px solid ${({ theme }) => theme.colors.success};
+      background-color: ${({ theme }) => theme.colors.successLight};
+    `}
+
+  ${({ wrong }) =>
+    wrong &&
+    css`
+      border: 1px solid ${({ theme }) => theme.colors.danger};
+      background-color: ${({ theme }) => theme.colors.dangerLight};
+    `}
+
+  span {
+    margin-right: 14px;
+  }
+
+  @media ${device.md} {
+    font-weight: 400;
+  }
+`
+
+
+const ResultScreen: FC = () => {
+  const { result } = useQuiz()
+
+  const onClickRetry = () => {
+    refreshPage()
+  }
+
+  return (
+    <ResultScreenContainer>
+      <LogoContainer>
+        <AppLogo />
+      </LogoContainer>
+      <InnerContainer>
+        <ResultOverview result={result} />
+        {result.map(
+          (
+            {
+              question,
+              choices,
+              image,
+              correctAnswers,
+              selectedAnswer,
+              isMatch,
+            },
+            index: number
+          ) => {
+            return (
+              <QuestionContainer key={question}>
+                <ResizableBox width="90%">
+                  <Flex gap="4px">
+                    <QuestionNumber>{`${index + 1}. `}</QuestionNumber>
+                    <QuestionStyle>{question}</QuestionStyle>
+                  </Flex>
+                  <div>
+                    {image && <QuizImage image={image} />}
+                    <ul>
+                      {choices.map((ans: string, index: number) => {
+                        // Convert index to alphabet character
+                        const label = String.fromCharCode(65 + index)
+                        const correct =
+                          selectedAnswer.includes(ans) && correctAnswers.includes(ans)
+                        const wrong =
+                          selectedAnswer.includes(ans) && !correctAnswers.includes(ans)
+
+                        return (
+                          <Answer key={ans} correct={correct} wrong={wrong}>
+                            <span>{label}.</span>
+                            {ans}
+                          </Answer>
+                        )
+                      })}
+                    </ul>
+                    {/* only show if the answer is wrong */}
+                    {!isMatch && (
+                      <RightAnswer correctAnswers={correctAnswers} choices={choices} />
+                    )}
+                  </div>
+                </ResizableBox>
+              </QuestionContainer>
+            )
+          }
+        )}
+      </InnerContainer>
+      <Flex flxEnd>
+        <Button
+          text="RETRY"
+          onClick={onClickRetry}
+          icon={<Refresh />}
+          iconPosition="left"
+          bold
+        />
+      </Flex>
+    </ResultScreenContainer>
+  )
+}
+
+export default ResultScreen
 
 
 
 
-merge your suggested changes into the code below. Any existing code that needs to be in the file, leave alone and return to me this code as it is. return to me the 100% complete and functional code for the file. update the comment box with the changes made including the date
+
+
 Step 17:
 @file: /Users/jason/Sites/cotf/src/api/api.js
 1. Connect to the Database
 2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection Document code necessary for any and all Database functions and values.
-
-
-
-
-merge your suggested changes into the code below. Any existing code that needs to be in the file, leave alone and return to me this code as it is. return to me the 100% complete and functional code for the file. update the comment box with the changes made including the date
-Step 18:
-@file: /Users/jason/Sites/cotf/scripts/importData.js
-1. Adapt the code to send the questions from the QuizQuestions folder data contained in JSON files named `amory.json`, `coheed.json`, `neverender.json`, and `sideProjects.json` to the `cotf-trivia-4644c' Database with a Collection named `quizQuestions` and Collection Documents named `AMORY WARS`, `Coheed and Cambria`, `S.S. Neverender` and `Side Projects`. These Collection Documents contain 5 Fields that are identical for each of the 4 Collection Documents. These Fields are:
-`questionID` which is has the number type
-`question` which is has the string type
-`choices` which is has the array type
-`type` which is has the string type
-`correctAnswers` which is has the array type
-I want to use the importData.js file to import data into all Collection Documents at once.
-2. Currently, the importData.js file is sending the question data to the Database and adding each question to its own individual Document with the format:
-`AMORY WARS_Q1, AMORY WARS_Q2, AMORY WARS_Q3` etc up to the last question currently in the `amory.json` file. This is true for all of the `QuizQuestions` JSON files sent to the Database. I want all of the questions from the `QuizQuestions` JSON files sent to the Database into 1 bulk Document named after the `AMORY WARS`, `Coheed and Cambria`, `S.S. Neverender` and `Side Projects` Collection Documents. I don't want Collection Documents with any kind of `_Q1' etc added to the end of the Collection Document name.
-3. I want a new JavaScript file that will let me import `QuizQuestions` JSON file questions data. This new JavaScript file should amend these questions to the `AMORY WARS`, `Coheed and Cambria`, `S.S. Neverender` and `Side Projects` Collection Documents to the END of these Collection Documents. For example, if the `AMORY WARS` Collection Document contains 100 questions, when I import data with this new JavaScript document, any new questions will be added after the last question currently in the `AMORY WARS` Collection Document. This will be true for any of the other Collection Documents as well.
-4. I want one new JavaScript file that will let me import question data from all 4 Collection Documents at once and another JavaScript file that will let me import data from just 1 individual Collection Document.
+Merge the changes you just suggested for the file.
+If anything is in the wrong place in the code, move it to the correct area of the source code.
+Add any import statements, if any, needed
+Make sure variables, functions, types, etc are all spelled right and are being used properly.
+If any of the existing code below works, keep it in your response as it. This includes returning all of the 
+styled components just as they are. Include the 100% complete code for any and all styled components. Give me back all the code below that works,
+don't comment out any code. Return to me the entire, 100% correct, 100% completed code.
+Give me back the ENTIRE source code for the file. Also, tell me any files that need to be edited in order for there to be no conflicts among any files, types, imports, variables, properties, etc Give me back existing code that is correct EXACTLY as it is. This includes returning ALL of the style definitions. Don't comment out ANY of the code. This rule goes for ALL of the code I provide you in the future.
+for the file. Here is the current code for the

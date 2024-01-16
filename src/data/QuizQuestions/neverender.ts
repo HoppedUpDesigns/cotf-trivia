@@ -8,7 +8,6 @@ import { Topic } from ".";
 export const neverender: Topic = {
   topic: "S.S. Neverender",
   totalQuestions: 42,
-  totalTime: 3600,
   questions: [
     {
       question:

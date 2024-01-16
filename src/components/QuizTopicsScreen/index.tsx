@@ -1,25 +1,4 @@
-/***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx
- * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This file defines the QuizTopicsScreen component, which is the first point of interaction for users to select a quiz topic and begin their trivia experience.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: - Displays a list of available quiz topics for users to select from.
- *                 - Allows users to proceed to the QuizDetailsScreen once they've selected a topic.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Created by: Jason McCoy
- * Created on: 12/30/2023
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
- *     - Initial creation of the QuizTopicsScreen component with functionality to display and select quiz topics.
- *     - Implemented user-friendly UI with interactive topic selection buttons and a continue button to proceed.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: 
- *     - This component sets the stage for users by providing a clear and engaging way to choose the quiz they want to attempt.
- *     - Future updates may include additional topics or more interactive elements to engage users further.
- ***************************************************************************************************************************/
+import React from 'react';
 import styled from 'styled-components'
 import { AppLogo } from '../../config/icons'
 import { useQuiz } from '../../context/QuizContext'
@@ -33,10 +12,8 @@ import {
 } from '../../styles/Global'
 import { ScreenTypes } from '../../types'
 
-import Button from '../ui/Button'
-
 const Heading = styled.h2`
-  font-size: 50px;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
   text-align: center;
@@ -65,17 +42,12 @@ const SelectButtonContainer = styled.div`
 `
 
 interface SelectButtonProps {
-  active: boolean
   disabled?: boolean
 }
 
 const SelectButton = styled.div<SelectButtonProps>`
   background-color: ${({ disabled, theme }) =>
     disabled ? `${theme.colors.disabledCard}` : `${theme.colors.selectTopicBg}`};
-  border: ${({ active, theme }) =>
-    active
-      ? `2px solid ${theme.colors.themeColor}`
-      : `1px solid ${theme.colors.disabledButton}`};
   transition: background-color 0.4s ease-out;
   border-radius: 10px;
   padding: 14px 10px;
@@ -100,11 +72,12 @@ const SelectButtonText = styled.span`
 `
 
 const QuizTopicsScreen: React.FC = () => {
-  const { quizTopic, selectQuizTopic, setCurrentScreen } = useQuiz()
+  const { selectQuizTopic, setCurrentScreen } = useQuiz();
 
-  const goToQuizDetailsScreen = () => {
-    setCurrentScreen(ScreenTypes.QuizDetailsScreen)
-  }
+  const handleTopicSelect = (topic: string) => {
+    selectQuizTopic(topic);
+    setCurrentScreen(ScreenTypes.QuizDetailsScreen);
+  };
 
   return (
     <PageCenter light justifyCenter>
@@ -117,22 +90,20 @@ const QuizTopicsScreen: React.FC = () => {
         </Heading>
         <DetailText>Select topic below to start your Quiz.</DetailText>
         <SelectButtonContainer>
-          {quizTopics.map(({ title, icon, disabled }) => (
+          {quizTopics.map(({ title, icon }) => (
             <SelectButton
               key={title}
-              active={quizTopic === title}
-              onClick={() => !disabled && selectQuizTopic(title)}
-              disabled={disabled}
+              onClick={() => handleTopicSelect(title)}
             >
               {icon}
               <SelectButtonText>{title}</SelectButtonText>
             </SelectButton>
           ))}
         </SelectButtonContainer>
-        <Button text="CONTINUE" onClick={goToQuizDetailsScreen} bold />
       </CenterCardContainer>
     </PageCenter>
-  )
-}
+  );
+};
+console.log(quizTopics); // Add this line to debug
 
 export default QuizTopicsScreen

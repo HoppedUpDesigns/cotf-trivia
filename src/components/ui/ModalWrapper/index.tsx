@@ -1,31 +1,6 @@
-/***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/ui/ModalWrapper/index.tsx
- * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This file contains the ModalWrapper component, a reusable UI element for displaying modals throughout the application. It provides a centralized and consistent way to present important information, alerts, or interactive elements to users.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: - Renders a modal with customizable title, subtitle, and button.
- *                 - Utilizes styled-components for styling and theming.
- *                 - Accepts an icon to display within the modal for visual context.
- *                 - Offers a callback function when the modal's button is clicked.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Created by: Jason McCoy
- * Created on: 12/30/2023
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
- *     - Introduced ModalWrapper component with props for title, subtitle, icon, and button.
- *     - Implemented styling for modals with responsiveness and theme consistency.
- *     - Added functionality to close or perform actions via the modal's button.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: 
- *     - Ensure that the modal's functionality is accessible and user-friendly.
- *     - Consider adding animations or transitions for a smoother user experience.
- *     - ModalWrapper can be extended to include more complex interactions or additional content based on future requirements.
- ***************************************************************************************************************************/
 import { FC } from 'react'
 import styled from 'styled-components'
+
 import Button from '../Button'
 
 const ModalContainer = styled.div`

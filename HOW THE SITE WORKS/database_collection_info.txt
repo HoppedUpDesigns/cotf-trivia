@@ -1,0 +1,12 @@
+The Database URL is `cotf-trivia-4644c.firebaseapp.com`, 
+The Database Collection is named `quizQuestions`, 
+The Collection Documents are named: 
+`AMORY WARS`, 
+`Coheed and Cambria`, 
+`S.S. Neverender" 
+and `Side Projects`.  
+The Documents each have these Fields: 
+`questionID` which is a number field, 
+`question` which is a text field, 
+`choices` which is an array field, 
+and `correctAnswers` with is an array field

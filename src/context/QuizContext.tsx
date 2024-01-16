@@ -1,92 +1,61 @@
-/***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/context/QuizContext.tsx
- * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: The QuizContext file centralizes the state and logic of the quiz application, enabling easy management and sharing of state across various components. This context provides essential data and functions related to the quiz, such as current screen, quiz topics, questions, results, and timer.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: - Manages the global state of the quiz application, including current screen, selected topic, questions, results, and timing.
- *                 - Provides a QuizContext for components to consume and interact with the quiz state.
- *                 - Implements functions to update the state, such as selecting a quiz topic, setting questions, and recording results.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Created by: Jason McCoy
- * Created on: 12/30/2023
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
- *     - Initial creation of the QuizContext with foundational state and functions.
- *     - Added dynamic handling of quiz questions and topics.
- *     - Implemented timing and result recording functionalities.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: 
- *     - Ensure that the context is wrapped around the application root to provide global access.
- *     - Consider implementing more robust error handling and state validation as the application scales.
- ***************************************************************************************************************************/
-import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { QuizContextTypes, QuizDetails, Result, ScreenTypes } from '../types'
 import { quiz } from '../data/QuizQuestions'
-import { QuizContextTypes, Result, ScreenTypes } from '../types'
+import { Question } from '../data/QuizQuestions';
 
 const initialState: QuizContextTypes = {
   currentScreen: ScreenTypes.SplashScreen,
   setCurrentScreen: () => {},
-  quizTopic: 'Coheed and Cambria',
+  quizTopic: '',
   selectQuizTopic: () => {},
-  questions: [],
-  setQuestions: () => {},
+  questions: [], // Initialize with an empty array
+  setQuestions: () => {}, // Initialize with an empty function
   result: [],
   setResult: () => {},
-  timer: 15,
-  setTimer: () => {},
-  endTime: 0,
-  setEndTime: () => {},
   quizDetails: {
     totalQuestions: 0,
-    totalTime: 0,
-    selectedQuizTopic: 'Coheed and Cambria',
+    selectedQuizTopic: '',
+    userSelectedNumberOfQuestions: 0,
   },
-}
+  updateQuizDetails: () => {}, // Initialize with an empty function
+};
 
-export const QuizContext = createContext<QuizContextTypes>(initialState)
+export const QuizContext = createContext<QuizContextTypes>(initialState);
 
 export function useQuiz() {
-  return useContext(QuizContext)
+  return useContext(QuizContext);
 }
 
 type QuizProviderProps = {
-  children: ReactNode
-}
+  children: React.ReactNode;
+};
 
 const QuizProvider = ({ children }: QuizProviderProps) => {
-  const [timer, setTimer] = useState<number>(initialState.timer)
-  const [endTime, setEndTime] = useState<number>(initialState.endTime)
-  const [quizTopic, setQuizTopic] = useState<string>(initialState.quizTopic)
-  const [result, setResult] = useState<Result[]>(initialState.result)
-  const [currentScreen, setCurrentScreen] = useState<ScreenTypes>(
-    initialState.currentScreen
-  )
-
-  const [questions, setQuestions] = useState(quiz[initialState.quizTopic].questions)
-
-  const {
-    questions: quizQuestions,
-    totalQuestions,
-    totalTime,
-  } = quiz[quizTopic]
-
-  const selectQuizTopic = (topic: string) => {
-    setQuizTopic(topic)
-  }
+  const [currentScreen, setCurrentScreen] = useState<ScreenTypes>(initialState.currentScreen);
+  const [quizTopic, setQuizTopic] = useState<string>(initialState.quizTopic);
+  const [result, setResult] = useState<Result[]>(initialState.result);
+  const [quizDetails, setQuizDetails] = useState<QuizDetails>(initialState.quizDetails);
+  const [questions, setQuestions] = useState<Question[]>([]); // Initialize as empty array
 
   useEffect(() => {
-    setTimer(totalTime)
-    setQuestions(quizQuestions)
-  }, [quizTopic])
+    // Ensure that the quiz topic is valid and exists in the quiz data
+    if (quizTopic && quiz[quizTopic]) {
+      setQuestions(quiz[quizTopic].questions);
+      setQuizDetails(prevDetails => ({
+        ...prevDetails,
+        totalQuestions: quiz[quizTopic].totalQuestions,
+        selectedQuizTopic: quizTopic,
+      }));
+    }
+  }, [quizTopic]);
 
-  const quizDetails = {
-    totalQuestions,
-    totalTime,
-    selectedQuizTopic: quizTopic,
-  }
+  const selectQuizTopic = (topic: string) => {
+    setQuizTopic(topic);
+  };
+
+  const updateQuizDetails = (newDetails: Partial<QuizDetails>) => {
+    setQuizDetails((prevDetails) => ({ ...prevDetails, ...newDetails }));
+  };
 
   const quizContextValue: QuizContextTypes = {
     currentScreen,
@@ -98,13 +67,14 @@ const QuizProvider = ({ children }: QuizProviderProps) => {
     result,
     setResult,
     quizDetails,
-    timer,
-    setTimer,
-    endTime,
-    setEndTime,
-  }
+    updateQuizDetails,
+  };
 
-  return <QuizContext.Provider value={quizContextValue}>{children}</QuizContext.Provider>
-}
+  return (
+    <QuizContext.Provider value={quizContextValue}>
+      {children}
+    </QuizContext.Provider>
+  );
+};
 
-export default QuizProvider
+export default QuizProvider;

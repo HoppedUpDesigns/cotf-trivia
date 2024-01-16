@@ -1,8 +1,8 @@
-*** /cotf is the root of the project ***
+*** /Users/jason/Sites/cotf/ is the root of the project ***
 *** anything that looks like this |-- / is a folder ***
-*** for example: |-- /src is a folder that is one level down from the root of the project (i.e. /cotf) ***
+*** for example: |-- /src is a folder that is one level down from the root of the project (i.e. /Users/jason/Sites/cotf/) ***
 *** anything that looks like this |--  is a file ***
-*** for example: |-- package.json is a file that is one level down from the root of the project (i.e. /cotf) ***
+*** for example: |-- package.json is a file that is one level down from the root of the project (i.e. /Users/jason/Sites/cotf/) ***
 
 /Users/jason/Sites/cotf/
   |-- /Users/jason/Sites/cotf/build/
@@ -80,6 +80,7 @@
   |     |-- /Users/jason/Sites/cotf/src/context/QuizContext.tsx
   |
   |-- /Users/jason/Sites/cotf/src/data/
+  |     |-- /Users/jason/Sites/cotf/src/data/fetchQuizTopics.js
   |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/
   |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/amory.ts
   |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/coheed.ts

@@ -1,42 +1,14 @@
-/***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx
- * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This file defines the QuestionScreen component, responsible for displaying individual quiz questions and managing quiz flow.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: - Renders questions along with answer options and navigational buttons to move between questions.
- *                 - Manages the state of the current question, user's selected answers, and quiz progress.
- *                 - Implements a timer for the quiz and displays a modal upon completion or when time runs out.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Created by: Jason McCoy
- * Created on: 12/30/2023
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
- *     - Initial creation of the QuestionScreen component with navigation and answer selection.
- *     - Added timer functionality and modal for quiz completion and timeout.
- *     - Integrated quiz context for global state management.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: 
- *     - This component is central to the quiz experience, orchestrating the display and interaction of questions and answers.
- *     - Ensure proper handling of quiz data and state to maintain a smooth user experience.
- *     - Consider scalability and maintainability as quiz requirements evolve.
- ***************************************************************************************************************************/
-
-import { FC, useEffect, useState } from "react";
-import styled from "styled-components";
-import { AppLogo, CheckIcon, Previous, Next, TimerIcon } from "../../config/icons";
-import { useQuiz } from "../../context/QuizContext";
-import { useTimer } from "../../hooks";
-import { device } from "../../styles/BreakPoints";
-import { PageCenter } from "../../styles/Global";
-import { ScreenTypes } from "../../types";
-
-import Button from "../ui/Button";
-import ModalWrapper from "../ui/ModalWrapper";
-import Question from "./Question";
-import QuizHeader from "./QuizHeader";
+import { FC, useEffect, useState } from 'react'
+import styled from 'styled-components'
+import { AppLogo, CheckIcon, Next, Previous } from '../../config/icons'
+import { useQuiz } from '../../context/QuizContext'
+import { device } from '../../styles/BreakPoints'
+import { PageCenter } from '../../styles/Global'
+import { ScreenTypes } from '../../types'
+import Button from '../ui/Button'
+import ModalWrapper from '../ui/ModalWrapper'
+import Question from './Question'
+import QuizHeader from './QuizHeader'
 
 const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
   width: 900px;
@@ -55,14 +27,12 @@ const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
       svg {
         path {
           fill: ${({ selectedAnswer, theme }) =>
-            selectedAnswer
-              ? `${theme.colors.buttonText}`
-              : `${theme.colors.darkGray}`};
+            selectedAnswer ? `${theme.colors.buttonText}` : `${theme.colors.darkGray}`};
         }
       }
     }
   }
-`;
+`
 
 const LogoContainer = styled.div`
   margin-top: 50px;
@@ -75,7 +45,7 @@ const LogoContainer = styled.div`
       height: 80px;
     }
   }
-`;
+`
 
 const ButtonWrapper = styled.div`
   position: absolute;
@@ -88,110 +58,84 @@ const ButtonWrapper = styled.div`
     width: 90%;
     right: 15px;
   }
-`;
+`
 
 const QuestionScreen: FC = () => {
-  const [activeQuestion, setActiveQuestion] = useState<number>(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<string[]>([]);
-  const [showTimerModal, setShowTimerModal] = useState<boolean>(false);
-  const [showResultModal, setShowResultModal] = useState<boolean>(false);
+  const [activeQuestion, setActiveQuestion] = useState<number>(0)
+  const [selectedAnswer, setSelectedAnswer] = useState<string[]>([])
+  const [showResultModal, setShowResultModal] = useState<boolean>(false)
 
   const {
     questions,
-    setQuestions,
     quizDetails,
     result,
     setResult,
     setCurrentScreen,
-    timer,
-    setTimer,
-    setEndTime,
   } = useQuiz();
 
   const currentQuestion = questions[activeQuestion];
-
-  const { question, type, choices, image, correctAnswers } =
-    currentQuestion;
+  const { question, type, choices, image } = currentQuestion;
 
   const onClickNext = () => {
-    const isMatch: boolean =
-      selectedAnswer.length === correctAnswers.length &&
-      selectedAnswer.every((answer) => correctAnswers.includes(answer));
+    const isMatch = selectedAnswer.length === currentQuestion.correctAnswers.length &&
+                    selectedAnswer.every(answer => currentQuestion.correctAnswers.includes(answer));
+    
+    const questionAlreadyAnsweredIndex = result.findIndex(res => res.question === currentQuestion.question);
 
-    // adding selected answer, and if answer matches key to result array with current question
-    setResult([...result, { ...currentQuestion, selectedAnswer, isMatch }]);
-
-    if (activeQuestion !== questions.length - 1) {
-      setActiveQuestion((prev) => prev + 1);
+    if (questionAlreadyAnsweredIndex === -1) {
+      setResult([...result, { ...currentQuestion, selectedAnswer, isMatch }]);
     } else {
-      // how long does it take to finish the quiz
-      const timeTaken = quizDetails.totalTime - timer;
-      setEndTime(timeTaken);
+      const updatedResult = [...result];
+      updatedResult[questionAlreadyAnsweredIndex] = { ...currentQuestion, selectedAnswer, isMatch };
+      setResult(updatedResult);
+    }
+
+    if (activeQuestion === quizDetails.userSelectedNumberOfQuestions - 1) {
       setShowResultModal(true);
+    } else {
+      setActiveQuestion(prev => prev + 1);
     }
     setSelectedAnswer([]);
   };
-
-  const handleAnswerSelection = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-
-    if (type === "MAQs") {
-      if (selectedAnswer.includes(name)) {
-        setSelectedAnswer((prevSelectedAnswer) =>
-          prevSelectedAnswer.filter((element) => element !== name)
-        );
-      } else {
-        setSelectedAnswer((prevSelectedAnswer) => [
-          ...prevSelectedAnswer,
-          name,
-        ]);
-      }
-    }
-
-    if (type === "MCQs" || type === "boolean") {
-      if (checked) {
-        setSelectedAnswer([name]);
-      }
-    }
-  };
-
-    const onClickPrevious = () => {
+  
+  // Handler for the Previous button click
+  const onClickPrevious = () => {
     if (activeQuestion > 0) {
       setActiveQuestion(activeQuestion - 1);
     }
   };
 
-  const handleSkipQuestion = () => {
-    const filterQuestion = questions.filter(
-      (item) => item.question !== currentQuestion.question
-    );
+  const handleAnswerSelection = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target
 
-    // in case of skip question add current questions to the end of questions array, with skipped key
-    setQuestions([...filterQuestion, { ...currentQuestion, skipped: true }]);
-    setSelectedAnswer([]);
-  };
+    if (type === 'MAQs') {
+      if (selectedAnswer.includes(name)) {
+        setSelectedAnswer((prevSelectedAnswer) =>
+          prevSelectedAnswer.filter((element) => element !== name)
+        )
+      } else {
+        setSelectedAnswer((prevSelectedAnswer) => [...prevSelectedAnswer, name])
+      }
+    }
+
+    if (type === 'MCQs' || type === 'boolean') {
+      if (checked) {
+        setSelectedAnswer([name])
+      }
+    }
+  }
 
   const handleModal = () => {
-    setCurrentScreen(ScreenTypes.ResultScreen);
-    document.body.style.overflow = "auto";
-  };
+    setCurrentScreen(ScreenTypes.ResultScreen)
+    document.body.style.overflow = 'auto'
+  }
 
   // to prevent scrolling when modal is opened
   useEffect(() => {
-    if (showTimerModal || showResultModal) {
-      document.body.style.overflow = "hidden";
+    if (showResultModal) {
+      document.body.style.overflow = 'hidden'
     }
-  }, [showTimerModal, showResultModal]);
-
-  // timer hooks, handle conditions related to time
-  useTimer(
-    timer,
-    quizDetails,
-    setEndTime,
-    setTimer,
-    setShowTimerModal,
-    showResultModal
-  );
+  }, [showResultModal])
 
   return (
     <PageCenter>
@@ -199,11 +143,9 @@ const QuestionScreen: FC = () => {
         <AppLogo />
       </LogoContainer>
       <QuizContainer selectedAnswer={selectedAnswer.length > 0}>
-        <QuizHeader
+      <QuizHeader
           activeQuestion={activeQuestion}
-          totalQuestions={quizDetails.totalQuestions}
-          timer={timer}
-          skipped={currentQuestion?.skipped}
+          userSelectedNumberOfQuestions={quizDetails.userSelectedNumberOfQuestions} // Pass this prop
         />
         <Question
           question={question}
@@ -215,18 +157,14 @@ const QuestionScreen: FC = () => {
         />
         <ButtonWrapper>
           <Button
-            text={"Previous"} 
-            onClick={onClickPrevious} 
-            icon={<Previous />} 
-            iconPosition="left" 
-            disabled={activeQuestion === 0} 
+            text={"Previous"}
+            onClick={onClickPrevious}
+            icon={<Previous />}
+            iconPosition="left"
+            disabled={activeQuestion === 0}
           />
-
-          {!currentQuestion?.skipped && (
-            <Button text="Skip" onClick={handleSkipQuestion} outline />
-          )}
           <Button
-            text={activeQuestion === questions.length - 1 ? "Finish" : "Next"}
+            text={activeQuestion === quizDetails.userSelectedNumberOfQuestions - 1 ? "Finish" : "Next"}
             onClick={onClickNext}
             icon={<Next />}
             iconPosition="right"
@@ -234,18 +172,18 @@ const QuestionScreen: FC = () => {
           />
         </ButtonWrapper>
       </QuizContainer>
-      {/* timer or finish quiz modal*/}
-      {(showTimerModal || showResultModal) && (
+      {/* finish quiz modal*/}
+      {(showResultModal) && (
         <ModalWrapper
-          title={showResultModal ? "Done!" : "Your time is up!"}
-          subtitle={`You have attempted ${result.length} questions in total.`}
-          onClick={handleModal}
-          icon={showResultModal ? <CheckIcon /> : <TimerIcon />}
-          buttonTitle="SHOW RESULT"
-        />
+        title="Done!"
+        subtitle={`You have attempted ${result.length} questions in total.`}
+        onClick={handleModal}
+        icon={<CheckIcon />}
+        buttonTitle="SHOW RESULT"
+      />
       )}
     </PageCenter>
-  );
-};
+  )
+}
 
-export default QuestionScreen;
+export default QuestionScreen

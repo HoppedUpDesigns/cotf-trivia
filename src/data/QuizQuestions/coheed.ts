@@ -8,7 +8,6 @@ import { Topic } from ".";
 export const coheed: Topic = {
   topic: "Coheed and Cambria",
   totalQuestions: 100,
-  totalTime: 3600,
   questions: [
     {
       question: "What was Coheed and Cambria's first single?",

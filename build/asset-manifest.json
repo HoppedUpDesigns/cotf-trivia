@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.cd4ed9f0.css",
-    "main.js": "/static/js/main.e01fa0fd.js",
-    "static/js/787.caaf11a9.chunk.js": "/static/js/787.caaf11a9.chunk.js",
+    "main.js": "/static/js/main.1d708d7f.js",
+    "static/js/787.366a16ce.chunk.js": "/static/js/787.366a16ce.chunk.js",
     "static/media/anek-malayalam-v4-malayalam-700.woff": "/static/media/anek-malayalam-v4-malayalam-700.c6ce627cd72c475d46cb.woff",
     "static/media/anek-malayalam-v4-malayalam-600.woff": "/static/media/anek-malayalam-v4-malayalam-600.8a1553bb42261d2beb5b.woff",
     "static/media/anek-malayalam-v4-malayalam-300.woff": "/static/media/anek-malayalam-v4-malayalam-300.e041c0cfec740e2322d6.woff",
@@ -29,11 +29,11 @@
     "index.html": "/index.html",
     "static/media/start.svg": "/static/media/start.0085dec5cb635e6a4b0b73a507947989.svg",
     "main.cd4ed9f0.css.map": "/static/css/main.cd4ed9f0.css.map",
-    "main.e01fa0fd.js.map": "/static/js/main.e01fa0fd.js.map",
-    "787.caaf11a9.chunk.js.map": "/static/js/787.caaf11a9.chunk.js.map"
+    "main.1d708d7f.js.map": "/static/js/main.1d708d7f.js.map",
+    "787.366a16ce.chunk.js.map": "/static/js/787.366a16ce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd4ed9f0.css",
-    "static/js/main.e01fa0fd.js"
+    "static/js/main.1d708d7f.js"
   ]
 }
