@@ -25,10 +25,15 @@ interface ResultOverviewProps {
 const ResultOverview: FC<ResultOverviewProps> = ({ result }) => {
   const { quizDetails } = useQuiz();
 
+  // Calculate the number of correct answers
+  const correctAnswersCount = result.reduce((acc, current) => {
+    return current.isMatch ? acc + 1 : acc;
+  }, 0);
+
   return (
     <ResultOverviewStyle>
       <p>
-        You attempted questions: <HighlightedText>{result.length}</HighlightedText> / {quizDetails.userSelectedNumberOfQuestions}
+      <p>You Answered <HighlightedText>{correctAnswersCount}</HighlightedText> Out of <HighlightedText>{quizDetails.userSelectedNumberOfQuestions}</HighlightedText> Questions Correctly</p>
       </p>
     </ResultOverviewStyle>
   );

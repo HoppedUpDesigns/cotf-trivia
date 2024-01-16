@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styled from 'styled-components'
 import { AppLogo } from '../../config/icons'
 import { useQuiz } from '../../context/QuizContext'
@@ -43,23 +43,46 @@ const SelectButtonContainer = styled.div`
 
 interface SelectButtonProps {
   disabled?: boolean
+  icon?: ReactElement;
 }
 
 const SelectButton = styled.div<SelectButtonProps>`
   background-color: ${({ disabled, theme }) =>
     disabled ? `${theme.colors.disabledCard}` : `${theme.colors.selectTopicBg}`};
-  transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out, transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   padding: 14px 10px;
   display: flex;
   align-items: center;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); // Shadow for 3D effect
+  
+  // Apply border conditionally based on theme
+  border: ${({ theme }) => theme.colors.background === '#708dad' ? '1px solid #708dad' : '1px solid #B4B4B4'};
+
+  /* Directly apply the fill color to SVG icons */
+  > svg {
+    fill: ${({ theme }) => theme.colors.appLogo}; // Using theme color
+  }
+
+  /* Additional specificity if needed */
+  > svg path {
+    fill: ${({ theme }) => theme.colors.appLogo};
+  }
+
+  &:hover {
+    transform: translateY(-3px); // Raise button on hover
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); // Increase shadow size on hover
+  }
+
   @media ${device.md} {
     padding: 10px;
     tap-highlight-color: transparent;
     -webkit-tap-highlight-color: transparent;
   }
-`
+`;
+
+
 
 const SelectButtonText = styled.span`
   font-size: 18px;
@@ -88,7 +111,7 @@ const QuizTopicsScreen: React.FC = () => {
         <Heading>
           WELCOME TO <HighlightedText> COTF TRIVIA</HighlightedText>
         </Heading>
-        <DetailText>Select topic below to start your Quiz.</DetailText>
+        <DetailText>Select Topic Below To Start Your Quiz</DetailText>
         <SelectButtonContainer>
           {quizTopics.map(({ title, icon }) => (
             <SelectButton

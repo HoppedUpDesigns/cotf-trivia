@@ -101,20 +101,6 @@ const Answer = styled.li<AnswerProps>`
   }
 `
 
-const Score = styled.span<{ right: boolean }>`
-  font-weight: 500;
-  font-size: 16px;
-  color: ${({ right, theme }) =>
-    right ? `${theme.colors.success}` : `${theme.colors.danger}`};
-  margin-top: 4px;
-  @media ${device.md} {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-    margin-right: 10px;
-  }
-`
-
 const ResultScreen: FC = () => {
   const { result } = useQuiz()
 

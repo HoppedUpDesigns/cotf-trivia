@@ -48,15 +48,15 @@ export const neverender: Topic = {
     },
     {
       question:
-        "What is the name of the band who played the Port Show Kick-off on the 2nd S.S. Neverender?",
+        "Whao played the port kick-off show for the second S.S. Neverender cruise?",
       choices: [
-        "Motion City Sounctrack",
+        "Motion City Soundtrack",
         "Animals As Leaders",
         "Mannequin Pussy",
         "Sunny Day Real Estate",
       ],
       type: "MCQs",
-      correctAnswers: ["Motion City Sounctrack"],
+      correctAnswers: ["Motion City Soundtrack"],
     },
     {
       question:

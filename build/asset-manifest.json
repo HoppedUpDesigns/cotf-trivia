@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.cd4ed9f0.css",
-    "main.js": "/static/js/main.1d708d7f.js",
-    "static/js/787.366a16ce.chunk.js": "/static/js/787.366a16ce.chunk.js",
+    "main.js": "/static/js/main.01727ab1.js",
+    "static/js/787.f1462681.chunk.js": "/static/js/787.f1462681.chunk.js",
     "static/media/anek-malayalam-v4-malayalam-700.woff": "/static/media/anek-malayalam-v4-malayalam-700.c6ce627cd72c475d46cb.woff",
     "static/media/anek-malayalam-v4-malayalam-600.woff": "/static/media/anek-malayalam-v4-malayalam-600.8a1553bb42261d2beb5b.woff",
     "static/media/anek-malayalam-v4-malayalam-300.woff": "/static/media/anek-malayalam-v4-malayalam-300.e041c0cfec740e2322d6.woff",
@@ -24,16 +24,16 @@
     "static/media/moon.svg": "/static/media/moon.fa8c7fd3232dddfd7d9291c28b6590cf.svg",
     "static/media/timer.svg": "/static/media/timer.046cc8ea0d0be1641a21e5dccedfd1fb.svg",
     "static/media/previous.svg": "/static/media/previous.7a54e9d109e4e32dd54f549c2ea06d6e.svg",
+    "index.html": "/index.html",
     "static/media/next.svg": "/static/media/next.e5109a3eafe9247a359cb697b1a7fba0.svg",
     "static/media/check.svg": "/static/media/check.77b4d1e03dcdf84035397dda68ec2233.svg",
-    "index.html": "/index.html",
     "static/media/start.svg": "/static/media/start.0085dec5cb635e6a4b0b73a507947989.svg",
     "main.cd4ed9f0.css.map": "/static/css/main.cd4ed9f0.css.map",
-    "main.1d708d7f.js.map": "/static/js/main.1d708d7f.js.map",
-    "787.366a16ce.chunk.js.map": "/static/js/787.366a16ce.chunk.js.map"
+    "main.01727ab1.js.map": "/static/js/main.01727ab1.js.map",
+    "787.f1462681.chunk.js.map": "/static/js/787.f1462681.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd4ed9f0.css",
-    "static/js/main.1d708d7f.js"
+    "static/js/main.01727ab1.js"
   ]
 }

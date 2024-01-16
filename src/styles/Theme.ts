@@ -25,7 +25,7 @@ export const themes: Record<string, Theme> = {
       themeText: '#000000',
       themeColor: '#800080',
       themeGradient: 'linear-gradient(to right,#800080, #FFC0CB)',
-      background: '#E5E5E5',
+      background: '#708dad',
       cardBackground: '#FFFFFF',
       selectTopicBg: '#FFFFFF',
       appLogo: '#000000',
@@ -49,9 +49,9 @@ export const themes: Record<string, Theme> = {
       darkGray: '#9fa3a9',
       darkerGray: '#817a8e',
     },
-    fonts: {
-      anekMalayalam: 'Anek Malayalam',
-    },
+    // fonts: {
+    //   anekMalayalam: 'Anek Malayalam',
+    // },
     shadows: {
       activeButton: '3px 2px 22px 1px rgba(0, 0, 0, 0.24)',
     },
@@ -94,9 +94,9 @@ export const themes: Record<string, Theme> = {
       darkGray: '#9fa3a9',
       darkerGray: '#817a8e',
     },
-    fonts: {
-      anekMalayalam: 'Anek Malayalam',
-    },
+    // fonts: {
+    //   anekMalayalam: 'Anek Malayalam',
+    // },
     shadows: {
       activeButton: '3px 2px 22px 1px rgba(0, 0, 0, 0.24)',
     },

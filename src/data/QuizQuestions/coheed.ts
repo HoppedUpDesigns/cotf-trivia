@@ -7,7 +7,7 @@ import { Topic } from ".";
 
 export const coheed: Topic = {
   topic: "Coheed and Cambria",
-  totalQuestions: 100,
+  totalQuestions: 104,
   questions: [
     {
       question: "What was Coheed and Cambria's first single?",
@@ -141,7 +141,7 @@ export const coheed: Topic = {
     {
       question:
         "Which member of Coheed and Cambria temporarily left the band but later returned?",
-      choices: ["Josh Eppard", "Travis Stever", "Michael Todd", "Chris Pennie"],
+      choices: ["Josh Eppard", "Travis Stever", "Zach Cooper", "Chris Pennie"],
       type: "MCQs",
       correctAnswers: ["Josh Eppard"],
     },
@@ -203,7 +203,7 @@ export const coheed: Topic = {
     {
       question:
         "In 2012, which member of Coheed and Cambria was replaced by Zach Cooper?",
-      choices: ["Michael Todd", "Chris Pennie", "Travis Stever", "Josh Eppard"],
+      choices: ["Michael Todd", "Chris Pennie", "Jon Carleo", "Josh Eppard"],
       type: "MCQs",
       correctAnswers: ["Michael Todd"],
     },
@@ -412,7 +412,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What music festival did Coheed and Cambria headline in 2008?",
+        "What music festival did Coheed and Cambria co-headline in 2008?",
       choices: ["Coachella", "Burning Man", "Lollapalooza", "Bamboozle"],
       type: "MCQs",
       correctAnswers: ["Bamboozle"],
@@ -506,7 +506,7 @@ export const coheed: Topic = {
         "Blood Red Summer",
       ],
       type: "MCQs",
-      correctAnswers: ["A Favor House Atlantic"],
+      correctAnswers: ["Devil in Jersey City"],
     },
     {
       question:
@@ -773,7 +773,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which member of Coheed and Cambria joined the band in 2007, filling the role of bassist?",
+        "Which member of Coheed and Cambria rejoined the band in 1996, replacing Jon Carleo as bassist?",
       choices: ["Zach Cooper", "Michael Todd", "Josh Eppard", "Travis Stever"],
       type: "MCQs",
       correctAnswers: ["Michael Todd"],
@@ -1023,7 +1023,7 @@ export const coheed: Topic = {
     correctAnswers: ["Michael Todd"],
     },
     {
-    question: "What is the name of the manager who started working with Coheed and Cambria in August 2002?",
+    question: "What is the name of Coheed and Cambria's manager?",
     choices: [
       "Blaze James",
       "Nick Raskulinecz",
@@ -1033,5 +1033,51 @@ export const coheed: Topic = {
     type: "MCQs",
     correctAnswers: ["Blaze James"],
     },
+    {
+      question: "When did Nate Kelley leave Shabūtie?",
+      choices: [
+        "1999",
+        "1998",
+        "1996",
+        "1995"
+      ],
+      type: "MCQs",
+      correctAnswers: ["1999"],
+      },
+      {
+        question: "When did Travis Stever join Shabūtie?",
+        choices: [
+          "1998",
+          "1994",
+          "1996",
+          "1999"
+        ],
+        type: "MCQs",
+        correctAnswers: ["1999"],
+        },
+        {
+          question:
+            "What was the title of Shabütie's EP released in 1999?",
+          choices: [
+            "Toxic Parents",
+            "Plan to Take Over the World",
+            "The Naked Prey EP",
+            "The Delirium Trigger EP",
+          ],
+          type: "MCQs",
+          correctAnswers: ["The Penelope EP"],
+        },
+        {
+          question:
+            "Who is listed as the drummer in the liner notes of Delirium Trigger?",
+          choices: [
+            "Nate Kelley",
+            "Chris Pennie",
+            "Taylor Hawkins",
+            "Josh Eppard",
+          ],
+          type: "MCQs",
+          correctAnswers: ["Josh Eppard"],
+        },
   ],
 };

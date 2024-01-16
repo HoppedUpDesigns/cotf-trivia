@@ -101,12 +101,12 @@ const QuizDetailsScreen = () => {
             <HighlightedText>{quizDetails.selectedQuizTopic}</HighlightedText>
           </DetailText>
           <DetailText>
-            Total questions available from the selected quiz:{" "}
+            Total Questions Available From The Selected Quiz:{" "}
             <HighlightedText>{quizDetails.totalQuestions}</HighlightedText>
           </DetailText>
           <DetailText>
             <label htmlFor="userInput">
-              How many questions would you like to attempt?
+              How Many Questions Would You Like To Attempt?
             </label>
             <NumericInput
               type="number"

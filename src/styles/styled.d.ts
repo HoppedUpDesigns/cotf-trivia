@@ -49,9 +49,9 @@ export interface Theme {
     darkGray: string
     darkerGray: string
   }
-  fonts: {
-    anekMalayalam: string
-  }
+  // fonts: {
+  //   anekMalayalam: string
+  // }
   shadows: {
     activeButton: string
   }

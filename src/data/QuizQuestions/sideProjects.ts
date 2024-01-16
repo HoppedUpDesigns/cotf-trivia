@@ -7,7 +7,7 @@ import { Topic } from ".";
 
 export const sideProjects: Topic = {
   topic: "Side Projects",
-  totalQuestions: 30,
+  totalQuestions: 32,
   questions: [
     {
       question:
@@ -339,6 +339,30 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Sick Kids"],
+    },
+    {
+      question:
+        "What is the name of the band Claudio and Travis was in before forming the band Shabūtie in March 1995?",
+      choices: [
+        "Penelope",
+        "Take Over The World",
+        "Toxic Parents",
+        "Naked Prey",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Toxic Parents"],
+    },
+    {
+      question:
+        "What is the name of Shabūtie's first studio demo released in 1999?",
+      choices: [
+        "Delirium Trigger",
+        "Take Over The World",
+        "The Penelope EP",
+        "Naked Prey",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Toxic Parents"],
     },
   ],
 };
