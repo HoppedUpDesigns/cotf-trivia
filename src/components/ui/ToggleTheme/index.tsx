@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/ui/ToggleTheme/index.tsx
+ * @file: PROJECT-ROOT-FOLDER/src/components/ui/ToggleTheme/index.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: 
  *  - This file contains the ToggleTheme component, which allows users to switch between light and dark themes in the application.
@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation of the ToggleTheme component with animations and theme-specific icons.

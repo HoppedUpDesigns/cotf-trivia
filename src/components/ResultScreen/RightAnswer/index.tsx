@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/index.tsx
+ * @file: PROJECT-ROOT-FOLDER/src/components/ResultScreen/RightAnswer/index.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: 
  *  - This file defines the RightAnswer component, used in the ResultScreen to display the correct answers for questions where the user's response was incorrect.
@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Developed the initial component structure and logic.

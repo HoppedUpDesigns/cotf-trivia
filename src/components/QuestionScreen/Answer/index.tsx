@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/Answer/index.tsx
+ * @file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Answer/index.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This file contains the Answer component, which is responsible for rendering individual answer options within the QuestionScreen.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -12,7 +12,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made:
  *     - Initial creation and setup of the Answer component.

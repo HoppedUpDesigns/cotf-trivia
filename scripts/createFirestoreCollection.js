@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/scripts/createFirestoreCollection.js
+ * @file: PROJECT-ROOT-FOLDER/scripts/createFirestoreCollection.js
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This script is designed to create a Firestore Collection, named Documents, and define Fields with specified data types.
  * ---------------------------------------------------------------------------------------------------------------------------------------------

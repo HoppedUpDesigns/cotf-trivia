@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/scripts/appendQuestionsAllDocuments.js
+ * @file: PROJECT-ROOT-FOLDER/scripts/appendQuestionsAllDocuments.js
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This script is designed to append quiz question data to all specified Firestore Collection Documents. It reads JSON files 
  *               containing quiz questions and adds them to the specified Firestore collection documents.

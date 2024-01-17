@@ -1,124 +1,125 @@
-*** /Users/jason/Sites/cotf/ is the root of the project ***
+*** PROJECT-ROOT-FOLDER/ is the root of the project ***
 *** anything that looks like this |-- / is a folder ***
-*** for example: |-- /src is a folder that is one level down from the root of the project (i.e. /Users/jason/Sites/cotf/) ***
+*** for example: |-- /src is a folder that is one level down from the root of the project (i.e. PROJECT-ROOT-FOLDER/) ***
 *** anything that looks like this |--  is a file ***
-*** for example: |-- package.json is a file that is one level down from the root of the project (i.e. /Users/jason/Sites/cotf/) ***
+*** for example: |-- package.json is a file that is one level down from the root of the project (i.e. PROJECT-ROOT-FOLDER/) ***
 
-/Users/jason/Sites/cotf/
-  |-- /Users/jason/Sites/cotf/build/
-  |     |-- /Users/jason/Sites/cotf/build/static/
-  |     |     |-- /Users/jason/Sites/cotf/build/static/css
-  |     |     |-- /Users/jason/Sites/cotf/build/static/js
-  |     |     |-- /Users/jason/Sites/cotf/build/static/media
-  |     |-- /Users/jason/Sites/cotf/build/index.html
+PROJECT-ROOT-FOLDER/
+  |-- PROJECT-ROOT-FOLDER/build/
+  |     |-- PROJECT-ROOT-FOLDER/build/static/
+  |     |     |-- PROJECT-ROOT-FOLDER/build/static/css
+  |     |     |-- PROJECT-ROOT-FOLDER/build/static/js
+  |     |     |-- PROJECT-ROOT-FOLDER/build/static/media
+  |     |-- PROJECT-ROOT-FOLDER/build/index.html
   |
-  |-- /Users/jason/Sites/cotf/node_modules/
+  |-- PROJECT-ROOT-FOLDER/node_modules/
   |
-  |-- /Users/jason/Sites/cotf/public/
-  |     |-- /Users/jason/Sites/cotf/public/index.html
-  |     |-- /Users/jason/Sites/cotf/public/site.webmanifest
+  |-- PROJECT-ROOT-FOLDER/public/
+  |     |-- PROJECT-ROOT-FOLDER/public/index.html
+  |     |-- PROJECT-ROOT-FOLDER/public/site.webmanifest
   |
-  |-- /Users/jason/Sites/cotf/src/
-  |     |-- /Users/jason/Sites/cotf/src/components/
-  |     |     |-- /Users/jason/Sites/cotf/src/components/Main
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/Main/index.tsx
+  |-- PROJECT-ROOT-FOLDER/src/
+  |     |-- PROJECT-ROOT-FOLDER/src/components/
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/Main
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/Main/index.tsx
   |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Answer/
-  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Answer/index.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Answer/
+  |     |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Answer/index.tsx
   |     |     |     |
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/
-  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/index.tsx
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Question/
+  |     |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Question/index.tsx
   |     |     |     |
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/QuizHeader/
-  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/QuizHeader/Counter
-  |     |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/QuizHeader/Counter/index.tsx
-  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/QuizHeader/index.tsx
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Question/QuizHeader/
+  |     |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Question/QuizHeader/Counter
+  |     |     |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Question/QuizHeader/Counter/index.tsx
+  |     |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Question/QuizHeader/index.tsx
   |     |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/index.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Question/index.tsx
   |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx
   |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx
   |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/
-  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/index.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/ResultScreen/
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ResultScreen/ResultOverview/
+  |     |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ResultScreen/ResultOverview/index.tsx
   |     |     |     |
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/
-  |     |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/index.tsx
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ResultScreen/RightAnswer/
+  |     |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ResultScreen/RightAnswer/index.tsx
   |     |     |     |
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ResultScreen/index.tsx
   |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/SplashScreen/
-  |     |           |-- /Users/jason/Sites/cotf/src/components/SplashScreen/index.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/SplashScreen/
+  |     |           |-- PROJECT-ROOT-FOLDER/src/components/SplashScreen/index.tsx
   |     |
-  |     |-- /Users/jason/Sites/cotf/src/components/ui/
-  |     |     |-- /Users/jason/Sites/cotf/src/components/ui/Button/
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/Button/index.tsx
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/Button/styled.tsx
+  |     |-- PROJECT-ROOT-FOLDER/src/components/ui/
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/ui/Button/
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ui/Button/index.tsx
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ui/Button/styled.tsx
   |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/ui/ModalWrapper/
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/ModalWrapper/index.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/ui/ModalWrapper/
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ui/ModalWrapper/index.tsx
   |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/ui/PreviousButton/
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/PreviousButton/index.tsx
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/ui/PreviousButton/styled.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/ui/PreviousButton/
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ui/PreviousButton/index.tsx
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/ui/PreviousButton/styled.tsx
   |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/QuizImage/
-  |     |     |     |-- /Users/jason/Sites/cotf/src/components/QuizImage/index.tsx
+  |     |-- PROJECT-ROOT-FOLDER/src/components/contactUs.js
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuizImage/
+  |     |     |     |-- PROJECT-ROOT-FOLDER/src/components/QuizImage/index.tsx
   |     |     |
-  |     |     |-- /Users/jason/Sites/cotf/src/components/ui/ToggleTheme/
-  |     |           |-- /Users/jason/Sites/cotf/src/components/ui/ToggleTheme/index.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/components/ui/ToggleTheme/
+  |     |           |-- PROJECT-ROOT-FOLDER/src/components/ui/ToggleTheme/index.tsx
   |
-  |-- /Users/jason/Sites/cotf/src/config/
-  |     |-- /Users/jason/Sites/cotf/src/config/icons.ts
+  |-- PROJECT-ROOT-FOLDER/src/config/
+  |     |-- PROJECT-ROOT-FOLDER/src/config/icons.ts
   |
-  |-- /Users/jason/Sites/cotf/src/context/
-  |     |-- /Users/jason/Sites/cotf/src/context/QuizContext.tsx
+  |-- PROJECT-ROOT-FOLDER/src/context/
+  |     |-- PROJECT-ROOT-FOLDER/src/context/QuizContext.tsx
   |
-  |-- /Users/jason/Sites/cotf/src/data/
-  |     |-- /Users/jason/Sites/cotf/src/data/fetchQuizTopics.js
-  |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/
-  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/amory.ts
-  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/coheed.ts
-  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/index.tsx
-  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/neverender.ts
-  |     |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/sideProjects.ts
+  |-- PROJECT-ROOT-FOLDER/src/data/
+  |     |-- PROJECT-ROOT-FOLDER/src/data/fetchQuizTopics.js
+  |     |-- PROJECT-ROOT-FOLDER/src/data/QuizQuestions/
+  |     |     |-- PROJECT-ROOT-FOLDER/src/data/QuizQuestions/amory.ts
+  |     |     |-- PROJECT-ROOT-FOLDER/src/data/QuizQuestions/coheed.ts
+  |     |     |-- PROJECT-ROOT-FOLDER/src/data/QuizQuestions/index.tsx
+  |     |     |-- PROJECT-ROOT-FOLDER/src/data/QuizQuestions/neverender.ts
+  |     |     |-- PROJECT-ROOT-FOLDER/src/data/QuizQuestions/sideProjects.ts
   |     |
-  |     |-- /Users/jason/Sites/cotf/src/data/QuizQuestions/quizTopics.tsx
+  |     |-- PROJECT-ROOT-FOLDER/src/data/QuizQuestions/quizTopics.tsx
   |
-  |-- /Users/jason/Sites/cotf/src/hooks
-  |     |-- /Users/jason/Sites/cotf/src/hooks/index.tsx
-  |     |-- /Users/jason/Sites/cotf/src/hooks/useShuffleQuestions.ts
-  |     |-- /Users/jason/Sites/cotf/src/hooks/useTimer.ts
+  |-- PROJECT-ROOT-FOLDER/src/hooks
+  |     |-- PROJECT-ROOT-FOLDER/src/hooks/index.tsx
+  |     |-- PROJECT-ROOT-FOLDER/src/hooks/useShuffleQuestions.ts
+  |     |-- PROJECT-ROOT-FOLDER/src/hooks/useTimer.ts
   |
-  |-- /Users/jason/Sites/cotf/src/styles/
-  |     |-- /Users/jason/Sites/cotf/src/styles/Breakpoints.ts
-  |     |-- /Users/jason/Sites/cotf/src/styles/fonts.module.css
-  |     |-- /Users/jason/Sites/cotf/src/styles/Global.ts
-  |     |-- /Users/jason/Sites/cotf/src/styles/styled.d.ts
-  |     |-- /Users/jason/Sites/cotf/src/styles/Theme.ts
+  |-- PROJECT-ROOT-FOLDER/src/styles/
+  |     |-- PROJECT-ROOT-FOLDER/src/styles/Breakpoints.ts
+  |     |-- PROJECT-ROOT-FOLDER/src/styles/fonts.module.css
+  |     |-- PROJECT-ROOT-FOLDER/src/styles/Global.ts
+  |     |-- PROJECT-ROOT-FOLDER/src/styles/styled.d.ts
+  |     |-- PROJECT-ROOT-FOLDER/src/styles/Theme.ts
   |
-  |-- /Users/jason/Sites/cotf/src/types/
-  |     |-- /Users/jason/Sites/cotf/src/types/index.tsx
+  |-- PROJECT-ROOT-FOLDER/src/types/
+  |     |-- PROJECT-ROOT-FOLDER/src/types/index.tsx
   |
-  |-- /Users/jason/Sites/cotf/src/utils/
-  |     |-- /Users/jason/Sites/cotf/src/utils/helpers.ts
+  |-- PROJECT-ROOT-FOLDER/src/utils/
+  |     |-- PROJECT-ROOT-FOLDER/src/utils/helpers.ts
   |
-  |-- /Users/jason/Sites/cotf/src/App.test.tsx
-  |-- /Users/jason/Sites/cotf/src/App.tsx
-  |-- /Users/jason/Sites/cotf/src/index.tsx
-  |-- /Users/jason/Sites/cotf/src/logo.svg
-  |-- /Users/jason/Sites/cotf/src/react-app-env.d.ts
-  |-- /Users/jason/Sites/cotf/src/reportWebVitals.ts
-  |-- /Users/jason/Sites/cotf/src/setupTests.ts
+  |-- PROJECT-ROOT-FOLDER/src/App.test.tsx
+  |-- PROJECT-ROOT-FOLDER/src/App.tsx
+  |-- PROJECT-ROOT-FOLDER/src/index.tsx
+  |-- PROJECT-ROOT-FOLDER/src/logo.svg
+  |-- PROJECT-ROOT-FOLDER/src/react-app-env.d.ts
+  |-- PROJECT-ROOT-FOLDER/src/reportWebVitals.ts
+  |-- PROJECT-ROOT-FOLDER/src/setupTests.ts
 |
-|-- /Users/jason/Sites/cotf/.firebaserc
-|-- /Users/jason/Sites/cotf/.gitignore
-|-- /Users/jason/Sites/cotf/package-lock.json
-|-- /Users/jason/Sites/cotf/package.json
-|-- /Users/jason/Sites/cotf/README.md
-|-- /Users/jason/Sites/cotf/tsconfig.json
+|-- PROJECT-ROOT-FOLDER/.firebaserc
+|-- PROJECT-ROOT-FOLDER/.gitignore
+|-- PROJECT-ROOT-FOLDER/package-lock.json
+|-- PROJECT-ROOT-FOLDER/package.json
+|-- PROJECT-ROOT-FOLDER/README.md
+|-- PROJECT-ROOT-FOLDER/tsconfig.json

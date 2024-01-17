@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/data/QuizQuestions/amory.ts
+ * @file: PROJECT-ROOT-FOLDER/src/data/QuizQuestions/amory.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: 
  *  - This file contains the quiz questions and answers related to the "AMORY WARS" topic.
@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation with a set of questions specifically curated for the "AMORY WARS" topic.

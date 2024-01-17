@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx
+ * @file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/index.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This file defines the QuestionScreen component, which is responsible for displaying individual quiz questions and managing quiz flow.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -11,7 +11,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *     - Initial creation of the QuestionScreen component with question navigation and answer selection logic.

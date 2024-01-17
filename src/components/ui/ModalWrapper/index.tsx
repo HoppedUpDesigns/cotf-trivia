@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/ui/ModalWrapper/index.tsx
+ * @file: PROJECT-ROOT-FOLDER/src/components/ui/ModalWrapper/index.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: 
  *  - This file contains the ModalWrapper component, a reusable modal component for displaying information overlays in the application.
@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation of the ModalWrapper component with responsive design and theme integration.

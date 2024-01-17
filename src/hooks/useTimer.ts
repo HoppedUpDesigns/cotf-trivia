@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/hooks/useTimer.ts
+ * @file: PROJECT-ROOT-FOLDER/src/hooks/useTimer.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: 
  *  - This file contains the custom hook 'useTimer' used to manage the countdown timer in the quiz application.
@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation of the useTimer hook with basic countdown functionality.

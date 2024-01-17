@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/ui/QuizImage/index.tsx
+ * @file: PROJECT-ROOT-FOLDER/src/components/ui/QuizImage/index.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: 
  *  - This file contains the QuizImage component, which is used for displaying images in quiz questions.
@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial implementation of the QuizImage component with responsive design.

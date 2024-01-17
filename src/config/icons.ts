@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/config/icons.ts
+ * @file: PROJECT-ROOT-FOLDER/src/config/icons.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: 
  *  - This file serves as a centralized hub for importing and exporting SVG icons used throughout the application.
@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial setup of icon imports and exports.

@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/reportWebVitals.ts
+ * @file: PROJECT-ROOT-FOLDER/src/reportWebVitals.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This file includes the functionality to measure and report web vitals, which are metrics related to the performance of a web page.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -11,7 +11,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *     - Initial implementation of the reportWebVitals function to measure key performance indicators of the web application.

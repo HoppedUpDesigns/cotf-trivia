@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx
+ * @file: PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This file contains the QuizDetailsScreen component which allows users to select the number of questions they want to attempt in a quiz.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation with user input for selecting the number of questions.

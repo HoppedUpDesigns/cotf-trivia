@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/utils/helpers.ts
+ * @file: PROJECT-ROOT-FOLDER/src/utils/helpers.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: Contains utility functions used throughout the ReactJS Quiz App. These functions perform various tasks such as formatting time, shuffling arrays, and adding leading zeros to numbers.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -9,7 +9,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: Added convertSeconds and shuffleArray functions. Updated formatting and comments for clarity and consistency.
  * ---------------------------------------------------------------------------------------------------------------------------------------------

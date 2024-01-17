@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/styles/Global.ts
+ * @file: PROJECT-ROOT-FOLDER/src/styles/Global.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This file contains the global styling for the COTF Trivia application. It includes the GlobalStyles, 
  *               which apply universally across the application, as well as several styled-components for common layout patterns 
@@ -15,7 +15,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: Added new components for card layouts, updated global styles for improved accessibility and cross-browser 
  *               compatibility, incorporated responsive design breakpoints.

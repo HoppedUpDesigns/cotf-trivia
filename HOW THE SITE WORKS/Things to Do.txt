@@ -6,7 +6,7 @@ Give me very detailed, step by step instructions on how to create these new comp
 
 
 Step 1:
-@file: /Users/jason/Sites/cotf/src/types/index.ts
+@file: PROJECT-ROOT-FOLDER/src/types/index.ts
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Edit this code:
 export interface QuestionTypes extends Question {
@@ -38,14 +38,14 @@ selectedQuizTopic: string
 }
 
 Step 2:
-@file: /Users/jason/Sites/cotf/src/components/Main/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/Main/index.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Edit this code:
 const ComponentToRender = screenComponents[currentScreen] || <SplashScreen />
 to render components based on the Database type, variables, properties, etc
 
 Step 3:
-@file: /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Edit this code:
 const QuizTopicsScreen: React.FC = () => {
@@ -70,7 +70,7 @@ const { quizTopic, selectQuizTopic, setCurrentScreen } = useQuiz()
 code above.
 
 Step 4:
-@file: /Users/jason/Sites/cotf/src/context/QuizContext.tsx
+@file: PROJECT-ROOT-FOLDER/src/context/QuizContext.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Ediit this code:
 import { quiz } from '../data/QuizQuestions'
@@ -96,22 +96,22 @@ selectedQuizTopic: 'Coheed and Cambria',
 },
 }
 to get the quizTopic, questions, quizDetails, totalQuestions, and selectedQuizTopic values from the Database Collection Documents and the code imported from: import { quiz } from '../data/QuizQuestions' (but from the Database NOT the QuizQuestions folder)
-4. All values for the quiz, quizTopic, questions and any related values are in the @file: /Users/jason/Sites/cotf/src/context/QuizContext.tsx file are fetched from Database sources not local files
+4. All values for the quiz, quizTopic, questions and any related values are in the @file: PROJECT-ROOT-FOLDER/src/context/QuizContext.tsx file are fetched from Database sources not local files
 
 
 Step 5:
-@file: /Users/jason/Sites/cotf/src/App.tsx
+@file: PROJECT-ROOT-FOLDER/src/App.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code to fetch the values needed from the newly updated QuizContext file and any Database Collection Document code necessary for any and all Database functions and values.
 
 Step 6:
-@file: /Users/jason/Sites/cotf/src/hooks/useShuffleQuestions.ts
+@file: PROJECT-ROOT-FOLDER/src/hooks/useShuffleQuestions.ts
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code to fetch useShuffleQuestions from the Database Collection Documents NOT local files
 
 
 Step 7:
-@file: /Users/jason/Sites/cotf/src/hooks/useTimer.ts
+@file: PROJECT-ROOT-FOLDER/src/hooks/useTimer.ts
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code:
 interface QuizDetails {
@@ -183,10 +183,10 @@ export default useTimer
 
 
 Step 8:
-@file: /Users/jason/Sites/cotf/src/hooks/index.ts
+@file: PROJECT-ROOT-FOLDER/src/hooks/index.ts
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code to get the values from the newly edited useTimer.ts and useShuffleQuestions.ts files
-Here is the code for /Users/jason/Sites/cotf/src/hooks/index.ts:
+Here is the code for PROJECT-ROOT-FOLDER/src/hooks/index.ts:
 import useShuffleQuestions from './useShuffleQuestions'
 import useTimer from './useTimer'
 
@@ -195,7 +195,7 @@ export { useShuffleQuestions, useTimer }
 
 
 Step 9:
-@file: /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Create input box on QuizDetailsScreen that:
 a. is a input box that allows the user to type in their answer to the prompt "How many questions would you like to attempt?"
@@ -210,7 +210,7 @@ d. The user must enter the value of 1 in this input box.
 e. The maximum the user can input is the getTopicQuestionCount from the QuizDetailsScreen based on the number of questions available to the user from the selectedQuizTopic from the QuizDetailsScreen
 f. If user does not enter a number between 1 and the getTopicQuestionCount or they enter any non-numberic characters, they will be shown an error message that reads "You must enter a number between 1 and " {getTopicQuestionCount}
 3. The code for this input box will replace the comment that reads: `// Input box code goes here`
-Here is the code for the /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file: 
+Here is the code for the PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx file: 
 import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
@@ -371,13 +371,13 @@ export default QuizDetailsScreen;
 
 
 Step 10:
-@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/QuizHeader/index.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code to fetch values necessary from the newly updated cotf Quiz App files necessary and all Database functions and values needed.
 3. The line of code `<TotalQuestionNo>/{addLeadingZero(totalQuestions)}</TotalQuestionNo>` needs to be 
 adapted so that the totalQuestions is the number the user entered into the input box on the
 QuizDetailsScreen that set the number of questions the user wanted to be quizzed on.
-Here's the code for the /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/index.tsx file:
+Here's the code for the PROJECT-ROOT-FOLDER/src/components/QuestionScreen/QuizHeader/index.tsx file:
 import { FC } from 'react'
 import styled from 'styled-components'
 
@@ -447,7 +447,7 @@ export default QuizHeader
 
 
 Step 11:
-@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/Counter/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/QuizHeader/Counter/index.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt this code:
 const Counter: FC<CounterProps> = ({ time }) => {
@@ -469,13 +469,13 @@ to get the {time} value from the newly edited useTimer hook
 
 
 Step 12:
-@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/index.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Edit the code of the QuestionScreen to fetch all values from the Database Collection Documents NOT local files
 3. Once the user clicks on the "Start" Button on the QuizDetailsScreen, the getTopicQuestionCount will be passed to the QuestionScreen
 4. The user will ONLY be asked the getTopicQuestionCount number of questions from the quiz they selected from the selectedQuizTopic value from the QuizDetailsScreen
 5. Once the user has answered the getTopicQuestionCount number of questions or the useTimer value runs out, the user will be sent to the ResultOverview Screen
-Merge the changes you just suggested for the /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx file.
+Merge the changes you just suggested for the PROJECT-ROOT-FOLDER/src/components/QuestionScreen/index.tsx file.
 If anything is in the wrong place in the code, move it to the correct area of the source code.
 Add any import statements, if any, needed
 Make sure variables, functions, types, etc are all spelled right and are being used properly.
@@ -484,7 +484,7 @@ styled components just as they are. Include the 100% complete code for any and a
 don't comment out any code. Return to me the entire, 100% correct, 100% completed code.
 Give me back the ENTIRE source code for the file. Give me back existing code that is correct EXACTLY as it is. This includes returning ALL of the style definitions. Don't comment out ANY of the code. This rule goes for ALL of the code I provide you in the future.
 for the file.
-Here is the code for the /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx file:
+Here is the code for the PROJECT-ROOT-FOLDER/src/components/QuestionScreen/index.tsx file:
 import { FC, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { AppLogo, CheckIcon, Previous, Next, TimerIcon } from '../../config/icons';
@@ -725,7 +725,7 @@ export default QuestionScreen;
 
 
 Step 13:
-@file: /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/ResultScreen/ResultOverview/index.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt this code:
 interface ResultOverviewProps {
@@ -748,7 +748,7 @@ Time Spent:<HighlightedText> {convertSeconds(endTime)} </HighlightedText>
 )
 }
 to fetch values from any and all Database Collection Document values and newly edited cotf Quiz App files necessary NOT local files
-Merge the changes you just suggested for the /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx file.
+Merge the changes you just suggested for the PROJECT-ROOT-FOLDER/src/components/QuestionScreen/index.tsx file.
 If anything is in the wrong place in the code, move it to the correct area of the source code.
 Add any import statements, if any, needed
 Make sure variables, functions, types, etc are all spelled right and are being used properly.
@@ -756,7 +756,7 @@ If any of the existing code below works, keep it in your response as it. This in
 styled components just as they are. Include the 100% complete code for any and all styled components. Give me back all the code below that works,
 don't comment out any code. Return to me the entire, 100% correct, 100% completed code.
 Give me back the ENTIRE source code for the file. Also, tell me any files that need to be edited in order for there to be no conflicts among any files, types, imports, variables, properties, etc Give me back existing code that is correct EXACTLY as it is. This includes returning ALL of the style definitions. Don't comment out ANY of the code. This rule goes for ALL of the code I provide you in the future.
-for the file. Here is the current code for the /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/index.tsx file:
+for the file. Here is the current code for the PROJECT-ROOT-FOLDER/src/components/ResultScreen/ResultOverview/index.tsx file:
 import { FC } from 'react'
 import styled from 'styled-components'
 import { useQuiz } from '../../../context/QuizContext'
@@ -814,7 +814,7 @@ export default ResultOverview
 
 
 Step 14:
-@file: /Users/jason/Sites/cotf/src/utils/helpers.ts
+@file: PROJECT-ROOT-FOLDER/src/utils/helpers.ts
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code to use any values necessary from the newly updated useTimer hook or any Database Collection Document code necessary for any and all Database functions and values.
 Merge the changes you just suggested for the file.
@@ -825,7 +825,7 @@ If any of the existing code below works, keep it in your response as it. This in
 styled components just as they are. Include the 100% complete code for any and all styled components. Give me back all the code below that works,
 don't comment out any code. Return to me the entire, 100% correct, 100% completed code.
 Give me back the ENTIRE source code for the file. Also, tell me any files that need to be edited in order for there to be no conflicts among any files, types, imports, variables, properties, etc Give me back existing code that is correct EXACTLY as it is. This includes returning ALL of the style definitions. Don't comment out ANY of the code. This rule goes for ALL of the code I provide you in the future.
-for the file. Here is the current code for the /Users/jason/Sites/cotf/src/utils/helpers.ts file: 
+for the file. Here is the current code for the PROJECT-ROOT-FOLDER/src/utils/helpers.ts file: 
 export const addLeadingZero = (number: number) => {
   if (number > 9) {
     return number
@@ -884,7 +884,7 @@ export const shuffleArray = <T>(array: T[]): T[] => {
 
 
 Step 15:
-@file: /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/ResultScreen/RightAnswer/index.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection Document code necessary for any and all Database functions and values.
 
@@ -894,7 +894,7 @@ Step 15:
 
 
 Step 16:
-@file: /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/ResultScreen/index.tsx
 1. Connect to the Database instead of using local TypeScript files (if necessary for this file)
 2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection 
 Merge the changes you just suggested for the file.
@@ -905,7 +905,7 @@ If any of the existing code below works, keep it in your response as it. This in
 styled components just as they are. Include the 100% complete code for any and all styled components. Give me back all the code below that works,
 don't comment out any code. Return to me the entire, 100% correct, 100% completed code.
 Give me back the ENTIRE source code for the file. Also, tell me any files that need to be edited in order for there to be no conflicts among any files, types, imports, variables, properties, etc Give me back existing code that is correct EXACTLY as it is. This includes returning ALL of the style definitions. Don't comment out ANY of the code. This rule goes for ALL of the code I provide you in the future.
-for the file. Here is the current code for the /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx:
+for the file. Here is the current code for the PROJECT-ROOT-FOLDER/src/components/ResultScreen/index.tsx:
 import { FC } from 'react'
 import styled, { css } from 'styled-components'
 import { AppLogo, Refresh } from '../../config/icons'
@@ -1094,7 +1094,7 @@ export default ResultScreen
 
 
 Step 17:
-@file: /Users/jason/Sites/cotf/src/api/api.js
+@file: PROJECT-ROOT-FOLDER/src/api/api.js
 1. Connect to the Database
 2. Adapt the code to fetch the values needed from any newly updated cotf Quiz App files and any Database Collection Document code necessary for any and all Database functions and values.
 Merge the changes you just suggested for the file.

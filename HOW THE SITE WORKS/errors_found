@@ -57,23 +57,23 @@ complete, fixed, edited, merged, etc code returned to me in a very detailed, ste
 Here are the issues that I think need to be resolved. Read the comments next to the line of code in
 these files in order to determine questions that need to be addressed and fixed:
 
-Line 131 of the /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file needs to be
+Line 131 of the PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx file needs to be
 traced backwards to fix the error that prints "No topic selected" on the QuizDetailsScreen
 
-Line 33 of the /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file:
+Line 33 of the PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx file:
 // 'useShuffleQuestions' is declared but its value is never read.ts(6133)
 (alias) const useShuffleQuestions: () => void
 import useShuffleQuestions`
-// DOES useShuffleQuestions NEED TO BE FIXED SO IT CAN BE USED IN THE /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file
+// DOES useShuffleQuestions NEED TO BE FIXED SO IT CAN BE USED IN THE PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx file
 
-Line 25 of the /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx file: 
+Line 25 of the PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx file: 
 `'getDocs' is declared but its value is never read.ts(6133)
 (alias) function getDocs<AppModelType, DbModelType extends DocumentData>(query: Query<AppModelType, DbModelType>): Promise<QuerySnapshot<AppModelType, DbModelType>>
 import getDocs`
-// DOES getDocs NEED TO BE IMPORTED SO IT CAN BE USED IN THE /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file
+// DOES getDocs NEED TO BE IMPORTED SO IT CAN BE USED IN THE PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx file
 
 
-Line 26 of the /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file:
+Line 26 of the PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx file:
 `import { collection, query, where, orderBy, limit, getDocs, and } from "firebase/firestore";
 // `collection' is declared but its value is never read`
 // `query' is declared but its value is never read`
@@ -81,24 +81,24 @@ Line 26 of the /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.ts
 //`orderBy' is declared but its value is never read`
 // `limit' is declared but its value is never read`
 // `getDocs' is declared but its value is never read`
-// DO collection, query, where, orderBy, limit, and getDocs NEED TO BE IMPORTED SO THEY CAN BE USED IN THE /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file
+// DO collection, query, where, orderBy, limit, and getDocs NEED TO BE IMPORTED SO THEY CAN BE USED IN THE PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx file
 
-Line 36 of the /Users/jason/Sites/cotf/src/types/index.ts file:
+Line 36 of the PROJECT-ROOT-FOLDER/src/types/index.ts file:
 export interface QuizTopic { // Is this the correct use of topic and QuizTopic?
   title: string; // Should this be name instead of title?
   icon: React.ReactNode; // Is this the correct use of icon?
   disabled?: boolean;
 }
 
-Line 25 of the /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx file:
+Line 25 of the PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx file:
 import { collection, getDocs, doc, getDoc } from "firebase/firestore";
-// DO doc and getDoc NEED TO BE IMPORTED SO THEY CAN BE USED IN THE /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file
+// DO doc and getDoc NEED TO BE IMPORTED SO THEY CAN BE USED IN THE PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx file
 
-Line 29 of the /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx file:
+Line 29 of the PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx file:
 import { device } from '../../styles/BreakPoints';
-// DOES device NEED TO BE IMPORTED SO IT CAN BE USED IN THE /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx file
+// DOES device NEED TO BE IMPORTED SO IT CAN BE USED IN THE PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx file
 
-Line 29 of the /Users/jason/Sites/cotf/src/hooks/useShuffleQuestions.ts file:
+Line 29 of the PROJECT-ROOT-FOLDER/src/hooks/useShuffleQuestions.ts file:
 export const useShuffleQuestions = () => {
   const { setQuestions, currentScreen, quizTopic } = useQuiz(); // Is this the correct use of quizTopic?
 
@@ -128,14 +128,14 @@ export const useShuffleQuestions = () => {
   }, [currentScreen, quizTopic, setQuestions]); // Is this the correct use of quizTopic?
 };
 
-Line 26 of the /Users/jason/Sites/cotf/src/data/quizTopics.tsx file:
+Line 26 of the PROJECT-ROOT-FOLDER/src/data/quizTopics.tsx file:
 type QuizTopic = { // Is this the correct use of QuizTopic?
   title: string
   icon: ReactNode // Does this need to be icon: React.ReactNode;
   disabled?: boolean
 }
 
-Line 22 of the /Users/jason/Sites/cotf/src/data/fetchQuizTopics.ts file:
+Line 22 of the PROJECT-ROOT-FOLDER/src/data/fetchQuizTopics.ts file:
 export const fetchQuizTopics = async (): Promise<QuizTopic[]> => { // Is this the correct use of QuizTopic?
   const quizTopicsCollectionRef = collection(db, "quizTopics"); // Is this the correct use of quizTopics?
   const querySnapshot = await getDocs(quizTopicsCollectionRef);
@@ -149,7 +149,7 @@ export const fetchQuizTopics = async (): Promise<QuizTopic[]> => { // Is this th
   });
 };
 
-Line 31 of the /Users/jason/Sites/cotf/src/context/QuizContext.tsx file:
+Line 31 of the PROJECT-ROOT-FOLDER/src/context/QuizContext.tsx file:
 async function fetchQuizData(topic: string) { // Is this the correct use of topic?
   console.log(`Fetching data for topic: ${topic}`); // Is this the correct use of topic?
   const quizRef = doc(db, "quizQuestions", topic); // Is this the correct use of topic?
@@ -164,7 +164,7 @@ async function fetchQuizData(topic: string) { // Is this the correct use of topi
   }
 }
 
-Line 98 of the /Users/jason/Sites/cotf/src/context/QuizContext.tsx file:
+Line 98 of the PROJECT-ROOT-FOLDER/src/context/QuizContext.tsx file:
 // THIS SEEMS TO BE THE PROBLEM THIS useEffect(() NEEDS TO BE FIXED
   useEffect(() => {
     if (!quizTopic || typeof quizTopic !== 'string' || quizTopic.trim() === '') { // Is this the correct use of quizTopic?
@@ -197,10 +197,10 @@ Line 98 of the /Users/jason/Sites/cotf/src/context/QuizContext.tsx file:
     loadQuizData();
   }, [quizTopic]); // Is this the correct use of quizTopic?
 
-Line 84 of the /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx file:
+Line 84 of the PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx file:
 type QuizTopicWithIcon = QuizTopic & { icon: React.ReactNode }; // Is this the correct use of QuizTopic?
 
-Line 86 of the /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx file:
+Line 86 of the PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx file:
 const QuizTopicsScreen: React.FC = () => {
   const { selectQuizTopic, setCurrentScreen, quizDetails } = useQuiz();
   const [quizTopics, setQuizTopics] = useState<QuizTopicWithIcon[]>([]); // Should this be quizTopic instead of quizTopics. Should it be setQuizTopic instead of setQuizTopics?
@@ -264,7 +264,7 @@ const QuizTopicsScreen: React.FC = () => {
 
 This is what is being returned by the console.log:
 QuizContext.tsx:98 Invalid or no topic provided // This needs to be checked
-(anonymous) @ QuizContext.tsx:98 // The useEffect starting on line 98 of the /Users/jason/Sites/cotf/src/context/QuizContext.tsx file needs to be fixed
+(anonymous) @ QuizContext.tsx:98 // The useEffect starting on line 98 of the PROJECT-ROOT-FOLDER/src/context/QuizContext.tsx file needs to be fixed
 QuizContext.tsx:128 Topic selected:  AMORY WARS // Works
 QuizContext.tsx:102 Attempting to load data for topic: AMORY WARS // Works
 QuizContext.tsx:32 Fetching data for topic: AMORY WARS // Works
@@ -274,7 +274,7 @@ QuizContext.tsx:108 Quiz data fetched successfully for topic AMORY WARS // Works
 
 
 
-Problems with the /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx file might be caused 
+Problems with the PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx file might be caused 
 because the name of the <SelectButtonContainer> is configured wrong. The name of the quiz that goes in the 
 <SelectButtonContainer> should only be fetched from the `quizTopics` Collection Document in order to get the path
 to the icon for the quiz so that it can be displayed on the screen to the left of the name of the quiz. 
@@ -356,7 +356,7 @@ any` 3. The code `max={10}  {/* Replace with dynamic value */}
 Return to me the 100% completed source code for both files as you promised you would do from now on.
 Here is the code for both of these files as they currently are:
 
-@file: /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuizTopicsScreen/index.tsx
 import React, { useEffect, useState } from "react";
 import { useQuiz } from "../../context/QuizContext";
 import { collection, getDocs, doc, getDoc } from "firebase/firestore";
@@ -480,7 +480,7 @@ const QuizTopicsScreen: React.FC = () => {
 export default QuizTopicsScreen;
 
 
-@file: /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx
 import React, { useEffect, useState } from "react";
 import { fetchTopicData } from '../../data/QuizQuestions';
 import styled from "styled-components";
@@ -620,22 +620,22 @@ const QuizDetailsScreen = () => {
 export default QuizDetailsScreen;
 
 Also, do any changes need to be made to the following files:
-@file: /Users/jason/Sites/cotf/src/types/index.ts
-@file: /Users/jason/Sites/cotf/src/context/QuizContext.tsx
-@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/Question/index.tsx
-@file: /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx
-@file: /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/index.tsx
-@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/index.tsx
-@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/QuizHeader/Counter/index.tsx
-@file: /Users/jason/Sites/cotf/src/data/QuizQuestions/index.ts
-@file: /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/index.tsx
-@file: /Users/jason/Sites/cotf/src/components/QuestionScreen/Answer/index.tsx
-@file: /Users/jason/Sites/cotf/src/components/Main/index.tsx
-@file: /Users/jason/Sites/cotf/src/data/fetchQuizTopics.ts
-@file: /Users/jason/Sites/cotf/src/hooks/useShuffleQuestions.ts
-@file: /Users/jason/Sites/cotf/src/firebaseConfig.js
-@file: /Users/jason/Sites/cotf/src/index.tsx
-@file: /Users/jason/Sites/cotf/src/App.tsx
+@file: PROJECT-ROOT-FOLDER/src/types/index.ts
+@file: PROJECT-ROOT-FOLDER/src/context/QuizContext.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Question/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/ResultScreen/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/ResultScreen/ResultOverview/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/QuizHeader/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/QuizHeader/Counter/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/data/QuizQuestions/index.ts
+@file: PROJECT-ROOT-FOLDER/src/components/ResultScreen/RightAnswer/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/Answer/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/components/Main/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/data/fetchQuizTopics.ts
+@file: PROJECT-ROOT-FOLDER/src/hooks/useShuffleQuestions.ts
+@file: PROJECT-ROOT-FOLDER/src/firebaseConfig.js
+@file: PROJECT-ROOT-FOLDER/src/index.tsx
+@file: PROJECT-ROOT-FOLDER/src/App.tsx
 
 If so, give me very detailed, step by step instructions on how I need to modify 
 these files. 
@@ -645,7 +645,7 @@ functions, types, properties, states, etc in the code that you return to me. I w
 complete, fixed, edited, merged, etc code returned to me
 
 
-Fix these errors from the /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx file:
+Fix these errors from the PROJECT-ROOT-FOLDER/src/components/QuizDetailsScreen/index.tsx file:
 1. `Argument of type 'Topic' is not assignable to parameter of type 'SetStateAction<null>'.
   Type 'Topic' provides no match for the signature '(prevState: null): null'.ts(2345)
 const data: Topic' From this code:         const data = await fetchTopicData(selectedTopic);
@@ -677,7 +677,7 @@ This is the entire code block that has these errors:
 
 
 
-  In this code from the /Users/jason/Sites/cotf/src/services/dataService.js file, `export const fetchTopicDetails = async (topicName) => {
+  In this code from the PROJECT-ROOT-FOLDER/src/services/dataService.js file, `export const fetchTopicDetails = async (topicName) => {
   try {
     // Query the quizQuestions collection where the title matches the topicName
     const q = query(collection(db, "quizQuestions"), where("title", "==", topicName));` 
@@ -692,7 +692,7 @@ This is the entire code block that has these errors:
     `AMORY WARS', 'Coheed and Cambria', `S.S. Neverender`, and `Side Projects` that the user selected. Any references
     from the Document `quizTopics` should be deleted from any and all code for the cotf Quiz App.
 
-    Here is the existing code for the /Users/jason/Sites/cotf/src/services/dataService.js file. Return to me the entire, completed code for the /Users/jason/Sites/cotf/src/services/dataService.js file as you promised earlier that you would do for code from now on:
+    Here is the existing code for the PROJECT-ROOT-FOLDER/src/services/dataService.js file. Return to me the entire, completed code for the PROJECT-ROOT-FOLDER/src/services/dataService.js file as you promised earlier that you would do for code from now on:
 
     `import { collection, query, where, getDocs } from "firebase/firestore";
 import db from "../firebaseConfig";  // Adjust the path as necessary

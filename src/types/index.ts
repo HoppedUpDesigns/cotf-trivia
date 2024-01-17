@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/types/index.ts
+ * @file: PROJECT-ROOT-FOLDER/src/types/index.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: 
  *  - Centralizes the type definitions used in the quiz application.
@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Added and refined types for various aspects of the quiz application, including screens, quiz details, and results.

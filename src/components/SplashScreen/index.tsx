@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/components/SplashScreen/index.tsx
+ * @file: PROJECT-ROOT-FOLDER/src/components/SplashScreen/index.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: 
  *  - This file implements the SplashScreen component, which is the initial screen displayed when the application is loaded.
@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial development of the SplashScreen component with responsive logo animation.

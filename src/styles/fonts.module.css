@@ -1,5 +1,5 @@
 /***************************************************************************************************************************
- * @file: /Users/jason/Sites/cotf/src/styles/fonts.module.css
+ * @file: PROJECT-ROOT-FOLDER/src/styles/fonts.module.css
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This CSS module file defines the @font-face rules for the 'Anek Malayalam' font family, 
  *               ensuring the correct font files are used based on the weight of the text. It includes 
@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/16/2024
+ * Last Updated on: 01/17/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: Added multiple font weights for 'Anek Malayalam' and included both woff2 and woff formats for each weight.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
