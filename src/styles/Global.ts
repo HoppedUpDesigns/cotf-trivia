@@ -1,19 +1,27 @@
 /***************************************************************************************************************************
  * @file: /Users/jason/Sites/cotf/src/styles/Global.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This file creates and exports global styles for the application using styled-components. It defines default styling for elements, sets up responsive breakpoints, and includes utility styled components for layout and design.
+ * @description: This file contains the global styling for the COTF Trivia application. It includes the GlobalStyles, 
+ *               which apply universally across the application, as well as several styled-components for common layout patterns 
+ *               and UI elements such as containers, flexbox layouts, and highlighted text.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: It provides a consistent base for styling across the application and includes helper styled components like 'Flex' and 'Container' to streamline layout and design processes.
+ * @functionality: GlobalStyles set the foundational CSS rules and defaults for the application, including styles for 
+ *                 body, headings, buttons, images, inputs, and more. It ensures consistency in the visual presentation 
+ *                 across different browsers and devices. The file also exports styled-components like Container, Box, 
+ *                 PageCenter, Flex, CenterCardContainer, HighlightedText, LogoContainer, and ResizableBox for easy reuse 
+ *                 throughout the application.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Created by: Jason McCoy
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
+ * Last Updated on: 01/16/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: Introduced additional global styles for accessibility, refined media queries for responsive design, and added new utility components for more flexible layout management.
+ * Changes made: Added new components for card layouts, updated global styles for improved accessibility and cross-browser 
+ *               compatibility, incorporated responsive design breakpoints.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: Ensure global styles do not unintentionally override component-specific styles. Regularly review for performance optimizations and accessibility improvements.
+ * Notes: This file is crucial for maintaining the uniform appearance of the app. Changes to this file should be made 
+ *        cautiously as they affect the entire application.
  ***************************************************************************************************************************/
 
 import styled, { createGlobalStyle, css } from 'styled-components'

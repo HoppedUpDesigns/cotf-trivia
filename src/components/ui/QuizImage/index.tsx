@@ -1,3 +1,29 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/ui/QuizImage/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: 
+ *  - This file contains the QuizImage component, which is used for displaying images in quiz questions.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - The QuizImage component takes an image URL as a prop and renders the image with specific styling.
+ *  - It uses styled-components to apply styles such as border-radius, max-width, box-shadow, and margin.
+ *  - The component enhances the visual appeal of quiz questions by including relevant images.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial implementation of the QuizImage component with responsive design.
+ *  - Added shadow and border-radius to make images more integrated with the quiz's aesthetic.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - The QuizImage component is essential for quizzes that rely on visual aids or require image-based questions.
+ *  - It is designed to be responsive and maintain the aspect ratio of images across different screen sizes.
+ ***************************************************************************************************************************/
+
 import { FC } from 'react'
 import styled from 'styled-components'
 

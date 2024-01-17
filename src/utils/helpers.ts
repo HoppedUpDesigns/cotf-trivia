@@ -1,3 +1,21 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/utils/helpers.ts
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: Contains utility functions used throughout the ReactJS Quiz App. These functions perform various tasks such as formatting time, shuffling arrays, and adding leading zeros to numbers.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: Includes functions for time formatting (convertSeconds, formatTime), array manipulation (shuffleArray), page reloading (refreshPage), and number formatting (addLeadingZero).
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: Added convertSeconds and shuffleArray functions. Updated formatting and comments for clarity and consistency.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: This file is a central place for reusable utility functions, reducing redundancy and improving maintainability across the app.
+ ***************************************************************************************************************************/
+
 export const addLeadingZero = (number: number) => {
   if (number > 9) {
     return number

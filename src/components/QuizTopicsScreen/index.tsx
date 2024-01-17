@@ -1,3 +1,30 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/QuizTopicsScreen/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file contains the QuizTopicsScreen component which serves as the entry point for users to select a quiz topic.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - Displays a list of quiz topics for users to choose from.
+ *  - Allows users to select a quiz topic, which then navigates them to the QuizDetailsScreen.
+ *  - Utilizes styled components for layout and design.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial creation with functionality to display and select quiz topics.
+ *  - Integration with QuizContext for state management.
+ *  - Styling and layout enhancements for a responsive design.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - Key component for user interaction and quiz topic selection.
+ *  - Supports dynamic loading and presentation of quiz topics.
+ *  - Responsive design ensures a consistent user experience across devices.
+ ***************************************************************************************************************************/
+
 import React, { ReactElement } from 'react';
 import styled from 'styled-components'
 import { AppLogo } from '../../config/icons'
@@ -127,6 +154,5 @@ const QuizTopicsScreen: React.FC = () => {
     </PageCenter>
   );
 };
-console.log(quizTopics); // Add this line to debug
 
 export default QuizTopicsScreen

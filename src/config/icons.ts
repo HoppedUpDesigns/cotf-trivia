@@ -1,19 +1,27 @@
 /***************************************************************************************************************************
  * @file: /Users/jason/Sites/cotf/src/config/icons.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: fetches icon images from the /Users/jason/Sites/cotf/src/assets/icons folder
+ * @description: 
+ *  - This file serves as a centralized hub for importing and exporting SVG icons used throughout the application.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: exports icons to be used by app components
+ * @functionality: 
+ *  - It imports various SVG icons as React components from the assets directory.
+ *  - The icons are then exported for use in different components, ensuring consistency in iconography across the app.
+ *  - Icons include common UI elements like navigation arrows, refresh, timer, thematic icons like sun and moon, and the app logo.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Created by: Jason McCoy
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
+ * Last Updated on: 01/16/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
+ *  - Initial setup of icon imports and exports.
+ *  - Addition of new icons as required by the evolving UI design.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: puts icon images on app components
+ * Notes: 
+ *  - The use of SVG icons ensures high-quality visuals at any scale, important for responsive design.
+ *  - Keeping all icon imports in one file simplifies maintenance and updates to the icon set.
  ***************************************************************************************************************************/
 
 import { ReactComponent as AppLogo } from '../assets/icons/app-logo.svg'

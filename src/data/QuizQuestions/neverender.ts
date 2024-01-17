@@ -1,3 +1,32 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/data/QuizQuestions/neverender.ts
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: 
+ *  - This file contains the quiz questions and answers related to the "S.S. Neverender" topic.
+ *  - Each question is structured with options, a question type, and the correct answer(s).
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - Provides a specific set of quiz questions for the "S.S. Neverender" theme.
+ *  - Supports multiple-choice questions (MCQs) and questions with multiple correct answers (MAQs).
+ *  - Enhances the variety of the quiz by offering diverse questions within the same topic.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial creation with a set of questions specifically curated for the "S.S. Neverender" topic.
+ *  - Regular updates to questions and answers to ensure accuracy and engagement.
+ *  - Inclusion of additional questions to expand the question set over time.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - The questions in this file are designed to challenge fans about the details of the S.S. Neverender cruises 
+ *  - and test their knowledge about specific details about the events and bands on the cruises.
+ *  - Regular review and updates are crucial to keep the content fresh and accurate.
+ ***************************************************************************************************************************/
+
 // Question Types
 // 1. MCQs | Multiple Choice | single
 // 2. boolean | true/false | single
@@ -11,21 +40,21 @@ export const neverender: Topic = {
   questions: [
     {
       question:
-        "What is the name of the Norwegian Cruise Line ship for the 1st S.S. Neverender?",
+        "What is the name of the Norwegian Cruise Line ship for the first S.S. Neverender cruise?",
       choices: ["Pearl", "Bliss", "Gem", "Diamond"],
       type: "MCQs",
       correctAnswers: ["Gem"],
     },
     {
       question:
-        "What is the name of the Norwegian Cruise Line ship for the 2nd S.S. Neverender?",
+        "What is the name of the Norwegian Cruise Line ship for the second S.S. Neverender cruise?",
       choices: ["Gem", "Pearl", "Bliss", "Emerald"],
       type: "MCQs",
       correctAnswers: ["Pearl"],
     },
     {
       question:
-        "West Coast Devin played cowbell on what Coheed and Cambria song on the 2nd night of Coheed and Cambria's indoor show?",
+        "West Coast Devin played cowbell on what Coheed and Cambria song on the second night of Coheed and Cambria's indoor show on the second S.S. Neverender cruise?",
       choices: [
         "The Camper Velourium II: Backend of Forever",
         "A Favor House Atlantic",
@@ -36,7 +65,7 @@ export const neverender: Topic = {
       correctAnswers: ["The Camper Velourium I: Faint of Hearts"],
     },
     {
-      question: "What city did the 2nd S.S. Neverender visit?",
+      question: "What city did the second S.S. Neverender cruise visit?",
       choices: [
         "Nassau, Bahamas",
         "Puerto Plata, Dominican Republic",
@@ -60,13 +89,13 @@ export const neverender: Topic = {
     },
     {
       question:
-        "What was the name of the special IPA that was available on the 2nd S.S. Neverender?",
+        "What was the name of the special IPA that was available on the second S.S. Neverender cruise?",
       choices: ["Jai Alai", "Two-Hearted", "The Liars Club", "Freak of Nature"],
       type: "MCQs",
       correctAnswers: ["The Liars Club"],
     },
     {
-      question: "The 2023 guest named drink winner was?",
+      question: "What was the guest named drink winner for the the second S.S. Neverender cruise called?",
       choices: [
         "Al the Painkiller",
         "Ambellini",
@@ -78,9 +107,9 @@ export const neverender: Topic = {
     },
     {
       question:
-        "Mannequin Pussy's lead vocalist and guitarist is known by which name?",
+        "What is the name of Mannequin Pussy's lead vocalist and guitarist?",
       choices: [
-        "Missy Dabice",
+        "Melvin Dabice",
         "Marisa Dabice",
         "Molly Dabice",
         "Melissa Dabice",
@@ -97,7 +126,7 @@ export const neverender: Topic = {
     },
     {
       question:
-        "What is the name of the band who played the Port Show Kick-off on the 1st S.S. Neverender?",
+        "What is the name of the band who played the port kick-off show on the first S.S. Neverender cruise?",
       choices: [
         "Thank You Scientist",
         "Hail The Sun",
@@ -108,7 +137,7 @@ export const neverender: Topic = {
       correctAnswers: ["Taking Back Sunday"],
     },
     {
-      question: "Which band played at the Prom on the 1st S.S. Neverender?",
+      question: "Which band played at the Prom on the first S.S. Neverender cruise?",
       choices: [
         "Hail The Sun",
         "Animals as Leaders",
@@ -230,14 +259,14 @@ export const neverender: Topic = {
     },
     {
       question:
-        "Hail The Sun's lead vocalist and drummer is known by which name?",
+        "Who is Hail The Sun's lead vocalist and drummer?",
       choices: ["Donovan Melero", "Shane Gann", "Aric Garcia", "John Stirrat"],
       type: "MCQs",
       correctAnswers: ["Donovan Melero"],
     },
     {
       question:
-        "What is the title of Hail The Sun's debut full-length album, released in 2014?",
+        "What is the title of Hail The Sun's debut album, released in 2014?",
       choices: [
         "Culture Scars",
         "Wake",
@@ -261,7 +290,7 @@ export const neverender: Topic = {
     },
     {
       question:
-        "What is the title of Prince Daddy & The Hyena's debut full-length album, released in 2016?",
+        "What is the title of Prince Daddy & The Hyena's debut album released in 2016?",
       choices: [
         "I Thought You Didn't Even Like Leaving",
         "Adult Summers",
@@ -354,7 +383,7 @@ export const neverender: Topic = {
     },
     {
       question:
-        "What is the title of Militarie Gun's debut album, released in 2021?",
+        "What is the title of Militarie Gun's debut album released in 2021?",
       choices: [
         "All Roads Lead to the Gun",
         "All Across the Gun",
@@ -366,7 +395,7 @@ export const neverender: Topic = {
     },
     {
       question:
-        "What is the title of Brand of Sacrifice's debut studio album, released in 2019?",
+        "What is the title of Brand of Sacrifice's debut studio album released in 2019?",
       choices: ["Godhand", "The Interstice", "Eclipse", "Lifeblood"],
       type: "MCQs",
       correctAnswers: ["Godhand"],
@@ -380,7 +409,7 @@ export const neverender: Topic = {
     },
     {
       question:
-        "What is the title of Kaonashi's debut full-length album, released in 2019?",
+        "What is the title of Kaonashi's debut full-length album released in 2019?",
       choices: [
         "Why Did You Do It?",
         "Dear Lemon House, You Ruined Me: Senior Year",
@@ -415,14 +444,14 @@ export const neverender: Topic = {
       correctAnswers: ["Worlds I've Lost"],
     },
     {
-      question: "Proper. hails from which city in the United States?",
+      question: "Proper. hails from what city?",
       choices: ["Chicago", "Los Angeles", "New York", "Philadelphia"],
       type: "MCQs",
       correctAnswers: ["Philadelphia"],
     },
     {
       question:
-        "What is the title of Proper.'s debut full-length album, released in 2019?",
+        "What is the title of Proper.'s debut album released in 2019?",
       choices: [
         "Always Something",
         "It's Never Enough",

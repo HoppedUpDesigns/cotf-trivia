@@ -1,19 +1,27 @@
 /***************************************************************************************************************************
  * @file: /Users/jason/Sites/cotf/src/styles/BreakPoints.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This file defines the breakpoints for responsive design in the application, outlining sizes for various devices ranging from small mobile screens to large desktop monitors.
+ * @description: 
+ *  - Defines the breakpoints for responsive design in the quiz application.
+ *  - Contains a range of sizes to accommodate different screen sizes.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: It provides an interface and constants for screen sizes and a device object for media queries, allowing for tailored UI across different device sizes.
+ * @functionality: 
+ *  - Provides a centralized location for managing responsive breakpoints.
+ *  - Used across the application to ensure consistent and adaptive layouts.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Created by: Jason McCoy
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
+ * Last Updated on: 01/16/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: Updated size constants and added xxl for big screens; refined media queries for better responsiveness.
+ * Changes made: 
+ *  - Established specific breakpoints for various device categories (mobile, tablet, laptop, desktop, etc.).
+ *  - Ensured the application layout adapts seamlessly across a wide range of screen sizes.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: Be cautious when updating sizes as it can significantly affect the layout on different devices. Always test changes thoroughly.
+ * Notes: 
+ *  - These breakpoints can be used throughout the application's styled components for responsive design.
+ *  - The breakpoints should be updated or extended if new device sizes need to be supported.
  ***************************************************************************************************************************/
 
 interface Size {

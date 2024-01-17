@@ -1,3 +1,31 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/ui/Button/styled.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: 
+ *  - This file contains styled components for the Button component, defining its visual appearance.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - The file defines styled components including ButtonStyle, IconLeft, and IconRight.
+ *  - ButtonStyle is the main button component with customizable properties like outline, bold, and big.
+ *  - IconLeft and IconRight are styled components for positioning icons within the button.
+ *  - The file uses styled-components library to leverage dynamic styling based on the props.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial creation of the styled components for the Button.
+ *  - Added responsive styles and interactivity (like hover and active states).
+ *  - Integrated theme colors and other styling parameters from the global theme.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - The separation of styling into a different file helps maintain cleaner code in the main Button component file.
+ *  - The use of styled-components allows for more dynamic and reusable styles, enhancing scalability and maintainability.
+ ***************************************************************************************************************************/
+
 import styled from 'styled-components'
 import { device } from '../../../styles/BreakPoints'
 interface ButtonType {

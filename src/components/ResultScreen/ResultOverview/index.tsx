@@ -1,3 +1,29 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/ResultScreen/ResultOverview/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file defines the ResultOverview component used in the ResultScreen to summarize the user's performance in the quiz.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - Displays the count of correctly answered questions out of the total attempted questions.
+ *  - Uses styled-components for styling the text and layout.
+ *  - Accesses quiz details from the QuizContext to get the total number of questions attempted by the user.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Implemented the logic to calculate the number of correct answers.
+ *  - Added styled-component for consistent styling with the theme.
+ *  - Integrated the component with the QuizContext for dynamic data retrieval.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - This component is pivotal for providing a quick overview of quiz performance to the user.
+ *  - The design focuses on clear and concise presentation of key quiz performance metrics.
+ ***************************************************************************************************************************/
+
 import { FC } from 'react'
 import styled from 'styled-components'
 import { useQuiz } from '../../../context/QuizContext'

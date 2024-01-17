@@ -1,3 +1,32 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/QuizDetailsScreen/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file contains the QuizDetailsScreen component which allows users to select the number of questions they want to attempt in a quiz.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - Displays the selected quiz topic and the total number of questions available.
+ *  - Allows users to input the number of questions they wish to attempt.
+ *  - Validates the user input and shows error messages if the input is invalid.
+ *  - Transitions to the QuestionScreen with the user-selected number of questions.
+ *  - Utilizes the useShuffleQuestions hook to randomize questions.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial creation with user input for selecting the number of questions.
+ *  - Added validation for user input and error handling.
+ *  - Integrated transition to QuestionScreen based on user input.
+ *  - Included shuffle functionality for quiz questions.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - Central component for setting up the quiz experience based on user preference.
+ *  - Ensures a dynamic and user-specific quiz experience.
+ ***************************************************************************************************************************/
+
 import React, { useState } from "react";
 import styled from 'styled-components'
 import { AppLogo, StartIcon } from '../../config/icons'

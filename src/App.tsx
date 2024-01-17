@@ -1,52 +1,50 @@
 /***************************************************************************************************************************
  * @file: /Users/jason/Sites/cotf/src/App.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: The main entry point for the cotf Trivia application. It sets up the theme provider, global styles, and the main quiz context provider. It also includes a toggle for switching between light and dark themes.
+ * @description: This file defines the main App component of the 'COTF Trivia' application.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: 
- *     - ThemeProvider: Provides a theme to all styled components within the app.
- *     - GlobalStyles: Applies global styles to the entire application.
- *     - QuizProvider: Provides the quiz context to all components within the application.
- *     - ToggleTheme: Allows users to switch between light and dark themes.
+ * @functionality: - Renders the top-level component structure for the application.
+ *                 - Manages the application theme (light/dark) state.
+ *                 - Provides the QuizContext to all child components.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Created by: Jason McCoy
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/15/2024
+ * Last Updated on: 01/16/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
- *     - Implemented ThemeProvider for theme switching capabilities.
- *     - Integrated QuizProvider to manage quiz-related state throughout the app.
- *     - Added ToggleTheme for dynamic theme adjustments.
- *     - Applied GlobalStyles to ensure consistent styling.
+ * Changes made:
+ *     - Initial creation of the App component with theme switching and QuizContext.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Notes: 
- *     - This file acts as the central hub for managing the application's layout, theme, and global context.
- *     - Future updates may include more nuanced theme management and additional context providers for expanded functionality.
+ *     - The application uses styled-components for theming.
+ *     - QuizProvider is used to manage quiz-related state throughout the app.
  ***************************************************************************************************************************/
 
-import { useState } from 'react'
-import { ThemeProvider } from 'styled-components'
-import Main from './components/Main'
-import ToggleTheme from './components/ui/ToggleTheme'
-import QuizProvider from './context/QuizContext'
-import { GlobalStyles } from './styles/Global'
-import { themes } from './styles/Theme'
+import { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import Main from './components/Main';
+import ToggleTheme from './components/ui/ToggleTheme';
+import QuizProvider from './context/QuizContext';
+import { GlobalStyles } from './styles/Global';
+import { themes } from './styles/Theme';
 
 function App() {
+  // State to manage the current theme (light or dark)
   const [currentTheme, setCurrentTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('theme')
-    return savedTheme || 'light'
-  })
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme || 'light'; // Default to 'light' if no theme is saved
+  });
 
+  // Function to toggle the theme and save the preference to localStorage
   const toggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { checked } = e.target
-    setCurrentTheme(checked ? 'dark' : 'light')
-    localStorage.setItem('theme', checked ? 'dark' : 'light')
-  }
+    const { checked } = e.target;
+    setCurrentTheme(checked ? 'dark' : 'light');
+    localStorage.setItem('theme', checked ? 'dark' : 'light');
+  };
 
-  const theme = currentTheme === 'light' ? themes.light : themes.dark
+  // Determine the theme object based on the current theme state
+  const theme = currentTheme === 'light' ? themes.light : themes.dark;
 
   return (
     <ThemeProvider theme={theme}>
@@ -59,10 +57,10 @@ function App() {
           id="toggleTheme"
           value="theme"
         />
-        <Main />
+        <Main /> {/* Main component of the application */}
       </QuizProvider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

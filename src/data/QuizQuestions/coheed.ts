@@ -1,3 +1,32 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/data/QuizQuestions/coheed.ts
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: 
+ *  - This file contains the quiz questions and answers related to the "Coheed and Cambria" topic.
+ *  - Each question is structured with options, a question type, and the correct answer(s).
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - Provides a specific set of quiz questions for the "Coheed and Cambria" theme.
+ *  - Supports multiple-choice questions (MCQs) and questions with multiple correct answers (MAQs).
+ *  - Enhances the variety of the quiz by offering diverse questions within the same topic.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial creation with a set of questions specifically curated for the "Coheed and Cambria" topic.
+ *  - Regular updates to questions and answers to ensure accuracy and engagement.
+ *  - Inclusion of additional questions to expand the question set over time.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - The questions in this file are designed to challenge fans of Coheed and Cambria and test their 
+ *  - knowledge about specific details from the band's history.
+ *  - Regular review and updates are crucial to keep the content fresh and accurate.
+ ***************************************************************************************************************************/
+
 // Question Types
 // 1. MCQs | Multiple Choice | single
 // 2. boolean | true/false | single
@@ -38,7 +67,7 @@ export const coheed: Topic = {
       correctAnswers: ["2002"],
     },
     {
-      question: "What year was I'n Keeping Secrets of Silent Earth: 3' released?",
+      question: "What year was `In Keeping Secrets of Silent Earth: 3' released?",
       choices: ["2003", "2004", "2005", "2006"],
       type: "MCQs",
       correctAnswers: ["2003"],
@@ -52,7 +81,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What year was 'Good Apollo, I'm Burning Star IV, Vol. 2' released?",
+        "What year was 'Good Apollo, I'm Burning Star IV, Vol. 2: No World For Tomorrow' released?",
       choices: ["2005", "2006", "2007", "2008"],
       type: "MCQs",
       correctAnswers: ["2007"],
@@ -82,13 +111,13 @@ export const coheed: Topic = {
       correctAnswers: ["2015"],
     },
     {
-      question: "In what year was Coheed and Cambria formed?",
-      choices: ["1998", "2001", "2003", "2005"],
+      question: "In what year was Coheed and Cambria formed under the name Shabūtie?",
+      choices: ["1998", "2001", "1995", "2005"],
       type: "MCQs",
-      correctAnswers: ["1998"],
+      correctAnswers: ["1995"],
     },
     {
-      question: "Who are the founding members of Coheed and Cambria?",
+      question: "Which founding members of Coheed and Cambria are still in the band as of 2023?",
       choices: [
         "Claudio Sanchez and Josh Eppard",
         "Claudio Sanchez and Travis Stever",
@@ -166,7 +195,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which Coheed and Cambria album serves as the prequel to The Amory Wars and provides insights into the origins of the storyline?",
+        "Which Coheed and Cambria album serves as the prequel to 'The Amory Wars'?",
       choices: [
         "In Keeping Secrets of Silent Earth: 3",
         "Year of the Black Rainbow",
@@ -178,7 +207,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What inspired Claudio Sanchez to create the character 'Coheed Kilgannon'?",
+        "Who inspired the character Coheed Kilgannon?",
       choices: [
         "A family member",
         "A friend",
@@ -209,7 +238,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What event served as the catalyst for Claudio Sanchez to start writing the story of The Amory Wars?",
+        "What event served as the catalyst for Claudio Sanchez to start writing the story of 'The Amory Wars'?",
       choices: [
         "A personal tragedy",
         "A dream",
@@ -221,7 +250,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which song by Coheed and Cambria is considered a tribute to Claudio Sanchez's dog, Apollo?",
+        "Which song by Coheed and Cambria is considered a tribute to Claudio Sanchez's dog Apollo?",
       choices: [
         "Welcome Home",
         "The Suffering",
@@ -240,7 +269,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What was the original name of Coheed and Cambria before they changed it to the current name?",
+        "What was the original name of Coheed and Cambria?",
       choices: [
         "Shabütie",
         "The Prize Fighter Inferno",
@@ -273,7 +302,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which influential producer worked with Coheed and Cambria on their breakthrough album 'In Keeping Secrets of Silent Earth: 3'?",
+        "Which influential producer worked with Coheed and Cambria on 'In Keeping Secrets of Silent Earth: 3'?",
       choices: [
         "Butch Vig",
         "David Bottrill",
@@ -285,19 +314,19 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the significance of the song 'The Camper Velourium III: Al the Killer' in Coheed and Cambria's discography?",
+        "What is the the name of the third part of 'The Camper Velourium'?",
       choices: [
-        "It's a tribute to a fan",
-        "It's a concept for a movie",
-        "It's part of The Amory Wars storyline",
-        "It's a cover song",
+        "Al the Killer",
+        "Faint of Hearts",
+        "The Light & the Glass",
+        "Backend of Forever",
       ],
       type: "MCQs",
-      correctAnswers: ["It's part of The Amory Wars storyline"],
+      correctAnswers: ["Al the Killer"],
     },
     {
       question:
-        "Which album marked the departure of drummer Josh Eppard and the temporary inclusion of drummer Taylor Hawkins?",
+        "Which album marked the temporary inclusion of drummer Taylor Hawkins?",
       choices: [
         "Good Apollo, I'm Burning Star IV",
         "The Afterman: Ascension",
@@ -321,7 +350,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which member of Coheed and Cambria took on the persona of 'Sirius Amory' during 'The Amory Wars' concept?",
+        "Which member of Coheed and Cambria took on the persona of 'Sirius Amory'?",
       choices: [
         "Claudio Sanchez",
         "Travis Stever",
@@ -345,7 +374,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which album by Coheed and Cambria marked a return to The Amory Wars concept after a brief departure?",
+        "Which album by Coheed and Cambria marked a return to 'The Amory Wars' concept after a brief departure?",
       choices: [
         "Year of the Black Rainbow",
         "The Afterman: Descension",
@@ -421,13 +450,13 @@ export const coheed: Topic = {
       question:
         "In 2005, Coheed and Cambria released a limited-edition graphic novel accompanying which album?",
       choices: [
-        "Good Apollo, I'm Burning Star IV",
+        "Good Apollo, I'm Burning Star IV, Vol. 1",
         "In Keeping Secrets of Silent Earth: 3",
         "The Afterman: Ascension",
         "Vaxis - Act I: The Unheavenly Creatures",
       ],
       type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV"],
+      correctAnswers: ["Good Apollo, I'm Burning Star IV, Vol. 1"],
     },
     {
       question:
@@ -443,15 +472,15 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the significance of the song 'The Willing Well IV: The Final Cut' in Coheed and Cambria's discography?",
+        "What is the second part of 'The Willing Well'?",
       choices: [
-        "It's a cover song",
-        "It's a live recording",
-        "It's the last track on their debut album",
-        "It's part of The Amory Wars storyline",
+        "Mother May I",
+        "From Fear Through the Eyes of Madness",
+        "The Final Cut",
+        "The Telling Truth",
       ],
       type: "MCQs",
-      correctAnswers: ["It's part of The Amory Wars storyline"],
+      correctAnswers: ["From Fear Through the Eyes of Madness"],
     },
     {
       question:
@@ -467,7 +496,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "During the early years, what pseudonym did Claudio Sanchez use?",
+        "During the early years of Coheed and Cambria, what pseudonym did Claudio Sanchez use?",
       choices: [
         "Sirius Amory",
         "The Crowing",
@@ -498,7 +527,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the title of Coheed and Cambria's first music video, released in 2002?",
+        "What is the title of Coheed and Cambria's second music video?",
       choices: [
         "The Suffering",
         "A Favor House Atlantic",
@@ -506,19 +535,19 @@ export const coheed: Topic = {
         "Blood Red Summer",
       ],
       type: "MCQs",
-      correctAnswers: ["Devil in Jersey City"],
+      correctAnswers: ["A Favor House Atlantic"],
     },
     {
       question:
-        "In 2004, Coheed and Cambria released a live DVD capturing a performance in New York. What is the title of this DVD?",
+        "In 2005, Coheed and Cambria released a live DVD. What is the title of this DVD?",
       choices: [
         "Live at the Roxy",
-        "Neverender: Children of the Fence Edition",
+        "Live at the Starland Ballroom",
         "The Last Supper: Live at Hammerstein Ballroom",
         "Good Apollo, I'm Burning Star IV Live",
       ],
       type: "MCQs",
-      correctAnswers: ["The Last Supper: Live at Hammerstein Ballroom"],
+      correctAnswers: ["Live at the Starland Ballroom"],
     },
     {
       question:
@@ -534,7 +563,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What year was Live at the Starland Ballroom released?",
+        "What year was Live at the Starland Ballroom filmed?",
       choices: [
         "2006",
         "2003",
@@ -542,7 +571,7 @@ export const coheed: Topic = {
         "2004",
       ],
       type: "MCQs",
-      correctAnswers: ["2005"],
+      correctAnswers: ["2004"],
     },
     {
       question:
@@ -589,7 +618,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which member of Coheed and Cambria originally played bass guitar and later switched to lead guitar?",
+        "Which member of Coheed and Cambria originally played bass guitar and later switched to guitar?",
       choices: [
         "Claudio Sanchez",
         "Travis Stever",
@@ -601,22 +630,22 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the name of the character who serves as the protagonist in 'The Amory Wars' narrative?",
+        "What is the name of the main protagonist in 'The Amory Wars' narrative?",
       choices: ["Coheed Kilgannon", "Sirius Amory", "The Crowing", "Ambellina"],
       type: "MCQs",
-      correctAnswers: ["The Crowing"],
+      correctAnswers: ["Coheed Kilgannon"],
     },
     {
       question:
-        "Which album features a song inspired by the film 'The NeverEnding Story.'?",
+        "Which album features a song inspired by the film 'The NeverEnding Story'?",
       choices: [
         "Year of the Black Rainbow",
         "The Afterman: Descension",
-        "Good Apollo, I'm Burning Star IV",
+        "Good Apollo, I'm Burning Star IV, Vol. 1",
         "No World for Tomorrow",
       ],
       type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV"],
+      correctAnswers: ["Good Apollo, I'm Burning Star IV, Vol. 1"],
     },
     {
       question:
@@ -663,7 +692,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which Coheed and Cambria album features the character 'Ambellina,' a prominent figure in 'The Amory Wars' storyline?",
+        "Which Coheed and Cambria album features the character Ambellina?",
       choices: [
         "Vaxis - Act I: The Unheavenly Creatures",
         "Good Apollo, I'm Burning Star IV",
@@ -675,7 +704,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2018, Coheed and Cambria embarked on a tour named after a significant element in 'The Amory Wars' universe. What was the title of this tour?",
+        "What was the name of Coheed and Cambria's 2018 tour?",
       choices: [
         "The Keywork Chronicles Tour",
         "The Vaxis Voyage Tour",
@@ -699,7 +728,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2006, Coheed and Cambria released an exclusive track for the soundtrack of a popular video game. Which game featured their song 'Welcome Home'?",
+        "Which video game released in 2006 features the song 'Welcome Home'?",
       choices: [
         "Guitar Hero III: Legends of Rock",
         "Fallout 3",
@@ -761,19 +790,19 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2010, Coheed and Cambria performed a series of concerts called 'Neverender: SSTB.' What album did they play in its entirety during this tour?",
+        "What year did the Neverender: SSTB tour happen?",
       choices: [
-        "Year of the Black Rainbow",
-        "Good Apollo, I'm Burning Star IV",
-        "In Keeping Secrets of Silent Earth: 3",
-        "The Second Stage Turbine Blade",
+        "2011",
+        "2010",
+        "2012",
+        "2009",
       ],
       type: "MCQs",
-      correctAnswers: ["The Second Stage Turbine Blade"],
+      correctAnswers: ["2011"],
     },
     {
       question:
-        "Which member of Coheed and Cambria rejoined the band in 1996, replacing Jon Carleo as bassist?",
+        "Which member of Coheed and Cambria joined the band in 1996, replacing Jon Carleo as bassist?",
       choices: ["Zach Cooper", "Michael Todd", "Josh Eppard", "Travis Stever"],
       type: "MCQs",
       correctAnswers: ["Michael Todd"],
@@ -802,7 +831,7 @@ export const coheed: Topic = {
         "Coheed and Cambria's album 'The Afterman: Descension' continues the story of a character introduced in 'The Afterman: Ascension.' What is the name of this character?",
       choices: ["Sirius Amory", "The Writer", "The Keywork", "Al the Killer"],
       type: "MCQs",
-      correctAnswers: ["The Writer"],
+      correctAnswers: ["Sirius Amory"],
     },
     {
       question:
@@ -818,7 +847,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "What is the title of the documentary film released in 2009 that provides a behind-the-scenes look at Coheed and Cambria's tour life?",
+        "What is the title of the documentary released in 2009 that provides a behind-the-scenes look at Coheed and Cambria's tour life?",
       choices: [
         "The Fiction Will See the Real",
         "Neverender: Children of the Fence Edition",
@@ -849,15 +878,15 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2004, Coheed and Cambria released a live DVD featuring footage from a concert in New York City. What is the title of this live DVD?",
+        "What year was The Last Supper: Live at Hammerstein filmed?",
       choices: [
-        "Live at the Roxy",
-        "The Last Supper: Live at Hammerstein Ballroom",
-        "Live at CBGB",
-        "Neverender: Children of the Fence Edition",
+        "2005",
+        "2007",
+        "2008",
+        "2006",
       ],
       type: "MCQs",
-      correctAnswers: ["Live at the Hammerstein Ballroom"],
+      correctAnswers: ["2006"],
     },
     {
       question:
@@ -1023,7 +1052,7 @@ export const coheed: Topic = {
     correctAnswers: ["Michael Todd"],
     },
     {
-    question: "What is the name of Coheed and Cambria's manager?",
+    question: "Who is Coheed and Cambria's manager?",
     choices: [
       "Blaze James",
       "Nick Raskulinecz",
@@ -1057,7 +1086,7 @@ export const coheed: Topic = {
         },
         {
           question:
-            "What was the title of Shabütie's EP released in 1999?",
+            "What was the title of Shabütie's second EP released in 1999?",
           choices: [
             "Toxic Parents",
             "Plan to Take Over the World",

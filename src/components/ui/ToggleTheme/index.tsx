@@ -1,3 +1,30 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/ui/ToggleTheme/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: 
+ *  - This file contains the ToggleTheme component, which allows users to switch between light and dark themes in the application.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - The ToggleTheme component uses a checkbox input for toggling themes and custom animations for a smooth transition.
+ *  - It shows a sun icon for the light theme and a moon icon for the dark theme, providing a visual representation of the current theme.
+ *  - Styled components are used to style the toggle button and animations for switching themes.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial creation of the ToggleTheme component with animations and theme-specific icons.
+ *  - Implemented theme switching functionality using React's context and state management.
+ *  - Enhanced user experience with smooth transition animations and responsive design.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - This component is crucial for providing users the flexibility to choose their preferred theme, enhancing accessibility and user experience.
+ *  - The use of keyframes for animations adds a polished feel to the theme switching action.
+ ***************************************************************************************************************************/
+
 import React, { FC } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Moon, Sun } from '../../../config/icons'

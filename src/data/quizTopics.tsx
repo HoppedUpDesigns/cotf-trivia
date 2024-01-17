@@ -1,25 +1,31 @@
 /***************************************************************************************************************************
  * @file: /Users/jason/Sites/cotf/src/data/quizTopics.tsx
  * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: The quizTopics.tsx file defines the different topics available for the quiz application, each with a corresponding title and icon. This data is used to generate topic selections for users to choose from within the application.
+ * @description: 
+ *  - This file defines the quiz topics available for the trivia application.
+ *  - Each quiz topic is represented with a title and an associated icon.
+ *  - Provides a central location for managing the topics available for users to select in the quiz.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: - Provides an array of quiz topics, each represented as an object with a title and icon.
- *                 - Enables dynamic rendering of quiz topic options based on the data provided in this file.
+ * @functionality: 
+ *  - Supplies a structured list of quiz topics, allowing for easy integration and updates.
+ *  - Facilitates dynamic rendering of quiz topics in the application's user interface.
+ *  - Enhances user experience by providing a variety of topics for selection.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Created by: Jason McCoy
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 1/1/2024
+ * Last Updated on: 01/16/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
- *     - Initial creation and setup of quiz topics with default icons.
- *     - Defined structure for each quiz topic object with title and icon properties.
+ *  - Initial creation with a basic set of quiz topics.
+ *  - Addition and modification of quiz topics based on user interest and content updates.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Notes: 
- *     - The icons are currently using a placeholder; consider updating them with distinct and relevant icons for each topic.
- *     - As the application evolves, more topics with respective icons can be added to this array to expand the quiz offerings.
+ *  - Regular updates to this file can reflect new content or shifts in user interest.
+ *  - The structure allows for easy expansion with more topics or modifications to existing ones.
  ***************************************************************************************************************************/
+
 import { ReactNode } from 'react'
 import { ReactComponent as Coheed } from '../assets/icons/app-logo.svg'
 

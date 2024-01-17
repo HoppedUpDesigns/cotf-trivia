@@ -1,3 +1,31 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/context/QuizContext.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: 
+ *  - This file defines the React context for managing the state of the quiz application.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - Provides global state management for quiz-related data like current screen, quiz topic, questions, and results.
+ *  - Allows for consistent access and mutation of state across different components.
+ *  - Uses React's Context API to create a QuizContext and a provider component (QuizProvider).
+ *  - Manages the lifecycle of quiz data, including setting the current quiz topic and updating quiz details.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial setup and configuration of the quiz context.
+ *  - Addition of state management logic for new features.
+ *  - Refactoring and optimization for improved performance and maintainability.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - It's important to ensure that the context is properly maintained to prevent state inconsistencies across the application.
+ *  - The use of Context API provides a more scalable and efficient way to manage state than prop drilling.
+ ***************************************************************************************************************************/
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { QuizContextTypes, QuizDetails, Result, ScreenTypes } from '../types'
 import { quiz } from '../data/QuizQuestions'

@@ -1,19 +1,25 @@
 /***************************************************************************************************************************
  * @file: /Users/jason/Sites/cotf/src/styles/fonts.module.css
  * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This file contains the @font-face rules for the 'Anek Malayalam' font, specifying various font weights and ensuring the fonts are loaded efficiently and responsively across different browsers.
+ * @description: This CSS module file defines the @font-face rules for the 'Anek Malayalam' font family, 
+ *               ensuring the correct font files are used based on the weight of the text. It includes 
+ *               multiple font weights from 100 to 800. The fonts are loaded in both woff2 and woff formats 
+ *               for better browser compatibility.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: It provides the application with a consistent typographic appearance by defining how the 'Anek Malayalam' font is loaded and displayed in the application, covering a range of font weights from 100 to 800.
+ * @functionality: Each @font-face declaration specifies the font-family name ('Anek Malayalam'), the font style 
+ *                 (normal), font weight (ranging from 100 to 800), the source of the font files (woff2 and woff 
+ *                 formats), and the font-display property set to 'swap' for better performance and user experience.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Created by: Jason McCoy
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
+ * Last Updated on: 01/16/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: Updated font file paths and added additional font weights to enhance typographic hierarchy and readability across the application.
+ * Changes made: Added multiple font weights for 'Anek Malayalam' and included both woff2 and woff formats for each weight.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: Ensure that the paths to the font files are correct and that they are served efficiently to minimize load times. Regularly check for updates to the font to include any improvements or additional weights.
+ * Notes: Ensure that the font files are correctly located in the specified paths. This file is essential for 
+ *        the consistent and correct display of the 'Anek Malayalam' font across different parts of the application.
  ***************************************************************************************************************************/
 
 /* woff2 : Super Modern Browsers */

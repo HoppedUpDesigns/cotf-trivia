@@ -1,3 +1,32 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/data/QuizQuestions/amory.ts
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: 
+ *  - This file contains the quiz questions and answers related to the "AMORY WARS" topic.
+ *  - Each question is structured with options, a question type, and the correct answer(s).
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - Provides a specific set of quiz questions for the "AMORY WARS" theme.
+ *  - Supports multiple-choice questions (MCQs) and questions with multiple correct answers (MAQs).
+ *  - Enhances the variety of the quiz by offering diverse questions within the same topic.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial creation with a set of questions specifically curated for the "AMORY WARS" topic.
+ *  - Regular updates to questions and answers to ensure accuracy and engagement.
+ *  - Inclusion of additional questions to expand the question set over time.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - The questions in this file are designed to challenge fans of "The Amory Wars" and test their 
+ *  - knowledge about specific details about the Amory Wars graphic novels and comics.
+ *  - Regular review and updates are crucial to keep the content fresh and accurate.
+ ***************************************************************************************************************************/
+
 // Question Types
 // 1. MCQs | Multiple Choice | single
 // 2. boolean | true/false | single
@@ -228,13 +257,13 @@ export const amory: Topic = {
       question:
         "What is the Dark Sentencer?",
       choices: [
-        "Spaceship",
+        "A Spaceship",
         "Nickname for Mayo Deftinwolf",
-        "Prison Planet",
+        "A Prison Planet",
         "A Weapon",
       ],
       type: "MCQs",
-      correctAnswers: ["Prison Planet"],
+      correctAnswers: ["A Prison Planet"],
     },
     {
       question: "What is the name of the home planet of The Narrows?",
@@ -243,7 +272,7 @@ export const amory: Topic = {
       correctAnswers: ["Hilmgore"],
     },
     {
-      question: "What is the The Camper Velorium?",
+      question: "What is The Camper Velorium?",
       choices: [
         "A Weapon",
         "A Spaceship",
@@ -277,10 +306,10 @@ export const amory: Topic = {
         "A Weapon",
         "A Celestial Event",
         "A Spaceship",
-        "Interconnecting Beams of Energy",
+        "Interconnecting beams of energy",
       ],
       type: "MCQs",
-      correctAnswers: ["Interconnecting Beams of Energy"],
+      correctAnswers: ["Interconnecting beams of energy"],
     },
     {
       question: "What is the name of Ryder's ex-girlfriend?",
@@ -295,7 +324,7 @@ export const amory: Topic = {
     },
     {
       question:
-        "In The Amory Wars, what is the name of the collection of 78 planets and seven stars held in place by interconnecting beams of energy?",
+        "What is the name of the collection of 78 planets and seven stars held in place by the Keywork?",
       choices: [
         "Heaven's Fence",
         "Heavenly Collection",
@@ -313,7 +342,7 @@ export const amory: Topic = {
     },
     {
       question:
-        "What was the first graphic series related to the Amory Wars published in 2004?",
+        "What was the first graphic series related to 'The Amory Wars' that was published in 2004?",
       choices: [
         "The Amory Wars: Good Apollo, I'm Burning Star IV",
         "The Second Stage Turbine Blade Ultimate Edition",
@@ -326,7 +355,7 @@ export const amory: Topic = {
     },
     {
       question:
-        "Who co-wrote the novel included in the deluxe edition of 'Year of the Black Rainbow'?",
+        "Who co-wrote the novel 'Year of the Black Rainbow' with Claudio Sanchez?",
       choices: [
         "Wes Abbott",
         "Christopher Shy",
@@ -338,9 +367,9 @@ export const amory: Topic = {
     },
     {
       question: "What is the Great Crash?",
-      choices: ["Cosmological Event", "Spacecraft", "A Great Battle", "Weapon"],
+      choices: ["A Cosmological Event", "Q Spacecraft", "A Great Battle", "A Weapon"],
       type: "MCQs",
-      correctAnswers: ["Cosmological Event"],
+      correctAnswers: ["A Cosmological Event"],
     },
     {
       question:
@@ -375,7 +404,7 @@ export const amory: Topic = {
     },
     {
       question:
-        "On December 2, 2012, who announced he would be producing a film adaptation of The Amory Wars?",
+        "On December 2, 2012, who announced he would be producing a film adaptation of 'The Amory Wars'?",
       choices: [
         "Peter David",
         "Christopher Nolan",

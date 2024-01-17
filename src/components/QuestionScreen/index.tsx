@@ -1,3 +1,27 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/QuestionScreen/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file defines the QuestionScreen component, which is responsible for displaying individual quiz questions and managing quiz flow.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: The component renders individual quiz questions along with answer options, navigational buttons, and a result modal on quiz completion.
+ *                 - Manages state for the current question, user's selected answers, and display of the result modal.
+ *                 - Implements logic for handling answer selection, navigating between questions, and updating quiz results.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *     - Initial creation of the QuestionScreen component with question navigation and answer selection logic.
+ *     - Added functionality to update results based on user's answer selection and navigate through questions.
+ *     - Integrated modal for displaying results upon quiz completion.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *     - Key component for quiz interaction, central to user experience during the quiz.
+ *     - The component logic ensures that each question is answered only once, even if revisited.
+ ***************************************************************************************************************************/
 import { FC, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { AppLogo, CheckIcon, Next, Previous } from '../../config/icons'
@@ -176,7 +200,7 @@ const QuestionScreen: FC = () => {
       {(showResultModal) && (
         <ModalWrapper
         title="Done!"
-        subtitle={`You have attempted ${result.length} questions in total.`}
+        subtitle={`You attempted ${result.length} questions`}
         onClick={handleModal}
         icon={<CheckIcon />}
         buttonTitle="SHOW RESULT"

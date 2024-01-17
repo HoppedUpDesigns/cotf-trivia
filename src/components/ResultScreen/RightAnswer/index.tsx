@@ -1,6 +1,32 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/ResultScreen/RightAnswer/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: 
+ *  - This file defines the RightAnswer component, used in the ResultScreen to display the correct answers for questions where the user's response was incorrect.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - The component takes in the correct answers and the choices for a particular question.
+ *  - It formats and displays the correct answers with their corresponding choice labels (A, B, C, etc.).
+ *  - Utilizes styled-components for styling.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Developed the initial component structure and logic.
+ *  - Integrated with the quiz system to dynamically fetch and display correct answers.
+ *  - Styled the component for clear visibility and consistency with the quiz theme.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - This component enhances the learning experience by clearly indicating the correct answers, aiding in user understanding and knowledge retention.
+ *  - Designed to be reusable across different types of questions within the quiz.
+ ***************************************************************************************************************************/
+
 import { FC } from 'react'
 import styled from 'styled-components'
-
 import { HighlightedText } from '../../../styles/Global'
 
 interface RightAnswerProps {

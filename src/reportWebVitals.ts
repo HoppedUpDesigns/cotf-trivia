@@ -1,22 +1,24 @@
 /***************************************************************************************************************************
  * @file: /Users/jason/Sites/cotf/src/reportWebVitals.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This file contains a function to report website performance metrics using the web-vitals library.
+ * @description: This file includes the functionality to measure and report web vitals, which are metrics related to the performance of a web page.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: Provides a utility function to measure and report on a variety of web performance metrics. These metrics can help understand areas of the site that can be improved for a better user experience.
+ * @functionality: 
+ *   - This file defines a function to report various web performance metrics (CLS, FID, FCP, LCP, TTFB) for the application.
+ *   - It leverages the 'web-vitals' library to capture these metrics.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Created by: Jason McCoy
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
+ * Last Updated on: 01/16/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
- *     - Initial setup to import and utilize web vitals reporting functions.
+ *     - Initial implementation of the reportWebVitals function to measure key performance indicators of the web application.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Notes: 
- *     - This file is part of the Create React App setup and is used to measure the performance of the app in production.
- *     - Web vitals are important for understanding real-world user experience and can contribute to improving site ranking and user satisfaction.
+ *     - The function reportWebVitals is optional and can be used to measure and analyze the performance of the web application.
+ *     - CLS (Cumulative Layout Shift), FID (First Input Delay), FCP (First Contentful Paint), LCP (Largest Contentful Paint), and TTFB (Time to First Byte) are the metrics reported.
  ***************************************************************************************************************************/
 
 import { ReportHandler } from 'web-vitals';

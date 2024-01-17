@@ -1,3 +1,29 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/components/ResultScreen/index.tsx
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description: This file contains the ResultScreen component which displays the results of the quiz after it has concluded.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *  - Shows a summary of the user's performance including correct and incorrect answers.
+ *  - Utilizes styled components for displaying each question with user's selected answer and the correct answer.
+ *  - Provides a "RETRY" button for users to retake the quiz.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made: 
+ *  - Initial creation of the component with basic result presentation.
+ *  - Integration with QuizContext for accessing quiz results.
+ *  - Styling and layout enhancements for a user-friendly display of results.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes: 
+ *  - Essential component for providing feedback and analysis of user's performance in the quiz.
+ *  - The component structure and logic ensure a detailed and informative result presentation.
+ ***************************************************************************************************************************/
+
 import { FC } from 'react'
 import styled, { css } from 'styled-components'
 import { AppLogo, Refresh } from '../../config/icons'

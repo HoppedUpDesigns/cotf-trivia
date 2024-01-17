@@ -1,3 +1,32 @@
+/***************************************************************************************************************************
+ * @file: /Users/jason/Sites/cotf/src/data/QuizQuestions/sideProjects.ts
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * @description:
+ *  - This file contains the quiz questions and answers related to the "Side Projects" topic.
+ *  - Each question is structured with options, a question type, and the correct answer(s).
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality:
+ *  - Provides a specific set of quiz questions for the "Side Projects" theme.
+ *  - Supports multiple-choice questions (MCQs) and questions with multiple correct answers (MAQs).
+ *  - Enhances the variety of the quiz by offering diverse questions within the same topic.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Created by: Jason McCoy
+ * Created on: 12/30/2023
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Last Updated by: Jason McCoy
+ * Last Updated on: 01/16/2024
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made:
+ *  - Initial creation with a set of questions specifically curated for the "Side Projects" topic.
+ *  - Regular updates to questions and answers to ensure accuracy and engagement.
+ *  - Inclusion of additional questions to expand the question set over time.
+ * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes:
+ *  - The questions in this file are designed to challenge fans on their knowledge of the members of 
+ *  - Coheed and Cambria's side projects and test their knowledge about specific details.
+ *  - Regular review and updates are crucial to keep the content fresh and accurate.
+ ***************************************************************************************************************************/
+
 // Question Types
 // 1. MCQs | Multiple Choice | single
 // 2. boolean | true/false | single
@@ -11,7 +40,7 @@ export const sideProjects: Topic = {
   questions: [
     {
       question:
-        "What is the name of the 2nd full-length album by The Prize Fighter Inferno?",
+        "What is the name of the second full-length album by The Prize Fighter Inferno?",
       choices: [
         "Half Measures",
         "The City Introvert",
@@ -93,7 +122,7 @@ export const sideProjects: Topic = {
       correctAnswers: ["My Chemical Romance"],
     },
     {
-      question: "What is the name of Davenport Cabinet's 2nd album?",
+      question: "What is the name of Davenport Cabinet's second album?",
       choices: [
         "Nostalgia In Stereo",
         "Our Machine",
@@ -123,7 +152,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the title of The Prize Fighter Inferno's debut album, released in 2006?",
+        "What is the title of The Prize Fighter Inferno's debut album released in 2006?",
       choices: [
         "Half Measures",
         "My Brother's Blood Machine",
@@ -171,7 +200,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What animated series inspired the  Prize Fighter Inferno song 'Gears'?",
+        "What animated series inspired the Prize Fighter Inferno song 'Gears'?",
       choices: ["Rick and Morty", "Adventure Time", "The Simpsons", "Futurama"],
       type: "MCQs",
       correctAnswers: ["The Simpsons"],
@@ -233,7 +262,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "In 2010, Davenport Cabinet released a split EP with another band. Which band was it?",
+        "In 2010, Davenport Cabinet released a split EP with another band. What is the name of this band?",
       choices: [
         "Circa Survive",
         "Thank You Scientist",
@@ -266,7 +295,8 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: [
-        "It's named after a street in Claudio Sanchez's hometown"],
+        "It's named after a street in Claudio Sanchez's hometown",
+      ],
     },
     {
       question:
@@ -282,7 +312,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the title of Weerd Science's debut album, released in 2005?",
+        "What is the title of Weerd Science's debut album released in 2005?",
       choices: [
         "The Waterfront EP",
         "Friends and Nervous Breakdowns",
@@ -306,7 +336,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the title of Weerd Science's third full-length album, released in 2014?",
+        "What is the title of Weerd Science's third full-length album released in 2014?",
       choices: [
         "The Waterfront EP",
         "Red Light Juliet",
@@ -330,7 +360,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the title of Weerd Science's second full-length album, released in 2011?",
+        "What is the title of Weerd Science's second album released in 2011?",
       choices: [
         "Red Light Juliet",
         "Sick Kids",
@@ -342,13 +372,8 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the name of the band Claudio and Travis was in before forming the band Shabūtie in March 1995?",
-      choices: [
-        "Penelope",
-        "Take Over The World",
-        "Toxic Parents",
-        "Naked Prey",
-      ],
+        "What is the name of the band Claudio and Travis were in before Shabūtie?",
+      choices: ["Penelope", "Evil Ink", "Toxic Parents", "Naked Prey"],
       type: "MCQs",
       correctAnswers: ["Toxic Parents"],
     },
@@ -357,12 +382,12 @@ export const sideProjects: Topic = {
         "What is the name of Shabūtie's first studio demo released in 1999?",
       choices: [
         "Delirium Trigger",
-        "Take Over The World",
+        "Plan to Take Over the World",
         "The Penelope EP",
         "Naked Prey",
       ],
       type: "MCQs",
-      correctAnswers: ["Toxic Parents"],
+      correctAnswers: ["Plan to Take Over the World"],
     },
   ],
 };

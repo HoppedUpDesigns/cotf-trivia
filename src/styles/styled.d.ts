@@ -1,21 +1,27 @@
 /***************************************************************************************************************************
  * @file: /Users/jason/Sites/cotf/src/styles/styled.d.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: This file extends the styled-components module to include a custom theme interface, defining the color, font, shadow, padding, and margin properties for the application's design.
+ * @description: This file extends the default theme provided by styled-components with custom theme properties specific 
+ *               to the COTF Trivia application. It defines the structure of the Theme interface, which includes color 
+ *               schemes, shadows, paddings, and margins.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: It provides a strongly typed interface for theme properties, ensuring consistent theming and styling across the application by extending the DefaultTheme from styled-components.
+ * @functionality: By extending the DefaultTheme from styled-components, this file allows for the consistent application 
+ *                 of the theme throughout the app. It enables easy access to the defined theme properties (like colors, 
+ *                 shadows, and layout measures) in any styled component, ensuring a cohesive look and feel.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Created by: Jason McCoy
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/04/2024
+ * Last Updated on: 01/16/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: Added additional color properties for UI components, refined font settings, and updated shadow definitions for a more cohesive design language.
+ * Changes made: Enhanced the theme structure to include new color schemes and layout properties. Refactored the theme 
+ *               to improve readability and ease of use across the application.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: When modifying this file, ensure that the theme remains coherent and accessible. Consult the design team for significant changes.
+ * Notes: The theme defined in this file is crucial for the styling and appearance of the app. Updates or changes to 
+ *        this file should be made with consideration of its wide-reaching impact across all styled components in the app.
  ***************************************************************************************************************************/
-// import original module declarations
+
 import 'styled-components'
 
 export interface Theme {
