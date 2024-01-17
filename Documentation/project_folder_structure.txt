@@ -1,8 +1,8 @@
 *** PROJECT-ROOT-FOLDER/ is the root of the project ***
-*** anything that looks like this |-- / is a folder ***
-*** for example: |-- /src is a folder that is one level down from the root of the project (i.e. PROJECT-ROOT-FOLDER/) ***
-*** anything that looks like this |--  is a file ***
-*** for example: |-- package.json is a file that is one level down from the root of the project (i.e. PROJECT-ROOT-FOLDER/) ***
+*** Anything that looks like this |-- / is a folder ***
+*** For example: |-- /src is a folder that is one level down from the root of the project (i.e. PROJECT-ROOT-FOLDER/) ***
+*** Anything that looks like this |--  is a file ***
+*** For example: |-- package.json is a file that is one level down from the root of the project (i.e. PROJECT-ROOT-FOLDER/) ***
 
 PROJECT-ROOT-FOLDER/
   |-- PROJECT-ROOT-FOLDER/build/

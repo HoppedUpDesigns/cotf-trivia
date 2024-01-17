@@ -1,0 +1,45 @@
+Here is how the questions in the quiz files are formated:
+// Question Types
+// 1. MCQs | Multiple Choice | single
+// 2. boolean | true/false | single
+// 3. MAQs | Multiple Answers | multiple
+
+import { Topic } from ".";
+
+export const topic: Topic = {
+  topic: "QUIZ TOPIC GOES HERE",
+  questions: [
+    {
+      question: "SINGLE ANSWER QUESTION GOES HERE?",
+      choices: [
+        "ANSWER CHOICE A",
+        "ANSWER CHOICE B",
+        "ANSWER CHOICE C",
+        "ANSWER CHOICE D",
+      ],
+      type: "MCQs",
+      correctAnswers: ["ANSWER GOES HERE"],
+    },
+    {
+      question: "TRUE/FALSE QUESTION GOES HERE?",
+      choices: ["TRUE", "FALSE"],
+      type: "boolean",
+      correctAnswers: ["ANSWER GOES HERE"],
+    },
+    {
+      question: "MULTIPLE ANSWERS QUESTION GOES HERE? (Select all that apply)",
+      choices: [
+        "ANSWER CHOICE A",
+        "ANSWER CHOICE B",
+        "ANSWER CHOICE C",
+        "ANSWER CHOICE D",
+      ],
+      type: "MAQs",
+      correctAnswers: [
+        "CORRECT ANSWER 1 GOES HERE",
+        "CORRECT ANSWER 2 GOES HERE",
+        "CORRECT ANSWER 3 GOES HERE",
+      ],
+    },
+  ],
+};
