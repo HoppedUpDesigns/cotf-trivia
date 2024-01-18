@@ -51,8 +51,8 @@ const QuizHeader: FC<QuizHeaderProps> = ({
   return (
     <Flex spaceBetween gap="6px">
       <div>
-        <ActiveQuestionNo>{addLeadingZero(activeQuestion + 1)}</ActiveQuestionNo> // Display the current question number.
-        <TotalQuestionNo>/{addLeadingZero(userSelectedNumberOfQuestions)}</TotalQuestionNo> // Display the total number of questions.
+        <ActiveQuestionNo>{addLeadingZero(activeQuestion + 1)}</ActiveQuestionNo>
+        <TotalQuestionNo>/{addLeadingZero(userSelectedNumberOfQuestions)}</TotalQuestionNo>
       </div>
     </Flex>
   )

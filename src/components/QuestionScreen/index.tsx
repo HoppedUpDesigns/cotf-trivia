@@ -1,38 +1,47 @@
-/***************************************************************************************************************************
+/*************************************************************************************************************************************************************
  * @file: PROJECT-ROOT-FOLDER/src/components/QuestionScreen/index.tsx
- * -----------------------------------------------------------------------------------------------------------------------------------------------
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This file defines the QuestionScreen component, which is responsible for displaying individual quiz questions and managing quiz flow.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: The component renders individual quiz questions along with answer options, navigational buttons, and a result modal on quiz completion.
- *                 - Manages state for the current question, user's selected answers, and display of the result modal.
- *                 - Implements logic for handling answer selection, navigating between questions, and updating quiz results.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
+ *               It includes question rendering, answer selection, and navigation controls.
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------
+ * @functionality: 
+ *    - Manages state for the current question index, selected answers, and the display of the result modal.
+ *    - Renders the question text, choices, and associated image (if any) from the quiz data.
+ *    - Utilizes a custom hook to shuffle answer choices to ensure randomness.
+ *    - Implements navigation functionality, allowing the user to move between questions and submit answers.
+ *    - Handles answer selection, updating state with the user's selected answers.
+ *    - Determines if the user's answer is correct and updates the result accordingly.
+ *    - Displays a modal with quiz results and an option to retry upon completing the last question.
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------
  * Created by: Jason McCoy
  * Created on: 12/30/2023
- * ---------------------------------------------------------------------------------------------------------------------------------------------
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
  * Last Updated on: 01/17/2024
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
- *     - Initial creation of the QuestionScreen component with question navigation and answer selection logic.
- *     - Added functionality to update results based on user's answer selection and navigate through questions.
- *     - Integrated modal for displaying results upon quiz completion.
- * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: 
- *     - Key component for quiz interaction, central to user experience during the quiz.
- *     - The component logic ensures that each question is answered only once, even if revisited.
- ***************************************************************************************************************************/
-import { FC, useEffect, useState } from 'react'
-import styled from 'styled-components'
-import { AppLogo, CheckIcon, Next, Previous } from '../../config/icons'
-import { useQuiz } from '../../context/QuizContext'
-import { device } from '../../styles/BreakPoints'
-import { PageCenter } from '../../styles/Global'
-import { ScreenTypes } from '../../types'
-import Button from '../ui/Button'
-import ModalWrapper from '../ui/ModalWrapper'
-import Question from './Question'
-import QuizHeader from './QuizHeader'
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Changes made:
+ *     - Integrated useShuffledChoices hook for randomizing choice order.
+ *     - Enhanced answer checking and result updating logic.
+ *     - Improved responsiveness and user interaction flow.
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Notes:
+ *     - This component is central to the quiz-taking experience, providing an interactive interface for answering questions.
+ *     - It ensures a dynamic and engaging user experience by randomizing answer choices and providing immediate feedback.
+ *     - The component is designed to be reusable and adaptable for various types of quizzes.
+ *************************************************************************************************************************************************************/
+
+import { FC, useEffect, useState } from "react";
+import styled from "styled-components";
+import { AppLogo, CheckIcon, Next, Previous } from "../../config/icons";
+import { useQuiz } from "../../context/QuizContext";
+import { device } from "../../styles/BreakPoints";
+import { PageCenter } from "../../styles/Global";
+import { ScreenTypes } from "../../types";
+import Button from "../ui/Button";
+import ModalWrapper from "../ui/ModalWrapper";
+import Question from "./Question";
+import QuizHeader from "./QuizHeader";
+import useShuffledChoices from "../../hooks/useShuffleChoices";
 
 const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
   width: 900px;
@@ -51,12 +60,14 @@ const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
       svg {
         path {
           fill: ${({ selectedAnswer, theme }) =>
-            selectedAnswer ? `${theme.colors.buttonText}` : `${theme.colors.darkGray}`};
+            selectedAnswer
+              ? `${theme.colors.buttonText}`
+              : `${theme.colors.darkGray}`};
         }
       }
     }
   }
-`
+`;
 
 const LogoContainer = styled.div`
   margin-top: 50px;
@@ -69,7 +80,7 @@ const LogoContainer = styled.div`
       height: 80px;
     }
   }
-`
+`;
 
 const ButtonWrapper = styled.div`
   position: absolute;
@@ -82,46 +93,53 @@ const ButtonWrapper = styled.div`
     width: 90%;
     right: 15px;
   }
-`
+`;
 
 const QuestionScreen: FC = () => {
-  const [activeQuestion, setActiveQuestion] = useState<number>(0)
-  const [selectedAnswer, setSelectedAnswer] = useState<string[]>([])
-  const [showResultModal, setShowResultModal] = useState<boolean>(false)
+  const [activeQuestion, setActiveQuestion] = useState<number>(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<string[]>([]);
+  const [showResultModal, setShowResultModal] = useState<boolean>(false);
 
-  const {
-    questions,
-    quizDetails,
-    result,
-    setResult,
-    setCurrentScreen,
-  } = useQuiz();
+  const { questions, quizDetails, result, setResult, setCurrentScreen } =
+    useQuiz();
 
   const currentQuestion = questions[activeQuestion];
   const { question, type, choices, image } = currentQuestion;
 
+  // Use the custom hook to shuffle choices
+  const shuffledChoices = useShuffledChoices(choices);
+
   const onClickNext = () => {
-    const isMatch = selectedAnswer.length === currentQuestion.correctAnswers.length &&
-                    selectedAnswer.every(answer => currentQuestion.correctAnswers.includes(answer));
-    
-    const questionAlreadyAnsweredIndex = result.findIndex(res => res.question === currentQuestion.question);
+    const isMatch =
+      selectedAnswer.length === currentQuestion.correctAnswers.length &&
+      selectedAnswer.every((answer) =>
+        currentQuestion.correctAnswers.includes(answer)
+      );
+
+    const questionAlreadyAnsweredIndex = result.findIndex(
+      (res) => res.question === currentQuestion.question
+    );
 
     if (questionAlreadyAnsweredIndex === -1) {
       setResult([...result, { ...currentQuestion, selectedAnswer, isMatch }]);
     } else {
       const updatedResult = [...result];
-      updatedResult[questionAlreadyAnsweredIndex] = { ...currentQuestion, selectedAnswer, isMatch };
+      updatedResult[questionAlreadyAnsweredIndex] = {
+        ...currentQuestion,
+        selectedAnswer,
+        isMatch,
+      };
       setResult(updatedResult);
     }
 
     if (activeQuestion === quizDetails.userSelectedNumberOfQuestions - 1) {
       setShowResultModal(true);
     } else {
-      setActiveQuestion(prev => prev + 1);
+      setActiveQuestion((prev) => prev + 1);
     }
     setSelectedAnswer([]);
   };
-  
+
   // Handler for the Previous button click
   const onClickPrevious = () => {
     if (activeQuestion > 0) {
@@ -130,55 +148,62 @@ const QuestionScreen: FC = () => {
   };
 
   const handleAnswerSelection = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target
+    const { name, checked } = e.target;
 
-    if (type === 'MAQs') {
+    if (type === "MAQs") {
       if (selectedAnswer.includes(name)) {
         setSelectedAnswer((prevSelectedAnswer) =>
           prevSelectedAnswer.filter((element) => element !== name)
-        )
+        );
       } else {
-        setSelectedAnswer((prevSelectedAnswer) => [...prevSelectedAnswer, name])
+        setSelectedAnswer((prevSelectedAnswer) => [
+          ...prevSelectedAnswer,
+          name,
+        ]);
       }
     }
 
-    if (type === 'MCQs' || type === 'boolean') {
+    if (type === "MCQs" || type === "boolean") {
       if (checked) {
-        setSelectedAnswer([name])
+        setSelectedAnswer([name]);
       }
     }
-  }
+  };
 
   const handleModal = () => {
-    setCurrentScreen(ScreenTypes.ResultScreen)
-    document.body.style.overflow = 'auto'
-  }
+    setCurrentScreen(ScreenTypes.ResultScreen);
+    document.body.style.overflow = "auto";
+  };
 
   // to prevent scrolling when modal is opened
   useEffect(() => {
     if (showResultModal) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     }
-  }, [showResultModal])
+  }, [showResultModal]);
 
   return (
     <PageCenter>
+      {/* Component JSX */}
       <LogoContainer>
         <AppLogo />
       </LogoContainer>
       <QuizContainer selectedAnswer={selectedAnswer.length > 0}>
-      <QuizHeader
+        <QuizHeader
           activeQuestion={activeQuestion}
-          userSelectedNumberOfQuestions={quizDetails.userSelectedNumberOfQuestions} // Pass this prop
+          userSelectedNumberOfQuestions={
+            quizDetails.userSelectedNumberOfQuestions
+          }
         />
         <Question
           question={question}
           image={image}
-          choices={choices}
+          choices={shuffledChoices} // Use shuffled choices here
           type={type}
           handleAnswerSelection={handleAnswerSelection}
           selectedAnswer={selectedAnswer}
         />
+
         <ButtonWrapper>
           <Button
             text={"Previous"}
@@ -188,7 +213,11 @@ const QuestionScreen: FC = () => {
             disabled={activeQuestion === 0}
           />
           <Button
-            text={activeQuestion === quizDetails.userSelectedNumberOfQuestions - 1 ? "Finish" : "Next"}
+            text={
+              activeQuestion === quizDetails.userSelectedNumberOfQuestions - 1
+                ? "Finish"
+                : "Next"
+            }
             onClick={onClickNext}
             icon={<Next />}
             iconPosition="right"
@@ -197,17 +226,17 @@ const QuestionScreen: FC = () => {
         </ButtonWrapper>
       </QuizContainer>
       {/* finish quiz modal*/}
-      {(showResultModal) && (
+      {showResultModal && (
         <ModalWrapper
-        title="Done!"
-        subtitle={`You attempted ${result.length} questions`}
-        onClick={handleModal}
-        icon={<CheckIcon />}
-        buttonTitle="SHOW RESULT"
-      />
+          title="Done!"
+          subtitle={`You attempted ${result.length} questions`}
+          onClick={handleModal}
+          icon={<CheckIcon />}
+          buttonTitle="SHOW RESULT"
+        />
       )}
     </PageCenter>
-  )
-}
+  );
+};
 
-export default QuestionScreen
+export default QuestionScreen;
