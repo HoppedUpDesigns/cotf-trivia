@@ -32,7 +32,7 @@
 
 import { FC, useState } from "react";
 import styled from "styled-components";
-import { AppLogo, Next, Previous, Done, TimesUp } from "../../config/icons";
+import { Dragonfly, Next, Previous, Done, TimesUp } from "../../config/icons";
 import { useQuiz } from "../../context/QuizContext";
 import { device } from "../../styles/BreakPoints";
 import { PageCenter } from "../../styles/Global";
@@ -160,7 +160,7 @@ const QuestionScreen: FC = () => {
   return (
     <PageCenter>
       <LogoContainer>
-        <AppLogo />
+        <Dragonfly />
       </LogoContainer>
       <QuizContainer selectedAnswer={selectedAnswer.length > 0}>
         <QuizHeader

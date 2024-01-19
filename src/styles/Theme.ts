@@ -31,7 +31,7 @@ export const themes: Record<string, Theme> = {
       themeText: '#000000',
       themeColor: '#800080',
       themeGradient: 'linear-gradient(to right,#800080, #FFC0CB)',
-      background: '#708dad',
+      background: '#00c073',
       cardBackground: '#FFFFFF',
       selectTopicBg: '#FFFFFF',
       appLogo: '#000000',

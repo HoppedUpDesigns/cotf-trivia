@@ -34,7 +34,8 @@ import { ReactComponent as StartIcon } from '../assets/icons/start.svg'
 import { ReactComponent as Sun } from '../assets/icons/sun.svg'
 import { ReactComponent as Moon } from '../assets/icons/moon.svg'
 import { ReactComponent as Coheed } from '../assets/icons/coheed.svg'
+import { ReactComponent as Dragonfly } from '../assets/icons/dragonfly.svg'
 import { ReactComponent as Done } from '../assets/icons/done.svg'
 import { ReactComponent as TimesUp } from '../assets/icons/timesUp.svg'
 
-export { AppLogo, CheckIcon, Next, Previous, Refresh, TimerIcon, StartIcon, Sun, Moon, Coheed, Done, TimesUp }
+export { AppLogo, CheckIcon, Next, Previous, Refresh, TimerIcon, StartIcon, Sun, Moon, Coheed, Dragonfly, Done, TimesUp }

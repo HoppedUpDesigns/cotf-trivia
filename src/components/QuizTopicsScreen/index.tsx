@@ -27,7 +27,7 @@
 
 import React, { ReactElement } from 'react';
 import styled from 'styled-components'
-import { AppLogo } from '../../config/icons'
+import { Dragonfly } from '../../config/icons'
 import { useQuiz } from '../../context/QuizContext'
 import { quizTopics } from '../../data/quizTopics'
 import { device } from '../../styles/BreakPoints'
@@ -133,7 +133,7 @@ const QuizTopicsScreen: React.FC = () => {
     <PageCenter light justifyCenter>
       <CenterCardContainer>
         <LogoContainer>
-          <AppLogo />
+          <Dragonfly />
         </LogoContainer>
         <Heading>
           WELCOME TO <HighlightedText> COTF TRIVIA</HighlightedText>

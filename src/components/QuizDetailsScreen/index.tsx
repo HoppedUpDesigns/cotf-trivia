@@ -29,7 +29,7 @@
 
 import React, { useState } from "react";
 import styled from 'styled-components'
-import { AppLogo, StartIcon } from '../../config/icons'
+import { Dragonfly, StartIcon } from '../../config/icons'
 import { useQuiz } from '../../context/QuizContext'
 import { useShuffleQuestions } from '../../hooks'
 import {
@@ -121,7 +121,7 @@ const QuizDetailsScreen = () => {
     <PageCenter light justifyCenter>
       <CenterCardContainer>
         <LogoContainer>
-          <AppLogo />
+          <Dragonfly />
         </LogoContainer>
         <AppTitle>COTF TRIVIA</AppTitle>
         <DetailTextContainer>
