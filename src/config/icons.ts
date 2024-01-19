@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/17/2024
+ * Last Updated on: 01/19/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial setup of icon imports and exports.
@@ -33,6 +33,8 @@ import { ReactComponent as TimerIcon } from '../assets/icons/timer.svg'
 import { ReactComponent as StartIcon } from '../assets/icons/start.svg'
 import { ReactComponent as Sun } from '../assets/icons/sun.svg'
 import { ReactComponent as Moon } from '../assets/icons/moon.svg'
-import { ReactComponent as Coheed } from '../assets/icons/app-logo.svg'
+import { ReactComponent as Coheed } from '../assets/icons/coheed.svg'
+import { ReactComponent as Done } from '../assets/icons/done.svg'
+import { ReactComponent as TimesUp } from '../assets/icons/timesUp.svg'
 
-export { AppLogo, CheckIcon, Next, Previous, Refresh, TimerIcon, StartIcon, Sun, Moon, Coheed }
+export { AppLogo, CheckIcon, Next, Previous, Refresh, TimerIcon, StartIcon, Sun, Moon, Coheed, Done, TimesUp }

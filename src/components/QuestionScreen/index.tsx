@@ -17,7 +17,7 @@
  * Created on: 12/30/2023
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/17/2024
+ * Last Updated on: 01/19/2024
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made:
  *     - Integrated useShuffledChoices hook for randomizing choice order.
@@ -30,9 +30,9 @@
  *     - The component is designed to be reusable and adaptable for various types of quizzes.
  *************************************************************************************************************************************************************/
 
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import styled from "styled-components";
-import { AppLogo, CheckIcon, Next, Previous } from "../../config/icons";
+import { AppLogo, Next, Previous, Done, TimesUp } from "../../config/icons";
 import { useQuiz } from "../../context/QuizContext";
 import { device } from "../../styles/BreakPoints";
 import { PageCenter } from "../../styles/Global";
@@ -42,6 +42,7 @@ import ModalWrapper from "../ui/ModalWrapper";
 import Question from "./Question";
 import QuizHeader from "./QuizHeader";
 import useShuffledChoices from "../../hooks/useShuffleChoices";
+import useTimer from "../../hooks/useTimer";
 
 const QuizContainer = styled.div<{ selectedAnswer: boolean }>`
   width: 900px;
@@ -96,51 +97,48 @@ const ButtonWrapper = styled.div`
 `;
 
 const QuestionScreen: FC = () => {
+  const { questions, quizDetails, result, setResult, setCurrentScreen } = useQuiz();
+  const totalQuizTime = quizDetails.userSelectedNumberOfQuestions * 10; // Total time for the quiz in seconds
+  const [timer, setTimer] = useState(totalQuizTime);
   const [activeQuestion, setActiveQuestion] = useState<number>(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string[]>([]);
   const [showResultModal, setShowResultModal] = useState<boolean>(false);
+  const [timeExpired, setTimeExpired] = useState<boolean>(false); // Flag to track if time has expired
+  const [quizCompleted, setQuizCompleted] = useState(false); // State to determine if the quiz is finished
 
-  const { questions, quizDetails, result, setResult, setCurrentScreen } =
-    useQuiz();
+  const shuffledChoices = useShuffledChoices(questions[activeQuestion].choices);
 
-  const currentQuestion = questions[activeQuestion];
-  const { question, type, choices, image } = currentQuestion;
+  const handleTimerEnd = () => {
+    setTimeExpired(true);
+    setShowResultModal(true);
+  };
 
-  // Use the custom hook to shuffle choices
-  const shuffledChoices = useShuffledChoices(choices);
+  useTimer(timer, handleTimerEnd, setTimer);
 
   const onClickNext = () => {
-    const isMatch =
-      selectedAnswer.length === currentQuestion.correctAnswers.length &&
-      selectedAnswer.every((answer) =>
-        currentQuestion.correctAnswers.includes(answer)
-      );
+    const currentQuestion = questions[activeQuestion];
+    const isMatch = selectedAnswer.length === currentQuestion.correctAnswers.length &&
+                    selectedAnswer.every(answer => currentQuestion.correctAnswers.includes(answer));
 
-    const questionAlreadyAnsweredIndex = result.findIndex(
-      (res) => res.question === currentQuestion.question
-    );
+    const questionAlreadyAnsweredIndex = result.findIndex(res => res.question === currentQuestion.question);
 
     if (questionAlreadyAnsweredIndex === -1) {
       setResult([...result, { ...currentQuestion, selectedAnswer, isMatch }]);
     } else {
       const updatedResult = [...result];
-      updatedResult[questionAlreadyAnsweredIndex] = {
-        ...currentQuestion,
-        selectedAnswer,
-        isMatch,
-      };
+      updatedResult[questionAlreadyAnsweredIndex] = { ...currentQuestion, selectedAnswer, isMatch };
       setResult(updatedResult);
     }
 
     if (activeQuestion === quizDetails.userSelectedNumberOfQuestions - 1) {
+      setQuizCompleted(true);
       setShowResultModal(true);
     } else {
-      setActiveQuestion((prev) => prev + 1);
+      setActiveQuestion(prev => prev + 1);
     }
     setSelectedAnswer([]);
   };
 
-  // Handler for the Previous button click
   const onClickPrevious = () => {
     if (activeQuestion > 0) {
       setActiveQuestion(activeQuestion - 1);
@@ -149,61 +147,35 @@ const QuestionScreen: FC = () => {
 
   const handleAnswerSelection = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
-
-    if (type === "MAQs") {
-      if (selectedAnswer.includes(name)) {
-        setSelectedAnswer((prevSelectedAnswer) =>
-          prevSelectedAnswer.filter((element) => element !== name)
-        );
-      } else {
-        setSelectedAnswer((prevSelectedAnswer) => [
-          ...prevSelectedAnswer,
-          name,
-        ]);
-      }
-    }
-
-    if (type === "MCQs" || type === "boolean") {
-      if (checked) {
-        setSelectedAnswer([name]);
-      }
+    if (questions[activeQuestion].type === 'MAQs' || questions[activeQuestion].type === 'MCQs') {
+      setSelectedAnswer(checked ? [name] : []);
     }
   };
 
   const handleModal = () => {
     setCurrentScreen(ScreenTypes.ResultScreen);
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = 'auto';
   };
-
-  // to prevent scrolling when modal is opened
-  useEffect(() => {
-    if (showResultModal) {
-      document.body.style.overflow = "hidden";
-    }
-  }, [showResultModal]);
 
   return (
     <PageCenter>
-      {/* Component JSX */}
       <LogoContainer>
         <AppLogo />
       </LogoContainer>
       <QuizContainer selectedAnswer={selectedAnswer.length > 0}>
         <QuizHeader
           activeQuestion={activeQuestion}
-          userSelectedNumberOfQuestions={
-            quizDetails.userSelectedNumberOfQuestions
-          }
+          totalQuestions={quizDetails.userSelectedNumberOfQuestions}
+          timer={timer}
         />
         <Question
-          question={question}
-          image={image}
-          choices={shuffledChoices} // Use shuffled choices here
-          type={type}
+          question={questions[activeQuestion].question}
+          image={questions[activeQuestion].image}
+          choices={shuffledChoices}
+          type={questions[activeQuestion].type}
           handleAnswerSelection={handleAnswerSelection}
           selectedAnswer={selectedAnswer}
         />
-
         <ButtonWrapper>
           <Button
             text={"Previous"}
@@ -213,11 +185,7 @@ const QuestionScreen: FC = () => {
             disabled={activeQuestion === 0}
           />
           <Button
-            text={
-              activeQuestion === quizDetails.userSelectedNumberOfQuestions - 1
-                ? "Finish"
-                : "Next"
-            }
+            text={activeQuestion === quizDetails.userSelectedNumberOfQuestions - 1 ? "Finish" : "Next"}
             onClick={onClickNext}
             icon={<Next />}
             iconPosition="right"
@@ -225,13 +193,11 @@ const QuestionScreen: FC = () => {
           />
         </ButtonWrapper>
       </QuizContainer>
-      {/* finish quiz modal*/}
       {showResultModal && (
         <ModalWrapper
-          title="Done!"
-          subtitle={`You attempted ${result.length} questions`}
+          title={timeExpired && !quizCompleted ? "Time's Up!" : "Done!"}
           onClick={handleModal}
-          icon={<CheckIcon />}
+          icon={timeExpired && !quizCompleted ? <TimesUp /> : <Done />}
           buttonTitle="SHOW RESULT"
         />
       )}
@@ -240,3 +206,4 @@ const QuestionScreen: FC = () => {
 };
 
 export default QuestionScreen;
+    

@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/17/2024
+ * Last Updated on: 01/19/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation of the useTimer hook with basic countdown functionality.
@@ -26,37 +26,23 @@
  *  - Ensure the timer's accuracy and smoothness across different devices and browsers.
  ***************************************************************************************************************************/
 
-import { Dispatch, SetStateAction, useEffect } from 'react'
-
-interface QuizDetails {
-  totalTime: number
-}
+import { useEffect } from 'react';
 
 const useTimer = (
   timer: number,
-  quizDetails: QuizDetails,
-  setEndTime: (time: number) => void,
-  setTimer: Dispatch<SetStateAction<number>>,
-  setShowTimerModal: (time: boolean) => void,
-  showResultModal: boolean
+  onTimerEnd: () => void,
+  setTimer: React.Dispatch<React.SetStateAction<number>>
 ) => {
   useEffect(() => {
     if (timer <= 0) {
-      const timeTaken = quizDetails.totalTime
-      setEndTime(timeTaken)
-      setShowTimerModal(true)
-      setTimer(0)
+      onTimerEnd();
+    } else {
+      const timeoutId = setTimeout(() => {
+        setTimer(timer - 1);
+      }, 1000);
+      return () => clearTimeout(timeoutId);
     }
-  }, [timer, quizDetails.totalTime, setEndTime, setShowTimerModal, setTimer])
+  }, [timer, onTimerEnd, setTimer]);
+};
 
-  useEffect(() => {
-    if (!showResultModal) {
-      const countTimer = setTimeout(() => {
-        setTimer((prevTimer) => prevTimer - 1)
-      }, 1000)
-      return () => clearTimeout(countTimer)
-    }
-  }, [timer, setTimer])
-}
-
-export default useTimer
+export default useTimer;

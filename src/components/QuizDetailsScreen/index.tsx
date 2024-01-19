@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/17/2024
+ * Last Updated on: 01/19/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation with user input for selecting the number of questions.
@@ -130,12 +130,12 @@ const QuizDetailsScreen = () => {
             <HighlightedText>{quizDetails.selectedQuizTopic}</HighlightedText>
           </DetailText>
           <DetailText>
-            Total Questions Available From The Selected Quiz:{" "}
+            Total Questions Available For The Selected Quiz:{" "}
             <HighlightedText>{quizDetails.totalQuestions}</HighlightedText>
           </DetailText>
           <DetailText>
             <label htmlFor="userInput">
-              How Many Questions Would You Like To Attempt?
+              How Many Questions Would You Like?
             </label>
             <NumericInput
               type="number"
@@ -147,6 +147,9 @@ const QuizDetailsScreen = () => {
               name="userInput"
             />
             {error && <ErrorMessage>{error}</ErrorMessage>}
+          </DetailText>
+          <DetailText>
+            You will have <HighlightedText>10 seconds</HighlightedText> for each question to complete your quiz
           </DetailText>
         </DetailTextContainer>
         <Button

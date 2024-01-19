@@ -9,7 +9,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/17/2024
+ * Last Updated on: 01/19/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  * - Initial creation of the Counter component for displaying the quiz timer.
@@ -27,7 +27,7 @@ import { device } from '../../../../styles/BreakPoints'
 // Styled component for the timer text display.
 const TimerStyle = styled.span`
   min-width: 60px;
-  font-size: clamp(16px, 5vw, 24px);
+  font-size: clamp(32px, 10vw, 48px);
   font-weight: 500;
   margin-left: 8px;
   color: ${({ theme }) => theme.colors.themeColor};

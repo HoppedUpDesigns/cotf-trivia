@@ -3,7 +3,7 @@
  * -----------------------------------------------------------------------------------------------------------------------------------------------
  * @description: This file contains the ResultScreen component which displays the results of the quiz after it has concluded.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: 
+ * @functionality:
  *  - Shows a summary of the user's performance including correct and incorrect answers.
  *  - Utilizes styled components for displaying each question with user's selected answer and the correct answer.
  *  - Provides a "RETRY" button for users to retake the quiz.
@@ -12,14 +12,14 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/17/2024
+ * Last Updated on: 01/19/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
+ * Changes made:
  *  - Initial creation of the component with basic result presentation.
  *  - Integration with QuizContext for accessing quiz results.
  *  - Styling and layout enhancements for a user-friendly display of results.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: 
+ * Notes:
  *  - Essential component for providing feedback and analysis of user's performance in the quiz.
  *  - The component structure and logic ensure a detailed and informative result presentation.
  ***************************************************************************************************************************/
@@ -128,11 +128,11 @@ const Answer = styled.li<AnswerProps>`
 `
 
 const ResultScreen: FC = () => {
-  const { result } = useQuiz()
+  const { questions, result, quizDetails } = useQuiz();
 
   const onClickRetry = () => {
-    refreshPage()
-  }
+    refreshPage();
+  };
 
   return (
     <ResultScreenContainer>
@@ -141,54 +141,43 @@ const ResultScreen: FC = () => {
       </LogoContainer>
       <InnerContainer>
         <ResultOverview result={result} />
-        {result.map(
-          (
-            {
-              question,
-              choices,
-              image,
-              correctAnswers,
-              selectedAnswer,
-              isMatch,
-            },
-            index: number
-          ) => {
-            return (
-              <QuestionContainer key={question}>
-                <ResizableBox width="90%">
-                  <Flex gap="4px">
-                    <QuestionNumber>{`${index + 1}. `}</QuestionNumber>
-                    <QuestionStyle>{question}</QuestionStyle>
-                  </Flex>
-                  <div>
-                    {image && <QuizImage image={image} />}
-                    <ul>
-                      {choices.map((ans: string, index: number) => {
-                        // Convert index to alphabet character
-                        const label = String.fromCharCode(65 + index)
-                        const correct =
-                          selectedAnswer.includes(ans) && correctAnswers.includes(ans)
-                        const wrong =
-                          selectedAnswer.includes(ans) && !correctAnswers.includes(ans)
+        {questions.slice(0, quizDetails.userSelectedNumberOfQuestions).map((questionObj, index) => {
+          const questionResult = result.find(r => r.question === questionObj.question);
+          const isAnswered = questionResult !== undefined;
 
-                        return (
-                          <Answer key={ans} correct={correct} wrong={wrong}>
-                            <span>{label}.</span>
-                            {ans}
-                          </Answer>
-                        )
-                      })}
-                    </ul>
-                    {/* only show if the answer is wrong */}
-                    {!isMatch && (
-                      <RightAnswer correctAnswers={correctAnswers} choices={choices} />
-                    )}
-                  </div>
-                </ResizableBox>
-              </QuestionContainer>
-            )
-          }
-        )}
+          return (
+            <QuestionContainer key={questionObj.question}>
+              <ResizableBox width="90%">
+                <Flex gap="4px">
+                  <QuestionNumber>{`${index + 1}. `}</QuestionNumber>
+                  <QuestionStyle>{questionObj.question}</QuestionStyle>
+                </Flex>
+                <div>
+                  {questionObj.image && <QuizImage image={questionObj.image} />}
+                  <ul>
+                    {questionObj.choices.map((ans, idx) => {
+                      const label = String.fromCharCode(65 + idx);
+                      const isCorrectAnswer = questionObj.correctAnswers.includes(ans);
+                      const isSelectedAnswer = isAnswered && questionResult?.selectedAnswer.includes(ans);
+                      const isWrongAnswer = isSelectedAnswer && !isCorrectAnswer;
+
+                      return (
+                        <Answer key={ans} correct={isCorrectAnswer} wrong={isWrongAnswer}>
+                          <span>{label}.</span>
+                          {ans}
+                          {isCorrectAnswer && <span style={{ color: 'green' }}> (Right Answer)</span>}
+                        </Answer>
+                      );
+                    })}
+                  </ul>
+                  {!isAnswered && (
+                    <p style={{ color: 'red', marginTop: '10px' }}>Question Not Answered</p>
+                  )}
+                </div>
+              </ResizableBox>
+            </QuestionContainer>
+          );
+        })}
       </InnerContainer>
       <Flex flxEnd>
         <Button
@@ -200,7 +189,7 @@ const ResultScreen: FC = () => {
         />
       </Flex>
     </ResultScreenContainer>
-  )
-}
+  );
+};
 
-export default ResultScreen
+export default ResultScreen;

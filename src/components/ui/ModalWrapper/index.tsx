@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/17/2024
+ * Last Updated on: 01/19/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation of the ModalWrapper component with responsive design and theme integration.
@@ -72,7 +72,6 @@ const ModalSubtitle = styled.p`
 
 interface ModalWrapperProps {
   title: string
-  subtitle: string
   icon: JSX.Element
   buttonTitle: string
   onClick: () => void
@@ -80,7 +79,6 @@ interface ModalWrapperProps {
 
 const ModalWrapper: FC<ModalWrapperProps> = ({
   title,
-  subtitle,
   icon,
   buttonTitle,
   onClick,
@@ -90,7 +88,6 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
       <ModalContent>
         {icon}
         <ModalTitle>{title}</ModalTitle>
-        <ModalSubtitle>{subtitle}</ModalSubtitle>
         <Button text={buttonTitle} onClick={onClick} bold big />
       </ModalContent>
     </ModalContainer>

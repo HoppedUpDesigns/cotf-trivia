@@ -9,7 +9,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/17/2024
+ * Last Updated on: 01/19/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  * - Initial creation of the QuizHeader component for displaying question counters.
@@ -37,22 +37,33 @@ const TotalQuestionNo = styled.span`
   color: ${({ theme }) => theme.colors.darkerGray};
 `
 
-// Props interface for QuizHeader.
 interface QuizHeaderProps {
-  activeQuestion: number // Current active question number.
-  userSelectedNumberOfQuestions: number // Total questions selected by the user.
+  activeQuestion: number;
+  totalQuestions: number;
+  timer: number; // New prop for the timer
+  
 }
 
 // The QuizHeader component displays the current and total question numbers.
 const QuizHeader: FC<QuizHeaderProps> = ({
   activeQuestion,
-  userSelectedNumberOfQuestions,
+  totalQuestions,
+  timer,
 }) => {
+  // Function to format time in minutes:seconds
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  };
   return (
     <Flex spaceBetween gap="6px">
       <div>
-        <ActiveQuestionNo>{addLeadingZero(activeQuestion + 1)}</ActiveQuestionNo>
-        <TotalQuestionNo>/{addLeadingZero(userSelectedNumberOfQuestions)}</TotalQuestionNo>
+      <ActiveQuestionNo>{addLeadingZero(activeQuestion + 1)}</ActiveQuestionNo>
+        <TotalQuestionNo>/{addLeadingZero(totalQuestions)}</TotalQuestionNo>
+      </div>
+      <div>
+        {formatTime(timer)}
       </div>
     </Flex>
   )
