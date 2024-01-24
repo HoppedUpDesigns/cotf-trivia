@@ -12,7 +12,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/19/2024
+ * Last Updated on: Last Updated on: 01/24/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made:
  *  - Initial creation of the component with basic result presentation.
@@ -24,17 +24,19 @@
  *  - The component structure and logic ensure a detailed and informative result presentation.
  ***************************************************************************************************************************/
 
-import { FC } from 'react'
-import styled, { css } from 'styled-components'
-import { Dragonfly, Refresh } from '../../config/icons'
-import { useQuiz } from '../../context/QuizContext'
-import { device } from '../../styles/BreakPoints'
-import { Flex, LogoContainer, ResizableBox } from '../../styles/Global'
-import { refreshPage } from '../../utils/helpers'
-import Button from '../ui/Button'
-import QuizImage from '../ui/QuizImage'
-import ResultOverview from './ResultOverview'
-import RightAnswer from './RightAnswer'
+import { FC } from "react";
+import styled, { css } from "styled-components";
+import { Dragonfly, Refresh } from "../../config/icons";
+import { useQuiz } from "../../context/QuizContext";
+import { device } from "../../styles/BreakPoints";
+import { Flex, LogoContainer, ResizableBox } from "../../styles/Global";
+import { refreshPage } from "../../utils/helpers";
+import Button from "../ui/Button";
+import QuizImage from "../ui/QuizImage";
+import ResultOverview from "./ResultOverview";
+import RightAnswer from "./RightAnswer";
+import { Question } from "../../data/QuizQuestions";
+import { Result } from "../../data/QuizQuestions";
 
 const ResultScreenContainer = styled.div`
   max-width: 900px;
@@ -44,7 +46,7 @@ const ResultScreenContainer = styled.div`
     margin: 30px auto;
     padding-top: 40px;
   }
-`
+`;
 
 const InnerContainer = styled.div`
   background: ${({ theme }) => theme.colors.cardBackground};
@@ -55,7 +57,7 @@ const InnerContainer = styled.div`
   @media ${device.md} {
     padding: 15px;
   }
-`
+`;
 
 const QuestionContainer = styled.div`
   display: flex;
@@ -64,14 +66,14 @@ const QuestionContainer = styled.div`
   @media ${device.md} {
     flex-direction: column;
   }
-`
+`;
 
 const QuestionNumber = styled.h6`
   font-size: clamp(16px, 5vw, 24px);
   font-weight: 500;
   line-height: 1.3;
   color: ${({ theme }) => theme.colors.primaryText};
-`
+`;
 
 const QuestionStyle = styled.span`
   font-size: clamp(16px, 5vw, 24px);
@@ -82,11 +84,11 @@ const QuestionStyle = styled.span`
   @media ${device.md} {
     margin-bottom: 10px;
   }
-`
+`;
 
 interface AnswerProps {
-  correct?: boolean
-  wrong?: boolean
+  correct?: boolean;
+  wrong?: boolean;
 }
 
 const Answer = styled.li<AnswerProps>`
@@ -125,10 +127,23 @@ const Answer = styled.li<AnswerProps>`
   @media ${device.md} {
     font-weight: 400;
   }
-`
+`;
 
 const ResultScreen: FC = () => {
   const { questions, result, quizDetails } = useQuiz();
+
+  // Function to check if a boolean question was answered correctly
+  const isBooleanQuestionCorrect = (
+    questionObj: Question,
+    questionResult?: Result
+  ) => {
+    if (questionObj.type === "boolean" && questionResult) {
+      return questionObj.correctAnswers.includes(
+        questionResult.selectedAnswer[0]
+      );
+    }
+    return false;
+  };
 
   const onClickRetry = () => {
     refreshPage();
@@ -141,43 +156,80 @@ const ResultScreen: FC = () => {
       </LogoContainer>
       <InnerContainer>
         <ResultOverview result={result} />
-        {questions.slice(0, quizDetails.userSelectedNumberOfQuestions).map((questionObj, index) => {
-          const questionResult = result.find(r => r.question === questionObj.question);
-          const isAnswered = questionResult !== undefined;
+        {questions
+          .slice(0, quizDetails.userSelectedNumberOfQuestions)
+          .map((questionObj, index) => {
+            const questionResult = result.find(
+              (r) => r.question === questionObj.question
+            );
+            const isAnswered = questionResult !== undefined;
 
-          return (
-            <QuestionContainer key={questionObj.question}>
-              <ResizableBox width="90%">
-                <Flex gap="4px">
-                  <QuestionNumber>{`${index + 1}. `}</QuestionNumber>
-                  <QuestionStyle>{questionObj.question}</QuestionStyle>
-                </Flex>
-                <div>
-                  {questionObj.image && <QuizImage image={questionObj.image} />}
-                  <ul>
-                    {questionObj.choices.map((ans, idx) => {
-                      const label = String.fromCharCode(65 + idx);
-                      const isCorrectAnswer = questionObj.correctAnswers.includes(ans);
-                      const isSelectedAnswer = isAnswered && questionResult?.selectedAnswer.includes(ans);
-                      const isWrongAnswer = isSelectedAnswer && !isCorrectAnswer;
+            return (
+              <QuestionContainer key={questionObj.question}>
+                <ResizableBox width="90%">
+                  <Flex gap="4px">
+                    <QuestionNumber>{`${index + 1}. `}</QuestionNumber>
+                    <QuestionStyle>{questionObj.question}</QuestionStyle>
+                  </Flex>
+                  <div>
+                    {questionObj.image && (
+                      <QuizImage image={questionObj.image} />
+                    )}
+                    <ul>
+                      {questionObj.choices.map((ans, idx) => {
+                        const label = String.fromCharCode(65 + idx);
+                        const isCorrectAnswer =
+                          questionObj.correctAnswers.includes(ans);
+                        const isSelectedAnswer =
+                          isAnswered &&
+                          questionResult?.selectedAnswer.includes(ans);
+                        const isWrongAnswer =
+                          isSelectedAnswer && !isCorrectAnswer;
 
-                      return (
-                        <Answer key={ans} correct={isCorrectAnswer} wrong={isWrongAnswer}>
-                          <span>{label}.</span>
-                          {ans}
-                          {isCorrectAnswer && <span style={{ color: 'green' }}> (Right Answer)</span>}
-                        </Answer>
-                      );
-                    })}
-                  </ul>
-                  {!isAnswered && (
-                    <p style={{ color: 'red', marginTop: '10px' }}>Question Not Answered</p>
-                  )}
-                </div>
-              </ResizableBox>
-            </QuestionContainer>
-          );
-        })}
+                        return (
+                          <Answer
+                            key={ans}
+                            correct={isCorrectAnswer}
+                            wrong={isWrongAnswer}
+                          >
+                            <span>{label}.</span>
+                            {ans}
+                            {isCorrectAnswer && (
+                              <span style={{ color: "green" }}>
+                                {" "}
+                                (Right Answer)
+                              </span>
+                            )}
+                          </Answer>
+                        );
+                      })}
+                    </ul>
+                    {!isAnswered && (
+                      <p style={{ color: "red", marginTop: "10px" }}>
+                        Question Not Answered
+                      </p>
+                    )}
+                    {/* Display comment for boolean questions */}
+                    {questionObj.type === "boolean" && questionObj.comment && (
+                      <div
+                        style={{
+                          color: isBooleanQuestionCorrect(
+                            questionObj,
+                            questionResult
+                          )
+                            ? "green"
+                            : "red",
+                          marginTop: "10px",
+                        }}
+                      >
+                        {questionObj.comment}
+                      </div>
+                    )}
+                  </div>
+                </ResizableBox>
+              </QuestionContainer>
+            );
+          })}
       </InnerContainer>
       <Flex flxEnd>
         <Button

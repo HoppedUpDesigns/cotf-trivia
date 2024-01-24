@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/22/2024
+ * Last Updated on: Last Updated on: 01/24/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation with a set of questions specifically curated for the "AMORY WARS" topic.
@@ -419,24 +419,28 @@ export const amory: Topic = {
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["TRUE"],
+      comment: "He also illustrated the second issue as well",
     },
     {
       question: "The Mage are burdened eternally with the responsibility of guarding the Keywork?",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["FALSE"],
+      comment: "The Prise are responsible for guarding the Keywork",
     },
     {
       question: "The right side of Mayo Deftinwolf's face was damaged by a plasma cannon?",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["FALSE"],
+      comment: "It was the left side of his face that was damaged",
     },
     {
       question: "Mayo Deftinwolf is a cyborg?",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["TRUE"],
+      comment: "He was the first Z-class cybernetic organism of its kind",
     },
     {
       question: "How many years after the colonization of Silent Earth: 3 did the opening scene of the 'Second Stage Turbine Blade' take place?",

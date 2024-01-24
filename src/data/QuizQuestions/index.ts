@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/19/2024
+ * Last Updated on: Last Updated on: 01/24/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation of quiz data structure and importation of topic-specific quiz data.
@@ -39,11 +39,19 @@ type CorrectAnswers = string[]
 // 3. MAQs | Multiple Answers | multiple
 export type Question = {
   question: string
+  comment?: string // optional comment property
   choices: Choice[]
   type: 'MCQs' | 'MAQs' | 'boolean'
   correctAnswers: CorrectAnswers
-  image?: string
+  image?: string // optional image property
 }
+
+export type Result = {
+  question: string;
+  selectedAnswer: string[];
+  isMatch: boolean;
+  // other fields...
+};
 
 export type Topic = {
   topic: string

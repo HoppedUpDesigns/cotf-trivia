@@ -17,7 +17,7 @@
  * Created on: 12/30/2023
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/22/2024
+ * Last Updated on: Last Updated on: 01/24/2024
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made:
  *     - Integrated useShuffledChoices hook for randomizing choice order.
@@ -176,6 +176,13 @@ const QuestionScreen: FC = () => {
     setCurrentScreen(ScreenTypes.ResultScreen);
     document.body.style.overflow = 'auto';
   };
+
+  const isBooleanQuestionCorrect = () => {
+    if (questions[activeQuestion].type === 'boolean') {
+      return selectedAnswer.includes(questions[activeQuestion].correctAnswers[0]);
+    }
+    return false;
+  }
 
   return (
     <PageCenter>
