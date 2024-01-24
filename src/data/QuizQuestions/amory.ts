@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/19/2024
+ * Last Updated on: 01/22/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation with a set of questions specifically curated for the "AMORY WARS" topic.
@@ -36,7 +36,7 @@ import { Topic } from ".";
 
 export const amory: Topic = {
   topic: "AMORY WARS",
-  totalQuestions: 40,
+  totalQuestions: 57,
   questions: [
     {
       question:
@@ -57,7 +57,7 @@ export const amory: Topic = {
       correctAnswers: ["Meri"],
     },
     {
-      question: "What are the names of Coheed and Cambria's twins?",
+      question: "What are the names of Coheed and Cambria's 'twins'?",
       choices: [
         "Mike and Melinda",
         "Claudio and Josephine",
@@ -68,13 +68,13 @@ export const amory: Topic = {
       correctAnswers: ["Matthew and Maria"],
     },
     {
-      question: "How did Coheed kill his youngest children?",
+      question: "How did Coheed kill his youngest 'children'?",
       choices: ["Poisoned Them", "Chocked Them", "Shot Them", "Drowned Them"],
       type: "MCQs",
       correctAnswers: ["Poisoned Them"],
     },
     {
-      question: "How did Coheed kill his oldest child?",
+      question: "How did Coheed kill his oldest 'daughter'?",
       choices: ["Bullet To The Head", "Hammer Blow To The Head", "Burned Her To Eeath", "Drowned Her"],
       type: "MCQs",
       correctAnswers: ["Hammer Blow To The Head"],
@@ -159,14 +159,14 @@ export const amory: Topic = {
     },
     {
       question:
-        "What is the name of Coheed and Cambria's home planet?",
+        "What is the name of the planet Coheed and Cambria live on?",
       choices: ["Hetricus", "Apity Prime", "Cobalt and Calcium", "Star IV"],
       type: "MCQs",
       correctAnswers: ["Hetricus"],
     },
     {
       question:
-        "What is the name of the gang that attacked Josephine?",
+        "What is the name of the gang that assaulted Josephine?",
       choices: [
         "Jersey City Devils",
         "Jersey City Angels",
@@ -184,7 +184,7 @@ export const amory: Topic = {
       correctAnswers: ["Vaxis"],
     },
     {
-      question: "In the false memory that Inferno implanted in Cambria, what was her occupation?",
+      question: "In the false memory that was implanted in Cambria, what was her occupation?",
       choices: [
         "Lawyer",
         "Nurse",
@@ -219,7 +219,7 @@ export const amory: Topic = {
     },
     {
       question:
-        "On which planet was Mariah killed?",
+        "What planet was Mariah Antillerea killed on?",
       choices: [
         "Kalline",
         "Shylos X",
@@ -272,7 +272,7 @@ export const amory: Topic = {
       correctAnswers: ["Hilmgore"],
     },
     {
-      question: "What is The Camper Velorium?",
+      question: "What is the Camper Velorium?",
       choices: [
         "A Weapon",
         "A Spaceship",
@@ -367,7 +367,7 @@ export const amory: Topic = {
     },
     {
       question: "What is the Great Crash?",
-      choices: ["A Cosmological Event", "Q Spacecraft", "A Great Battle", "A Weapon"],
+      choices: ["A Cosmological Event", "A Spacecraft", "A Great Battle", "A Weapon"],
       type: "MCQs",
       correctAnswers: ["A Cosmological Event"],
     },
@@ -404,7 +404,7 @@ export const amory: Topic = {
     },
     {
       question:
-        "On December 2, 2012, who announced he would be producing a film adaptation of 'The Amory Wars'?",
+        "On December 2, 2012, who announced he bought the rights for a film adaptation of 'The Amory Wars'?",
       choices: [
         "Peter David",
         "Christopher Nolan",
@@ -413,6 +413,173 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Mark Wahlberg"],
+    },
+    {
+      question: "Gus Vazquez was the artist for the first issue of 'The Second Stage Turbine Blade' comic?",
+      choices: ["TRUE", "FALSE"],
+      type: "boolean",
+      correctAnswers: ["TRUE"],
+    },
+    {
+      question: "The Mage are burdened eternally with the responsibility of guarding the Keywork?",
+      choices: ["TRUE", "FALSE"],
+      type: "boolean",
+      correctAnswers: ["FALSE"],
+    },
+    {
+      question: "The right side of Mayo Deftinwolf's face was damaged by a plasma cannon?",
+      choices: ["TRUE", "FALSE"],
+      type: "boolean",
+      correctAnswers: ["FALSE"],
+    },
+    {
+      question: "Mayo Deftinwolf is a cyborg?",
+      choices: ["TRUE", "FALSE"],
+      type: "boolean",
+      correctAnswers: ["TRUE"],
+    },
+    {
+      question: "How many years after the colonization of Silent Earth: 3 did the opening scene of the 'Second Stage Turbine Blade' take place?",
+      choices: [
+        "6",
+        "7",
+        "4",
+        "2",
+    ],
+      type: "MCQs",
+      correctAnswers: ["6"],
+    },
+    {
+      question: "Which character has the first line of dialogue in the 'Second Stage Turbine Blade' comics?",
+      choices: [
+        "Inferno",
+        "Coheed",
+        "Cambria",
+        "Claudio",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Inferno"],
+    },
+    {
+      question: "What planet was Coheed 'born' on?",
+      choices: [
+        "Helvar",
+        "Hetricus",
+        "Morlunus",
+        "Omega",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Helvar"],
+    },
+    {
+      question: "What is Coheed's 'occupation' on Hetricus?",
+      choices: [
+        "Lawyer",
+        "Heat Treat Specialist",
+        "Soldier",
+        "Mechanic",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Heat Treat Specialist"],
+    },
+    {
+      question: "What was the name of the upper respiratory disease that Coheed's father 'contracted'?",
+      choices: [
+        "Ikkin",
+        "Melvus",
+        "Aetna",
+        "Tra-Nuvis",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Melvus"],
+    },
+    {
+      question: "What is the name of Claudio Kilgannon's high school?",
+      choices: [
+        "Rye Cooper",
+        "Aetna Six",
+        "Immaculate Conception",
+        "Hetricus High",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Rye Cooper"],
+    },
+    {
+      question: "What was Cambria's 'maiden' name?",
+      choices: [
+        "Myers",
+        "Conroy",
+        "Ryan",
+        "Gortus",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Myers"],
+    },
+    {
+      question: "What was the name of the hospital Cambria 'worked' in when she 'met' Coheed?",
+      choices: [
+        "George Haven",
+        "Ikkin",
+        "Aetna Six",
+        "Arbor",
+    ],
+      type: "MCQs",
+      correctAnswers: ["George Haven"],
+    },
+    {
+      question: "Claudio's girlfriend was the captain of what team at their high school?",
+      choices: [
+        "air-ball",
+        "basketball",
+        "volleyball",
+        "golf",
+    ],
+      type: "MCQs",
+      correctAnswers: ["air-ball"],
+    },
+    {
+      question: "Which of these is NOT an alias of Inferno?",
+      choices: [
+        "Jesse Kilgannon",
+        "Mainframe",
+        "Runaway Bomber",
+        "Grail Arbor",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Grail Arbor"],
+    },
+    {
+      question: "Who found Mariah Antillarea on a riverbank when she was an infant?",
+      choices: [
+        "Aetna Six",
+        "Inferno",
+        "Monks",
+        "Coheed",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Monks"],
+    },
+    {
+      question: "Who is the Chief Representative of The Prise Fellowship ?",
+      choices: [
+        "Ambellina",
+        "Paranoia",
+        "Ondriah",
+        "Hundriah",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Paranoia"],
+    },
+    {
+      question: "Who did Wilhelm Ryan execute in a public broadcast therefore starting the War of the Mages?",
+      choices: [
+        "Covent Marth",
+        "Althaddeus Favor",
+        "Sundihar Jepp",
+        "Grave Minetoter",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Covent Marth"],
     },
   ],
 };

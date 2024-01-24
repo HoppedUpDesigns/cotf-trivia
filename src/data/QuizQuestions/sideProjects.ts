@@ -64,7 +64,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What was the name Travis Stever went by in the band Fire Deuce?",
+        "What was the name Travis Stever used in his band Fire Deuce?",
       choices: [
         "Cleveland Stever",
         "Travis Stever",
@@ -87,7 +87,7 @@ export const sideProjects: Topic = {
     },
     {
       question: "Who is the rapper Weerd Science?",
-      choices: ["Travis Stever", "Joey Eppard", "Zach Cooper", "Josh Eppard"],
+      choices: ["Travis Stever", "Joey Eppard", "Tom Cruise", "Josh Eppard"],
       type: "MCQs",
       correctAnswers: ["Josh Eppard"],
     },
@@ -122,7 +122,7 @@ export const sideProjects: Topic = {
       correctAnswers: ["My Chemical Romance"],
     },
     {
-      question: "What is the name of Davenport Cabinet's second album?",
+      question: "What is the name of Davenport Cabinet's third album?",
       choices: [
         "Nostalgia In Stereo",
         "Our Machine",
@@ -130,7 +130,7 @@ export const sideProjects: Topic = {
         "Risks in Magic",
       ],
       type: "MCQs",
-      correctAnswers: ["Nostalgia In Stereo"],
+      correctAnswers: ["Damned Renegades"],
     },
     {
       question: "Whose side project is called The Prize Fighter Inferno?",
@@ -145,14 +145,14 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the name of the band Zach Cooper was in before Coheed and Cambria?",
+        "What is the name of the band Zach Cooper was in before joining Coheed and Cambria?",
       choices: ["Nirvana", "Afterman", "Inferno", "Life Before This"],
       type: "MCQs",
       correctAnswers: ["Life Before This"],
     },
     {
       question:
-        "What is the title of The Prize Fighter Inferno's debut album released in 2006?",
+        "What is the title of The Prize Fighter Inferno's debut album?",
       choices: [
         "Half Measures",
         "My Brother's Blood Machine",
@@ -164,46 +164,46 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "The Prize Fighter Inferno's song 'Easter' is part of a concept album. What is the title of this concept album?",
+        "What event saw the release of the Prize Fighter Inferno's EP 'Half Measures'?",
       choices: [
-        "The Afterman: Ascension",
-        "The Afterman: Descension",
-        "Good Apollo, I'm Burning Star IV",
-        "In Keeping Secrets of Silent Earth: 3",
+        "New York ComicCon",
+        "First Tour Date",
+        "Claudio's birthday",
+        "Birth of Claudio's son",
       ],
       type: "MCQs",
-      correctAnswers: ["The Afterman: Ascension"],
+      correctAnswers: ["New York ComicCon"],
     },
     {
       question:
-        "In The Prize Fighter Inferno's song 'The Margretville Dance,' the protagonist travels to a fictional place. What is the name of this place?",
+        "What song on the Prize Fighter Inferno's EP 'Stray Bullets' was NOT included on the album 'The City Introvert'?",
       choices: [
-        "Margretville",
-        "Hell's Kitchen",
-        "The Dark Sentencer",
-        "Wonderland",
+        "Stray Bullets",
+        "Stand By Me",
+        "Crazy For You",
+        "Death Rattle",
       ],
       type: "MCQs",
-      correctAnswers: ["Margretville"],
+      correctAnswers: ["Stand By Me"],
     },
     {
       question:
-        "The Prize Fighter Inferno released a Christmas-themed EP in 2009. What is the title of this EP?",
+        "What Prize Fighter Inferno song features vocals by Chondra Echert?",
       choices: [
-        "Merry Christmas",
-        "The Christmas Chronicles",
-        "Deck the Halls",
         "Half Measures",
+        "The Simple Fix",
+        "Elm Street Lover Boy",
+        "Pistol Pete Matty",
       ],
       type: "MCQs",
       correctAnswers: ["Half Measures"],
     },
     {
       question:
-        "What animated series inspired the Prize Fighter Inferno song 'Gears'?",
-      choices: ["Rick and Morty", "Adventure Time", "The Simpsons", "Futurama"],
+        "What Prize Fighter Inferno song features Chondra Echert singing the lyrics 'La la la, la la la la'?",
+      choices: ["Gears", "Erizo Schultz", "More Than Love", "Sweet Talker"],
       type: "MCQs",
-      correctAnswers: ["The Simpsons"],
+      correctAnswers: ["Gears"],
     },
     {
       question:
@@ -250,19 +250,19 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "Davenport Cabinet's song 'Simple Worlds' was featured in the soundtrack of which video game?",
+        "Travic Stever came up with the name Davenport Cabinet after the Davenport Brothers. What was the profession of these brothers?",
       choices: [
-        "Bioshock Infinite",
-        "The Elder Scrolls V: Skyrim",
-        "Red Dead Redemption 2",
-        "Fallout 4",
+        "Magicians",
+        "Carpenters",
+        "Singers",
+        "Bank Robbers",
       ],
       type: "MCQs",
-      correctAnswers: ["Fallout 4"],
+      correctAnswers: ["Magicians"],
     },
     {
       question:
-        "In 2010, Davenport Cabinet released a split EP with another band. What is the name of this band?",
+        "In 2010, Davenport Cabinet released a 12 inch EP with which other band?",
       choices: [
         "Circa Survive",
         "Thank You Scientist",
@@ -274,41 +274,41 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "Davenport Cabinet's song 'Sister Servant' is inspired by the works of which famous author?",
+        "What is the name of the band Travis Stever formed in 2021?",
       choices: [
-        "J.R.R. Tolkien",
-        "H.P. Lovecraft",
-        "Ray Bradbury",
-        "Arthur C. Clarke",
+        "Full Scale Riot",
+        "Zero Trust",
+        "Skarhead",
+        "Fire Deuce",
       ],
       type: "MCQs",
-      correctAnswers: ["H.P. Lovecraft"],
+      correctAnswers: ["Zero Trust"],
     },
     {
       question:
-        "What is the significance of the title 'Davenport Cabinet' for the band?",
+        "What Prize Fighter Inferno song did Travis Stever play lap steel guitar on?",
       choices: [
-        "It's named after a street in Claudio Sanchez's hometown",
-        "It's a tribute to a childhood friend",
-        "It's a reference to a historical event",
-        "It's a nod to a fictional character in 'The Amory Wars'",
+        "Wayne Andrews, The Old Beekeeper",
+        "The Going Price for Home",
+        "The Margretville Dance",
+        "Run, Gunner Recall, Run! The Town Wants You Dead!",
       ],
       type: "MCQs",
       correctAnswers: [
-        "It's named after a street in Claudio Sanchez's hometown",
+        "Wayne Andrews, The Old Beekeeper",
       ],
     },
     {
       question:
-        "Weerd Science is a side project led by which member of Coheed and Cambria?",
+        "What name did Josh Eppard use when drumming for the band Fire Deuce?",
       choices: [
-        "Claudio Sanchez",
-        "Travis Stever",
-        "Josh Eppard",
-        "Zach Cooper",
+        "Weerd Science",
+        "Bobby Delicious",
+        "Rick Whispers",
+        "Deuce Newton",
       ],
       type: "MCQs",
-      correctAnswers: ["Josh Eppard"],
+      correctAnswers: ["Deuce Newton"],
     },
     {
       question:
@@ -348,15 +348,15 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "Weerd Science's song 'Kill It With Fire' is part of the soundtrack for which video game?",
+        "What is the name of the band Josh Eppard joined in 2009?",
       choices: [
-        "Grand Theft Auto V",
-        "Call of Duty: Modern Warfare",
-        "Fallout 4",
-        "The Witcher 3: Wild Hunt",
+        "3",
+        "Applehead",
+        "Get Your Rock Out",
+        "Terrible Things",
       ],
       type: "MCQs",
-      correctAnswers: ["Fallout 4"],
+      correctAnswers: ["Terrible Things"],
     },
     {
       question:
@@ -372,7 +372,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What is the name of the band Claudio and Travis were in before Shabūtie?",
+        "Claudio Sanchez and Travis Stever were in what band together before creating the band Shabūtie?",
       choices: ["Penelope", "Evil Ink", "Toxic Parents", "Naked Prey"],
       type: "MCQs",
       correctAnswers: ["Toxic Parents"],

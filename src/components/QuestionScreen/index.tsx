@@ -17,7 +17,7 @@
  * Created on: 12/30/2023
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: 01/19/2024
+ * Last Updated on: 01/22/2024
  * -----------------------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made:
  *     - Integrated useShuffledChoices hook for randomizing choice order.
@@ -117,8 +117,16 @@ const QuestionScreen: FC = () => {
 
   const onClickNext = () => {
     const currentQuestion = questions[activeQuestion];
-    const isMatch = selectedAnswer.length === currentQuestion.correctAnswers.length &&
-                    selectedAnswer.every(answer => currentQuestion.correctAnswers.includes(answer));
+    let isMatch = false;
+
+    if (currentQuestion.type === 'MAQs' || currentQuestion.type === 'MCQs') {
+      isMatch = selectedAnswer.length === currentQuestion.correctAnswers.length &&
+                selectedAnswer.every(answer => currentQuestion.correctAnswers.includes(answer));
+    }
+
+    if (currentQuestion.type === 'boolean') {
+      isMatch = selectedAnswer.includes(currentQuestion.correctAnswers[0]);
+    }
 
     const questionAlreadyAnsweredIndex = result.findIndex(res => res.question === currentQuestion.question);
 
@@ -147,7 +155,19 @@ const QuestionScreen: FC = () => {
 
   const handleAnswerSelection = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
-    if (questions[activeQuestion].type === 'MAQs' || questions[activeQuestion].type === 'MCQs') {
+    const currentType = questions[activeQuestion].type;
+
+    if (currentType === 'MAQs') {
+      if (checked) {
+        setSelectedAnswer((prevSelectedAnswer) => [...prevSelectedAnswer, name]);
+      } else {
+        setSelectedAnswer((prevSelectedAnswer) =>
+          prevSelectedAnswer.filter((element) => element !== name)
+        );
+      }
+    }
+
+    if (currentType === 'MCQs' || currentType === 'boolean') {
       setSelectedAnswer(checked ? [name] : []);
     }
   };

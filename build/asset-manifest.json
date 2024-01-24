@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.cd4ed9f0.css",
-    "main.js": "/static/js/main.f9b9fea3.js",
+    "main.js": "/static/js/main.7e8e66f3.js",
     "static/js/787.f1462681.chunk.js": "/static/js/787.f1462681.chunk.js",
     "static/media/anek-malayalam-v4-malayalam-700.woff": "/static/media/anek-malayalam-v4-malayalam-700.c6ce627cd72c475d46cb.woff",
     "static/media/anek-malayalam-v4-malayalam-600.woff": "/static/media/anek-malayalam-v4-malayalam-600.8a1553bb42261d2beb5b.woff",
@@ -33,11 +33,11 @@
     "static/media/check.svg": "/static/media/check.77b4d1e03dcdf84035397dda68ec2233.svg",
     "static/media/start.svg": "/static/media/start.0085dec5cb635e6a4b0b73a507947989.svg",
     "main.cd4ed9f0.css.map": "/static/css/main.cd4ed9f0.css.map",
-    "main.f9b9fea3.js.map": "/static/js/main.f9b9fea3.js.map",
+    "main.7e8e66f3.js.map": "/static/js/main.7e8e66f3.js.map",
     "787.f1462681.chunk.js.map": "/static/js/787.f1462681.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd4ed9f0.css",
-    "static/js/main.f9b9fea3.js"
+    "static/js/main.7e8e66f3.js"
   ]
 }
