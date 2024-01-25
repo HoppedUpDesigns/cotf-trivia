@@ -1,11 +1,11 @@
 /***************************************************************************************************************************
  * @file: PROJECT-ROOT-FOLDER/src/data/QuizQuestions/amory.ts
  * -----------------------------------------------------------------------------------------------------------------------------------------------
- * @description: 
+ * @description:
  *  - This file contains the quiz questions and answers related to the "AMORY WARS" topic.
  *  - Each question is structured with options, a question type, and the correct answer(s).
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * @functionality: 
+ * @functionality:
  *  - Provides a specific set of quiz questions for the "AMORY WARS" theme.
  *  - Supports multiple-choice questions (MCQs) and questions with multiple correct answers (MAQs).
  *  - Enhances the variety of the quiz by offering diverse questions within the same topic.
@@ -16,13 +16,13 @@
  * Last Updated by: Jason McCoy
  * Last Updated on: Last Updated on: 01/24/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Changes made: 
+ * Changes made:
  *  - Initial creation with a set of questions specifically curated for the "AMORY WARS" topic.
  *  - Regular updates to questions and answers to ensure accuracy and engagement.
  *  - Inclusion of additional questions to expand the question set over time.
  * ---------------------------------------------------------------------------------------------------------------------------------------------
- * Notes: 
- *  - The questions in this file are designed to challenge fans of "The Amory Wars" and test their 
+ * Notes:
+ *  - The questions in this file are designed to challenge fans of "The Amory Wars" and test their
  *  - knowledge about specific details about the Amory Wars graphic novels and comics.
  *  - Regular review and updates are crucial to keep the content fresh and accurate.
  ***************************************************************************************************************************/
@@ -36,17 +36,12 @@ import { Topic } from ".";
 
 export const amory: Topic = {
   topic: "AMORY WARS",
-  totalQuestions: 57,
+  totalQuestions: 64,
   questions: [
     {
       question:
         "Which of these inhabitants of Heaven's Fence are NOT catalogued?",
-      choices: [
-        "Men",
-        "The Narrows",
-        "The Mage",
-        "The Prise",
-      ],
+      choices: ["Men", "The Narrows", "The Mage", "The Prise"],
       type: "MCQs",
       correctAnswers: ["The Narrows"],
     },
@@ -75,7 +70,12 @@ export const amory: Topic = {
     },
     {
       question: "How did Coheed kill his oldest 'daughter'?",
-      choices: ["Bullet To The Head", "Hammer Blow To The Head", "Burned Her To Eeath", "Drowned Her"],
+      choices: [
+        "Bullet To The Head",
+        "Hammer Blow To The Head",
+        "Burned Her To Eeath",
+        "Drowned Her",
+      ],
       type: "MCQs",
       correctAnswers: ["Hammer Blow To The Head"],
     },
@@ -158,15 +158,13 @@ export const amory: Topic = {
       correctAnswers: ["The All-Mother"],
     },
     {
-      question:
-        "What is the name of the planet Coheed and Cambria live on?",
+      question: "What is the name of the planet Coheed and Cambria live on?",
       choices: ["Hetricus", "Apity Prime", "Cobalt and Calcium", "Star IV"],
       type: "MCQs",
       correctAnswers: ["Hetricus"],
     },
     {
-      question:
-        "What is the name of the gang that assaulted Josephine?",
+      question: "What is the name of the gang that assaulted Josephine?",
       choices: [
         "Jersey City Devils",
         "Jersey City Angels",
@@ -184,48 +182,27 @@ export const amory: Topic = {
       correctAnswers: ["Vaxis"],
     },
     {
-      question: "In the false memory that was implanted in Cambria, what was her occupation?",
-      choices: [
-        "Lawyer",
-        "Nurse",
-        "Shop Owner",
-        "Professor",
-      ],
+      question:
+        "In the false memory that was implanted in Cambria, what was her occupation?",
+      choices: ["Lawyer", "Nurse", "Shop Owner", "Professor"],
       type: "MCQs",
       correctAnswers: ["Nurse"],
     },
     {
       question: "Where did Mayo Deftinwolf discard Sizer's body?",
-      choices: [
-        "House Atlantic",
-        "Donar",
-        "Grail Arbor",
-        "Godder Damm",
-      ],
+      choices: ["House Atlantic", "Donar", "Grail Arbor", "Godder Damm"],
       type: "MCQs",
       correctAnswers: ["Godder Damm"],
     },
     {
-      question:
-        "What is the name of Inferno's spaceship?",
-      choices: [
-        "Sizer",
-        "Chase",
-        "The Dark Sentencer",
-        "Grail Arbor",
-      ],
+      question: "What is the name of Inferno's spaceship?",
+      choices: ["Sizer", "Chase", "The Dark Sentencer", "Grail Arbor"],
       type: "MCQs",
       correctAnswers: ["Grail Arbor"],
     },
     {
-      question:
-        "What planet was Mariah Antillerea killed on?",
-      choices: [
-        "Kalline",
-        "Shylos X",
-        "Paris:Earth",
-        "Dil-Ariuth IX",
-      ],
+      question: "What planet was Mariah Antillerea killed on?",
+      choices: ["Kalline", "Shylos X", "Paris:Earth", "Dil-Ariuth IX"],
       type: "MCQs",
       correctAnswers: ["Paris:Earth"],
     },
@@ -244,18 +221,12 @@ export const amory: Topic = {
     {
       question:
         "What is the name of the city that Wilhelm Ryan released the new and improved dragonfiles on?",
-      choices: [
-        "Bendelesh",
-        "Valley's Hill",
-        "Sinosure",
-        "Kalline",
-      ],
+      choices: ["Bendelesh", "Valley's Hill", "Sinosure", "Kalline"],
       type: "MCQs",
       correctAnswers: ["Kalline"],
     },
     {
-      question:
-        "What is the Dark Sentencer?",
+      question: "What is the Dark Sentencer?",
       choices: [
         "A Spaceship",
         "Nickname for Mayo Deftinwolf",
@@ -284,18 +255,12 @@ export const amory: Topic = {
     },
     {
       question: "What is the name of Vaxis' mother?",
-      choices: [
-        "Ambellina",
-        "Nia Worn",
-        "Meri Amory",
-        "Ruetama Galadoline",
-      ],
+      choices: ["Ambellina", "Nia Worn", "Meri Amory", "Ruetama Galadoline"],
       type: "MCQs",
       correctAnswers: ["Nia Worn"],
     },
     {
-      question:
-        "Who is the leader of the Liars Club?",
+      question: "Who is the leader of the Liars Club?",
       choices: ["Vaxis", "Candelaria", "HOSS", "Nostrand Crane"],
       type: "MCQs",
       correctAnswers: ["Candelaria"],
@@ -313,12 +278,7 @@ export const amory: Topic = {
     },
     {
       question: "What is the name of Ryder's ex-girlfriend?",
-      choices: [
-        "Ambellina",
-        "Mariah",
-        "Meriwell",
-        "Erica",
-      ],
+      choices: ["Ambellina", "Mariah", "Meriwell", "Erica"],
       type: "MCQs",
       correctAnswers: ["Erica"],
     },
@@ -351,7 +311,8 @@ export const amory: Topic = {
       ],
       type: "MCQs",
       correctAnswers: [
-        "The Bag.On.Line. Adventures: The Second Stage Turbine Blade"],
+        "The Bag.On.Line. Adventures: The Second Stage Turbine Blade",
+      ],
     },
     {
       question:
@@ -367,19 +328,18 @@ export const amory: Topic = {
     },
     {
       question: "What is the Great Crash?",
-      choices: ["A Cosmological Event", "A Spacecraft", "A Great Battle", "A Weapon"],
+      choices: [
+        "A Cosmological Event",
+        "A Spacecraft",
+        "A Great Battle",
+        "A Weapon",
+      ],
       type: "MCQs",
       correctAnswers: ["A Cosmological Event"],
     },
     {
-      question:
-        "What are the Unheavenly Creatures?",
-      choices: [
-        "A Gang",
-        "K.B.I",
-        "The Prise",
-        "Star System",
-      ],
+      question: "What are the Unheavenly Creatures?",
+      choices: ["A Gang", "K.B.I", "The Prise", "Star System"],
       type: "MCQs",
       correctAnswers: ["A Gang"],
     },
@@ -415,85 +375,66 @@ export const amory: Topic = {
       correctAnswers: ["Mark Wahlberg"],
     },
     {
-      question: "Gus Vazquez was the artist for the first issue of 'The Second Stage Turbine Blade' comic?",
+      question:
+        "Gus Vazquez was the artist for the first issue of 'The Second Stage Turbine Blade' comic?",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["TRUE"],
-      comment: "He also illustrated the second issue as well",
+      comment: "TRUE. He also illustrated the second issue as well",
     },
     {
-      question: "The Mage are burdened eternally with the responsibility of guarding the Keywork?",
+      question:
+        "The Mage are burdened eternally with the responsibility of guarding the Keywork?",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["FALSE"],
-      comment: "The Prise are responsible for guarding the Keywork",
+      comment: "FALSE. That would be the Prise",
     },
     {
-      question: "The right side of Mayo Deftinwolf's face was damaged by a plasma cannon?",
+      question:
+        "The right side of Mayo Deftinwolf's face was damaged by a plasma cannon?",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["FALSE"],
-      comment: "It was the left side of his face that was damaged",
+      comment: "FALSE. It was the left side of his face that was damaged",
     },
     {
       question: "Mayo Deftinwolf is a cyborg?",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["TRUE"],
-      comment: "He was the first Z-class cybernetic organism of its kind",
+      comment: "TRUE. He was the first Z-class cybernetic organism of its kind",
     },
     {
-      question: "How many years after the colonization of Silent Earth: 3 did the opening scene of the 'Second Stage Turbine Blade' take place?",
-      choices: [
-        "6",
-        "7",
-        "4",
-        "2",
-    ],
+      question:
+        "How many years after the colonization of Silent Earth: 3 did the opening scene of the 'Second Stage Turbine Blade' take place?",
+      choices: ["6", "7", "4", "2"],
       type: "MCQs",
       correctAnswers: ["6"],
     },
     {
-      question: "Which character has the first line of dialogue in the 'Second Stage Turbine Blade' comics?",
-      choices: [
-        "Inferno",
-        "Coheed",
-        "Cambria",
-        "Claudio",
-    ],
+      question:
+        "Which character has the first line of dialogue in the 'Second Stage Turbine Blade' comics?",
+      choices: ["Inferno", "Coheed", "Cambria", "Claudio"],
       type: "MCQs",
       correctAnswers: ["Inferno"],
     },
     {
       question: "What planet was Coheed 'born' on?",
-      choices: [
-        "Helvar",
-        "Hetricus",
-        "Morlunus",
-        "Omega",
-    ],
+      choices: ["Helvar", "Hetricus", "Morlunus", "Omega"],
       type: "MCQs",
       correctAnswers: ["Helvar"],
     },
     {
       question: "What is Coheed's 'occupation' on Hetricus?",
-      choices: [
-        "Lawyer",
-        "Heat Treat Specialist",
-        "Soldier",
-        "Mechanic",
-    ],
+      choices: ["Lawyer", "Heat Treat Specialist", "Soldier", "Mechanic"],
       type: "MCQs",
       correctAnswers: ["Heat Treat Specialist"],
     },
     {
-      question: "What was the name of the upper respiratory disease that Coheed's father 'contracted'?",
-      choices: [
-        "Ikkin",
-        "Melvus",
-        "Aetna",
-        "Tra-Nuvis",
-    ],
+      question:
+        "What was the name of the upper respiratory disease that Coheed's father 'contracted'?",
+      choices: ["Ikkin", "Melvus", "Aetna", "Tra-Nuvis"],
       type: "MCQs",
       correctAnswers: ["Melvus"],
     },
@@ -504,40 +445,27 @@ export const amory: Topic = {
         "Aetna Six",
         "Immaculate Conception",
         "Hetricus High",
-    ],
+      ],
       type: "MCQs",
       correctAnswers: ["Rye Cooper"],
     },
     {
       question: "What was Cambria's 'maiden' name?",
-      choices: [
-        "Myers",
-        "Conroy",
-        "Ryan",
-        "Gortus",
-    ],
+      choices: ["Myers", "Conroy", "Ryan", "Gortus"],
       type: "MCQs",
       correctAnswers: ["Myers"],
     },
     {
-      question: "What was the name of the hospital Cambria 'worked' in when she 'met' Coheed?",
-      choices: [
-        "George Haven",
-        "Ikkin",
-        "Aetna Six",
-        "Arbor",
-    ],
+      question:
+        "What was the name of the hospital Cambria 'worked' in when she 'met' Coheed?",
+      choices: ["George Haven", "Ikkin", "Aetna Six", "Arbor"],
       type: "MCQs",
       correctAnswers: ["George Haven"],
     },
     {
-      question: "Claudio's girlfriend was the captain of what team at their high school?",
-      choices: [
-        "air-ball",
-        "basketball",
-        "volleyball",
-        "golf",
-    ],
+      question:
+        "Claudio's girlfriend was the captain of what team at their high school?",
+      choices: ["air-ball", "basketball", "volleyball", "golf"],
       type: "MCQs",
       correctAnswers: ["air-ball"],
     },
@@ -548,42 +476,92 @@ export const amory: Topic = {
         "Mainframe",
         "Runaway Bomber",
         "Grail Arbor",
-    ],
+      ],
       type: "MCQs",
       correctAnswers: ["Grail Arbor"],
     },
     {
-      question: "Who found Mariah Antillarea on a riverbank when she was an infant?",
-      choices: [
-        "Aetna Six",
-        "Inferno",
-        "Monks",
-        "Coheed",
-    ],
+      question:
+        "Who found Mariah Antillarea on a riverbank when she was an infant?",
+      choices: ["Aetna Six", "Inferno", "Monks", "Coheed"],
       type: "MCQs",
       correctAnswers: ["Monks"],
     },
     {
       question: "Who is the Chief Representative of The Prise Fellowship ?",
-      choices: [
-        "Ambellina",
-        "Paranoia",
-        "Ondriah",
-        "Hundriah",
-    ],
+      choices: ["Ambellina", "Paranoia", "Ondriah", "Hundriah"],
       type: "MCQs",
       correctAnswers: ["Paranoia"],
     },
     {
-      question: "Who did Wilhelm Ryan execute in a public broadcast therefore starting the War of the Mages?",
+      question:
+        "Who did Wilhelm Ryan execute in a public broadcast therefore starting the War of the Mages?",
       choices: [
         "Covent Marth",
         "Althaddeus Favor",
         "Sundihar Jepp",
         "Grave Minetoter",
-    ],
+      ],
       type: "MCQs",
       correctAnswers: ["Covent Marth"],
+    },
+    {
+      question:
+        "What planet does the novel 'Year of the Black Rainbow' start in?",
+      choices: ["Howling Earth", "Bendelesh", "Sinosure", "Apity Prime"],
+      type: "MCQs",
+      correctAnswers: ["Howling Earth"],
+    },
+    {
+      question:
+        "Who was the first Mage that Wilhelm Ryan executed in 'Year of the Black Rainbow'?",
+      choices: [
+        "Sundihar Jepp",
+        "Rolander Gurash",
+        "Althaddeus Favor",
+        "Covent Marth",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Rolander Gurash"],
+    },
+    {
+      question:
+        "Who was the last Mage to oppose Wilhelm Ryan's attempt to become the Supreme Tri-Mage  in 'Year of the Black Rainbow'?",
+      choices: [
+        "Malvas Limbi",
+        "Hanton Jo Seph",
+        "Bran Wilsinger",
+        "Covent Marth",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Covent Marth"],
+    },
+    {
+      question: "What was the name of Leonard and Pearl Hohenberger's son?",
+      choices: ["Joseph", "Bran", "Vielar", "Ryan"],
+      type: "MCQs",
+      correctAnswers: ["Joseph"],
+    },
+    {
+      question:
+        "What is the name of the planet Paranoia and Ambellina notice had a strange ebony band hovering above it?",
+      choices: ["Bendelesh", "Apity Prime", "Howling Earth", "Apity Central"],
+      type: "MCQs",
+      correctAnswers: ["Bendelesh"],
+    },
+    {
+      question: "Who is outfitted with the Prise DNA?",
+      choices: ["Inferno", "Coheed", "Cambria", "Sizer"],
+      type: "MCQs",
+      correctAnswers: ["Cambria"],
+    },
+    {
+      question:
+        "Coheed has 7 machete blades that can protrude from and retract into his right arm?",
+      choices: ["TRUE", "FALSE"],
+      type: "boolean",
+      correctAnswers: ["FALSE"],
+      comment: "FALSE. Those are on his left arm",
     },
   ],
 };
