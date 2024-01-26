@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: Last Updated on: 01/24/2024
+ * Last Updated on: Last Updated on: 01/26/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation with a set of questions specifically curated for the "S.S. Neverender" topic.
@@ -36,7 +36,7 @@ import { Topic } from ".";
 
 export const neverender: Topic = {
   topic: "S.S. Neverender",
-  totalQuestions: 42,
+  totalQuestions: 40,
   questions: [
     {
       question:
@@ -54,7 +54,7 @@ export const neverender: Topic = {
     },
     {
       question:
-        "West Coast Devin played cowbell on what Coheed and Cambria song on the second night of Coheed and Cambria's indoor show on the second S.S. Neverender cruise?",
+        "West Coast and East Coast Devin played cowbell on what Coheed and Cambria song during the seated shows on the second S.S. Neverender cruise?",
       choices: [
         "The Camper Velourium II: Backend of Forever",
         "A Favor House Atlantic",
@@ -185,39 +185,15 @@ export const neverender: Topic = {
     },
     {
       question:
-        "Motion City Soundtrack's song 'Everything Is Alright' gained popularity and is known for its inclusion in which popular video game?",
+        "Animals As Leaders guitarist Tosin Abasi played which instrument in elementary school?",
       choices: [
-        "Guitar Hero III: Legends of Rock",
-        "Tony Hawk's Pro Skater 4",
-        "Rock Band 2",
-        "Need for Speed: Most Wanted",
+        "Trumpet",
+        "Tuba",
+        "Clarinet",
+        "Violin",
       ],
       type: "MCQs",
-      correctAnswers: ["Guitar Hero III: Legends of Rock"],
-    },
-    {
-      question:
-        "Animals As Leaders is known for pioneering a fusion of progressive metal with which other musical genre?",
-      choices: [
-        "Jazz Fusion",
-        "Country",
-        "Electronic Dance Music (EDM)",
-        "Blues",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Jazz Fusion"],
-    },
-    {
-      question:
-        "Tosin Abasi, the guitarist and founder of Animals As Leaders, is known for popularizing and mastering which unique playing technique?",
-      choices: [
-        "Sweep Picking",
-        "Tapping",
-        "Chicken Picking",
-        "Hybrid Picking",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Tapping"],
+      correctAnswers: ["Clarinet"],
     },
     {
       question:
@@ -228,7 +204,7 @@ export const neverender: Topic = {
     },
     {
       question:
-        "What is the title of Psychedelic Porn Crumpets' debut album, released in 2015?",
+        "What is the title of Psychedelic Porn Crumpets' debut album, released in 2016?",
       choices: [
         "High Visceral {Part 1}",
         "And Now for the Whatchamacallit",
@@ -266,23 +242,23 @@ export const neverender: Topic = {
     },
     {
       question:
-        "What is the title of Hail The Sun's debut album, released in 2014?",
+        "What is the title of Hail The Sun's debut album, released in 2010?",
       choices: [
         "Culture Scars",
         "Wake",
         "Elephantitis",
-        "Pow! Right in the Kisser!",
+        "POW! Right in the Kisser!",
       ],
       type: "MCQs",
-      correctAnswers: ["Wake"],
+      correctAnswers: ["POW! Right in the Kisser!"],
     },
     {
       question:
         "Prince Daddy & The Hyena's album 'Cosmic Thrill Seekers' was released in collaboration with which record label?",
       choices: [
-        "Run For Cover Records",
-        "Topshelf Records",
-        "Polyvinyl Record Co.",
+        "Epitaph",
+        "Pure Noise Records",
+        "Lorna Vista Recordings",
         "Counter Intuitive Records",
       ],
       type: "MCQs",
@@ -299,18 +275,6 @@ export const neverender: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["I Thought You Didn't Even Like Leaving"],
-    },
-    {
-      question:
-        "What is the title of Davenport Cabinet's EP released in 2014, featuring acoustic versions of previously released songs?",
-      choices: [
-        "Nostalgia in Stereo",
-        "Our Machine II",
-        "Risks in Magic",
-        "Ruin Your Life",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Our Machine II"],
     },
     {
       question:
@@ -351,10 +315,10 @@ export const neverender: Topic = {
       correctAnswers: ["Never Say Diet"],
     },
     {
-      question: "What is the title of Pinkshift's debut EP, released in 2021?",
-      choices: ["Sacred Geometry", "Pastel Clouds", "Mars", "Tainted Waters"],
+      question: "What is the title of Pinkshift's debut LP, released in 2022?",
+      choices: ["Love Me Forever", "Pastel Clouds", "Mars", "Tainted Waters"],
       type: "MCQs",
-      correctAnswers: ["Sacred Geometry"],
+      correctAnswers: ["Love Me Forever"],
     },
     {
       question: "Who is the lead vocalist of Pinkshift?",
@@ -376,14 +340,14 @@ export const neverender: Topic = {
     },
     {
       question:
-        "Militarie Gun is a punk band formed by members of which other well-known punk group?",
-      choices: ["Dead Kennedys", "Fugazi", "Jawbreaker", "Against Me!"],
+        "Frontman Ian Shelton was in what band prior to forming Militarie Gun?",
+      choices: ["Dead Kennedys", "Fugazi", "Jawbreaker", "Regional Justice Center"],
       type: "MCQs",
-      correctAnswers: ["Against Me!"],
+      correctAnswers: ["Regional Justice Center"],
     },
     {
       question:
-        "What is the title of Militarie Gun's debut album released in 2021?",
+        "What is the title of Militarie Gun's debut EP released in 2021?",
       choices: [
         "All Roads Lead to the Gun",
         "All Across the Gun",
@@ -396,20 +360,20 @@ export const neverender: Topic = {
     {
       question:
         "What is the title of Brand of Sacrifice's debut studio album released in 2019?",
-      choices: ["Godhand", "The Interstice", "Eclipse", "Lifeblood"],
+      choices: ["God Hand", "The Interstice", "Eclipse", "Lifeblood"],
       type: "MCQs",
-      correctAnswers: ["Godhand"],
+      correctAnswers: ["God Hand"],
     },
     {
       question:
-        "Brand of Sacrifice collaborated with which iconic deathcore vocalist on the track 'Altered Eyes'?",
-      choices: ["Phil Bozeman", "CJ McMahon", "Alex Terrible", "Dickie Allen"],
+        "Brand of Sacrifice collaborated with which iconic deathcore vocalist on the re-release of the song 'Lifeblood'?",
+      choices: ["Phil Bozeman", "Will Ramos", "Alex Terrible", "Dickie Allen"],
       type: "MCQs",
-      correctAnswers: ["CJ McMahon"],
+      correctAnswers: ["Will Ramos"],
     },
     {
       question:
-        "What is the title of Kaonashi's debut full-length album released in 2019?",
+        "What is the title of Kaonashi's debut LP released in 2018?",
       choices: [
         "Why Did You Do It?",
         "Dear Lemon House, You Ruined Me: Senior Year",
@@ -417,11 +381,11 @@ export const neverender: Topic = {
         "A Place Where Nothing Matters",
       ],
       type: "MCQs",
-      correctAnswers: ["Dear Lemon House, You Ruined Me: Senior Year"],
+      correctAnswers: ["Why Did You Do It?"],
     },
     {
       question:
-        "Kaonashi's name is derived from a character in which animated film by Studio Ghibli?",
+        "Kaonashi's name is derived from a character in which animated film by Hayao Miyazaki?",
       choices: [
         "Princess Mononoke",
         "Spirited Away",
@@ -433,33 +397,45 @@ export const neverender: Topic = {
     },
     {
       question:
-        "In 2020, Kaonashi released a split EP with another band. What is the title of that EP?",
+        "What does Kaonashi's name translate to in English?",
       choices: [
-        "Brotherhood of the Snake",
-        "Crimson Thorn",
-        "Why Did You Do It?",
-        "Worlds I've Lost",
+        "Faceless",
+        "Fun",
+        "Frog",
+        "Feast",
       ],
       type: "MCQs",
-      correctAnswers: ["Worlds I've Lost"],
-    },
-    {
-      question: "Proper. hails from what city?",
-      choices: ["Chicago", "Los Angeles", "New York", "Philadelphia"],
-      type: "MCQs",
-      correctAnswers: ["Philadelphia"],
+      correctAnswers: ["Faceless"],
     },
     {
       question:
-        "What is the title of Proper.'s debut album released in 2019?",
+        "What is the name of Kaonashi's debut EP released in 2013?",
       choices: [
-        "Always Something",
-        "It's Never Enough",
-        "Made Up Dreams",
-        "Be Your Own Someone",
+        "Native",
+        "Crimson Thorn",
+        "You'll Understand When You're Older",
+        "Worlds I've Lost",
       ],
       type: "MCQs",
-      correctAnswers: ["Made Up Dreams"],
+      correctAnswers: ["Native"],
+    },
+    {
+      question: "Proper. hails from what city?",
+      choices: ["Chicago", "Los Angeles", "Brooklyn", "Philadelphia"],
+      type: "MCQs",
+      correctAnswers: ["Brooklyn"],
+    },
+    {
+      question:
+        "What is the title of Proper.'s debut album released in 2017?",
+      choices: [
+        "I Spent the Winter Writing Songs About Getting Better",
+        "Part-Timer",
+        "The Great American Novel",
+        "The Suburbs Have Ruined My Life",
+      ],
+      type: "MCQs",
+      correctAnswers: ["The Suburbs Have Ruined My Life"],
     },
   ],
 };

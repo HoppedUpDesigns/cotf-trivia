@@ -376,15 +376,15 @@ export const amory: Topic = {
     },
     {
       question:
-        "Gus Vazquez was the artist for the first issue of 'The Second Stage Turbine Blade' comic?",
+        "Gus Vazquez was the artist for the first issue of 'The Second Stage Turbine Blade' comic.",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["TRUE"],
-      comment: "TRUE. He also illustrated the second issue as well",
+      comment: "TRUE. He also illustrated the second issue",
     },
     {
       question:
-        "The Mage are burdened eternally with the responsibility of guarding the Keywork?",
+        "The Mage are burdened eternally with the responsibility of guarding the Keywork.",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["FALSE"],
@@ -392,14 +392,14 @@ export const amory: Topic = {
     },
     {
       question:
-        "The right side of Mayo Deftinwolf's face was damaged by a plasma cannon?",
+        "The right side of Mayo Deftinwolf's face was damaged by a plasma cannon.",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["FALSE"],
       comment: "FALSE. It was the left side of his face that was damaged",
     },
     {
-      question: "Mayo Deftinwolf is a cyborg?",
+      question: "Mayo Deftinwolf is a cyborg.",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["TRUE"],
@@ -507,7 +507,7 @@ export const amory: Topic = {
     },
     {
       question:
-        "What planet does the novel 'Year of the Black Rainbow' start in?",
+        "What planet does the novel 'Year of the Black Rainbow' start on?",
       choices: ["Howling Earth", "Bendelesh", "Sinosure", "Apity Prime"],
       type: "MCQs",
       correctAnswers: ["Howling Earth"],
@@ -557,7 +557,7 @@ export const amory: Topic = {
     },
     {
       question:
-        "Coheed has 7 machete blades that can protrude from and retract into his right arm?",
+        "Coheed has 7 machete blades that can protrude from and retract into his right arm.",
       choices: ["TRUE", "FALSE"],
       type: "boolean",
       correctAnswers: ["FALSE"],

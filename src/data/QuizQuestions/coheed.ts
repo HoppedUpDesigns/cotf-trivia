@@ -36,7 +36,7 @@ import { Topic } from ".";
 
 export const coheed: Topic = {
   topic: "Coheed and Cambria",
-  totalQuestions: 104,
+  totalQuestions: 91,
   questions: [
     {
       question: "What was Coheed and Cambria's first single?",
@@ -195,7 +195,7 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which Coheed and Cambria album serves as the prequel to 'The Amory Wars'?",
+        "Which Coheed and Cambria album serves as the prequel to 'The Amory Wars' concept?",
       choices: [
         "In Keeping Secrets of Silent Earth: 3",
         "Year of the Black Rainbow",
@@ -281,17 +281,17 @@ export const coheed: Topic = {
     },
     {
       question:
-        "During their early years, what genre of music did Coheed and Cambria primarily identify with?",
-      choices: ["Punk rock", "Post-hardcore", "Progressive metal", "Emo"],
+        "What band was Dr. Know who played guitar on the song 'Time Consumer' known for?",
+      choices: ["Bad Brains", "Faith No More", "At the Drive-In", "Misfits"],
       type: "MCQs",
-      correctAnswers: ["Punk rock"],
+      correctAnswers: ["Bad Brains"],
     },
     {
       question:
-        "Which venue played a crucial role in Coheed and Cambria's early success in the New York music scene?",
-      choices: ["CBGB", "Whisky a Go Go", "The Roxy Theatre", "The Troubadour"],
+        "The song 'Atlas' is about whom?",
+      choices: ["Claudio's son", "Travis's son", "A Greek God", "Ayn Rand"],
       type: "MCQs",
-      correctAnswers: ["CBGB"],
+      correctAnswers: ["Claudio's son"],
     },
     {
       question:
@@ -328,25 +328,25 @@ export const coheed: Topic = {
       question:
         "Which album marked the temporary inclusion of drummer Taylor Hawkins?",
       choices: [
-        "Good Apollo, I'm Burning Star IV",
+        "Good Apollo, I'm Burning Star IV, Vol. 1",
         "The Afterman: Ascension",
         "Year of the Black Rainbow",
         "Vaxis - Act I: The Unheavenly Creatures",
       ],
       type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV"],
+      correctAnswers: ["Good Apollo, I'm Burning Star IV, Vol. 1"],
     },
     {
       question:
-        "What notable event in 2004 boosted Coheed and Cambria's mainstream visibility?",
+        "What award did Coheed and Cambria win in 2004?",
       choices: [
-        "A Grammy Award nomination",
-        "A performance on Saturday Night Live",
-        "A collaboration with a popular artist",
-        "A cover feature in Rolling Stone",
+        "Grammy for Best Album",
+        "Metal Hammer Golden Gods Award for Best Album",
+        "The Road Woodie for Best Live Performance",
+        "MTV Music Award for Best Band",
       ],
       type: "MCQs",
-      correctAnswers: ["A Grammy Award nomination"],
+      correctAnswers: ["The Road Woodie for Best Live Performance"],
     },
     {
       question:
@@ -362,18 +362,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "In 2007, Coheed and Cambria contributed a song to the soundtrack of which film?",
-      choices: [
-        "Star Wars: The Force Awakens",
-        "Blade Runner 2049",
-        "Transformers",
-        "Ender's Game",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Transformers"],
-    },
-    {
-      question:
         "Which album by Coheed and Cambria marked a return to 'The Amory Wars' concept after a brief departure?",
       choices: [
         "Year of the Black Rainbow",
@@ -383,25 +371,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Vaxis - Act I: The Unheavenly Creatures"],
-    },
-    {
-      question:
-        "What is the title of the documentary that provides insights into the making of Coheed and Cambria's album 'The Color Before the Sun'?",
-      choices: [
-        "Beyond the Fence",
-        "The Afterman Chronicles",
-        "Unheavenly Creatures Unleashed",
-        "Making Colors",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Beyond the Fence"],
-    },
-    {
-      question:
-        "Which song by Coheed and Cambria was inspired by Claudio Sanchez's experience with sleep paralysis?",
-      choices: ["Gravity's Union", "The Hard Sell", "The Crowing", "Ghost"],
-      type: "MCQs",
-      correctAnswers: ["Gravity's Union"],
     },
     {
       question:
@@ -457,18 +426,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Good Apollo, I'm Burning Star IV, Vol. 1"],
-    },
-    {
-      question:
-        "Which song by Coheed and Cambria served as the theme for the animated series 'American Dad!'?",
-      choices: [
-        "A Favor House Atlantic",
-        "The Suffering",
-        "Welcome Home",
-        "Feathers",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Welcome Home"],
     },
     {
       question:
@@ -575,25 +532,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "During the early years, Coheed and Cambria released music under the name Shabütie. What inspired the name change?",
-      choices: [
-        "A legal dispute",
-        "A desire for a fresh start",
-        "A suggestion from a fan",
-        "A change in musical direction",
-      ],
-      type: "MCQs",
-      correctAnswers: ["A legal dispute"],
-    },
-    {
-      question:
-        "Which song by Coheed and Cambria is known for its extended guitar solo and was released as a single in 2005?",
-      choices: ["The Crowing", "Welcome Home", "The Suffering", "Feathers"],
-      type: "MCQs",
-      correctAnswers: ["The Suffering"],
-    },
-    {
-      question:
         "What is the name of Coheed and Cambria's first-ever headlining tour, launched in 2004?",
       choices: [
         "The Unheavenly Tour",
@@ -637,18 +575,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which album features a song inspired by the film 'The NeverEnding Story'?",
-      choices: [
-        "Year of the Black Rainbow",
-        "The Afterman: Descension",
-        "Good Apollo, I'm Burning Star IV, Vol. 1",
-        "No World for Tomorrow",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV, Vol. 1"],
-    },
-    {
-      question:
         "Which record label signed Coheed and Cambria for their debut album 'The Second Stage Turbine Blade'?",
       choices: [
         "Columbia Records",
@@ -658,13 +584,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Equal Vision Records"],
-    },
-    {
-      question:
-        "In 2018, Coheed and Cambria collaborated with a popular rapper on the song 'The Dark Sentencer.' Who was the rapper?",
-      choices: ["Eminem", "Travis Scott", "Kid Cudi", "Logic"],
-      type: "MCQs",
-      correctAnswers: ["Travis Scott"],
     },
     {
       question:
@@ -821,13 +740,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Coheed and Cambria's song 'Welcome Home' gained popularity as the soundtrack for a trailer of a highly anticipated video game. Which game featured this trailer?",
-      choices: ["Gears of War", "Halo 2", "Assassin's Creed", "Fallout 3"],
-      type: "MCQs",
-      correctAnswers: ["Gears of War"],
-    },
-    {
-      question:
         "Coheed and Cambria's album 'The Afterman: Descension' continues the story of a character introduced in 'The Afterman: Ascension.' What is the name of this character?",
       choices: ["Sirius Amory", "The Writer", "The Keywork", "Al the Killer"],
       type: "MCQs",
@@ -844,30 +756,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Unheavenly Brew"],
-    },
-    {
-      question:
-        "What is the title of the documentary released in 2009 that provides a behind-the-scenes look at Coheed and Cambria's tour life?",
-      choices: [
-        "The Fiction Will See the Real",
-        "Neverender: Children of the Fence Edition",
-        "On the Road with Coheed and Cambria",
-        "Behind the Keywork",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Neverender: Children of the Fence Edition"],
-    },
-    {
-      question:
-        "Coheed and Cambria's album 'The Afterman: Ascension' features a song with a guest appearance by which famous musician?",
-      choices: [
-        "Serj Tankian",
-        "Maynard James Keenan",
-        "Chino Moreno",
-        "Corey Taylor",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Serj Tankian"],
     },
     {
       question:
@@ -890,18 +778,6 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Coheed and Cambria's album 'No World for Tomorrow' features a song with a guest appearance by which famous musician?",
-      choices: [
-        "Maynard James Keenan",
-        "Serj Tankian",
-        "Chino Moreno",
-        "Corey Taylor",
-      ],
-      type: "MCQs",
-      correctAnswers: ["Maynard James Keenan"],
-    },
-    {
-      question:
         "In 2015, Coheed and Cambria released an animated video for the song 'You Got Spirit, Kid.' Who directed this animated video?",
       choices: [
         "Wes Anderson",
@@ -911,13 +787,6 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Claudio Sanchez"],
-    },
-    {
-      question:
-        "In 2014, Coheed and Cambria released a song that was used as the end credits theme for a popular animated TV series. What is the title of this song?",
-      choices: ["Here to Mars", "Island", "Colors", "The Hard Sell"],
-      type: "MCQs",
-      correctAnswers: ["Island"],
     },
   {
     question: "Who were the founding members of the band Beautiful Loser after Toxic Parents split?",
@@ -1098,7 +967,7 @@ export const coheed: Topic = {
         },
         {
           question:
-            "Who is listed as the drummer in the liner notes of Delirium Trigger?",
+            "Who is listed as the drummer in the liner notes of 'Delirium Trigger'?",
           choices: [
             "Nate Kelley",
             "Chris Pennie",
