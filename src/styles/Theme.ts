@@ -12,7 +12,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: Last Updated on: 01/24/2024
+ * Last Updated on: 01/26/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: Added dark theme with distinct color schemes and adjusted existing light theme properties for improved contrast 
  *               and readability.

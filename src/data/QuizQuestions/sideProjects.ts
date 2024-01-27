@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: Last Updated on: 01/24/2024
+ * Last Updated on: 01/26/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made:
  *  - Initial creation with a set of questions specifically curated for the "Side Projects" topic.
@@ -146,9 +146,9 @@ export const sideProjects: Topic = {
     {
       question:
         "What is the name of the band Zach Cooper was in before joining Coheed and Cambria?",
-      choices: ["Nirvana", "Afterman", "Inferno", "Life Before This"],
+      choices: ["I the Mighty", "Glassjaw", "Silver Snakes", "AM to AM"],
       type: "MCQs",
-      correctAnswers: ["Life Before This"],
+      correctAnswers: ["AM to AM"],
     },
     {
       question:

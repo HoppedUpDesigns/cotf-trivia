@@ -15,7 +15,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: Last Updated on: 01/24/2024
+ * Last Updated on: 01/26/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: Added new components for card layouts, updated global styles for improved accessibility and cross-browser 
  *               compatibility, incorporated responsive design breakpoints.

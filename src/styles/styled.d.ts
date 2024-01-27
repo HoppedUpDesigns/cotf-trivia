@@ -13,7 +13,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: Last Updated on: 01/24/2024
+ * Last Updated on: 01/26/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: Enhanced the theme structure to include new color schemes and layout properties. Refactored the theme 
  *               to improve readability and ease of use across the application.

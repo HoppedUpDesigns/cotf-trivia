@@ -14,7 +14,7 @@
  * Created on: 12/30/2023
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Last Updated by: Jason McCoy
- * Last Updated on: Last Updated on: 01/24/2024
+ * Last Updated on: 01/26/2024
  * ---------------------------------------------------------------------------------------------------------------------------------------------
  * Changes made: 
  *  - Initial creation with a set of questions specifically curated for the "Coheed and Cambria" topic.
@@ -36,7 +36,7 @@ import { Topic } from ".";
 
 export const coheed: Topic = {
   topic: "Coheed and Cambria",
-  totalQuestions: 91,
+  totalQuestions: 96,
   questions: [
     {
       question: "What was Coheed and Cambria's first single?",
@@ -48,6 +48,50 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Devil In Jersey City"],
+    },
+    {
+      question: "What is the name of the song that Coheed and Cambria decided not to release because of the COVID-19 pandemic?",
+      choices: [
+        "Jessie's Girl 2",
+        "The Great Destroyer",
+        "Hallelujah Quarantine",
+        "Angel Dust",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Hallelujah Quarantine"],
+    },
+    {
+      question: "What video game features the Coheed and Cambria song 'Deranged'?",
+      choices: [
+        "Dark Souls",
+        "Batman: Arkham City",
+        "Portal 2",
+        "L.A. Noire",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Batman: Arkham City"],
+    },
+    {
+      question: "What ZZ Top song did Coheed and Cambris record for the tribute album 'A Tribute from Friends'?",
+      choices: [
+        "Beer Drinkers & Hell Raisers",
+        "La Grange",
+        "Got Me Under Pressure",
+        "Cheap Sunglasses",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Beer Drinkers & Hell Raisers"],
+    },
+    {
+      question: "In 2011, what crime was bassist Michael Todd arrested for?",
+      choices: [
+        "Murder",
+        "Armed Robbery",
+        "Public Intoxication",
+        "Jaywalking",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Armed Robbery"],
     },
     {
       question: "What is the name of Coheed and Cambria's first studio album?",
@@ -976,6 +1020,18 @@ export const coheed: Topic = {
           ],
           type: "MCQs",
           correctAnswers: ["Josh Eppard"],
+        },
+        {
+          question:
+            "Who is the name of the actress who starred in the video for 'Feathers'?",
+          choices: [
+            "Gina Gershon",
+            "Elizabeth Berkley",
+            "Rena Riffel",
+            "Bobbie Phillips",
+          ],
+          type: "MCQs",
+          correctAnswers: ["Rena Riffel"],
         },
   ],
 };
