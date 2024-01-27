@@ -36,7 +36,7 @@ import { Topic } from ".";
 
 export const sideProjects: Topic = {
   topic: "Side Projects",
-  totalQuestions: 32,
+  totalQuestions: 34,
   questions: [
     {
       question:
@@ -92,20 +92,20 @@ export const sideProjects: Topic = {
       correctAnswers: ["Josh Eppard"],
     },
     {
-      question: "Who is the lead singer of L.S. Dunes?",
+      question: "Which member of Coheed and Cambria is also in the band L.S. Dunes?",
       choices: [
-        "Anthony Green",
+        "Travis Stever",
         "Zach Cooper",
-        "Joey Eppard",
-        "Claudio Sanchez",
+        "Josh Eppard",
+        "Chris Pennie",
       ],
       type: "MCQs",
-      correctAnswers: ["Anthony Green"],
+      correctAnswers: ["Travis Stever"],
     },
     {
       question:
         "What is the name of the boxer who goes by the name The Prize Fighter Inferno?",
-      choices: ["West Coast Devin", "Mike Tyson", "Jesse", "Claudio"],
+      choices: ["Sizer", "Tyson", "Jesse", "Claudio"],
       type: "MCQs",
       correctAnswers: ["Jesse"],
     },
@@ -188,7 +188,7 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What Prize Fighter Inferno song features vocals by Chondra Echert?",
+        "Which of these Prize Fighter Inferno songs features vocals by Chondra Echert?",
       choices: [
         "Half Measures",
         "The Simple Fix",
@@ -200,14 +200,14 @@ export const sideProjects: Topic = {
     },
     {
       question:
-        "What Prize Fighter Inferno song features Chondra Echert singing the lyrics 'La la la, la la la la'?",
+        "Which Prize Fighter Inferno song features Chondra Echert singing the lyrics 'La la la, la la la la'?",
       choices: ["Gears", "Erizo Schultz", "More Than Love", "Sweet Talker"],
       type: "MCQs",
       correctAnswers: ["Gears"],
     },
     {
       question:
-        "In The Prize Fighter Inferno's song 'Pistol Pete Matty,' what instrument is prominently featured?",
+        "In the Prize Fighter Inferno song 'Pistol Pete Matty,' what instrument is prominently featured?",
       choices: ["Banjo", "Accordion", "Mandolin", "Trumpet"],
       type: "MCQs",
       correctAnswers: ["Banjo"],
@@ -388,6 +388,30 @@ export const sideProjects: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Plan to Take Over the World"],
+    },
+    {
+      question:
+        "Who are the Bleam brothers?",
+      choices: [
+        "Long-Arm and Butchie",
+        "Inferno and Johnny",
+        "Moses and Arthur",
+        "Wayne and McCloud",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Long-Arm and Butchie"],
+    },
+    {
+      question:
+        "Who is the main character of the Prize Fighter Inferno album 'My Brother's Blood Machine'?",
+      choices: [
+        "Johnny Early",
+        "Cecilia McCloud",
+        "Long-Arm Bleam",
+        "Wayne Andrews",
+      ],
+      type: "MCQs",
+      correctAnswers: ["Cecilia McCloud"],
     },
   ],
 };

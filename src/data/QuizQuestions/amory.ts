@@ -36,7 +36,7 @@ import { Topic } from ".";
 
 export const amory: Topic = {
   topic: "AMORY WARS",
-  totalQuestions: 64,
+  totalQuestions: 65,
   questions: [
     {
       question:
@@ -149,16 +149,16 @@ export const amory: Topic = {
       question:
         "What is the name of the mysterious energy being that guides Sirius Amory?",
       choices: [
-        "The Prize Fighter Inferno",
-        "Sirius Amory",
-        "The All-Mother",
-        "The Ghost of Wilhelm Ryan",
+        "Afterlife",
+        "Entities",
+        "All Mother",
+        "Cruiser",
       ],
       type: "MCQs",
-      correctAnswers: ["The All-Mother"],
+      correctAnswers: ["All Mother"],
     },
     {
-      question: "What is the name of the planet Coheed and Cambria live on?",
+      question: "What is the name of the planet Coheed and Cambria lived on?",
       choices: ["Hetricus", "Apity Prime", "Cobalt and Calcium", "Star IV"],
       type: "MCQs",
       correctAnswers: ["Hetricus"],
@@ -205,6 +205,12 @@ export const amory: Topic = {
       choices: ["Kalline", "Shylos X", "Paris:Earth", "Dil-Ariuth IX"],
       type: "MCQs",
       correctAnswers: ["Paris:Earth"],
+    },
+    {
+      question: "How did Mayo DDeftinwolf kill Mariah Antillerea?",
+      choices: ["Hung her", "Choked her", "Shot her", "Slit her throat"],
+      type: "MCQs",
+      correctAnswers: ["Slit her throat"],
     },
     {
       question:
@@ -268,13 +274,13 @@ export const amory: Topic = {
     {
       question: "What is the Keywork?",
       choices: [
-        "A Weapon",
+        "A celestial body",
         "A Celestial Event",
-        "A Spaceship",
-        "Interconnecting beams of energy",
+        "A worm hole",
+        "Beams of energy",
       ],
       type: "MCQs",
-      correctAnswers: ["Interconnecting beams of energy"],
+      correctAnswers: ["Beams of energy"],
     },
     {
       question: "What is the name of Ryder's ex-girlfriend?",
@@ -329,13 +335,13 @@ export const amory: Topic = {
     {
       question: "What is the Great Crash?",
       choices: [
-        "A Cosmological Event",
-        "A Spacecraft",
-        "A Great Battle",
-        "A Weapon",
+        "A cosmological event",
+        "A spacecraft explosion",
+        "A great battle",
+        "Fractured worlds",
       ],
       type: "MCQs",
-      correctAnswers: ["A Cosmological Event"],
+      correctAnswers: ["A cosmological event"],
     },
     {
       question: "What are the Unheavenly Creatures?",
@@ -488,22 +494,22 @@ export const amory: Topic = {
       correctAnswers: ["Monks"],
     },
     {
-      question: "Who is the Chief Representative of The Prise Fellowship ?",
+      question: "Who is the Chief Representative of The Prise Fellowship?",
       choices: ["Ambellina", "Paranoia", "Ondriah", "Hundriah"],
       type: "MCQs",
       correctAnswers: ["Paranoia"],
     },
     {
       question:
-        "Who did Wilhelm Ryan execute in a public broadcast therefore starting the War of the Mages?",
+        "Who did Wilhelm Ryan execute in a public broadcast therefore starting the Mage War?",
       choices: [
-        "Covent Marth",
+        "Rolander Gurash",
         "Althaddeus Favor",
         "Sundihar Jepp",
         "Grave Minetoter",
       ],
       type: "MCQs",
-      correctAnswers: ["Covent Marth"],
+      correctAnswers: ["Rolander Gurash"],
     },
     {
       question:
@@ -514,19 +520,19 @@ export const amory: Topic = {
     },
     {
       question:
-        "Who was the first Mage that Wilhelm Ryan executed in 'Year of the Black Rainbow'?",
+        "Who was the only Mage that joined Wilhelm Ryan before the start of the Mage War?",
       choices: [
         "Sundihar Jepp",
         "Rolander Gurash",
         "Althaddeus Favor",
-        "Covent Marth",
+        "Litan Boss",
       ],
       type: "MCQs",
-      correctAnswers: ["Rolander Gurash"],
+      correctAnswers: ["Althaddeus Favor"],
     },
     {
       question:
-        "Who was the last Mage to oppose Wilhelm Ryan's attempt to become the Supreme Tri-Mage  in 'Year of the Black Rainbow'?",
+        "Who was the only Mage who didn't vote for Wilhelm Ryan to replace Sundihar Jepp as governor os Sector 6 in 'Year of the Black Rainbow'?",
       choices: [
         "Malvas Limbi",
         "Hanton Jo Seph",
@@ -544,7 +550,7 @@ export const amory: Topic = {
     },
     {
       question:
-        "What is the name of the planet Paranoia and Ambellina notice had a strange ebony band hovering above it?",
+        "What is the name of the planet Paranoia and Ambellina notice had a strange ebony band, later known as the Black Rainbow, hovering above it?",
       choices: ["Bendelesh", "Apity Prime", "Howling Earth", "Apity Central"],
       type: "MCQs",
       correctAnswers: ["Bendelesh"],
