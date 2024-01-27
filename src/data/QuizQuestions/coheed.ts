@@ -328,13 +328,13 @@ export const coheed: Topic = {
       question:
         "Which album marked the temporary inclusion of drummer Taylor Hawkins?",
       choices: [
-        "Good Apollo, I'm Burning Star IV, Vol. 1",
+        "Good Apollo, I'm Burning Star IV, Vol. 2",
         "The Afterman: Ascension",
         "Year of the Black Rainbow",
         "Vaxis - Act I: The Unheavenly Creatures",
       ],
       type: "MCQs",
-      correctAnswers: ["Good Apollo, I'm Burning Star IV, Vol. 1"],
+      correctAnswers: ["Good Apollo, I'm Burning Star IV, Vol. 2"],
     },
     {
       question:
