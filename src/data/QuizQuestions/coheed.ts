@@ -556,15 +556,15 @@ export const coheed: Topic = {
     },
     {
       question:
-        "Which member of Coheed and Cambria originally played bass guitar and later switched to guitar?",
+        "Which member of Shabütie was primarily a  bass guitar but switched to guitar for the good of the band?",
       choices: [
         "Claudio Sanchez",
-        "Travis Stever",
+        "Michael Todd",
         "Zach Cooper",
         "Josh Eppard",
       ],
       type: "MCQs",
-      correctAnswers: ["Travis Stever"],
+      correctAnswers: ["Michael Todd"],
     },
     {
       question:
