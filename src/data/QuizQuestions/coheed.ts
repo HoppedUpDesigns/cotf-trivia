@@ -36,7 +36,7 @@ import { Topic } from ".";
 
 export const coheed: Topic = {
   topic: "Coheed and Cambria",
-  totalQuestions: 96,
+  totalQuestions: 100,
   questions: [
     {
       question: "What was Coheed and Cambria's first single?",
@@ -48,6 +48,39 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["Devil In Jersey City"],
+    },
+    {
+      question: "Which of these songs was a iTunes bonus edition track for 'The Afterman: Descension' release?",
+      choices: [
+        "Carol Ann",
+        "2's My Favorite 1",
+        "Away We Go",
+        "The Hard Sell",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Carol Ann"],
+    },
+    {
+      question: "Which of these songs was a iTunes edition track for 'The Afterman: Ascension' release?",
+      choices: [
+        "Subtraction",
+        "The Homecoming",
+        "Mothers Of Men",
+        "The Hollow",
+    ],
+      type: "MCQs",
+      correctAnswers: ["The Homecoming"],
+    },
+    {
+      question: "Which of these songs was a iTunes pre-order exclusive for the 'Year of the Black Rainbow' release?",
+      choices: [
+        "The Lost Shepherd",
+        "Chamberlain",
+        "Hush",
+        "When Skeletons Live",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Hush"],
     },
     {
       question: "What is the name of the song that Coheed and Cambria decided not to release because of the COVID-19 pandemic?",
@@ -210,6 +243,17 @@ export const coheed: Topic = {
       ],
       type: "MCQs",
       correctAnswers: ["The Children of the Fence"],
+    },
+    {
+      question: "Which of these songs was a bonus song on the 2005 re-release of 'The Second Stage Turbine Blade'?",
+      choices: [
+        "God Send Conspirator",
+        "Elf Tower New Mexico",
+        "Junesong Provision",
+        "33",
+    ],
+      type: "MCQs",
+      correctAnswers: ["Elf Tower New Mexico"],
     },
     {
       question:
